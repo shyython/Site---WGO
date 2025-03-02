@@ -1,5 +1,12 @@
+* { 
+    margin: 0;
+    padding: 0;
+}
+
 header {
     background-color: brown;
-
-
+    padding-bottom: 0;
+    align-items: center;
+    color: chocolate;
+    justify-content: space-around;
 }

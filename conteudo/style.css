@@ -4,9 +4,24 @@
 }
 
 header {
-    background-color: brown;
-    padding-bottom: 0;
+    display: flex;
+    background-color: #FF9A69;
+    padding-top: 5px;
+    padding-bottom: 5px;
     align-items: center;
-    color: chocolate;
+    color: #fffff7;
     justify-content: space-around;
+    flex-flow: row wrap;
+}
+
+.Pesquisar {
+    display: flex;
+    align-items: left;
+    width: 300px;
+    padding: 10px;
+    border: solid 1px #D9DCD6;
+    border-radius: 10px;
+    font-size: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+    flex-flow: row wrap;
 }

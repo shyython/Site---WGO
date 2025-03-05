@@ -76,3 +76,11 @@ header {
     margin-right: 10px;
     flex-flow: row wrap;
 }
+
+.imgmenu {
+    width: 50px;
+    height: 50px;  
+    border-radius: 10px;
+    margin: 3px;
+    
+}

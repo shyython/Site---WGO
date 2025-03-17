@@ -61,6 +61,9 @@ header {
 }
 
 .containerlateral {
+    background-color: #ffc7ab;
+    border-radius: 60px;
+    margin-top: 5px;
     font-family: Arial, Helvetica, sans-serif;
     display: flex;
     flex-flow: column wrap;

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,76 +8,74 @@
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <title>Bem-vindo ao WGO!</title>
 </head>
+
 <body>
     <header>
         <img class="Logo" src="/imagens/Wgo.png" alt="Logo">
-          
-        <h1 class="itens-home">
-            
-            <a class="linksHome" href="#">Eventos</a>
-            <a class="linksHome" href="#">Sobre</a>
-            <a class="linksHome" href="#">Suporte</a>
-           
-        </h1>
-        
 
-    <input class="Pesquisar" type="search" placeholder="Pesquisar">
+
+
+        <form class="form">
+            <input class="input" placeholder="Pesquisar" required="" type="text">
+            <button>
+                <svg width="17" height="16" fill="none" xmlns="http://www.w3.org/2000/svg" role="img"
+                    aria-labelledby="search">
+                    <path d="M7.667 12.667A5.333 5.333 0 107.667 2a5.333 5.333 0 000 10.667zM14.334 14l-2.9-2.9"
+                        stroke="currentColor" stroke-width="1.333" stroke-linecap="round" stroke-linejoin="round">
+                    </path>
+                </svg>
+            </button>
+
+        </form>
+
+        <a class="Login" href="cadastrar.html">Cadastrar</a>
+        <a class="Login" href="entrar.html">entrar</a>
 
     </header>
 
-    <div class="container">
-    <aside class="containerlateral">
-        <div class="itensordem1">
-            <!-- <img class="imgmenu" src="/imagens/iconnn.png" alt="">
-            <p class="textolateral"> CATEGORIAS</p> 
-            <p class="textolateral"> Atrações</p> 
-            <a href="">Mais Visitados</a>
-            <a href="">Em Breve</a>
-            <p class="textolateral"> RECOMENDADO POR AMIGOS</p>
-            <a href=""></a>
-            <a href=""></a> -->
-            <img class="imgmenu" src="/imagens/iconnn.png" alt="">
-            <p class="textolateral"> CATEGORIAS</p> 
-            <p class="textolateral"> Atrações</p> 
-            <a href="">Atividades ao ar livre</a>
-            <a href="">Gastronomia</a>
-            <a href="">Compras</a>
-            <a href="">Viagens de um dia</a>
-            <a href="">Eventos</a>
-            <p class="textolateral">TIPOS DE ATRAÇÃO</p> 
-            <a href="">Pontos turisticos</a>
-            <a href="">Natureza e parques</a>
-            <a href="">Museus</a>
-            <a href="">Diversao e jogos</a>
-            <a href="">Vida noturna</a>
-            <a href="">Spas e bem-estar</a>
-            <a href="">Zoologico e aquarios</a>
-            <a href="">Parques de diversao e aquaticos</a>
-            <p class="textolateral"> RECOMENDADO POR AMIGOS</p>
-            <a href=""></a>
-            <a href=""></a>
-        </div>
+    <div class="menu">
 
-        <div class="itensordem1">
-            <img class="imgmenu" src="/imagens/iconnn.png" alt="">
-            <p class="textolateral">aaa</p>
-        </div>
-        <div class="itensordem1">
-            <img class="imgmenu" src="/imagens/iconnn.png" alt="">
-            <p class="textolateral">aaa</p>
-        </div>
-    </aside>
+        <ul>
+            <li><a href="Inicio" class="itens">Inicio</a></li>
+            <li> <a href="Amigos" class="itens">Amigos</a></li>
+            <li> <a href="Eventos" class="itens">Eventos</a></li>
+            <li> <a href="Configurações" class="itens">Configurações</a></li>
+            <li> <a href="Ajuda" class="itens">Ajuda</a></li>
+        </ul>
+
+    </div>
+
+
+    <div class="container">
+        <aside class="containerlateral">
+
+            <div class="itensordem1">
+                <p>Restaurantes</p>
+            </div>
+
+            <div class="itensordem2">
+                <p class="textolateral">Show</p>
+            </div>
+
+            <div class="itensordem3">
+                <p class="textolateral">Standup's</p>
+            </div>
+        </aside>
+    </div>
+
     <main>
-        <section>
-            <img class="box_imagens" src="/imagens/imagem1.avif" alt=""> <div class="cu"></div>            
-        </section>      
-        <section>
-            <img class="box_imagens" src="/imagens/imagem1.avif" alt="">
+        <section class="box1">
+            <img class="box_imagens1" src="/imagens/imagem1.avif" alt="">
         </section>
-        <section>
-            <img class="box_imagens" src="/imagens/imagem1.avif" alt="">
-        </section> 
-    </main>   
-</div>
+        <section class="box2">
+            <img class="box_imagens2" src="/imagens/imagem1.avif" alt="">
+        </section>
+        <section class="box3">
+            <img class="box_imagens3" src="/imagens/imagem1.avif" alt="">
+        </section>
+    </main>
+
+    </div>
 </body>
+
 </html>

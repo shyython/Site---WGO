@@ -21,7 +21,11 @@ header {
     margin-top: 3px;
     background-color:  #fbf5ef;
     width: 90px;
+<<<<<<< HEAD
     border-radius: 50px;
+=======
+    border-radius: 60px;
+>>>>>>> 9c1217a3fe505dc2369090d4d8bfaf0768d121a0
     justify-content: start;
     
 }
@@ -134,6 +138,7 @@ main {
     width: 100vw;
     display: flex;
     flex-direction: row;
+    
 }
 
 .containerlateral {
@@ -178,6 +183,7 @@ section {
     align-items: center;
     flex: auto;
     margin-left: 150px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 section>p {

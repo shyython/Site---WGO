@@ -5,7 +5,7 @@
 
 header {
     display: flex;
-    background-color: #FF9A69;
+    background-color: #272744;
     padding-top: 5px;
     padding-bottom: 5px;
     align-items: center;
@@ -16,7 +16,7 @@ header {
 
 .Logo {
     margin-top: 3px;
-    background-color:  #ffffff;
+    background-color:  #fbf5ef;
     width: 90px;
     border-radius: 20px;
     justify-content: start;
@@ -69,8 +69,8 @@ main {
 }
 
 .containerlateral {
-    background-color: #ffc7ab;
-    border-radius: 60px;
+    background-color: #494d7e;
+    border-radius: 5px;
     margin-top: 5px;
     font-family: Arial, Helvetica, sans-serif;
     display: inline-block;
@@ -101,7 +101,9 @@ section {
     display: flex;
     flex-flow: row wrap;
     margin: 5px;
-    background-color: darkcyan;
+    border-radius: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #c69fa5;
     height: 300px;
     text-align: center;
     justify-content: center;
@@ -115,6 +117,7 @@ section>p {
 }
 
 .box_imagens {
+    display: inline-block;
     width: 98%;
     max-width: 300px; 
     border-radius: 5px;

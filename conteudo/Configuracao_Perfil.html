@@ -4,18 +4,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="Configuracao_Perfil.css">
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <title>Bem-vindo ao WGO!</title>
 </head>
 
 <body>
+
+                        <!-- Cabeçalho geral -->
     <header>
-        <img class="Logo" src="/imagens/Wgo.png" alt="Logo">
-
-
-
+     <a href="index.html"><img class="Logo" src="imagens/WgoIcon.png" alt="Logo"></a>   
         <form class="form">
+                         <!-- Barra de pesquisa -->
             <input class="input" placeholder="Pesquisar" required="" type="text">
             <button>
                 <svg width="17" height="16" fill="none" xmlns="http://www.w3.org/2000/svg" role="img"
@@ -25,55 +25,43 @@
                     </path>
                 </svg>
             </button>
-
+                                <!-- Cadastros -->
         </form>
-
         <a class="Login" href="cadastrar.html">Cadastrar</a>
         <a class="Login" href="entrar.html">entrar</a>
 
     </header>
-
+                            <!-- Barra de interações -->
     <div class="menu">
 
         <ul>
             <li><a href="Inicio" class="itens">Inicio</a></li>
             <li> <a href="Amigos" class="itens">Amigos</a></li>
             <li> <a href="Eventos" class="itens">Eventos</a></li>
-            <li> <a href="Configuracao.html" class="itens">Configurações</a></li>
+            <li> <a href="Configuracao.html" class="itens4">Configurações</a></li>
             <li> <a href="Ajuda" class="itens">Ajuda</a></li>
         </ul>
-
     </div>
-
-
-    <div class="container">
-        <aside class="containerlateral">
-
-            <div class="itensordem1">
-                <p>Restaurantes</p>
-            </div>
-
-            <div class="itensordem2">
-                <p class="textolateral">Show</p>
-            </div>
-
-            <div class="itensordem3">
-                <p class="textolateral">Standup's</p>
-            </div>
-        </aside>
+<main>
+            <!-- Perfil -->
+     
+                <!-- Foto do usuario -->
+                <div class="usuario">
+                    <h2>Seu perfil</h2>          
+                    <button class="BtnEditar">Editar Foto</button>
+                    <img src="imagens/Icone-usuario.png" alt="" id="ImagemPerfil">
+                    <p id="NomePerfil">O</p>
+                </div>
+                <!-- Resumo -->
+                 <div class="resumo">
+                    <input type="text" placeholder="Apelido" class="Apelido">
+                    <input type="text" placeholder="Bio" class="Bio">
+                 </div>
+     
+     
+</main>
     </div>
-
-    <main>
-        <section class="box1">
-            <img class="box_imagens1" src="/imagens/imagem1.avif" alt="">
-        </section>
-        <section class="box2">
-            <img class="box_imagens2" src="/imagens/imagem1.avif" alt="">
-        </section>
-        <section class="box3">
-            <img class="box_imagens3" src="/imagens/imagem1.avif" alt="">
-        </section>
-    </main>
+       
 
     </div>
 </body>

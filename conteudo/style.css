@@ -1,6 +1,7 @@
 * {
     margin: 0;
     padding: 0;
+   
 }
 
 header {
@@ -9,7 +10,7 @@ header {
     padding-top: 5px;
     padding-bottom: 5px;
     align-items: center;
-    color: #fffff7;
+    color: #f5f5f5;
     justify-content: space-around;
     flex-flow: row wrap;
 }
@@ -27,6 +28,15 @@ header {
     border-radius: 60px;
     justify-content: start;
 
+}
+
+.notificacao{
+    display: flex;
+    justify-content: flex-end;
+}
+.btnNot{
+    background-color: transparent  ;
+    border: none;
 }
 
 .itens-home {
@@ -125,16 +135,7 @@ input:not(:placeholder-shown)~.reset {
     margin-top: 3px;
 }
 
-main {
-    text-align: center;
-    background-color: #F5F5F5;
-    display: flex;
-    flex-wrap: row wrap;
-    justify-content: center;
-    margin-top: 20px;
-    width: 80vw;
 
-}
 
 /* menu lateral D */
 .container {
@@ -153,6 +154,13 @@ main {
     flex-flow: column wrap;
     justify-content: space-around;
     width: 10vw;
+
+}
+main {
+    text-align: center;
+    background-color: #F5F5F5;
+    display: flex;
+    justify-content: space-around;
 
 }
 
@@ -247,6 +255,21 @@ li a:hover {
 }
 
 /* fim menu lateral D */
+
+/* imagens sobrepondo(ou tentando) */
+.img{
+   width: 300px;
+   height: 250;
+}
+#imagem2 {
+    position: absolute;
+    left: 70px;
+  }
+
+  #elemento-pai {
+    position: relative;
+    
+  }
 
 .box1 {
     display: flex;

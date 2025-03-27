@@ -179,8 +179,8 @@ margin-top: 60px;
     border-radius: 150px;
     border: 3px solid black
 }
-#NomePerfil{
-    font-size: 25px;
+.NomePerfil{
+    font-size: 40px;
 }
 .BtnEditar{
     width: 200px;
@@ -197,14 +197,36 @@ flex-direction: column;
 width: 40vw;
 }
 .Apelido{
-     
+    
+    font-size: 25px;
     height: 50px;
     border-radius: 20px;
     border: 0.2px solid black;
     background-color:#8BA4D5 ;
 }
 .Bio{
+    font-size: 20px;
     height: 150px;
     margin-top: 30px;
     border: 2px solid black;
+}
+.redes{
+    margin-top: 20px;
+    display: flex;
+}
+.insta , .twitter, .face{
+    width: 100px;
+}
+.buttonadd{
+    border: none;
+    background-color: #fff;
+}
+.add{
+display: flex;
+flex-direction: column; 
+
+}
+.imgadd{
+    width: 30px;
+    
 }

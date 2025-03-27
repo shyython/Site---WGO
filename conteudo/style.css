@@ -215,6 +215,10 @@ main {
 .itens {
     margin-right: 50px;
 }
+.itens1 {
+    margin-right: 50px;
+    color: gray;
+}
 
 ul {
     display: flex;

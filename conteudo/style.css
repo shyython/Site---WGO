@@ -45,16 +45,16 @@ header {
 
 }
 
+/* Pesquisar Inicial */
 .form button {
     border: none;
     background: none;
     color: #8b8ba7;
-  }
-
+}
 
 .form {
     --timing: 0.3s;
-    --width-of-input: 200px;
+    --width-of-input: 500px;
     --height-of-input: 40px;
     --border-height: 2px;
     --input-bg: #fff;
@@ -64,11 +64,12 @@ header {
     position: relative;
     width: var(--width-of-input);
     height: var(--height-of-input);
+    display: flex;
     align-items: center;
-     padding-inline: 0.8em;
-     border-radius: var(--border-radius);
-     transition: border-radius 0.5s ease;
-     background: var(--input-bg,#fff);
+    padding-inline: 0.8em;
+    border-radius: var(--border-radius);
+    transition: border-radius 0.5s ease;
+    background: var(--input-bg, #fff);
 }
 
 .input {
@@ -79,9 +80,9 @@ header {
     padding-inline: 0.5em;
     padding-block: 0.7em;
     border: none;
-  }
-  
-  .form:before {
+}
+
+.form:before {
     content: "";
     position: absolute;
     background: var(--border-color);
@@ -93,36 +94,36 @@ header {
     bottom: 0;
     border-radius: 1px;
     transition: transform var(--timing) ease;
-  }
- 
-  .form:focus-within {
+}
+
+.form:focus-within {
     border-radius: var(--after-border-radius);
-  }
-  
-  input:focus {
+}
+
+input:focus {
     outline: none;
-  }
+}
 
-  .form:focus-within:before {
+.form:focus-within:before {
     transform: scale(1);
-  }
+}
 
-  .reset {
+.reset {
     border: none;
     background: none;
     opacity: 0;
     visibility: hidden;
-  }
+}
 
-  input:not(:placeholder-shown) ~ .reset {
+input:not(:placeholder-shown)~.reset {
     opacity: 1;
     visibility: visible;
-  }
+}
 
-  .form svg {
+.form svg {
     width: 17px;
     margin-top: 3px;
-  }
+}
 
 main {
     text-align: center;
@@ -152,7 +153,7 @@ main {
     flex-flow: column wrap;
     justify-content: space-around;
     width: 10vw;
-   
+
 }
 
 .itensordem1 {
@@ -179,12 +180,12 @@ main {
     padding: 5px;
     margin-right: 10px;
     flex-flow: row wrap;
-    border-style: outset ;
+    border-style: outset;
     border-color: #8BA4D5;
     border-top: #F5F5F5;
     border-right: #F5F5F5;
     border-left: #F5F5F5;
-  
+
 }
 
 .itensordem3 {
@@ -195,7 +196,7 @@ main {
     padding: 5px;
     margin-right: 10px;
     flex-flow: row wrap;
-    border-style: outset ;
+    border-style: outset;
     border-color: #8BA4D5;
     border-top: #F5F5F5;
     border-right: #F5F5F5;
@@ -258,6 +259,7 @@ li a:hover {
     margin-left: 150px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
+
 .box2 {
     display: flex;
     flex-flow: row wrap;
@@ -273,6 +275,7 @@ li a:hover {
     margin-left: 150px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
+
 .box3 {
     display: flex;
     flex-flow: row wrap;
@@ -300,6 +303,7 @@ section>p {
     border-radius: 5px;
     padding-left: 5px;
 }
+
 .box_imagens2 {
     display: inline-block;
     width: 98%;
@@ -307,6 +311,7 @@ section>p {
     border-radius: 5px;
     padding-left: 5px;
 }
+
 .box_imagens3 {
     display: inline-block;
     width: 98%;

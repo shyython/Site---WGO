@@ -351,6 +351,7 @@ section>p {
     font-family: Klee One;
     src: url(Klee_One/KleeOne-SemiBold.ttf);
 }
+<<<<<<< Updated upstream
 nav {
 	display: flex;
 	align-items: center;
@@ -358,6 +359,24 @@ nav {
 	height: 60px;
 	position: relative;
 }
+=======
+
+nav {
+	display: flex;
+	align-items: center;
+	background: #00A9D4;
+	height: 60px;
+	position: relative;
+}
+
+.not-box{
+    width: 300px;
+    position: absolute;
+    transition-property: 63px;
+   right: 35px;
+   box-shadow:  0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+>>>>>>> Stashed changes
 .notifi-box {
 	width: 300px;
 	height: 0px;

@@ -14,6 +14,9 @@ header {
     justify-content: space-around;
     flex-flow: row wrap;
 }
+body{
+    background-color: #F5F5F5;
+}
 
 .Login {
 
@@ -139,7 +142,7 @@ input:not(:placeholder-shown)~.reset {
 
 /* menu lateral D */
 .container {
-    width: 100vw;
+    width: 10vw;
     display: flex;
     flex-direction: row;
     padding: 5px;
@@ -358,6 +361,7 @@ nav {
 	height: 60px;
 	position: relative;
 }
+
 .notifi-box {
 	width: 300px;
 	height: 0px;
@@ -372,6 +376,7 @@ nav {
 	font-size: 14px;
 	padding: 10px;
 	border-bottom: 1px solid #eee;
+    background-color: #3C4E69;
 	color: #999;
 }
 .notifi-box h2 span {
@@ -380,6 +385,7 @@ nav {
 .notifi-item {
 	display: flex;
 	border-bottom: 1px solid #eee;
+    background-color: #F5F5F5;
 	padding: 15px 5px;
 	margin-bottom: 15px;
 	cursor: pointer;
@@ -401,4 +407,28 @@ nav {
 .notifi-item .text p {
 	color: #aaa;
 	font-size: 12px;
+}
+.img-not{
+    
+    max-height: 70px;
+}
+
+#configMenu {
+    position: absolute;
+    background-color: #3C4E69;
+    display: none; /* Inicialmente oculto */
+    z-index: 1;
+}
+
+#configMenu li {
+    border-top: 1px solid #6c757d;
+}
+
+#configMenu a {
+    padding: 10px 15px;
+    color: white;
+}
+
+#configMenu a:hover {
+    background-color: #6c757d;
 }

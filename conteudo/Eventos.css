@@ -258,12 +258,8 @@ li a:hover {
     font-size: 15px;
     
     
-    
-    
 }
 .evento1{
-transition: 0.5s;
-.evento1 ,.evento2, .evento3, .evento4{
 transition: 0.5s;
 border-radius: 15px;
 box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
@@ -302,12 +298,8 @@ transition: 0.5s;
     margin-top: 20px;
     
 }
-text-align: center;
 }
 .evento2{
-transition: 0.5s;
-.evento1:hover, .evento2:hover, .evento3:hover, .evento4:hover{
-    
 transition: 0.5s;
 border-radius: 15px;
 box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
@@ -351,42 +343,4 @@ background-color: #8BA4D5;
 border-radius: 10px;
 border:1px 1px 1px  solid black;
 visibility: hidden;
-background-color: #FF9A69;
-width: 20vw;
-height: auto;
-margin: 35px;
-margin-top: 5px;
-.ImagemEvento{
-    transition: 0.5s;
-        margin: 12px;
-        height: 12vw;
-        max-width: 15vw;
-        border-radius: 10px;
-        
-}
-.BtnEvento{
-    width: 15vw;
-    height: 2vw;    
-transition: 0.5s;   
-    visibility: visible;
-    margin-top: 40px;
-    
-}
-}
-
-.ImagemEvento{
-    transition: 0.5s;
-    margin: 12px;
-    max-width: 12vw;
-    height: 10vw;
-    border-radius: 10px;
-}
-.BtnEvento{
-    transition: 0.1s;
-width: 5vw;
-background-color: #8BA4D5;    
-border-radius: 10px;
-border:1px 1px 1px  solid black;
-visibility: hidden;
-cursor: pointer;
 }

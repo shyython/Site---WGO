@@ -1,0 +1,161 @@
+* {
+    margin: 0;
+    padding: 0;
+   
+}
+
+header {
+    display: flex;
+    background-color: #3C4E69;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    align-items: center;
+    color: #f5f5f5;
+    justify-content: space-around;
+    flex-flow: row wrap;
+}
+
+.Login {
+
+    color: beige;
+}
+
+.Logo {
+    margin-top: 3px;
+    background-color: #fbf5ef;
+    width: 90px;
+    border-radius: 50px;
+    border-radius: 60px;
+    justify-content: start;
+
+}
+
+.notificacao{
+    display: flex;
+    justify-content: flex-end;
+}
+.btnNot{
+    background-color: transparent  ;
+    border: none;
+}
+
+.itens-home {
+    list-style-type: none;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+
+.linksHome {
+    font-size: 19px;
+    margin: 3px;
+    color: #fffff7;
+    text-decoration: none;
+    flex-flow: row wrap;
+
+}
+
+/* Pesquisar Inicial */
+.form button {
+    border: none;
+    background: none;
+    color: #8b8ba7;
+}
+
+.form {
+    --timing: 0.3s;
+    --width-of-input: 500px;
+    --height-of-input: 40px;
+    --border-height: 2px;
+    --input-bg: #fff;
+    --border-color: #2f2ee9;
+    --border-radius: 30px;
+    --after-border-radius: 1px;
+    position: relative;
+    width: var(--width-of-input);
+    height: var(--height-of-input);
+    display: flex;
+    align-items: center;
+    padding-inline: 0.8em;
+    border-radius: var(--border-radius);
+    transition: border-radius 0.5s ease;
+    background: var(--input-bg, #fff);
+}
+
+.input {
+    font-size: 0.9rem;
+    background-color: transparent;
+    width: 100%;
+    height: 100%;
+    padding-inline: 0.5em;
+    padding-block: 0.7em;
+    border: none;
+}
+
+.form:before {
+    content: "";
+    position: absolute;
+    background: var(--border-color);
+    transform: scaleX(0);
+    transform-origin: center;
+    width: 100%;
+    height: var(--border-height);
+    left: 0;
+    bottom: 0;
+    border-radius: 1px;
+    transition: transform var(--timing) ease;
+}
+
+.form:focus-within {
+    border-radius: var(--after-border-radius);
+}
+
+input:focus {
+    outline: none;
+}
+
+.form:focus-within:before {
+    transform: scale(1);
+}
+
+.reset {
+    border: none;
+    background: none;
+    opacity: 0;
+    visibility: hidden;
+}
+
+input:not(:placeholder-shown)~.reset {
+    opacity: 1;
+    visibility: visible;
+}
+
+.form svg {
+    width: 17px;
+    margin-top: 3px;
+}
+ul {
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #8BA4D5;
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 10px 12px;
+    text-decoration: none;
+}
+
+li a:hover {
+    background-color: #111;
+}

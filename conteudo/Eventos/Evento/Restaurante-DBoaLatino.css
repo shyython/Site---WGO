@@ -125,7 +125,6 @@ input:not(:placeholder-shown)~.reset {
 }
 
 
-
 /* menu lateral D */
 .container {
     width: 100vw;
@@ -237,107 +236,136 @@ li a:hover {
     background-color: #111;
 }
 
+/* fim menu lateral D */
 
+.box1 {
+    display: flex;
+    flex-flow: row wrap;
+    margin: 5px;
+    border-radius: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #df0021;
+    height: 500px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    flex: auto;
+    margin-left: 150px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.box2 {
+    display: flex;
+    flex-flow: row wrap;
+    margin: 5px;
+    border-radius: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #df0021;
+    height: 500px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    flex: auto;
+    margin-left: 150px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.box3 {
+    display: flex;
+    flex-flow: row wrap;
+    margin: 5px;
+    border-radius: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #df0021;
+    height: 500px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    flex: auto;
+    margin-left: 150px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+section>p {
+    padding: 5px;
+}
+
+.box_imagens1 {
+    display: inline-block;
+    width: 98%;
+    max-width: 300px;
+    border-radius: 5px;
+    padding-left: 5px;
+}
+.box_imagens2 {
+    display: inline-block;
+    width: 98%;
+    max-width: 300px;
+    border-radius: 5px;
+    padding-left: 5px;
+}
+.box_imagens3 {
+    display: inline-block;
+    width: 98%;
+    max-width: 300px;
+    border-radius: 5px;
+    padding-left: 5px;
+}
+
+#box_cadastrar {
+    display: inline-block;
+    text-align: center;
+    padding: 60px;
+    background-color: #f2d3ab;
+    border-radius: 5px;
+    margin-top: 100px;
+}
+
+#body_cadastrar {
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+}
+q
+#input_cadastrar {
+    display: inline-block;
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+
+}
+
+#btn_cadastrar {
+    background-color: #4caf50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#btn_cadastrar:hover {
+    background-color: #45a049;
+}
 
 @font-face {
     font-family: Klee One;
     src: url(Klee_One/KleeOne-SemiBold.ttf);
 }
-.destaque{
-    display: flex ;
-    flex-direction: row ;
-   margin: 20px;
+main{
+    display: flex;
+    
 }
-.TituloEvento{
-    font-size: 25px;
+
+.BoxEvento{
+    display: flex;
+    flex-direction: column;
     text-align: center;
-    font-weight: bolder;
-}
-.DescricaoEvento{
-    font-size: 15px;
+    background-color: #FF9A69;
+    padding: 4vw;
     
-    
-}
-.evento1{
-transition: 0.5s;
-border-radius: 15px;
-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-background-color:#FF9A69;
-width: 250px;
-height: 300px;
-margin: 20px;
-text-align: center;
-}
-.evento1:hover, .evento2:hover, .evento3:hover, .evento4:hover{
-    
-transition: 0.5s;
-border-radius: 15px;
-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-background-color: #FF9A69;
-width: 300px;
-height: 350px;
-margin: 35px;
-margin-top: 5px;
-.ImagemEvento{
-    transition: 0.5s;
-        margin: 12px;
-        height: 12vw;
-        max-width: 21vw;
-        border-radius: 10px;
-        
-}
-.BtnEvento{
-    width: 20vw;
-    height: 2vw;    
-transition: 0.5s;   
-    visibility: visible;
-    margin-top: 20px;
-    
-}
-}
-.evento2{
-transition: 0.5s;
-border-radius: 15px;
-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-background-color:#FF9A69;
-width: 250px;
-height: 300px;
-margin: 20px;
-text-align: center;
-}
-.evento3{
-transition: 0.5s;
-border-radius: 15px;
-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-background-color: #FF9A69;
-width: 250px;
-height: 300px;
-margin: 20px;
-text-align: center;
-}
-.evento4{
-transition: 0.5s;
-border-radius: 15px;
-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-background-color: #FF9A69;
-width: 250px;
-height: 300px;
-margin: 20px;
-text-align: center;
 }
 .ImagemEvento{
-    transition: 0.5s;
-    margin: 12px;
-    max-width: 17vw;
-    height: 12vw;
-    border-radius: 10px;
-}
-.BtnEvento{
-    transition: 0.1s;
-width: 5vw;
-background-color: #8BA4D5;    
-border-radius: 10px;
-border:1px 1px 1px  solid black;
-visibility: hidden;
-cursor: pointer;
+    width: 30vw;
 }

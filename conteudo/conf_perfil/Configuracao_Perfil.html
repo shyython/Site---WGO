@@ -13,7 +13,7 @@
 
     <!-- Cabeçalho geral -->
     <header>
-        <a href="index.html"><img class="Logo" src="imagens/WgoIcon.png" alt="Logo"></a>
+        <a href="/conteudo/inicio/index.html"><img class="Logo" src="/conteudo/imagens/WgoIcon.png" alt="Logo"></a>
         <form class="form">
             <!-- Barra de pesquisa -->
             <input class="input" placeholder="Pesquisar" required="" type="text">
@@ -27,19 +27,26 @@
             </button>
             <!-- Cadastros -->
         </form>
-        <a class="Login" href="cadastrar.html">Cadastrar</a>
-        <a class="Login" href="entrar.html">entrar</a>
+        
 
     </header>
     <!-- Barra de interações -->
     <div class="menu">
 
         <ul>
-            <li><a href="index.html" class="itens">Inicio</a></li>
-            <li> <a href="Amigos" class="itens">Amigos</a></li>
-            <li> <a href="Eventos.html" class="itens">Eventos</a></li>
-            <li> <a href="Configuracao.html" class="itens4">Configurações</a></li>
-            <li> <a href="Ajuda" class="itens">Ajuda</a></li>
+            <li><a href="/conteudo/inicio/" class="itens">Inicio</a></li>
+            <li> <a href="/conteudo/amigos/Amigos.html" class="itens">Amigos</a></li>
+            <li> <a href="/conteudo/Eventos/Eventos.html" class="itens">Eventos</a></li>
+            <li>
+                <a href="#" class="itens" onclick="abrirMenuConf()">Configurações</a>
+                <ul id="configMenu" style="display: none;">
+                    <li><a href="/conteudo/cadastrar/cadastrar.html ">Cadastrar</a></li>
+                    <li><a href="/conteudo/conf_perfil/Configuracao_Perfil.html">Perfil</a></li>
+                    <li><a href="privacidade.html">Ajuda</a></li>
+
+                </ul>
+            </li>
+            
         </ul>
     </div>
     <main>
@@ -50,7 +57,7 @@
         <div class="usuario">
             <h2>Seu perfil</h2>
            
-            <img src="imagens/Icone-usuario.png" alt="" id="ImagemPerfil">
+            <img src="/conteudo/imagens/Icone-usuario.png" alt="" id="ImagemPerfil">
             <button class="BtnEditar">Editar Foto</button>
             <p id="NomePerfil">O</p>
         </div>
@@ -64,16 +71,16 @@
             <!-- Redes Sociais -->
             <div class="redes">
                 <div class="add">
-                    <img src="imagens/instagram.png" alt="" class="insta">
-                    <button class="buttonadd"><img src="imagens/add.png" alt="" class="imgadd"></button>
+                    <img src="/conteudo/imagens/instagram.png" alt="" class="insta">
+                    <button class="buttonadd"><img src="/conteudo/imagens/add.png" alt="" class="imgadd"></button>
                 </div>
                 <div class="add">
-                    <img src="imagens/twitter.png" alt="" class="twitter">
-                    <button class="buttonadd"><img src="imagens/add.png" alt="" class="imgadd"></button>
+                    <img src="/conteudo/imagens/twitter.png" alt="" class="twitter">
+                    <button class="buttonadd"><img src="/conteudo/imagens/add.png" alt="" class="imgadd"></button>
                 </div>
                 <div class="add">
-                    <img src="imagens/facebook.png" alt="" class="face">
-                    <button class="buttonadd"><img src="imagens/add.png" alt="" class="imgadd"></button>
+                    <img src="/conteudo/imagens/facebook.png" alt="" class="face">
+                    <button class="buttonadd"><img src="/conteudo/imagens/add.png" alt="" class="imgadd"></button>
                 </div>
             </div>
         </div>
@@ -85,6 +92,8 @@
 
 
     </div>
+
+    <script src="conf_perfil.js"></script>
 </body>
 
 </html>

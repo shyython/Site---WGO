@@ -1,7 +1,6 @@
 * {
     margin: 0;
     padding: 0;
-   
 }
 
 header {
@@ -10,12 +9,9 @@ header {
     padding-top: 5px;
     padding-bottom: 5px;
     align-items: center;
-    color: #f5f5f5;
+    color: #fffff7;
     justify-content: space-around;
     flex-flow: row wrap;
-}
-body{
-    background-color: #F5F5F5;
 }
 
 .Login {
@@ -31,15 +27,6 @@ body{
     border-radius: 60px;
     justify-content: start;
 
-}
-
-.notificacao{
-    display: flex;
-    justify-content: flex-end;
-}
-.btnNot{
-    background-color: transparent  ;
-    border: none;
 }
 
 .itens-home {
@@ -58,7 +45,6 @@ body{
 
 }
 
-/* Pesquisar Inicial */
 .form button {
     border: none;
     background: none;
@@ -139,10 +125,9 @@ input:not(:placeholder-shown)~.reset {
 }
 
 
-
 /* menu lateral D */
 .container {
-    width: 10vw;
+    width: 100vw;
     display: flex;
     flex-direction: row;
     padding: 5px;
@@ -157,14 +142,7 @@ input:not(:placeholder-shown)~.reset {
     flex-flow: column wrap;
     justify-content: space-around;
     width: 10vw;
-
-}
-main {
-    text-align: center;
-    background-color: #F5F5F5;
-    display: flex;
-    justify-content: space-around;
-
+   
 }
 
 .itensordem1 {
@@ -191,12 +169,12 @@ main {
     padding: 5px;
     margin-right: 10px;
     flex-flow: row wrap;
-    border-style: outset;
+    border-style: outset ;
     border-color: #8BA4D5;
     border-top: #F5F5F5;
     border-right: #F5F5F5;
     border-left: #F5F5F5;
-
+  
 }
 
 .itensordem3 {
@@ -207,7 +185,7 @@ main {
     padding: 5px;
     margin-right: 10px;
     flex-flow: row wrap;
-    border-style: outset;
+    border-style: outset ;
     border-color: #8BA4D5;
     border-top: #F5F5F5;
     border-right: #F5F5F5;
@@ -226,7 +204,8 @@ main {
 .itens {
     margin-right: 50px;
 }
-.itens1 {
+
+.itens3 {
     margin-right: 50px;
     color: gray;
 }
@@ -259,21 +238,6 @@ li a:hover {
 
 /* fim menu lateral D */
 
-/* imagens sobrepondo(ou tentando) */
-.img{
-   width: 300px;
-   height: 250;
-}
-#imagem2 {
-    position: absolute;
-    left: 70px;
-  }
-
-  #elemento-pai {
-    position: relative;
-    
-  }
-
 .box1 {
     display: flex;
     flex-flow: row wrap;
@@ -289,7 +253,6 @@ li a:hover {
     margin-left: 150px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
-
 .box2 {
     display: flex;
     flex-flow: row wrap;
@@ -305,7 +268,6 @@ li a:hover {
     margin-left: 150px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
-
 .box3 {
     display: flex;
     flex-flow: row wrap;
@@ -333,7 +295,6 @@ section>p {
     border-radius: 5px;
     padding-left: 5px;
 }
-
 .box_imagens2 {
     display: inline-block;
     width: 98%;
@@ -341,7 +302,6 @@ section>p {
     border-radius: 5px;
     padding-left: 5px;
 }
-
 .box_imagens3 {
     display: inline-block;
     width: 98%;
@@ -350,85 +310,99 @@ section>p {
     padding-left: 5px;
 }
 
+#box_cadastrar {
+    display: inline-block;
+    text-align: center;
+    padding: 60px;
+    background-color: #f2d3ab;
+    border-radius: 5px;
+    margin-top: 100px;
+}
+
+#body_cadastrar {
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+}
+q
+#input_cadastrar {
+    display: inline-block;
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+
+}
+
+#btn_cadastrar {
+    background-color: #4caf50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#btn_cadastrar:hover {
+    background-color: #45a049;
+}
+
 @font-face {
     font-family: Klee One;
     src: url(Klee_One/KleeOne-SemiBold.ttf);
 }
-nav {
-	display: flex;
-	align-items: center;
-	background: none;
-	height: 60px;
-	position: relative;
-}
-
-.notifi-box {
-	width: 300px;
-	height: 0px;
-	opacity: 0;
-	position: absolute;
-	top: 63px;
-	right: 35px;
-	transition: 1s opacity, 250ms height;
-	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-}
-.notifi-box h2 {
-	font-size: 14px;
-	padding: 10px;
-	border-bottom: 1px solid #eee;
-    background-color: #3C4E69;
-	color: #999;
-}
-.notifi-box h2 span {
-	color: #f00;
-}
-.notifi-item {
-	display: flex;
-	border-bottom: 1px solid #eee;
-    background-color: #F5F5F5;
-	padding: 15px 5px;
-	margin-bottom: 15px;
-	cursor: pointer;
-}
-.notifi-item:hover {
-	background-color: #eee;
-}
-.notifi-item img {
-	display: block;
-	width: 50px;
-	margin-right: 10px;
-	border-radius: 50%;
-}
-.notifi-item .text h4 {
-	color: #777;
-	font-size: 16px;
-	margin-top: 10px;
-}
-.notifi-item .text p {
-	color: #aaa;
-	font-size: 12px;
-}
-.img-not{
+main{
+    display: flex;
     
-    max-height: 70px;
 }
 
-#configMenu {
-    position: absolute;
-    background-color: #3C4E69;
-    display: none; /* Inicialmente oculto */
-    z-index: 1;
+.BoxEvento{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    background-color: #FF9A69;
+    padding: 1.5vw;
+    margin: 20px;
+    border-radius:30px ;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)
+    
 }
-
-#configMenu li {
-    border-top: 1px solid #6c757d;
+.ImagemEvento{
+    width: 30vw;
+    border-radius:15px ;
+    border: 3px solid black;
 }
-
-#configMenu a {
-    padding: 10px 15px;
-    color: white;
+.TituloEvento{
+    font-size: 3vw;
+    margin-bottom: 10px;
 }
+.DescricaoEvento{
+    margin: 50px;
+    font-size: 25px;
+    max-width: 50vw;
+}
+.ButtonPresenca{
+    width: 20vw;
+    height: 3vw;
+    border-radius:10px ;
+    margin-left: 10px;
+    background-color:#8BA4D5;
+}
+.ButtonCompartilhar{
+    width: 2.5vw;
+    height:auto;
+    border-radius:20px ;
+    
 
-#configMenu a:hover {
-    background-color: #6c757d;
+}
+.botoes{
+    display: flex;
+    flex-direction: row;
+   justify-content: flex-end;
+}
+.ButtonComp{
+    background-color:#8BA4D5;
+
 }

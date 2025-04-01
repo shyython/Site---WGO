@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <script></script>
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <title>Bem-vindo ao WGO!</title>
 </head>
@@ -34,17 +35,48 @@
 
         </form>
         <!-- botão de notificações -->
-        <div class="notificacao">
-            <button class="btnNot">
-                <img src="imagens/Sino.png" alt="">
-                <a href=""></a>
-            </button>
 
-        </div>
+        <nav>
+            <div class="icon" onclick="abrirNotifi()">
+                <img src="imagens/Sino.png" alt=""> <span>17</span>
+            </div>
+            <div class="notifi-box" id="box">
+                <h2>Notifications <span>17</span></h2>
+                <div class="notifi-item">
+                    <img src="imagens/Dav.jpg" alt="img" class="img-not">
+                    <div class="text">
+                        <h4>Davi Silva</h4>
+                        <p>@lorem ipsum dolor sit amet</p>
+                    </div>
+                </div>
 
-        <a class="Login" href="cadastrar.html">Cadastrar</a>
-        <a class="Login" href="entrar.html">entrar</a>
+                <div class="notifi-item">
+                    <img src="imagens/Ell.jpg" alt="img" class="img-not">
+                    <div class="text">
+                        <h4>Ella Prado</h4>
+                        <p>@lorem ipsum dolor sit amet</p>
+                    </div>
+                </div>
 
+                <div class="notifi-item">
+                    <img src="imagens/Bea.jpg" alt="img" class="img-not">
+                    <div class="text">
+                        <h4>Beatriz macedo</h4>
+                        <p>@lorem ipsum dolor sit amet</p>
+                    </div>
+                </div>
+
+
+                <div class="notifi-item">
+                    <img src="imagens/Thiago.jpg" alt="img" class="img-not">
+                    <div class="text">
+                        <h4>Thiago Silva</h4>
+                        <p>@lorem ipsum dolor sit amet</p>
+                    </div>
+                </div>
+
+            </div>
+        </nav>
     </header>
 
     <div class="menu">
@@ -52,9 +84,18 @@
         <ul>
             <li><a href="index.html" class="itens1">Inicio</a></li>
             <li> <a href="Amigos.html" class="itens">Amigos</a></li>
-            <li> <a href="Eventos" class="itens">Eventos</a></li>
-            <li> <a href="Configuracao.html" class="itens">Configurações</a></li>
-            <li> <a href="Ajuda" class="itens">Ajuda</a></li>
+            <li> <a href="Eventos.html" class="itens">Eventos</a></li>
+            
+
+            <li>
+                <a href="#" class="itens" onclick="abrirMenuConf()">Configurações</a>
+                <ul id="configMenu" style="display: none;">
+                    <li><a href="cadastrar.html ">Cadastrar</a></li>
+                    <li><a href="Configuracao.html">Perfil</a></li>
+                    <li><a href="privacidade.html">Ajuda</a></li>
+
+                </ul </ul>
+            </li>
         </ul>
 
     </div>
@@ -89,6 +130,7 @@
     </main>
 
     </div>
+    <script src="script.js"></script>
 </body>
 
 </html>

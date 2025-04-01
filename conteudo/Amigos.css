@@ -179,3 +179,128 @@ section>p {
 }
 
 /* ------------------- fim do menu principal */
+
+/* ------------------- lateral container1 */
+
+.container {
+    width: 100vw;
+    display: flex;
+    flex-direction: row;
+    padding: 5px;
+}
+
+.containerLateral {
+    background-color: #3C4E69;
+    color: #F5F5F5;
+    border-radius: 5px;
+    margin-top: 5px;
+    font-family: Arial, Helvetica, sans-serif;
+    display: inline-block;
+    flex-flow: column wrap;
+    justify-content: space-around;
+    width: 10vw;
+    height: 37vw;
+}
+
+main {
+    text-align: center;
+    background-color: #F5F5F5;
+    display: flex;
+    justify-content: space-around;
+
+}
+
+.iconLateral{
+    margin-top: 3px;
+    background-color: #9c9c9c;
+    width: 40px;
+    border-radius: 50px;
+    border-radius: 60px;
+    justify-content: start;
+    
+}
+.textoLateralPerfil{
+    margin-left: 5px;
+}
+
+.itensordem1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 8px;
+    margin-right: 10px;
+    flex-flow: row wrap;
+    border-color: #8BA4D5;
+    border-style: outset;
+    border-top: #F5F5F5;
+    border-right: #F5F5F5;
+    border-left: #F5F5F5;
+    padding-bottom: 10px;
+}
+
+.itensordem2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+    margin-right: 10px;
+    flex-flow: row wrap;
+    border-color: #8BA4D5;
+    border-style: outset;
+    border-top: #F5F5F5;
+    border-right: #F5F5F5;
+    border-left: #F5F5F5;
+
+}
+
+.itensordem3 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+    margin-right: 10px;
+    flex-flow: row wrap;
+    border-color: #8BA4D5;
+    border-style: outset;
+    border-top: #F5F5F5;
+    border-right: #F5F5F5;
+    border-left: #F5F5F5;
+
+}
+
+.itensordem4 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+    margin-right: 10px;
+    flex-flow: row wrap;
+    border-color: #8BA4D5;
+    border-style: outset;
+    border-top: #F5F5F5;
+    border-right: #F5F5F5;
+    border-left: #F5F5F5;
+
+}
+
+/* ------------------- menssagens container2*/
+
+.container2{
+    width: 100vw;
+    display: flex;
+    flex-direction: row;
+    padding: 5px;
+}
+
+.containerMenssagens{
+    background-color: #3C4E69;
+    color: #F5F5F5;
+    border-radius: 5px;
+    margin-top: 5px;
+    font-family: Arial, Helvetica, sans-serif;
+    width: 10vw;
+    height: 37vw;
+}

@@ -134,6 +134,15 @@ input:not(:placeholder-shown)~.reset {
     width: 17px;
     margin-top: 3px;
 }
+
+.itens {
+    margin-right: 50px;
+}
+.itens2 {
+    margin-right: 50px;
+    color: gray;
+}
+
 ul {
     display: flex;
     justify-content: center;
@@ -159,3 +168,14 @@ li a {
 li a:hover {
     background-color: #111;
 }
+
+section>p {
+    padding: 5px;
+}
+
+@font-face {
+    font-family: Klee One;
+    src: url(Klee_One/KleeOne-SemiBold.ttf);
+}
+
+/* ------------------- fim do menu principal */

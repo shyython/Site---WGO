@@ -126,9 +126,9 @@ input:not(:placeholder-shown)~.reset {
 
 main
 {
-display: flex;
+/* display: flex;
 flex-direction: row;
-justify-content: space-between;
+justify-content: space-between; */
 }
 
 
@@ -173,9 +173,12 @@ li a:hover {
     border-radius: 150px;
     border: 2px solid black
 }
-.NomePerfil{
+#NomePerfil{
     
     font-size: 20px;
+    padding: 8px;
+    margin-bottom: 7px;
+
 }
 .BtnEditar{
     width: 200px;
@@ -186,31 +189,35 @@ li a:hover {
 }
 /* Resumo */
 .resumo{
+    align-items: center;
     margin-top: 60px;
-display: flex;
-flex-direction: column;
-width: 40vw;
+    display: inline-block;
+    flex-direction: column;
+    width: 40vw;
 }
 .Apelido{
     
-    font-size: 25px;
-    height: 50px;
+    font-size: 15px;
+    text-align: center;
+    height: 30px;
+    width: 300px;
     border-radius: 20px;
     border: 0.2px solid black;
-    background-color:#8BA4D5 ;
 }
 .Bio{
-    font-size: 20px;
-    height: 150px;
-    margin-top: 30px;
-    border: 2px solid black;
+    font-size: 10px;
+    text-align: center;
+    height: 30px;
+    width: 300px;
+    margin-top: 20px;
+    border: 1px solid black;
 }
 .redes{
     margin-top: 20px;
     display: flex;
 }
 .insta , .twitter, .face{
-    width: 100px;
+    width: 30px;
 }
 .buttonadd{
     border: none;
@@ -226,20 +233,13 @@ flex-direction: column;
     
 }
 
-#container_lateral_perfil {
+#container_perfil {
     background-color: #F5F5F5;
     border-radius: 5px;
-    margin-top: 5px;
     font-family: Arial, Helvetica, sans-serif;
-    display: inline-block;
-    flex-flow: column wrap;
-    justify-content: space-around;
-    width: 10vw;
-    margin-top: 60px;
-    display: flex;
-    flex-direction: column;
-    width: 300px;
-    align-items: center;
+    display: block;
+    text-align: center;
+    
     
 }
 #configMenu {
@@ -260,4 +260,17 @@ flex-direction: column;
 
 #configMenu a:hover {
     background-color: #6c757d;
+}
+
+.sla {
+    background-color: #8b8ba7;
+}
+
+#perfil_funcoes {
+    background-color: #F5F5F5;
+    
+}
+
+#perfil_funcoes li {
+    color: #111;
 }

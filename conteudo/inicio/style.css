@@ -474,6 +474,8 @@ main{
     background-color:#8BA4D5;
 
 }
+
+/* notificações */
 nav {
 	display: flex;
 	align-items: center;
@@ -502,6 +504,7 @@ nav {
 .notifi-box h2 span {
 	color: #f00;
 }
+
 .notifi-item {
 	display: flex;
 	border-bottom: 1px solid #eee;
@@ -532,6 +535,8 @@ nav {
     
     max-height: 70px;
 }
+
+/* fim notificações */
 
 #configMenu {
     position: absolute;

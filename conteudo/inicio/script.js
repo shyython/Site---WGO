@@ -12,10 +12,9 @@ function mudarImagem() {
 // mundando a imagem a cada 3 segundos
 setInterval(mudarImagem, 3000);
 
-
+/* noticacoes */
 var box  = document.getElementById('box');
 var down = false;
-
 
 function abrirNotifi(){
 	if (down) {
@@ -29,6 +28,7 @@ function abrirNotifi(){
 	}
 }
 
+/* configurações */
 function abrirMenuConf() {
     const configMenu = document.getElementById('configMenu');
     if (configMenu.style.display === 'none' || configMenu.style.display === '') {

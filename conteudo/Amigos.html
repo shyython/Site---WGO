@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,6 +8,7 @@
     <title>Amigos</title>
 
 </head>
+
 <body>
     <header>
         <!-- LOGO -->
@@ -40,9 +42,6 @@
 
         </div>
 
-        <a class="Login" href="cadastrar.html">Cadastrar</a>
-        <a class="Login" href="entrar.html">entrar</a>
-
     </header>
 
     <div class="menu">
@@ -57,39 +56,53 @@
 
         <div class="container">
             <aside class="containerLateral">
-    
+
                 <div class="itensordem1">
                     <img class="iconLateral" src="imagens/Icone-usuario.png" alt="">
                     <p class="textoLateralPerfil">Perfil</p>
                 </div>
-    
+
                 <div class="itensordem2">
                     <p class="textoLateralMenssagens">Minhas menssagens</p>
                 </div>
-    
+
                 <div class="itensordem3">
                     <p class="textoLateralLugares">Meus lugares</p>
                 </div>
 
                 <div class="itensordem4">
                     <p class="textoLateralPendentes">Pendentes</p>
-                </div>    
-                
-            </aside>
-        </div>
-
-        <div class="container2">
-
-            <aside class="containerMenssagens"></aside>
-    
-                <div class="itens2ordem1">
-                    <p class="texto">AAAAAAAAAAA</p>
                 </div>
-                
+
             </aside>
 
+
+            <aside class="containerMenssagens">
+
+                <div class="itens2ordem1">
+                    <ul class="ulMais">
+
+                    <a id="marginMais"  href="">Caixa de entrada</a>
+                    <a id="marginMais" href="">Outros</a>
+                    <select name="" id="MaisLbl">
+                        <label  for="Mais">
+                            <option class="desabilitado" value="" disabled selected>Mais</option>
+                            <option value="Adicionar">Adicionar</option>
+                            <option value="Novo Grupo">Novo Grupo</option>
+                            <option value="Nova Conversa">Nova Conversa</option>
+                            <option value="Suporte">Suporte</option>
+                        </label>
+                    </select>
+
+                    </ul>
+                    <div class="input2">
+                        <input class="input2Buscar" placeholder="Buscar">
+                    </div>
+                </div>
+            </aside>
         </div>
-    
+
     </div>
 </body>
+
 </html>

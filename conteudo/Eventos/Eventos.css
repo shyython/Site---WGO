@@ -263,7 +263,7 @@ li a:hover {
 transition: 0.5s;
 border-radius: 15px;
 box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-background-color:#FF9A69;
+background-color:#FF9A69 ;
 width: 18vw;
 height: auto;
 margin: 20px;
@@ -294,6 +294,7 @@ transition: 0.5s;
     visibility: visible;
     margin-top: 20px;
     margin-bottom: 10px;
+    cursor: pointer;
 }
 }
 
@@ -312,10 +313,7 @@ border-radius: 10px;
 border:1px 1px 1px  solid black;
 visibility: hidden;
 }
-<<<<<<< Updated upstream
 
-=======
->>>>>>> Stashed changes
 #configMenu {
     position: absolute;
     background-color: #3C4E69;

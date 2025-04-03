@@ -184,6 +184,7 @@ li a:hover {
     width: 200px;
     height:40px;
     border: none;
+    border-radius: 18px;
     background-color: #8BA4D5;
     margin-bottom: 25px;
 }
@@ -328,11 +329,20 @@ nav {
     background-color: #8b8ba7;
 }
 
-#perfil_funcoes {
+#li_perfil_funcoes {
     background-color: #F5F5F5;
-    
+    color: #111;
 }
 
-#perfil_funcoes li {
+.link_perfil:hover{
+    background-color: rgb(221, 221, 221);
+   
+}
+
+#li_perfil_funcoes {
     color: #111;
+}
+
+.link_perfil {
+    color: #2f2ee9;
 }

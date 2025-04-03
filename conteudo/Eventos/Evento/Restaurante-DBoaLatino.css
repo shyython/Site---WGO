@@ -524,7 +524,12 @@ nav {
 display: flex;
 justify-content: center;
     width: 100%;
+
     
+}
+.ImagemSugestao{
+    width: 15vw;
+    height: 12vw;
 }
 .sugestao1, .sugestao2, .sugestao3{
     background-color: #FF9A69;
@@ -540,6 +545,7 @@ justify-content: center;
     font-size: 25px;
 }
 .BtnSugestao{
+    width: 15vw;
     margin-top: 20px;
     height: 25px;
     background-color: #8BA4D5;    

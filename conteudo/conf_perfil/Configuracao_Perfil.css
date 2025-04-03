@@ -223,6 +223,7 @@ li a:hover {
 .Bio{
     width: 25vw;
     height: 15vw;
+    border-radius: 1px solid;
 }   
 .redes{
     margin-top: 20px;

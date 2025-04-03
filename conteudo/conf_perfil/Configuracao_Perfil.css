@@ -126,9 +126,10 @@ input:not(:placeholder-shown)~.reset {
 
 main
 {
-/* display: flex;
+display: flex;
 flex-direction: row;
-justify-content: space-between; */
+justify-content: space-evenly;
+margin-top: 30px;
 }
 
 
@@ -167,11 +168,17 @@ li a:hover {
 
 
 /* Perfil Usuario */
-
+.Usuario{
+    display: flex;
+    flex-direction: row;
+}
 #ImagemPerfil{
-    width: 100px;  
+    width: 10vw;  
     border-radius: 150px;
     border: 2px solid black
+}
+.Dados{
+    display: flex;
 }
 #NomePerfil{
     
@@ -188,6 +195,14 @@ li a:hover {
     background-color: #8BA4D5;
     margin-bottom: 25px;
 }
+.Interacoes{
+    width: 60vw;
+}
+.FotoPerfil{
+    align-items: center;
+    justify-content: center;
+}
+
 /* Resumo */
 .resumo{
     align-items: center;
@@ -206,13 +221,9 @@ li a:hover {
     border: 0.2px solid black;
 }
 .Bio{
-    font-size: 10px;
-    text-align: center;
-    height: 30px;
-    width: 300px;
-    margin-top: 20px;
-    border: 1px solid black;
-}
+    width: 25vw;
+    height: 15vw;
+}   
 .redes{
     margin-top: 20px;
     display: flex;
@@ -238,7 +249,7 @@ flex-direction: column;
     background-color: #F5F5F5;
     border-radius: 5px;
     font-family: Arial, Helvetica, sans-serif;
-    display: block;
+    display: flex;
     text-align: center;
     
     

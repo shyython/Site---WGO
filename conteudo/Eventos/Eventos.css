@@ -246,35 +246,40 @@ li a:hover {
 
 .destaque{
     display: flex ;
-    flex-direction: row ;
+    flex-flow: row wrap;
    margin: 20px;
+   
 }
 .TituloEvento{
     font-size: 25px;
     text-align: center;
     font-weight: bolder;
+    padding-top: 15px;
 }
 .DescricaoEvento{
     font-size: 15px;
-    
+    padding: 0px 20px;
+    text-align: center;
     
 }
 .evento1, .evento2,.evento3,.evento4{
 transition: 0.5s;
 border-radius: 15px;
 box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-background-color:#FF9A69 ;
+background-color:#8BA4D5 ;
 width: 18vw;
 height: auto;
 margin: 20px;
 text-align: center;
+min-width: 350px;
+min-height: 400px;
 }
 .evento1:hover, .evento2:hover, .evento3:hover, .evento4:hover{
     
 transition: 0.5s;
 border-radius: 15px;
 box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-background-color: #FF9A69;
+
 width: 20vw;
 height: auto;
 margin: 35px;
@@ -298,20 +303,25 @@ transition: 0.5s;
 }
 }
 
+
 .ImagemEvento{
     transition: 0.5s;
     margin: 12px;
     max-width: 15vw;
     height: 12vw;
     border-radius: 10px;
+    min-width: 300px;
+    min-height: 200px;
+    
 }
 .BtnEvento{
     transition: 0.1s;
 width: 5vw;
-background-color: #8BA4D5;    
+background-color: #FF9A69;    
 border-radius: 10px;
 border:1px 1px 1px  solid black;
 visibility: hidden;
+
 }
 
 #configMenu {

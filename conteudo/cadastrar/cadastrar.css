@@ -290,7 +290,8 @@ li a:hover {
     background-color: #FFFFF7;
     border-radius: 5px;
     margin-top: 100px;
-    color: #8BA4D5;
+    color: #4968a5;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 #body_cadastrar {

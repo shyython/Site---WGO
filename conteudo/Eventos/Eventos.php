@@ -51,14 +51,15 @@
         <!-- Destaques -->
         <h2>Destaque ></h2>
         <div class="destaque">
-
-            <div class="evento1">
-                <p class="TituloEvento">Festival do café</p>
-                <img src="/conteudo/imagens/Cafe.jpg" alt="" class="ImagemEvento">
-                <p class="DescricaoEvento">O Festival Santos Café é um evento que movimenta o Centro Histórico de Santos
-                    e agrada tanto o público local quanto o de turistas</p>
-                <button class="BtnEvento">Ver Mais</button>
-            </div>
+            <form action="TesteEvento.php" method="get"></form>
+                <div value="2" class="evento1">
+                    <p class="TituloEvento">Festival do café</p>
+                    <img src="/conteudo/imagens/Cafe.jpg" alt="" class="ImagemEvento">
+                    <p class="DescricaoEvento">O Festival Santos Café é um evento que movimenta o Centro Histórico de Santos
+                        e agrada tanto o público local quanto o de turistas</p>
+                    <a href="TesteEvento.php"><button class="BtnEvento">Ver Mais</button></a>
+                </div>
+            </form>
             <div class="evento2">
                 <p class="TituloEvento">Expo Quantic 2025</p>
                 <img src="/conteudo/imagens/Expo.png" alt="" class="ImagemEvento">

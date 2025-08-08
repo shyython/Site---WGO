@@ -1,6 +1,15 @@
 <?php
+ require "ConfigBd.php";
 
+  $sql = "SELECT * FROM Eventos";
+   
+            $res = $conexao->query($sql);
+            $qtd = $res->num_rows;
 
+            $resEventos = $conexao->query($sql);
+            $qtdEventos = $resEventos->num_rows;
+            $row = $res->fetch_object()
+  
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -8,7 +17,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="Restaurante-DBoaLatino.css">
+    <link rel="stylesheet" href="teste.css">
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" />
     <script src="EventoIndividual.js" defer></script>
@@ -50,20 +59,18 @@
         <main>
             <aside>
                 <div class="BoxEvento">
-                    <h2 class="TituloEvento">D'boa Latino</h2>
-                    <img src="/conteudo/imagens/Dboa Latino.jpg " alt="" class="ImagemEvento">
+                    <?php
+                    print "<h1 class='TituloEvento'>" . $row->Nome_Evento . "</h1>";
+                    ?>
+                    <?php
+                    print "<img src=". $row->Foto . "' alt='' class='ImagemEvento'>";
+                    ?>
                 </div>
             </aside>
             <div>
-                <p class="DescricaoEvento" id="texto">D'boa Latino é um restaurante de comida mexicana localizado na
-                    Avenida Doutor
-                    Epitácio Pessoa, 179, em Santos. Com um ambiente acolhedor e vibrante, o D'boa Latino oferece uma
-                    experiência gastronômica autêntica e deliciosa, destacando-se pela variedade de pratos tradicionais
-                    mexicanos e latino-americanos No D'boa Latino, você encontrará desde tacos e burritos recheados com
-                    ingredientes frescos e saborosos, até ceviches e pokes que trazem um toque contemporâneo à culinária
-                    latina. Além disso, o restaurante é conhecido por suas opções vegetarianas e pratos à la carte,
-                    garantindo que todos os clientes encontrem algo que agrada ao paladar.
-                </p>
+                <?php
+                print "<p class='DescricaoEvento'>". $row->Descricao ."</p>";
+                ?>
                 <div class="interacoes">
                     <div class="botoes">
                         <button class="ButtonComp"><img src="/conteudo/imagens/compartilhar.png" alt="" class="ButtonCompartilhar"></button>

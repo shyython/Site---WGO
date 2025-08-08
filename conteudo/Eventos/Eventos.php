@@ -1,3 +1,16 @@
+
+<?php
+    require_once "ConfigBd.php";
+    $sql = "SELECT * FROM Eventos";
+    
+            $res = $conexao->query($sql);
+            $qtd = $res->num_rows;
+
+            $sql = "SELECT * FROM Eventos";
+            $resEventos = $conexao->query($sql);
+            $qtdEventos = $resEventos->num_rows;
+            $row = $res->fetch_object()
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -13,7 +26,7 @@
 
     <!-- Cabeçalho geral -->
     <header>
-        <a href="/conteudo/inicio/index.html"><img class="Logo" src="/conteudo/imagens/WgoIcon.png" alt="Logo"></a>
+        <a href="/conteudo/inicio/index.html"><img class="Logo" src="../imagens//WgoIcon.png" alt="Logo"></a>
         <form class="form">
             <!-- Barra de pesquisa -->
             <input class="input" placeholder="Pesquisar" required="" type="text">
@@ -54,22 +67,22 @@
             <form action="TesteEvento.php" method="get"></form>
                 <div value="2" class="evento1">
                     <p class="TituloEvento">Festival do café</p>
-                    <img src="/conteudo/imagens/Cafe.jpg" alt="" class="ImagemEvento">
+                    <img src="../imagens//Cafe.jpg" alt="" class="ImagemEvento">
                     <p class="DescricaoEvento">O Festival Santos Café é um evento que movimenta o Centro Histórico de Santos
                         e agrada tanto o público local quanto o de turistas</p>
-                    <a href="TesteEvento.php"><button class="BtnEvento">Ver Mais</button></a>
+                    <a href="TesteEvento.php"><button class="BtnEvento" >Ver Mais</button></a>
                 </div>
             </form>
             <div class="evento2">
                 <p class="TituloEvento">Expo Quantic 2025</p>
-                <img src="/conteudo/imagens/Expo.png" alt="" class="ImagemEvento">
+                <img src="../imagens//Expo.png" alt="" class="ImagemEvento">
                 <p class="DescricaoEvento">Expo Quantic no Santos Convention Center! venha participar desse encontro
                     quântico incrível que abordará os pilares de Tecnologia.</p>
                 <button class="BtnEvento">Ver Mais</button>
             </div>
             <div class="evento3">
                 <p class="TituloEvento">Jhony Rockets</p>
-                <img src="/conteudo/imagens/Jhony.jpg" alt="" class="ImagemEvento" width="300px">
+                <img src="../imagens//Jhony.jpg" alt="" class="ImagemEvento" width="300px">
                 <p class="DescricaoEvento">CHEGOU EM SANTOS, Johnny Rockets é uma cadeia de restaurantes americana,
                     especializada em fast-food. Caracteriza-se por oferecer a seus clientes uma atmosfera dos anos 50.
                 </p>
@@ -78,7 +91,7 @@
             </div>
             <div class="evento4">
                 <p class="TituloEvento">20° Torneio de Pesca</p>
-                <img src="/conteudo/imagens/Torneio.jpg" alt="" class="ImagemEvento" width="300px">
+                <img src="../imagens//Torneio.jpg" alt="" class="ImagemEvento" width="300px">
                 <p class="DescricaoEvento"> Uma prova noturna de pesca de praia em duplas na praia da Aparecida, em
                     Santos. Vagas limitadas. Muitos brindes e sorteios surpresa. Realização: Clube Santista de Pesca
                     Amadora.</p>
@@ -91,7 +104,7 @@
 
             <div class="evento1">
                 <p class="TituloEvento">Jhony Rockets</p>
-                <img src="/conteudo/imagens/Jhony.jpg" alt="" class="ImagemEvento" width="300px">
+                <img src="../imagens//Jhony.jpg" alt="" class="ImagemEvento" width="300px">
                 <p class="DescricaoEvento">CHEGOU EM SANTOS, Johnny Rockets é uma cadeia de restaurantes americana,
                     especializada em fast-food. Caracteriza-se por oferecer a seus clientes uma atmosfera dos anos 50.
                 </p>
@@ -100,7 +113,7 @@
             </div>
             <div class="evento2">
                 <p class="TituloEvento">Viela Gastronomia</p>
-                <img src="/conteudo/imagens/Viela.jpg" alt="" class="ImagemEvento">
+                <img src="../imagens//Viela.jpg" alt="" class="ImagemEvento">
                 <p class="DescricaoEvento">A Viela Gastronomica mais completa de Santos.</p>
                 <a href="/conteudo/Eventos/Evento/Restaurante-Viela_Grastronomica.html"><button class="BtnEvento">Ver
                         Mais</button></a>
@@ -108,7 +121,7 @@
             </div>
             <div class="evento3">
                 <p class="TituloEvento">Bistro Calixto</p>
-                <img src="/conteudo/imagens/Bistro Calixto.jpg" alt="" class="ImagemEvento" width="300px">
+                <img src="../imagens//Bistro Calixto.jpg" alt="" class="ImagemEvento" width="300px">
                 <p class="DescricaoEvento">Localizado nos jardins da Pinacoteca Benedito Calixto, com linda arquitetura
                     e paisagismo, o Bistrô Calixto é uma excelente opção para quem deseja passar deliciosos momentos.
                 </p>
@@ -117,12 +130,13 @@
             </div>
             <div class="evento4">
                 <p class="TituloEvento">D'boa Latino</p>
-                <img src="/conteudo/imagens/Dboa Latino.jpg" alt="" class="ImagemEvento" width="300px">
+                <img src="../imagens/Dboa Latino.jpg" alt="" class="ImagemEvento" width="300px">
                 <p class="DescricaoEvento">
                     Restaurante aconchegante e descontraído que serve pratos mexicanos, incluindo tacos, quesadillas e
                     nachos.</p>
-                <a href="/conteudo/Eventos/Evento/Restaurante-DBoaLatino.html"><button class="BtnEvento">Ver
-                        Mais</button></a>
+                    <?php
+print "<button class='BtnEvento' onclick=\"location.href='TesteEvento.php?id=" . $row->id_Evento . "'\">Ver Mais</button>";
+                ?>
             </div>
         </div>
 

@@ -69,7 +69,7 @@ body{
     --border-height: 2px;
     --input-bg: #fff;
     --border-color: #2f2ee9;
-    --border-radius: 30px;
+    --border-radius: 40px;
     --after-border-radius: 1px;
     position: relative;
     width: var(--width-of-input);
@@ -80,6 +80,7 @@ body{
     border-radius: var(--border-radius);
     transition: border-radius 0.5s ease;
     background: var(--input-bg, #fff);
+
 }
 
 .input {
@@ -90,6 +91,7 @@ body{
     padding-inline: 0.5em;
     padding-block: 0.7em;
     border: none;
+    border-radius: 10px;
 }
 
 .form:before {
@@ -292,6 +294,7 @@ li a:hover {
     margin-top: 100px;
     color: #4968a5;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 20px;
 }
 
 #body_cadastrar {

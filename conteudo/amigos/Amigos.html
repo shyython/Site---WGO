@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Amigos.css">
+    <title>Amigos</title>
+
+</head>
+<body>
+    <header>
+        <!-- LOGO -->
+        <a href="/conteudo/inicio/index.html"><img class="Logo" src="/conteudo/imagens/WgoIcon.png" alt="Logo"></a>
+
+        <!-- Barra de pesquisa -->
+        <form class="form">
+            <button>
+                <svg width="17" height="16" fill="none" xmlns="http://www.w3.org/2000/svg" role="img"
+                    aria-labelledby="search">
+                    <path d="M7.667 12.667A5.333 5.333 0 107.667 2a5.333 5.333 0 000 10.667zM14.334 14l-2.9-2.9"
+                        stroke="currentColor" stroke-width="1.333" stroke-linecap="round" stroke-linejoin="round">
+                    </path>
+                </svg>
+            </button>
+            <input class="input" placeholder="Type your text" required="" type="text">
+            <button class="reset" type="reset">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                    stroke="currentColor" stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"></path>
+                </svg>
+            </button>
+
+        </form>
+        <!-- botão de notificações -->
+        <nav>
+            <div class="icon" onclick="abrirNotifi()">
+                <img src="/conteudo/imagens/Sino.png" alt=""> <span>17</span>
+            </div>
+            <div class="notifi-box" id="box">
+                <h2>Notifications <span>17</span></h2>
+                <div class="notifi-item">
+                    <img src="/conteudo/imagens/Dav.jpg" alt="img" class="img-not">
+                    <div class="text">
+                        <h4>Davi Silva</h4>
+                        <p>@lorem ipsum dolor sit amet</p>
+                    </div>
+                </div>
+
+                <div class="notifi-item">
+                    <img src="/conteudo/imagens/Ell.jpg" alt="img" class="img-not">
+                    <div class="text">
+                        <h4>Ella Prado</h4>
+                        <p>@lorem ipsum dolor sit amet</p>
+                    </div>
+                </div>
+
+                <div class="notifi-item">
+                    <img src="/conteudo/imagens/Bea.jpg" alt="img" class="img-not">
+                    <div class="text">
+                        <h4>Beatriz macedo</h4>
+                        <p>@lorem ipsum dolor sit amet</p>
+                    </div>
+                </div>
+
+
+                <div class="notifi-item">
+                    <img src="/conteudo/imagens/Thiago.jpg" alt="img" class="img-not">
+                    <div class="text">
+                        <h4>Thiago Silva</h4>
+                        <p>@lorem ipsum dolor sit amet</p>
+                    </div>
+                </div>
+
+            </div>
+        </nav>
+
+    </header>
+
+    <div class="menu">
+
+        <ul>
+            <li><a href="/conteudo/inicio/index.html" class="itens1">Inicio</a></li>
+            <li> <a href="Amigos.html" class="itens">Amigos</a></li>
+            <li> <a href="/conteudo/Eventos/Eventos.html" class="itens">Eventos</a></li>
+            
+            <li>
+                <a href="#" class="itens" onclick="abrirMenuConf()">Configurações</a>
+                <ul id="configMenu" style="display: none;">
+                    <li><a href="/conteudo/cadastrar/cadastrar.html ">Cadastrar</a></li>
+                    <li><a href="/conteudo/conf_perfil/Configuracao_Perfil.html">Perfil</a></li>
+                    <li><a href="privacidade.html">Ajuda</a></li>
+
+                </ul>
+            </li>
+        </ul>
+
+        <div class="container">
+            <aside class="containerLateral">
+    
+                <div class="itensordem1">
+                    <img class="iconLateral" src="/conteudo/imagens/Icone-usuario.png" alt="">
+                    <p class="textoLateralPerfil">Perfil</p>
+                </div>
+    
+                <div class="itensordem2">
+                    <p class="textoLateralMenssagens">Minhas menssagens</p>
+                </div>
+    
+                <div class="itensordem3">
+                    <p class="textoLateralLugares">Meus lugares</p>
+                </div>
+
+                <div class="itensordem4">
+                    <p class="textoLateralPendentes">Pendentes</p>
+                </div>    
+                
+            </aside>
+        </div>
+
+        <div class="container2">
+
+            <aside class="containerMenssagens"></aside>
+    
+                <div class="itens2ordem1">
+                    <p class="texto">AAAAAAAAAAA</p>
+                </div>
+                
+            </aside>
+
+        </div>
+    
+    </div>
+    <script src="amigos.js"></script>
+</body>
+</html>

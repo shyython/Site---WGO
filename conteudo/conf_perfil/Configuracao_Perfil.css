@@ -3,6 +3,10 @@
     padding: 0;
 }
 
+body {
+    background-color: #F5F5F5;
+}
+
 header {
     display: flex;
     background-color: #3C4E69;
@@ -141,7 +145,7 @@ justify-content: space-between; */
     color: gray;
 }
 
-ul {
+.ul-header {
     display: flex;
     justify-content: center;
     list-style-type: none;
@@ -238,6 +242,11 @@ li a:hover {
 .img-config {
     width: 30px;
     height: 30px;
+}
+
+.btn-config {
+    border: none;
+    background-color: #F5F5F5;
 }
 
 .div-itens-config {
@@ -431,10 +440,26 @@ nav {
 }
 
 .sla {
-    background-color: #eee;
+    
     border-top: 1px solid;
-    border-color: #999;
+    border-color: #bdbdbd75;
 }
+
+ul {
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #F5F5F5;
+}
+
+.li_perfil_funcoes a:hover {
+    background-color: #d1d1d1;
+    border-bottom: #3C4E69 1px solid;
+}
+
 
 #perfil_funcoes {
     background-color: #F5F5F5;
@@ -442,5 +467,10 @@ nav {
 }
 
 #perfil_funcoes li {
+    color: #111;
+}
+
+.li_perfil_funcoes a{
+    
     color: #111;
 }

@@ -1,3 +1,18 @@
+ 
+<?php
+    require_once "configbd.php";
+    $sql = "SELECT * FROM Dados_Usuario";
+   
+            $res = $conexao->query($sql);
+            $qtd = $res->num_rows;
+ 
+            $sql = "SELECT * FROM Dados_Usuario";
+            $resDados = $conexao->query($sql);
+            $resDados = $resDados->num_rows;
+            $row = $res->fetch_object()
+?>
+ 
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -96,37 +111,12 @@
     <main>
         <!-- Perfil -->
 
-        <aside class="FotoPerfil">
-            <img src="/conteudo/imagens/Icone-usuario.png" alt="" id="ImagemPerfil">
-        </aside>
-        <div class="Interacoes">
-            <section class="Dados">
-                <p id="NomePerfil">Nome do usuario</p>
-                <a href="btn_Editar"><button class="BtnEditar"> Editar Perfil</button></a>
-            </section>
-            <input type="text" placeholder="Bio" class="Bio">
-            <!-- Redes Sociais -->
-            <div class="redes">
-                <div class="add">
-                    <img src="/conteudo/imagens/instagram.png" alt="" class="insta">
-                    <button class="buttonadd"><img src="/conteudo/imagens/add.png" alt="" class="imgadd"></button>
-                </div>
-                <div class="add">
-                    <img src="/conteudo/imagens/twitter.png" alt="" class="twitter">
-                    <button class="buttonadd"><img src="/conteudo/imagens/add.png" alt="" class="imgadd"></button>
-                </div>
-                <div class="add">
-                    <img src="/conteudo/imagens/facebook.png" alt="" class="face">
-                    <button class="buttonadd"><img src="/conteudo/imagens/add.png" alt="" class="imgadd"></button>
         <div id="container_perfil">
             <!-- Foto do usuario -->
             <div class="usuario">
                 <div class="div-itens-config">
-                    <p id="NomePerfil">Usuário</p>
-                    <button class="btn-config">
-                        <a href=""><img class="img-config" src="https://cdn-icons-png.flaticon.com/128/2956/2956788.png"
-                                alt=""></a>
-                    </button>
+                    <p><?php print $row->Nome; ?></p>
+                    <?php print" <img src=". $row->foto . ">"; ?>
                 </div>
                 <!-- <div class="div-seguir">
                     
@@ -147,8 +137,8 @@
                         <a href="">teste</a>
                     </div>
                     <div class="container-btns">
-                        <button class="BtnEditar"><a href="link-btn">Editar Perfil</a></button>
-                        <button class="BtnCompartilhar"><a href="link-btn">Compartilhar Perfil</a></button>
+                        <button class="BtnEditar">Editar Perfil</button>
+                        <button class="BtnCompartilhar">Compartilhar Perfil</button>
                     </div>
                     <div class="resumo">
                         <!-- <input type="text" placeholder="Apelido" class="Apelido">
@@ -173,15 +163,18 @@
                         </div> -->
                     </div>
                 </div>
-            </div>
-            <div class="sla">
-                <ul id="li_perfil_funcoes">
-                    <li id="li_perfil_funcoes"><a class="link_perfil" href="">Publicações</a></li>
-                    <li id="li_perfil_funcoes"><a class="link_perfil" href="">Confirmados</a></li>
-                    <li><a class="link_perfil" href="">Salvos</a></li>
-                </ul>
+
+
+
             </div>
 
+            <div class="sla">
+                <ul class="li_perfil_funcoes">
+                    <li class="li_perfil_funcoes"><a href="">Publicações</a></li>
+                    <li class="li_perfil_funcoes"><a href="">Confirmados</a></li>
+                    <li class="li_perfil_funcoes"><a href="">Salvos</a></li>
+                </ul>
+            </div>
         </div>
 
     </main>

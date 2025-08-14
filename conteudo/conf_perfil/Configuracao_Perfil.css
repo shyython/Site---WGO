@@ -256,6 +256,91 @@ flex-direction: column;
     
 }
 
+/*.div-seguir {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+ .btn-seguir {
+    width: 100px;
+    height: 25px;
+    border-radius: 10px;
+    border-color: #8BA4D5;
+    background-color: #8BA4D5;
+    margin-right: 10px;
+}
+
+.btn-mensagem {
+    width: 120px;
+    height: 25px;
+    border-radius: 10px;
+    border-color: #8BA4D5;
+    background-color: #8BA4D5;
+    margin-right: 10px;
+} */
+
+.container-obj {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.div-img{
+    display: flex;
+    justify-content: left;
+}
+
+.div-seguidores {
+    display: flex;
+    justify-content: space-evenly;
+    width: 40%;
+    align-items: center;
+
+}
+
+.container-btns {
+    display: flex;
+    width: 40%;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.link-btn{
+
+    
+}
+
+.BtnEditar {
+    display: flex;
+    width: 200px;
+    height: 40px;
+    border: none;
+    background-color: #8BA4D5;
+    justify-content: space-around;
+    align-items: center;
+    border-radius: 20px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+
+}
+
+.BtnCompartilhar {
+    display: flex;
+    width: 200px;
+    height: 40px;
+    border: none;
+    background-color: #8BA4D5;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
 /* notificações */
 nav {
 	display: flex;

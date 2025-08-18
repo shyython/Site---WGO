@@ -1,15 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>WGO -- Cadastro</title>
     <link rel="stylesheet" href="cadastrar.css">
 </head>
+
 <body id="body_cadastrar">
     <header>
         <!-- LOGO -->
-        <a href="/conteudo/inicio/index.html"><img class="Logo" src="/conteudo/imagens/WgoIcon.png" alt="Logo"></a>
+        <a href="cadastro.php"><img class="Logo" src="../imagens/Wgo.png" alt="Logo"></a>
 
         <!-- Barra de pesquisa -->
         <form class="form">
@@ -40,7 +42,7 @@
             <li><a href="/conteudo/inicio/index.html " class="itens1">Inicio</a></li>
             <li> <a href="/conteudo/amigos/Amigos.html" class="itens">Amigos</a></li>
             <li> <a href="/conteudo/Eventos/Eventos.html" class="itens">Eventos</a></li>
-            
+
 
             <li>
                 <a href="#" class="itens" onclick="abrirMenuConf()">Configurações</a>
@@ -56,26 +58,42 @@
     </div>
 
     <div id="box_cadastrar">
-    <form id="form_cadastrar" action="validar_cadastro.php" method="post">
-        <h1>Cadastrar</h1> <br>
-        <label for="nome">Nome:</label>
-        <input type="text" id="input_cadastrar" placeholder="Seu nome..."> <br>
+        <form id="form_cadastrar" action="valida_cadastro.php" method="POST">
+            <h1>Cadastrar</h1> <br>
+            <label for="nome">Nome:</label>
+            <input name="nome" type="text" id="input_cadastrar" placeholder="Nome completo"> <br>
 
-        
-        <label for="Usuario">Usuario:</label>
-        <input type="text" id="input_cadastrar" placeholder="Seu nome de suario..."> <br>
 
-        <label for="Email">Email:</label>
-        <input type="text" id="input_cadastrar" placeholder="Seu Email..."> <br>
+            <label for="Usuario">Usuario:</label>
+            <input  name="nomeUsuario" type="text" id="input_cadastrar" placeholder="Seu nome de usuario"> <br>
 
-        <label for="Senha">Senha:</label>
-        <input type="text" id="input_cadastrar" placeholder="Sua Senha...">
+            <label for="Email">Email:</label>
+            <input name="email" type="text" id="input_cadastrar" placeholder="E-mail"> <br>
 
-        <input id="btn_cadastrar" type="submit" value="Cadastrar">
+            <label for="Senha">Senha:</label>
+            <input name="senha" type="password" id="input_cadastrar" placeholder="Senha">
 
-    </form>
-</div>
+            <input id="btn_cadastrar" type="submit" value="Cadastrar">
 
-<script src="cadastrar.js"></script>
+        </form>
+
+        <?php 
+        if (isset($_GET['email']) && $_GET['email'] === 'erro') { ?>
+            <div class="text-danger" style="text-align: center;"> E-Mail já cadastrado!</div>
+        <?php } ?>
+
+       
+
+
+        <?php
+        if (isset($_GET['usuario']) && $_GET['usuario'] === 'sucesso') { ?>
+            <script> alert('Usuário cadastrado com Sucesso!');</script>
+        <?php } else if (isset($_GET['usuario']) && $_GET['usuario'] != 'sucesso') { ?>
+                <script> alert('Erro ao inserir usuário no banco, contate o administador!'); </script>
+        <?php } ?>
+    </div>
+
+    <script src="cadastrar.js"></script>
 </body>
+
 </html>

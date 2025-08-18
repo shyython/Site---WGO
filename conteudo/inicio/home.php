@@ -1,3 +1,12 @@
+<?php
+require_once("validador_acesso.php");
+require_once("config.php");
+
+$sql = "SELECT * FROM usuarios where id_usuario = '{$_SESSION['id']}'";
+$conexao->query($sql);
+$sql ->fetch_object();
+
+?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -14,7 +23,7 @@
 <body>
     <header>
         <!-- LOGO -->
-        <a href="home.php"><img class="Logo" src="../imagens/WgoIcon.png" alt="Logo"></a>
+        <a href="home.php"><img class="Logo" src="../conteudo/imagens/WgoIcon.png" alt="Logo"></a>
 
         <!-- Barra de pesquisa -->
         <form class="form">

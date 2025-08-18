@@ -13,7 +13,7 @@
     <div class="container" style="justify-content: center; align-items: center;">
         <div class="card">
             <div class="card-header" style="color: white; text-align:center;">
-                <img class="imgUser" src="../imagens/Icone-usuario.png" alt="Ícone de Usuário">
+                <img class="imgUser" src="../conteudo/imagens/Icone-usuario.png" alt="Ícone de Usuário">
 
             </div>
             <div class="card-body" style="color:white;">
@@ -30,7 +30,7 @@
                         <!-- <label for="senha">Senha</label> -->
                         <input type="password" name="senha" id="senha" class="input" placeholder="Senha" required>
                         <div class="text-primary" style="text-align: right;">
-                            <a href="../cadastrar/cadastrar.php" style=" font-size: 12px; margin: 5px; color: #8BA4D5;">Novo? Cadastre-se!</a>
+                            <a href="../conteudo/cadastrar/cadastro.php" style=" font-size: 12px; margin: 5px; color: #8BA4D5;">Novo? Cadastre-se!</a>
                         </div>
                     </div>
 

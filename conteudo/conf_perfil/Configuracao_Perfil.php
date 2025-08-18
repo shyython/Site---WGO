@@ -1,15 +1,26 @@
  
 <?php
-    require_once "configbd.php";
-    $sql = "SELECT * FROM Dados_Usuario";
-   
-            $res = $conexao->query($sql);
-            $qtd = $res->num_rows;
- 
-            $sql = "SELECT * FROM Dados_Usuario";
-            $resDados = $conexao->query($sql);
-            $resDados = $resDados->num_rows;
-            $row = $res->fetch_object()
+if(isset($_FILES['arquivos'])) {
+    $arquivo = $_FILES['arquivos'];
+
+    if($arquivo['error'])
+    die("Falha ao enviar o arquivo, tente novamente.");
+
+    $pasta = "arquivos/";
+    $nomeDoArquivo = $arquivo["name"];
+    $novoNomeDoArquivo = uniqid();
+    $extensao = strtolower(pathinfo($nomeDoArquivo, PATHINFO_EXTENSION));
+
+    if ($extensao != "jpg" && $extensao != 'png')
+    die("Tipo de arquivo não aceito.");
+
+    $deu_certo = move_uploaded_file($arquivo["temp_name"], $pasta . $novoNomeDoArquivo . "." . $extensao);
+        if($deu_certo)
+        echo "<p>Arquivo enviado com sucesso! Para acessá-lo, <a target=\"_blank\" href=\"arquivos/$novoNomeDoArquivo.$extensao";
+        else 
+        echo "<p>Falha ao enviar arquivo</p>";
+    
+}
 ?>
  
 
@@ -110,23 +121,25 @@
 
     <main>
         <!-- Perfil -->
-
-        <div id="container_perfil">
+        <form enctype="multipart/form-data" action="">
+            <div id="container_perfil">
             <!-- Foto do usuario -->
             <div class="usuario">
                 <div class="div-itens-config">
-                    <p><?php print $row->Nome; ?></p>
-                    <?php print" <img src=". $row->foto . ">"; ?>
-                </div>
-                <!-- <div class="div-seguir">
+                    <p><?php /*print $row->Nome; */?></p>
+                    <?php /*print" <img src=". $row->foto . ">";*/ ?>
+                 </div>
+                 <!-- <div class="div-seguir">
                     
                     <button class="btn-seguir">Seguir</button>
                     <button class="btn-mensagem">Enviar mensagem</button>
-                </div> -->
-                <div class="container-obj">
+                 </div> -->
+                 <div class="container-obj">
                     <div class="div-seguidores">
                         <div class="div-img">
                             <img src="/conteudo/imagens/Icone-usuario.png" alt="" id="ImagemPerfil">
+                            <input name="arquivo" type="file">
+                            <button name="upload" type="submit">enviar foto</button>
                         </div>
                         <label for="">posts</label>
                         <label for="">seguidores</label>
@@ -137,7 +150,7 @@
                         <a href="">teste</a>
                     </div>
                     <div class="container-btns">
-                        <button class="BtnEditar">Editar Perfil</button>
+                        <a href="./editar_perfil/editar_perfil.php"><button class="BtnEditar">Editar Perfil</button></a>
                         <button class="BtnCompartilhar">Compartilhar Perfil</button>
                     </div>
                     <div class="resumo">
@@ -167,7 +180,7 @@
 
 
             </div>
-
+        </form>
             <div class="sla">
                 <ul class="li_perfil_funcoes">
                     <li class="li_perfil_funcoes"><a href="">Publicações</a></li>
@@ -176,9 +189,7 @@
                 </ul>
             </div>
         </div>
-
     </main>
     <script src="conf_perfil.js"></script>
 </body>
-
 </html>

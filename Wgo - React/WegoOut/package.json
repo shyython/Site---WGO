@@ -11,8 +11,11 @@
   "dependencies": {
     "@react-navigation/bottom-tabs": "^7.4.6",
     "@react-navigation/stack": "^7.4.7",
+    "body-parser": "^2.2.0",
     "expo": "~53.0.20",
     "expo-status-bar": "~2.2.3",
+    "express": "^5.1.0",
+    "mysql": "^2.18.1",
     "react": "19.0.0",
     "react-native": "0.79.5",
     "react-native-gesture-handler": "^2.28.0"

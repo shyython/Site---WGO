@@ -2,6 +2,8 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 import Inicio from './Src/Pages';
 import Home from './Src/Home'; // ajuste o caminho se necessário
+import StackRoutes from './Src/Pages/stackroutes';
+
 
 const Stack = createStackNavigator();
 
@@ -11,7 +13,7 @@ export default function App() {
       <Stack.Navigator initialRouteName="Inicio"
        screenOptions={{ headerShown: false }}>
         <Stack.Screen name="Inicio" component={Inicio} />
-        <Stack.Screen name="Home" component={Home} />
+        <Stack.Screen name="Home" component={StackRoutes} />
       </Stack.Navigator>
     </NavigationContainer>
   );

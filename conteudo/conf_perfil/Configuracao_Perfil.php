@@ -150,7 +150,7 @@ if(isset($_FILES['arquivos'])) {
                         <a href="">teste</a>
                     </div>
                     <div class="container-btns">
-                        <a href="./editar_perfil/editar_perfil.php"><button class="BtnEditar">Editar Perfil</button></a>
+                        <button class="BtnEditar"><a href="/conteudo/editar_perfil/editar_perfil.php">Editar Perfil</a></button>
                         <button class="BtnCompartilhar">Compartilhar Perfil</button>
                     </div>
                     <div class="resumo">

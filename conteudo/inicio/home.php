@@ -1,3 +1,15 @@
+<?php
+require_once("../validador_acesso.php");
+require_once("../config.php");
+
+print("$_SESSION[id]");
+$sql = "SELECT * FROM usuarios WHERE id_usuario = '{$_SESSION['id_usuario']}'";
+$res = $conexao->query($sql);
+$row = $res->fetch_object();
+
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -13,7 +25,7 @@
 <body>
     <header>
         <!-- LOGO -->
-        <a href="index.html"><img class="Logo" src="/conteudo/imagens/WgoIcon.png" alt="Logo"></a>
+        <a href="home.php"><img class="Logo" src="../conteudo/imagens/WgoIcon.png" alt="Logo"></a>
 
         <!-- Barra de pesquisa -->
         <form class="form">
@@ -38,7 +50,7 @@
 
         <nav>
             <div class="icon" onclick="abrirNotifi()">
-                <img src="/conteudo/imagens/Sino.png" alt=""> <span>17</span>
+                <img src="../imagens/Sino.png" alt=""> <span>17</span>
             </div>
             <div class="notifi-box" id="box">
                 <h2>Notifications <span>17</span></h2>
@@ -82,16 +94,15 @@
     <div class="menu">
 
         <ul>
-            <li><a href="/conteudo/inicio/index.html " class="itens">Inicio</a></li>
-            <li> <a href="/conteudo/amigos/Amigos.html" class="itens">Amigos</a></li>
-            <li> <a href="/conteudo/Eventos/Eventos.html" class="itens3">Eventos</a></li>
+            <li><a href="home.php " class="itens">Inicio</a></li>
+            <li> <a href="../amigos/Amigos.html" class="itens">Amigos</a></li>
+            <li> <a href="../Eventos/Eventos.html" class="itens3">Eventos</a></li>
             
 
             <li>
                 <a href="#" class="itens" onclick="abrirMenuConf()">Configurações</a>
                 <ul id="configMenu" style="display: none;">
-                    <li><a href="/conteudo/cadastrar/cadastrar.html ">Cadastrar</a></li>
-                    <li><a href="/conteudo/conf_perfil/Configuracao_Perfil.html">Perfil</a></li>
+                    <li><a href="../conf_perfil/Configuracao_Perfil.html">Perfil</a></li>
                     <li><a href="privacidade.html">Ajuda</a></li>
 
                 </ul>
@@ -133,5 +144,5 @@
     </div>
     <script src="script.js"></script>
 </body>
-
+</html>
 </html>

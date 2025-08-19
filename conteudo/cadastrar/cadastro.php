@@ -1,81 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="cadastrar.css">
-</head>
-<body id="body_cadastrar">
-    <header>
-        <!-- LOGO -->
-        <a href="/conteudo/inicio/index.html"><img class="Logo" src="/conteudo/imagens/WgoIcon.png" alt="Logo"></a>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="cadastro.css">
+    <title>Sign Up</title>
 
-        <!-- Barra de pesquisa -->
-        <form class="form">
-            <button>
-                <svg width="17" height="16" fill="none" xmlns="http://www.w3.org/2000/svg" role="img"
-                    aria-labelledby="search">
-                    <path d="M7.667 12.667A5.333 5.333 0 107.667 2a5.333 5.333 0 000 10.667zM14.334 14l-2.9-2.9"
-                        stroke="currentColor" stroke-width="1.333" stroke-linecap="round" stroke-linejoin="round">
-                    </path>
-                </svg>
-            </button>
-            <input class="input" placeholder="Type your text" required="" type="text">
-            <button class="reset" type="reset">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
-                    stroke="currentColor" stroke-width="2">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"></path>
-                </svg>
-            </button>
+<body>
 
-        </form>
-        <!-- botão de notificações -->
+    <h2>Create Account</h2>
+    <img class="avatar" src="../imagens/Icone-usuario.png" alt="User" />
 
-    </header>
+    <form action="valida_cadastro.php" method="POST">
+        <input type="text" name="nomeUsuario" placeholder="Nome completo" required />
+        <input type="email" name="emailUsuario" placeholder="Email" required />
+        <input type="password" name="senhaUsuario" placeholder="Password" required />
+       
+       
+       <?php //VALIDA SE O USUÁRIO JÁ NÃO ESTAVA CADASTRADO
+        if (isset($_GET['email']) && $_GET['email'] === 'erro') { ?>
+            <div class="text-danger" style="text-align: center;"> E-Mail já cadastrado!</div>
+        <?php } ?>
 
-    <div class="menu">
+        <?php //VALIDA SE O PERFIL É VALIDO
+        if (isset($_GET['validaperfil']) && $_GET['validaperfil'] === 'erro') { ?>
+            <div class="text-danger" style="text-align: center;"> Obrigatório selecionar um perfil!</div>
+        <?php } ?>
 
-        <ul>
-            <li><a href="/conteudo/inicio/index.html " class="itens1">Inicio</a></li>
-            <li> <a href="/conteudo/amigos/Amigos.html" class="itens">Amigos</a></li>
-            <li> <a href="/conteudo/Eventos/Eventos.html" class="itens">Eventos</a></li>
-            
+        <?php //VALIDA SE O PERFIL É VALIDO
+        if (isset($_GET['usuario']) && $_GET['usuario'] === 'sucesso') { ?>
+            <script> alert('Usuário cadastrado com Sucesso!');</script>
+        <?php } else if (isset($_GET['usuario']) && $_GET['usuario'] != 'sucesso') { ?>
+                <script> alert('Erro ao inserir usuário no banco, contate o administador!'); </script>
+        <?php } ?>
 
-            <li>
-                <a href="#" class="itens" onclick="abrirMenuConf()">Configurações</a>
-                <ul id="configMenu" style="display: none;">
-                    <li><a href="/conteudo/cadastrar/cadastrar.html ">Cadastrar</a></li>
-                    <li><a href="/conteudo/conf_perfil/Configuracao_Perfil.html">Perfil</a></li>
-                    <li><a href="privacidade.html">Ajuda</a></li>
-
-                </ul>
-            </li>
-        </ul>
-
-    </div>
-
-    <div id="box_cadastrar">
-    <form id="form_cadastrar" action="validar_cadastro.php" method="post">
-        <h1>Cadastrar</h1> <br>
-        <label for="nome">Nome:</label>
-        <input type="text" id="input_cadastrar" placeholder="Seu nome..."> <br>
-
-        
-        <label for="Usuario">Usuario:</label>
-        <input type="text" id="input_cadastrar" placeholder="Seu nome de suario..."> <br>
-
-        <label for="Email">Email:</label>
-        <input type="text" id="input_cadastrar" placeholder="Seu Email..."> <br>
-
-        <label for="Senha">Senha:</label>
-        <input type="text" id="input_cadastrar" placeholder="Sua Senha...">
-
-        <input id="btn_cadastrar" type="submit" value="Cadastrar">
+        <button type="submit">Cadastrar</button>
 
     </form>
-</div>
 
-<script src="cadastrar.js"></script>
+    <div class="links">
+        <p>Já tem uma conta? <a href="login.html">Login</a></p>
+    </div>
+
 </body>
+
 </html>

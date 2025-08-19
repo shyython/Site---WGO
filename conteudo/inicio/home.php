@@ -1,10 +1,12 @@
 <?php
-require_once("validador_acesso.php");
-require_once("config.php");
+require_once("../validador_acesso.php");
+require_once("../config.php");
 
-$sql = "SELECT * FROM usuarios where id_usuario = '{$_SESSION['id']}'";
-$conexao->query($sql);
-$sql ->fetch_object();
+print("$_SESSION[id]");
+$sql = "SELECT * FROM usuarios WHERE id_usuario = '{$_SESSION['id_usuario']}'";
+$res = $conexao->query($sql);
+$row = $res->fetch_object();
+
 
 ?>
 
@@ -142,5 +144,5 @@ $sql ->fetch_object();
     </div>
     <script src="script.js"></script>
 </body>
-
+</html>
 </html>

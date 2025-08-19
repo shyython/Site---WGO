@@ -1,13 +1,13 @@
 <?php
     include ('config.php');
    
-    
-    $sql = "SELECT * FROM usuarios WHERE email = '{$_POST['email']}'";
+    // VERIFICA SE O E-MAIL JÁ ESTÁ CADASTRADO
+    $sql = "SELECT * FROM usuarios WHERE emailUsuario = '{$_POST['email']}'";
     $res = $conexao->query($sql);
 
     if ($res->num_rows > 0) {
         header('location: cadastro.php?email=erro');
-        exit(); 
+        exit(); //ADIONADO PARA GARANTIR QUE O SCRIPT PARA AQUI
     }   
 
     //VALIDA SE FOI SELECIONADO ALGUMA OPÇÃO
@@ -17,13 +17,12 @@
     } else {
 
         $nome = $_POST['nome'];
-        $nomeUsuario = $_POST['nomeUsuario'];
-        $email = $_POST['email'];
+        $email = $_POST['emailUsuario'];
         $senha = md5($_POST['senha']);
-
+        $perfil = $_POST['perfil'];
 
         //INSERÇÃO DOS DADOS NO BANCO
-        $sql = "INSERT INTO usuarios(nome, email, senha, perfil) VALUES('{$nome}', '{$nomeUsuario}', '{$emailUsuario}', '{$senhaUsuario}')";
+        $sql = "INSERT INTO usuarios(nome, email, senha, perfil) VALUES('{$nome}', '{$email}', '{$senha}', '{$perfil}')";
         $res = $conexao->query($sql);
 
         //REDIRECIONA E INFORMA SE FOI CONCLUIDA A INCLUSÃO COM SUCESSO OU NÃO

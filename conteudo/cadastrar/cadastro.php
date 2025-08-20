@@ -40,7 +40,7 @@
     </form>
 
     <div class="links">
-        <p>Já tem uma conta? <a href="login.html">Login</a></p>
+        <p>Já tem uma conta? <a href="login.php">Login</a></p>
     </div>
 
 </body>

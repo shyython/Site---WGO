@@ -16,7 +16,11 @@
         </div>
 
 
+<<<<<<< HEAD
         <form action="login.php" method="POST">
+=======
+        <form action="valida_login.php" method="POST">
+>>>>>>> 3aa94c5c5fa42c1664fcf2908e3c389b39a709f4
             <input type="text" name="emailUsuario" placeholder="E-mail" required>
             <input type="password" name="senhaUsuario" placeholder="Senha" required>
             <button type="submit">LOGIN</button>

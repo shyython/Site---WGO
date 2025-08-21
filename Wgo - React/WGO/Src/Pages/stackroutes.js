@@ -6,6 +6,7 @@ import Feather from 'react-native-vector-icons/Feather'
 const Tab = createBottomTabNavigator();
 import Home from '../Home';
 import Eventos from '../Eventos';
+import Perfil from '../Perfil';
 import Configuracoes from '../Configuracoes';
 
 export default function StackRoutes(){
@@ -16,6 +17,7 @@ export default function StackRoutes(){
              name="Home"
             component={Home}
              options={{
+              headerShown: false,
             tabBarIcon: ({color, size})=>{
             return <Feather name='home' color={color} size={size}/>
             },
@@ -26,6 +28,14 @@ export default function StackRoutes(){
          options={{
             tabBarIcon: ({color, size})=>{
             return <Feather name='map' color={color} size={size}/>
+            },
+          }} />
+        <Tab.Screen
+         name="Perfil" 
+         component={Perfil}
+         options={{
+            tabBarIcon: ({color, size})=>{
+            return <Feather name='user' color={color} size={size}/>
             },
           }} />
           

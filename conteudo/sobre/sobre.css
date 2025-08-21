@@ -295,3 +295,24 @@ a{
     height: 20px;
     border-radius: 100px;
 }
+
+/* categorias */
+
+.div-categoria{
+    display: flex;
+    justify-content: space-evenly;
+    text-align: center;
+    align-items: center;
+    padding: 15px;
+}
+
+.div-img-icone{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #e92e2e;
+    width: 90px;
+    height: 90px;
+    border-radius: 50px;
+}
+

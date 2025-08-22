@@ -8,27 +8,28 @@ body {
     font-family: Arial, Helvetica, sans-serif;
 }
 
-.div-introducao-basica{
+.div-introducao-basica {
+    background-image: ;
     height: 400px;
     background-color: #a7a7a7;
 }
 
-.div-introducao-conteudo{
+.div-introducao-conteudo {
     align-items: center;
 
 }
 
-.Titulo-WGO{
-    
+.Titulo-WGO {
+
     text-align: center;
     font-size: 100px;
 }
 
-.Titulo-wgo{
+.Titulo-wgo {
     text-align: center;
 }
 
-.subtitulo-WGO{
+.subtitulo-WGO {
     text-align: center;
     font-size: 30px;
 }
@@ -145,14 +146,14 @@ input:focus {
     transform: scale(1);
 }
 
-.div-introducao{
+.div-introducao {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
 }
 
-.Titulo-card{
+.Titulo-card {
     font-size: 50px;
     padding: 15px;
 }
@@ -168,7 +169,7 @@ input:focus {
     align-items: center;
 }
 
-.img-evento{
+.img-evento {
     border-radius: 5px;
 }
 
@@ -177,9 +178,7 @@ input:focus {
     margin-bottom: 20px;
 }
 
-.Titulo{
-
-}
+.Titulo {}
 
 .paragrafo {
     padding: 10px;
@@ -216,12 +215,85 @@ input:focus {
     margin-top: 10px;
 }
 
-.btn-curtir {
-    border: none;
-    background-color: #fff;
+/* From Uiverse.io by KSAplay */
+.container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
 }
 
-a{
+.container {
+    display: block;
+    position: relative;
+    cursor: pointer;
+    font-size: 20px;
+    user-select: none;
+    transition: 100ms;
+}
+
+.checkmark {
+    top: 0;
+    left: 0;
+    height: 2em;
+    width: 2em;
+    transition: 100ms;
+    animation: dislike_effect 400ms ease;
+}
+
+.container input:checked~.checkmark path {
+    fill: #ff5353;
+    stroke-width: 0;
+}
+
+.container input:checked~.checkmark {
+    animation: like_effect 400ms ease;
+}
+
+.container:hover {
+    transform: scale(1.1);
+}
+
+@keyframes like_effect {
+    0% {
+        transform: scale(0);
+    }
+
+    50% {
+        transform: scale(1.2);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes dislike_effect {
+    0% {
+        transform: scale(0);
+    }
+
+    50% {
+        transform: scale(1.2);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes enlarge {
+  0% {
+    transform: scale(0.5);
+  }
+  100% {
+    transform: scale(1.2);
+  }
+}
+
+
+a {
     text-decoration: none;
 }
 
@@ -237,7 +309,7 @@ a{
 }
 
 .imgint {
-    
+
     margin-right: 5px;
 
 }
@@ -277,19 +349,19 @@ a{
     transition: background-color 0.3s ease;
 }
 
-.div-usuarios-presente{
+.div-usuarios-presente {
     display: flex;
     justify-content: center;
     padding: 5px;
 }
 
-.usuarios-presente{
+.usuarios-presente {
     text-align: center;
     margin-bottom: 5px;
     font-size: 12px;
 }
 
-.img-usuario-presente{
+.img-usuario-presente {
 
     width: 20px;
     height: 20px;
@@ -298,7 +370,7 @@ a{
 
 /* categorias */
 
-.div-categoria{
+.div-categoria {
     display: flex;
     justify-content: space-evenly;
     text-align: center;
@@ -306,7 +378,7 @@ a{
     padding: 15px;
 }
 
-.div-img-icone{
+.div-img-icone {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -315,4 +387,3 @@ a{
     height: 90px;
     border-radius: 50px;
 }
-

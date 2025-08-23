@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="Blog.css">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+  </style>
+  <title>Blog</title>
+</head>
+
+<body>
+
+  <!-- ===================== HEADER ===================== -->
+  <header id="header">
+    <!-- LOGO -->
+    <a href="/conteudo/inicio/index.html">
+      <img class="Logo" src="/conteudo/imagens/WgoIcon2.png" alt="Logo">
+    </a>
+
+    <nav>
+      <ul>
+        <li><a href="/conteudo/inicio/index.html">Início</a></li>
+        <li><a href="Blog.html">Blog</a></li>
+        <li><a href="/conteudo/Eventos/Eventos.html">Eventos</a></li>
+        <li class="config">
+          <a href="#" onclick="abrirMenuConf()">Configurações</a>
+          <ul id="configMenu">
+            <li><a href="/conteudo/cadastrar/cadastrar.html">Cadastrar</a></li>
+            <li><a href="/conteudo/conf_perfil/Configuracao_Perfil.html">Perfil</a></li>
+            <li><a href="privacidade.html">Ajuda</a></li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+
+    <!-- PESQUISAR -->
+
+    <div class="pesquisar">
+      <input type="text" name="text" class="input" required="" placeholder="Type to search...">
+      <div class="icon">
+        <svg xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512">
+          <title>Search</title>
+          <path d="M221.09 64a157.09 157.09 0 10157.09 157.09A157.1 157.1 0 00221.09 64z" fill="none"
+            stroke="currentColor" stroke-miterlimit="10" stroke-width="32"></path>
+          <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="32"
+            d="M338.29 338.29L448 448"></path>
+        </svg>
+      </div>
+    </div>
+
+    <!-- BOTÃO DE NOTIFICAÇÃO -->
+    <div class="btnNot" onclick="abrirNotifi()">
+      <img src="/conteudo/imagens/Sino.png" alt="Notificações">
+      <span class="badge">17</span>
+    </div>
+
+    <!-- CAIXA DE NOTIFICAÇÕES -->
+    <div class="notifi-box" id="box">
+      <h2>Notificações <span>17</span></h2>
+
+      <div class="notifi-item">
+        <img src="/conteudo/imagens/Dav.jpg" alt="Davi" class="img-not">
+        <div class="text">
+          <h4>Davi Silva</h4>
+          <p>@lorem ipsum dolor sit amet</p>
+        </div>
+      </div>
+
+      <div class="notifi-item">
+        <img src="/conteudo/imagens/Ell.jpg" alt="Ella" class="img-not">
+        <div class="text">
+          <h4>Ella Prado</h4>
+          <p>@lorem ipsum dolor sit amet</p>
+        </div>
+      </div>
+
+      <div class="notifi-item">
+        <img src="/conteudo/imagens/Bea.jpg" alt="Beatriz" class="img-not">
+        <div class="text">
+          <h4>Beatriz Macedo</h4>
+          <p>@lorem ipsum dolor sit amet</p>
+        </div>
+      </div>
+
+      <div class="notifi-item">
+        <img src="/conteudo/imagens/Thiago.jpg" alt="Thiago" class="img-not">
+        <div class="text">
+          <h4>Thiago Silva</h4>
+          <p>@lorem ipsum dolor sit amet</p>
+        </div>
+      </div>
+    </div>
+  </header>
+  <img src="/conteudo/imagens/fundoBlog.jpg" alt="" class="FundoPraia">
+  <div class="aaa">
+    aaaa
+  </div>
+
+  <script src="Blog.js"></script>
+</body>
+
+</html>

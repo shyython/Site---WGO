@@ -9,13 +9,14 @@ body {
 }
 
 .div-introducao-basica {
-    background-image: url('./src/amigossssss\ \(1\).jpg');
-    height: 400px;
-    background-color: #a7a7a7;
+    /* background-image: url('./src/amigos.png');
+    background-repeat: no-repeat; */
+    width: 100%;
+    background-color: #F5F5F5;
 }
 
 .div-introducao-conteudo {
-    align-items: center;
+
 
 }
 
@@ -35,7 +36,10 @@ body {
 }
 
 main {
-    padding: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 
 header {

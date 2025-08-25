@@ -40,6 +40,9 @@ const VerificaLogin = () => {
     alert('Email ou Senha incorretos');
   }
 };
+  function NavegaCad(){
+  navigation.navigate('Cadastrar')
+};
   return (
     
       
@@ -53,7 +56,7 @@ const VerificaLogin = () => {
             <Text style={styles.label}>Esqueci a Senha</Text>
           </TouchableOpacity>
           <TouchableOpacity>
-            <Text  style={styles.label}>Cadastrar</Text>
+            <Text  style={styles.label} onPress={NavegaCad}>Cadastrar</Text>
           </TouchableOpacity>
         </View>
         <TouchableOpacity style={styles.Btn} onPress={VerificaLogin}>

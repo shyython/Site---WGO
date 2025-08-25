@@ -6,16 +6,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="Blog.css">
   <style>
-    @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap');
   </style>
   <title>Blog</title>
 </head>
 
 <body>
 
-  <!-- ===================== HEADER ===================== -->
   <header id="header">
-    <!-- LOGO -->
+    <!-- logo -->
     <a href="/conteudo/inicio/index.html">
       <img class="Logo" src="/conteudo/imagens/WgoIcon2.png" alt="Logo">
     </a>
@@ -26,20 +25,20 @@
         <li><a href="Blog.html">Blog</a></li>
         <li><a href="/conteudo/Eventos/Eventos.html">Eventos</a></li>
         <li class="config">
-          <a href="#" onclick="abrirMenuConf()">Configurações</a>
+          <a href="#" onclick="abrirMenuConf(event)">Configurações</a>
           <ul id="configMenu">
             <li><a href="/conteudo/cadastrar/cadastrar.html">Cadastrar</a></li>
             <li><a href="/conteudo/conf_perfil/Configuracao_Perfil.html">Perfil</a></li>
             <li><a href="privacidade.html">Ajuda</a></li>
           </ul>
         </li>
+        </li>
       </ul>
     </nav>
 
-    <!-- PESQUISAR -->
-
+    <!-- search -->
     <div class="pesquisar">
-      <input type="text" name="text" class="input" required="" placeholder="Type to search...">
+      <input type="text" name="text" class="input" required placeholder="Type to search...">
       <div class="icon">
         <svg xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512">
           <title>Search</title>
@@ -51,13 +50,13 @@
       </div>
     </div>
 
-    <!-- BOTÃO DE NOTIFICAÇÃO -->
-    <div class="btnNot" onclick="abrirNotifi()">
+    <!-- sininho -->
+    <div class="btnNot" onclick="abrirNotifi(event)">
       <img src="/conteudo/imagens/Sino.png" alt="Notificações">
       <span class="badge">17</span>
     </div>
 
-    <!-- CAIXA DE NOTIFICAÇÕES -->
+    <!-- box sininho -->
     <div class="notifi-box" id="box">
       <h2>Notificações <span>17</span></h2>
 
@@ -94,10 +93,48 @@
       </div>
     </div>
   </header>
-  <img src="/conteudo/imagens/fundoBlog.jpg" alt="" class="FundoPraia">
-  <div class="aaa">
-    aaaa
-  </div>
+
+  <img src="/conteudo/imagens/Blog/fundoBlog.jpg" alt="" class="FundoPraia">
+
+  <!-- posts destaques -->
+  <main class="posts">
+    <h1 class="destaquesTitle">Destaques da Semana</h1>
+    <div class="post">
+      <img src="/conteudo/imagens/Blog/barAcaiPost.jpg" alt="" class="post-img">
+      <div class="container-post">
+        <h3>Restaurante Bar Açaí</h3>
+        <p>Esse restaurante perfeito na estética e no paladar aqui na baixada santista! amei</p>
+        <div class="post-footer">
+          <button class="like-btn">❤️ 120</button>
+          <span>15 comentários</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="post">
+      <img src="/conteudo/imagens/Blog/telefericoPost.jpg" alt="" class="post-img">
+      <div class="container-post">
+        <h3>Teleférico de São Vicente</h3>
+        <p>Uma subida incrível com a visão da praia toda</p>
+        <div class="post-footer">
+          <button class="like-btn">❤️ 87</button>
+          <span>8 comentários</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="post">
+      <img src="/conteudo/imagens/Blog/bondePost.jpg" alt="" class="post-img">
+      <div class="container-post">
+        <h3>Bondinho de Santos</h3>
+        <p>O passeio certo para conhecer o tão famoso Monte Serrat</p>
+        <div class="post-footer">
+          <button class="like-btn">❤️ 65</button>
+          <span>12 comentários</span>
+        </div>
+      </div>
+    </div>
+  </main>
 
   <script src="Blog.js"></script>
 </body>

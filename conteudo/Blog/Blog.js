@@ -1,33 +1,35 @@
 // ABRIR/FECHAR NOTIFICAÇÕES
-function abrirNotifi() {
+function abrirNotifi(event) {
     const box = document.getElementById('box');
     box.classList.toggle('active');
 }
 
 // ABRIR/FECHAR MENU DE CONFIGURAÇÃO
-function abrirMenuConf() {
+function abrirMenuConf(event) {
     const configMenu = document.getElementById('configMenu');
-    configMenu.style.display = (configMenu.style.display === 'block') ? 'none' : 'block';
+    configMenu.classList.toggle('active');
 }
 
 // FECHAR NOTIFICAÇÃO E MENU AO CLICAR FORA
-document.addEventListener('click', function(e) {
+document.addEventListener('click', function (e) {
     const box = document.getElementById('box');
-    const icon = document.querySelector('.icon');
+    const btnNot = document.querySelector('.btnNot');
     const configMenu = document.getElementById('configMenu');
+    const configWrapper = document.querySelector('.config');
 
-    // Notificação
-    if (!box.contains(e.target) && !icon.contains(e.target)) {
+    // Fechar notificações
+    if (!box.contains(e.target) && !btnNot.contains(e.target)) {
         box.classList.remove('active');
     }
 
-    // Menu configuração
-    if (!configMenu.contains(e.target) && !e.target.classList.contains('itens')) {
-        configMenu.style.display = 'none';
+    // Fechar menu de configurações
+    if (!configWrapper.contains(e.target)) {
+        configMenu.classList.remove('active');
     }
 });
-// Adicionar classe 'solid' ao rolar
-window.addEventListener('scroll', function() {
+
+// 'solid' ao rolar
+window.addEventListener('scroll', function () {
     const header = document.getElementById('header');
     if (window.scrollY > 50) {
         header.classList.add('solid');

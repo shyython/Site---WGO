@@ -9,10 +9,24 @@ body {
 }
 
 .div-introducao-basica {
-    /* background-image: url('./src/amigos.png');
-    background-repeat: no-repeat; */
+    background-image: url('./src/bck-img.png');
     width: 100%;
+     height: 100vh;
+    background-repeat: no-repeat; 
     background-color: #F5F5F5;
+}
+
+/* Ajustes para telas menores */
+@media (max-width: 768px) {
+  .hero-section {
+    height: 100vh; /* mantém sempre a tela cheia */
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-section {
+    height: 100vh; /* mesma lógica para mobile */
+  }
 }
 
 .div-introducao-conteudo {

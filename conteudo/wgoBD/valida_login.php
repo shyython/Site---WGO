@@ -5,31 +5,32 @@ require 'config.php';
 $usuarioAutenticado = false;
 
 //RECEBENDO OS DADOS VIA MÉTODO GET
-$emailUsuario = $_GET['email'];
-$senhaUsuario = md5($_GET['senha']);
+$emailUsuario = $_POST['emailUsuario'];
+$senhaUsuario = md5($_POST['senhaUsuario']);
 
 //BUSCANDO NO BANCO AS INFORMAÇÕES
-    $sql = "SELECT * FROM usuarios WHERE email='{$emailUsuario}'";
-    $res = $conexao->query($sql);
-    $row = $res->fetch_object();
+$sql = "SELECT * FROM usuarios WHERE emailUsuario='{$emailUsuario}'";
+$res = $conexao->query($sql);
+$row = $res->fetch_object();
 
 // AUTENTICANDO O USUÁRIO
-    if ($emailUsuario == $row->email && $senhaUsuario == $row->senha) {
-        $usuarioAutenticado = true;
-        $_SESSION['id'] = $row-> id_usuario;
-        $_SESSION['perfil'] = $row->perfil;
-        $_SESSION['nome'] = $row->nome;
-    } else {
-        $usuarioAutenticado = false;
-    }
+if ($emailUsuario == $row->emailUsuario && $senhaUsuario == $row->senhaUsuario) {
+    $usuarioAutenticado = true;
+    $_SESSION['id_usuario'] = $row->id_usuario;
+    $_SESSION['nomeUsuario'] = $row->nomeUsuario;
+} else {
+    $usuarioAutenticado = false;
+}
 
-if($usuarioAutenticado){
+if ($usuarioAutenticado) {
     // VALIDANDO A SESSÃO
     $_SESSION['autenticado'] = 'sim';
-    header('location: home.php');
+    header('location: ./inicio/home.php');
+    exit;
 } else {
     // VALIDANDO A SESSÃO
     $_SESSION['autenticado'] = 'nao';
     header('location: index.php?login=erro');
+    exit;
 }
 

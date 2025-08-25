@@ -1,32 +1,39 @@
-function abrirNotifi(){
-    var box  = document.getElementById('box');
-    var down = false;
-	if (down) {
-		box.style.height  = '0px';
-		box.style.opacity = 0;
-		down = false;
-	}else {
-		box.style.height  = '510px';
-		box.style.opacity = 1;
-		down = true;
-	}
+// ABRIR/FECHAR NOTIFICAÇÕES
+function abrirNotifi(event) {
+    const box = document.getElementById('box');
+    box.classList.toggle('active');
 }
 
-function abrirMenuConf() {
+// ABRIR/FECHAR MENU DE CONFIGURAÇÃO
+function abrirMenuConf(event) {
     const configMenu = document.getElementById('configMenu');
-    if (configMenu.style.display === 'none' || configMenu.style.display === '') {
-        configMenu.style.display = 'block'; // Mostra o submenu
-    } else {
-        configMenu.style.display = 'none'; // Oculta o submenu
-    }
+    configMenu.classList.toggle('active');
 }
 
-// Para ocultar o menu ao clicar fora dele (opcional)
-window.onclick = function(event) {
-    if (!event.target.matches('.itens')) {
-        const configMenu = document.getElementById('configMenu');
-        if (configMenu.style.display === 'block') {
-            configMenu.style.display = 'none';
-        }
+// FECHAR NOTIFICAÇÃO E MENU AO CLICAR FORA
+document.addEventListener('click', function (e) {
+    const box = document.getElementById('box');
+    const btnNot = document.querySelector('.btnNot');
+    const configMenu = document.getElementById('configMenu');
+    const configWrapper = document.querySelector('.config');
+
+    // Fechar notificações
+    if (!box.contains(e.target) && !btnNot.contains(e.target)) {
+        box.classList.remove('active');
     }
-}
+
+    // Fechar menu de configurações
+    if (!configWrapper.contains(e.target)) {
+        configMenu.classList.remove('active');
+    }
+});
+
+// 'solid' ao rolar
+window.addEventListener('scroll', function () {
+    const header = document.getElementById('header');
+    if (window.scrollY > 50) {
+        header.classList.add('solid');
+    } else {
+        header.classList.remove('solid');
+    }
+});

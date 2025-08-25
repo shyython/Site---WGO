@@ -1,24 +1,12 @@
-<?php
-require_once("../validador_acesso.php");
-require_once("../config.php");
-
-print("$_SESSION[id]");
-$sql = "SELECT * FROM usuarios WHERE id_usuario = '{$_SESSION['id_usuario']}'";
-$res = $conexao->query($sql);
-$row = $res->fetch_object();
-
-
-?>
-
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html> 
+<html lang="en">  
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <script></script>
-    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">    
     <title>Bem-vindo ao WGO!</title>
 </head>
 
@@ -55,7 +43,7 @@ $row = $res->fetch_object();
             <div class="notifi-box" id="box">
                 <h2>Notifications <span>17</span></h2>
                 <div class="notifi-item">
-                    <img src="/conteudo/imagens/Dav.jpg" alt="img" class="img-not">
+                    <img src="/conteudo/imagens/Davi.jpg" alt="img" class="img-not">
                     <div class="text">
                         <h4>Davi Silva</h4>
                         <p>@lorem ipsum dolor sit amet</p>
@@ -63,7 +51,7 @@ $row = $res->fetch_object();
                 </div>
 
                 <div class="notifi-item">
-                    <img src="/conteudo/imagens/Ell.jpg" alt="img" class="img-not">
+                    <img src="/conteudo/imagens/Ella.jpg" alt="img" class="img-not">
                     <div class="text">
                         <h4>Ella Prado</h4>
                         <p>@lorem ipsum dolor sit amet</p>
@@ -95,7 +83,7 @@ $row = $res->fetch_object();
 
         <ul>
             <li><a href="home.php " class="itens">Inicio</a></li>
-            <li> <a href="../amigos/Amigos.html" class="itens">Amigos</a></li>
+            <li> <a href="../blog/blog.html" class="itens">Amigos</a></li>
             <li> <a href="../Eventos/Eventos.html" class="itens3">Eventos</a></li>
             
 

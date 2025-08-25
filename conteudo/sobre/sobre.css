@@ -11,42 +11,75 @@ body {
 .div-introducao-basica {
     background-image: url('./src/bck-img.png');
     width: 100%;
-     height: 100vh;
-    background-repeat: no-repeat; 
+    background-size: cover;
+    height: 100vh;
+    background-repeat: no-repeat;
     background-color: #F5F5F5;
+    background-position: center;
+}
+
+.hero-section {
+    height: 100vh;
+    /* altura total da viewport */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.5);
+    /* sobreposição para melhorar a legibilidade do texto */
+}
+
+.div-conteudo-intbas {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;    
+    margin-bottom: 200px;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    border-radius: 25px;
 }
 
 /* Ajustes para telas menores */
 @media (max-width: 768px) {
-  .hero-section {
-    height: 100vh; /* mantém sempre a tela cheia */
-  }
+    .hero-section {
+        height: 100vh;
+        /* mantém sempre a tela cheia */
+    }
 }
 
 @media (max-width: 480px) {
-  .hero-section {
-    height: 100vh; /* mesma lógica para mobile */
-  }
+    .hero-section {
+        height: 100vh;
+        /* mesma lógica para mobile */
+    }
 }
 
-.div-introducao-conteudo {
-
-
-}
+.div-introducao-conteudo {}
 
 .Titulo-WGO {
-
-    text-align: center;
     font-size: 100px;
+    color: #e55b06;
+    text-align: center;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    -webkit-text-stroke-width: 2px; /* Largura da borda */
+    -webkit-text-stroke-color: black; /* Cor da borda */
 }
 
-.Titulo-wgo {
-    text-align: center;
-}
-
-.subtitulo-WGO {
-    text-align: center;
+.subtitulo-card {
     font-size: 30px;
+    color: #174348;
+    margin-bottom: 20px;
+}
+
+.txt-italico {
+    font-size: 50px;
+    font-style: italic;
+    color: #fe6a07;
+    -webkit-text-stroke-width: 2px; /* Largura da borda */
+    -webkit-text-stroke-color: black; /* Cor da borda */
 }
 
 main {
@@ -58,7 +91,7 @@ main {
 
 header {
     display: flex;
-    background-color: #3C4E69;
+    background-color: #0a456c;
     padding-top: 5px;
     padding-bottom: 5px;
     align-items: center;
@@ -77,12 +110,10 @@ a {
 }
 
 .Logo {
-    margin-top: 3px;
-    background-color: #fbf5ef;
-    width: 90px;
-    border-radius: 50px;
-    border-radius: 60px;
-    justify-content: start;
+    width: 120px;
+    height: auto;
+    margin-right: 20px;
+    border-radius: 100%;
 
 }
 
@@ -302,12 +333,13 @@ input:focus {
 }
 
 @keyframes enlarge {
-  0% {
-    transform: scale(0.5);
-  }
-  100% {
-    transform: scale(1.2);
-  }
+    0% {
+        transform: scale(0.5);
+    }
+
+    100% {
+        transform: scale(1.2);
+    }
 }
 
 

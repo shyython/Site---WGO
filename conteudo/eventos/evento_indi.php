@@ -1,3 +1,15 @@
+<?php
+require_once "../ConfigBd/porta.php";
+  $sql = "SELECT * FROM eventos";
+   
+            $res = $conexao->query($sql);
+            $qtd = $res->num_rows;
+
+            $resEventos = $conexao->query($sql);
+            $qtdEventos = $resEventos->num_rows;
+            $row = $res->fetch_object()
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -64,47 +76,44 @@ $(document).ready(function () {
     <main>
         <div class="div-Eventos">
             <div class="Eventos">
-                <h2 class="TituloEvento">Restaurante D'boa Mexicano</h2>
+                  <?php
+                    print "<h1 class='TituloEvento'>" . $row->Nome_Evento . "</h1>";
+                    ?>
                 <div class="Imagens">
-
-                    <img class="ImgEvento"
-                        src="https://media-cdn.tripadvisor.com/media/photo-m/1280/19/ca/cb/0d/photo2jpg.jpg" alt="">
+                    <?php
+                    print "<img class='ImgEvento' src='" . $row->Img1 . "' alt=''>";
+                    ?>
                     <div class="Galeria">
-                        <img class="MiniImg"
-                            src="https://scontent-gru1-2.cdninstagram.com/v/t39.30808-6/480503868_661643609777031_8311981747630123228_n.jpg?stp=c0.0.1638.2048a_dst-jpg_e35_tt6&efg=eyJ2ZW5jb2RlX3RhZyI6IkNBUk9VU0VMX0lURU0uaW1hZ2VfdXJsZ2VuLjE2Mzl4MjA0OC5zZHIuZjMwODA4LmRlZmF1bHRfaW1hZ2UuYzIifQ&_nc_ht=scontent-gru1-2.cdninstagram.com&_nc_cat=103&_nc_oc=Q6cZ2QH3mItNUcSiB9fTEIDw2gv1dh-4SsOAi2vSKi2V6MjT6mHee7JUdU6rhJR1iAjZUOj0oCGgYkZL2qF1zEdxYuMN&_nc_ohc=u_kmOOYSfIcQ7kNvwGi9dl_&_nc_gid=awlipsbj44ZhbwIAJWdWQQ&edm=AP4sbd4AAAAA&ccb=7-5&ig_cache_key=MzU5MTA3OTczNDE4NDAwNjA1Ng%3D%3D.3-ccb7-5&oh=00_AfUzcF1LFPxYrf4UpyAqgT0hENV43AEhL86sk0b5xgrvsw&oe=68AECF39&_nc_sid=7a9f4b"
-                            alt="">
-                        <img class="MiniImg"
-                            src="https://scontent-gru2-2.cdninstagram.com/v/t39.30808-6/525339285_766435515964506_3531436152382137862_n.jpg?stp=dst-jpg_e35_tt6&efg=eyJ2ZW5jb2RlX3RhZyI6IkNBUk9VU0VMX0lURU0uaW1hZ2VfdXJsZ2VuLjE2Mzh4MjA0OC5zZHIuZjMwODA4LmRlZmF1bHRfaW1hZ2UuYzIifQ&_nc_ht=scontent-gru2-2.cdninstagram.com&_nc_cat=106&_nc_oc=Q6cZ2QFlvpaW4b5edGBYuoVNC6U-QHOY22bYYVWwDZqZ_4Rp73Vv2fQnAmqIiapwW8dW72RqJDXAGV6OHEt4KkfV27Zs&_nc_ohc=FAjfB7-nBT4Q7kNvwF9wRtT&_nc_gid=G4H_2tVv_VArnaVkar9KWQ&edm=APoiHPcAAAAA&ccb=7-5&ig_cache_key=MzY5Mzk4MjE0Mjg0Njg1NTQ3OQ%3D%3D.3-ccb7-5&oh=00_AfV7ZR3xyIelXFzNYDPLeCAAXMrPJnYKN2nKu4DNLRFndQ&oe=68AEA2AB&_nc_sid=22de04alt=">
-                        <img class="MiniImg"
-                            src="https://media-cdn.tripadvisor.com/media/photo-m/1280/19/ca/cb/0d/photo2jpg.jpg">
-                        <img class="MiniImg"
-                            src="https://tassioricardo.wordpress.com/wp-content/uploads/2012/11/20121103-205611.jpg">
+                        <?php
+                        print "<img class='MiniImg' src='" . $row->Img1 . "' alt=''>";
+                        print "<img class='MiniImg' src='" . $row->Img2 . "' alt=''>";
+                        print "<img class='MiniImg' src='" . $row->Img3 . "' alt=''>";
+                        print "<img class='MiniImg' src='" . $row->Img4 . "' alt=''>";
+                            ?>
                     </div>
                     <div class="Categoria">
-                        <p class="CategoriaEvento">Restaurante</p>
+                        <?php
+                        print "<p class='CategoriaEvento'>" . $row->Categoria . "</p>";
+                        ?>
                         <div class="AvaliacaoEvento">
                             <img class="ImgAvaliacao" src="https://cdn-icons-png.flaticon.com/128/9715/9715468.png" alt=""><p class="Avaliacao">4.8</p><p class="QntdAvaliacao">(20 avaliações)
                         </div>
                     </div>
                     <div class="expecificacoes">
-                        <p class="LocalEvento"><img class="ImgEspecificacoes"
-                                src="https://cdn-icons-png.flaticon.com/128/149/149060.png" alt="">Av. Pedro Lessa, 2324
-                            (Santos/SP)</p>
-                        <p class="Tipo"> <img class="ImgEspecificacoes"
-                                src="https://cdn-icons-png.flaticon.com/128/11735/11735507.png" alt="">Mexicano</p>
-                        <p class="Horarip"><img class="ImgEspecificacoes"
-                                src="https://cdn-icons-png.flaticon.com/128/992/992531.png" alt="">11:30 - 00:30</p>
+                        <?php
+                        print "<p class='LocalEvento'><img class='ImgEspecificacoes' src='https://cdn-icons-png.flaticon.com/128/149/149060.png' alt=''>" . $row->Endereco . "</p>";
+                        ?>
+                        <?php
+                        print "<p class='Tipo'><img class='ImgEspecificacoes' src='https://cdn-icons-png.flaticon.com/128/11735/11735507.png' alt=''>" . $row->Tipo . "</p>";
+                        ?>
+                        <?php
+                        print "<p class='Horarip'><img class='ImgEspecificacoes' src='https://cdn-icons-png.flaticon.com/128/992/992531.png' alt=''>" . $row->Horario . "</p>";
+                        ?>
+                        
                     </div>
-                    <p class="DescricaoEvento">D'boa Mexicano é um restaurante de comida mexicana localizado na Avenida
-                        Pedro Lessa, 2324, em Santos. Com um ambiente acolhedor e vibrante, o D'boa Mexicano oferece uma
-                        experiência gastronômica autêntica e deliciosa, destacando-se pela variedade de pratos
-                        tradicionais
-                        mexicanos e latino-americanos No D'boa Mexicano, você encontrará desde tacos e burritos
-                        recheados
-                        com ingredientes frescos e saborosos, até ceviches e pokes que trazem um toque contemporâneo à
-                        culinária latina. Além disso, o restaurante é conhecido por suas opções vegetarianas e pratos à
-                        la
-                        carte, garantindo que todos os clientes encontrem algo que agrada ao paladar.or</p>
+                    <?php
+                    print "<p class='DescricaoEvento'>" . $row->Descricao . "</p>";
+                    ?>
                 </div>
                 <button class="BtnPresenca">Marcar presença</button>
             </div>

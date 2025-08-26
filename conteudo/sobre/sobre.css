@@ -8,38 +8,52 @@ body {
     font-family: Arial, Helvetica, sans-serif;
 }
 
+.color-int{
+    background-color: #000000;
+    width: 100%;
+    height: 10px;
+}
+
+
+.color-int-bottom{
+    background-color: #000000;
+    width: 100%;
+    height: 10px;
+}
+
+
 .div-introducao-basica {
-    background-image: url('./src/bck-img.png');
+    background-image: url('./src/back-friends-2.png');
     width: 100%;
     background-size: cover;
-    height: 100vh;
+    height: 500px;
     background-repeat: no-repeat;
     background-color: #F5F5F5;
     background-position: center;
+    
 }
 
 .hero-section {
-    height: 100vh;
+    height: 500px;
     /* altura total da viewport */
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
+    align-items: flex-end;
     color: #fff;
     text-align: center;
     background: rgba(0, 0, 0, 0.5);
     /* sobreposição para melhorar a legibilidade do texto */
-}
+} 
 
 .div-conteudo-intbas {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;    
+    justify-content: end;
+    align-items: end;
     margin-bottom: 200px;
-    background: rgba(0, 0, 0, 0.5);
     padding: 20px;
-    border-radius: 25px;
+    
 }
 
 /* Ajustes para telas menores */
@@ -57,7 +71,11 @@ body {
     }
 }
 
-.div-introducao-conteudo {}
+.div-introducao-conteudo {
+    /* width: 100%;
+    height:500px;
+    background: rgba(0, 0, 0, 0.342); */
+}
 
 .Titulo-WGO {
     font-size: 100px;
@@ -91,7 +109,7 @@ main {
 
 header {
     display: flex;
-    background-color: #0a456c;
+    background-color: #21385e;
     padding-top: 5px;
     padding-bottom: 5px;
     align-items: center;

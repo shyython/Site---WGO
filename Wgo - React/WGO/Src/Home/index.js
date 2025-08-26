@@ -1,9 +1,12 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
-import { StyleSheet, Text, View, Image, TextInput, TouchableOpacity } from 'react-native';
+import { estiloheet, Text, View, Image, TextInput, TouchableOpacity, useColorScheme } from 'react-native';
 import { Feather } from '@expo/vector-icons';
+import {claro, escuro} from '../Styles/Globalstyles';
 
 export default function Home() {
+  const theme = useColorScheme();
+     const estilo = theme === 'dark' ? escuro : claro;
   const [users, setUsers] = useState([]);
 
   useEffect(() => {
@@ -19,124 +22,41 @@ export default function Home() {
   }, []);
 
   return (
-     <View style={styles.container}>
-        <View style={styles.Header}>
+     <View style={estilo.containerHome}>
+        <View style={estilo.Header}>
 
-            <View style={styles.top}>
-                <View style={styles.Localete}>
+            <View style={estilo.top}>
+                <View style={estilo.Localete}>
                 <Feather name='map-pin' color={'white'} size={35}/>
-                <Text style={styles.TxtLocalete}>Santos, Sp</Text>
+                <Text style={estilo.TxtLocalete}>Santos, Sp</Text>
                 </View>
-                <Feather name='bell' color={'white'} size={35} style={styles.Notif}/> 
-                <TextInput placeholder="Pesquisar" style={styles.input}/>
-                <View style={styles.Indicacoes}>
-                    <TouchableOpacity style={styles.botoes}>
-                        <Image source={require('../Assets/Restaurantes.png')} style={styles.icon}/>
+                <Feather name='bell' color={'white'} size={35} style={estilo.Notif}/> 
+                <TextInput placeholder="Pesquisar" style={estilo.input}/>
+                <View style={estilo.Indicacoes}>
+                    <TouchableOpacity style={estilo.botoes}>
+                        <Image source={require('../Assets/Restaurantes.png')} style={estilo.icon}/>
                     </TouchableOpacity>
-                    <TouchableOpacity style={styles.botoes}>
-                        <Image source={require('../Assets/Cafe.png')} style={styles.icon}/>
+                    <TouchableOpacity style={estilo.botoes}>
+                        <Image source={require('../Assets/Cafe.png')} style={estilo.icon}/>
                     </TouchableOpacity>
-                    <TouchableOpacity style={styles.botoes}>
-                        <Image source={require('../Assets/Show.png')} style={styles.icon}/>
+                    <TouchableOpacity style={estilo.botoes}>
+                        <Image source={require('../Assets/Show.png')} style={estilo.icon}/>
                     </TouchableOpacity>
-                    <TouchableOpacity style={styles.botoes}>
-                        <Image source={require('../Assets/Bar.png')} style={styles.icon}/>
+                    <TouchableOpacity style={estilo.botoes}>
+                        <Image source={require('../Assets/Bar.png')} style={estilo.icon}/>
                     </TouchableOpacity>
                 </View>
-                <View style={styles.TextIndicacoes}>
-                    <Text style={styles.Text}>Restaurantes</Text>
-                    <Text style={styles.Text}>Cafe</Text>
-                    <Text style={styles.Text}>Shows</Text>
-                    <Text style={styles.Text}>Bares</Text>
+                <View style={estilo.TextIndicacoes}>
+                    <Text style={estilo.Text}>Restaurantes</Text>
+                    <Text style={estilo.Text}>Cafe</Text>
+                    <Text style={estilo.Text}>Shows</Text>
+                    <Text style={estilo.Text}>Bares</Text>
                 </View>
             </View>
         </View>
-        <View style={styles.Recomendados}>
-           <Text style={styles.TxtTitulo}>Recomendados</Text>
+        <View style={estilo.Recomendados}>
+           <Text style={estilo.TxtTitulo}>Recomendados</Text>
         </View>
   </View>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-     flex: 1,
-  },
-  Header:{
-    backgroundColor: '#3fbdc7',
-  },
-  txt: {
-    color: '#ffffffff',
-    fontWeight: 'bold',
-  },
-  top: {
-    width: '100%',
-    maxHeight: "35%",
-    marginTop: 50,
-    margin: 15,
-  },
-  Localete: {
-    flexDirection: 'row',
-  },
-  map: {
-    width: 200,
-  },
-  Notif: {
-    position: 'absolute',
-    right: 40,
-  },
-    TxtLocalete: {
-        color: 'white',
-        fontSize: 20,
-        marginLeft: 10,
-        marginTop: 2,
-        fontWeight: 'bold',
-    },
-    input: {
-        backgroundColor: 'white',
-        width: '90%',
-        height: 50,
-        borderRadius: 10,
-        paddingLeft: 20,
-        marginTop: 20,
-        opacity: 0.5,
-    },
-    icon: {
-        width: 50,
-        height: 50,
-    },
-    Indicacoes:{
-        flexDirection: 'row',
-        justifyContent: 'space-evenly',
-        marginTop: 20,
-    },
-    botoes: {
-        marginTop: 20,
-        width: 80,
-        height: 80,
-        backgroundColor: '#fb7c02',
-        borderRadius: 10,
-        justifyContent: 'center',
-        alignItems: 'center',
-        marginRight:15,
-    },
-    TextIndicacoes: {
-        flexDirection: 'row',
-        marginTop: 10,
-    },
-    Text: {
-        color: 'white',
-        fontSize: 15,
-        marginRight: 10,
-        fontWeight: 'bold',
-    },
-    Recomendados: {
-        marginTop: 20,
-        marginLeft: 15,
-    },
-    TxtTitulo: {
-        color: 'black',
-        fontSize: 20,
-        fontWeight: 'bold',
-    },
-});

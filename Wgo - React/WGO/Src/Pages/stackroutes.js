@@ -17,25 +17,32 @@ export default function StackRoutes(){
              name="Home"
             component={Home}
              options={{
+              tabBarStyle: 
+              { backgroundColor: '#3C4E69' },
               headerShown: false,
             tabBarIcon: ({color, size})=>{
-            return <Feather name='home' color={color} size={size}/>
+            return <Feather name='home' color={'white'} size={size}/>
             },
           }} />
         <Tab.Screen
          name="Eventos" 
          component={Eventos}
          options={{
+          tabBarStyle: 
+              { backgroundColor: '#3C4E69' },
+               headerShown: false,
             tabBarIcon: ({color, size})=>{
-            return <Feather name='map' color={color} size={size}/>
+            return <Feather name='map' color={'white'} size={size}/>
             },
           }} />
         <Tab.Screen
          name="Perfil" 
          component={Perfil}
          options={{
+          tabBarStyle: 
+              { backgroundColor: '#3C4E69' },
             tabBarIcon: ({color, size})=>{
-            return <Feather name='user' color={color} size={size}/>
+            return <Feather name='user' color={'white'} size={size}/>
             },
           }} />
           
@@ -43,23 +50,12 @@ export default function StackRoutes(){
         name="Configuracoes" 
         component={Configuracoes}
         options={{
+          tabBarStyle: 
+              { backgroundColor: '#3C4E69' },
             tabBarIcon: ({color, size})=>{
-            return <Feather name='settings' color={color} size={size}/>
+            return <Feather name='settings' color={'white'} size={size}/>
             },
           }} />
     </Tab.Navigator>
     )
 }
-const styles = StyleSheet.create({
-    container:{
-        flex: 1, 
-        display:'flex',
-        justifyContent:'center',
-        alignItems:'center',
-        backgroundColor: '#1e3f5aff'
-    },
-        txt:{
-        color:'#ffffffff',
-        fontWeight: 'bold',
-    }
-})

@@ -11,3 +11,18 @@ const q = 'SELECT * FROM Dados_Usuarios';
     return res.status(200).json(results); 
   });
 }
+export const addUser = (req, res) => {
+  const q = 'INSERT INTO Dados_Usuarios (Nome, Email, Telefone, Senha) VALUES (?)';
+  const values = [
+    req.body.Nome,
+    req.body.Email,
+    req.body.Telefone,
+    req.body.Senha,
+  ];
+  db.query(q, [values], (err, data) => {
+    if (err) {
+      return res.status(500).json(err);
+    }
+    return res.status(200).json('Usuário adicionado com sucesso');
+  });
+}

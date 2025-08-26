@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt">
-
+ 
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,18 +10,18 @@
   </style>
   <title>Blog</title>
 </head>
-
+ 
 <body>
-
+ 
   <header id="header">
     <!-- logo -->
     <a href="/conteudo/inicio/index.html">
       <img class="Logo" src="/conteudo/imagens/WgoIcon2.png" alt="Logo">
     </a>
-
+ 
     <nav>
       <ul>
-        <li><a href="/conteudo/inicio/index.html">Início</a></li>
+        <li><a href="../inicio/home.php">Início</a></li>
         <li><a href="Blog.html">Blog</a></li>
         <li><a href="/conteudo/Eventos/Eventos.html">Eventos</a></li>
         <li class="config">
@@ -35,7 +35,7 @@
         </li>
       </ul>
     </nav>
-
+ 
     <!-- search -->
     <div class="pesquisar">
       <input type="text" name="text" class="input" required placeholder="Type to search...">
@@ -49,17 +49,17 @@
         </svg>
       </div>
     </div>
-
+ 
     <!-- sininho -->
     <div class="btnNot" onclick="abrirNotifi(event)">
       <img src="/conteudo/imagens/Sino.png" alt="Notificações">
       <span class="badge">17</span>
     </div>
-
+ 
     <!-- box sininho -->
     <div class="notifi-box" id="box">
       <h2>Notificações <span>17</span></h2>
-
+ 
       <div class="notifi-item">
         <img src="/conteudo/imagens/Dav.jpg" alt="Davi" class="img-not">
         <div class="text">
@@ -67,7 +67,7 @@
           <p>@lorem ipsum dolor sit amet</p>
         </div>
       </div>
-
+ 
       <div class="notifi-item">
         <img src="/conteudo/imagens/Ell.jpg" alt="Ella" class="img-not">
         <div class="text">
@@ -75,7 +75,7 @@
           <p>@lorem ipsum dolor sit amet</p>
         </div>
       </div>
-
+ 
       <div class="notifi-item">
         <img src="/conteudo/imagens/Bea.jpg" alt="Beatriz" class="img-not">
         <div class="text">
@@ -83,7 +83,7 @@
           <p>@lorem ipsum dolor sit amet</p>
         </div>
       </div>
-
+ 
       <div class="notifi-item">
         <img src="/conteudo/imagens/Thiago.jpg" alt="Thiago" class="img-not">
         <div class="text">
@@ -93,9 +93,9 @@
       </div>
     </div>
   </header>
-
+ 
   <img src="/conteudo/imagens/Blog/fundoBlog.jpg" alt="" class="FundoPraia">
-
+ 
   <!-- posts destaques -->
   <main class="posts">
     <h1 class="destaquesTitle">Destaques da Semana</h1>
@@ -110,7 +110,7 @@
         </div>
       </div>
     </div>
-
+ 
     <div class="post">
       <img src="/conteudo/imagens/Blog/telefericoPost.jpg" alt="" class="post-img">
       <div class="container-post">
@@ -122,7 +122,7 @@
         </div>
       </div>
     </div>
-
+ 
     <div class="post">
       <img src="/conteudo/imagens/Blog/bondePost.jpg" alt="" class="post-img">
       <div class="container-post">
@@ -135,8 +135,8 @@
       </div>
     </div>
   </main>
-
+ 
   <script src="Blog.js"></script>
 </body>
-
+ 
 </html>

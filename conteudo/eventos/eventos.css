@@ -1,0 +1,197 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+header {
+    display: flex;
+    background-color: #3C4E69;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    align-items: center;
+    color: #fffff7;
+    justify-content: space-around;
+    flex-flow: row wrap;
+}
+
+
+.form button {
+    border: none;
+    background: none;
+    color: #8b8ba7;
+}
+
+.form {
+    --timing: 0.3s;
+    --width-of-input: 500px;
+    --height-of-input: 40px;
+    --border-height: 2px;
+    --input-bg: #fff;
+    --border-color: #2f2ee9;
+    --border-radius: 30px;
+    --after-border-radius: 1px;
+    position: relative;
+    width: var(--width-of-input);
+    height: var(--height-of-input);
+    display: flex;
+    align-items: center;
+    padding-inline: 0.8em;
+    border-radius: var(--border-radius);
+    transition: border-radius 0.5s ease;
+    background: var(--input-bg, #fff);
+}
+
+.input {
+    font-size: 0.9rem;
+    background-color: transparent;
+    width: 100%;
+    height: 100%;
+    padding-inline: 0.5em;
+    padding-block: 0.7em;
+    border: none;
+}
+
+.form:before {
+    content: "";
+    position: absolute;
+    background: var(--border-color);
+    transform: scaleX(0);
+    transform-origin: center;
+    width: 100%;
+    height: var(--border-height);
+    left: 0;
+    bottom: 0;
+    border-radius: 1px;
+    transition: transform var(--timing) ease;
+}
+
+.form:focus-within {
+    border-radius: var(--after-border-radius);
+}
+
+input:focus {
+    outline: none;
+}
+
+.form:focus-within:before {
+    transform: scale(1);
+}
+
+a {
+    color: #F5F5F5;
+}
+
+.Login {
+
+    color: beige;
+}
+
+.Logo {
+    margin-top: 3px;
+    background-color: #fbf5ef;
+    width: 90px;
+    border-radius: 50px;
+    border-radius: 60px;
+    justify-content: start;
+
+}
+
+.itens-home {
+    list-style-type: none;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+
+.linksHome {
+    font-size: 19px;
+    margin: 3px;
+    color: #fffff7;
+    text-decoration: none;
+    flex-flow: row wrap;
+
+}
+
+.entenda{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.conheca{
+    display:flex;
+    flex-direction: row;
+    margin-bottom: 50px;
+}
+.resumo{
+ display: flex;
+ align-items: center;
+}
+.Categoria{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.Imgresumo{
+    max-width: 50px;
+    max-height: 50px;
+    margin-left: 5px;
+    margin-right: 10px;
+}
+.ImgCategoria{
+    max-width: 100px;
+    max-height: 90px;
+    min-height: 90px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+.CardCategoria{
+    display: flex;
+    width: 100px;
+    height: 120px;
+    flex-direction: column;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    background-color: rgb(205, 205, 205);
+    padding: 2px;
+    margin: 5px;
+    text-align: center;
+    font-size: 10px;
+    align-items: center;
+    justify-content: center;
+    transition: 0.5s;
+
+}
+.CardCategoria:hover{
+   scale: 1.2;
+   transition: 0.5s;
+   background-color: #e55b06;
+   color: white;
+   margin-left: 15px;
+   margin-right: 15px;
+   font-weight: bold;
+}
+.Explorar{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color:#2f4d6a ;
+    padding: 12px;
+    border-radius: 5px;
+}
+.TxtExplorar{
+    color: white;
+}
+.BtnExplorar{
+    background-color: white;
+    border: none;
+    padding: 5px;
+    border-radius: 5px;
+    color: #155088 ;
+    font-weight: bold;
+    
+}

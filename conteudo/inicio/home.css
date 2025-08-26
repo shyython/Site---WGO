@@ -16,12 +16,12 @@ header {
     justify-content: space-between;
     padding: 10px 30px;
     z-index: 1000;
-    transition: background 0.3s, box-shadow 0.3s;
+    transition:  0.3s, box-shadow 0.3s;
     background: #0000005d;
 }
  
 header.solid {
-    background-color: #3C4E69; /* cor sólida ao rolar */
+    background-color: #3C4E69; /* cor qnd rolar */
     box-shadow: 0 4px 6px rgba(0,0,0,0.1);
 }
  
@@ -58,7 +58,7 @@ nav ul li a {
     font-size: 16px;
     padding: 8px 12px;
     border-radius: 6px;
-    transition: background 0.3s;
+    transition:  0.3s;
 }
  
 nav ul li a:hover {
@@ -103,7 +103,7 @@ nav ul li a:hover {
     justify-content: center;
     position: relative;
     cursor: pointer;
-    transition: background 0.3s;
+    transition:  0.3s;
 }
  
 .btnNot:hover {
@@ -251,73 +251,75 @@ nav ul li a:hover {
   width: 100%;
   height: 100%;
 }
- 
-/* posts destaques */
-.destaquesTitle {
-  text-align: center;
-  font-family: "Lato", sans-serif;
-  color: #3C4E69;
-  font-size: 28px;
+
+
+#configMenu {
+    position: absolute;
+    background-color: #3C4E69;
+    display: none; /* Inicialmente oculto */
+    z-index: 1;
 }
-.posts {
-  margin-left: auto;
-  max-width: 900px;
-  display: grid;
-  gap: 20px;
-  padding: 20px;
-  font-family: "Lato", sans-serif;
+
+#configMenu li {
+    border-top: 1px solid #6c757d;
 }
- 
-.post {
-  background: #fff;
-  border-radius: 12px;
-  overflow: hidden;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-  transition: transform 0.3s;
+
+#configMenu a {
+    padding: 10px 15px;
+    color: white;
 }
- 
-.post:hover {
-  transform: translateY(-5px);
+
+#configMenu a:hover {
+    background-color: #6c757d;
+
 }
- 
-.post-img {
-  width: 100%;
-  height: 250px;
-  object-fit: cover;
+
+/* menu lateral D */
+.container {
+    width: 10vw;
+    display: flex;
+    flex-direction: row;
+    padding: 5px;
 }
- 
-.container-post {
-  padding: 15px;
+
+.containerlateral {
+    background-color: #F5F5F5;
+    border-radius: 5px;
+    margin-top: 5px;
+    font-family: Arial, Helvetica, sans-serif;
+    display: inline-block;
+    flex-flow: column wrap;
+    justify-content: space-around;
+    width: 10vw;
+
 }
- 
-.container-post h3 {
-  font-size: 20px;
-  margin-bottom: 10px;
-  color: #3C4E69;
+
+.carrossel {
+    width: 600px;
+    overflow: hidden; 
+    position: relative;
+    margin: 0 auto;
+    display: flex;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px;
 }
- 
-.container-post p {
-  font-size: 14px;
-  color: #444;
-  margin-bottom: 15px;
+
+.imagens {
+    display: flex; 
+    transition: transform 1s ease;
+    
 }
- 
-.post-footer {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  font-size: 13px;
-  color: #666;
+
+.imagens img {
+    width: 600px;
+    height: auto; 
 }
- 
-.like-btn {
-  border: none;
-  background: none;
-  font-size: 16px;
-  cursor: pointer;
-  transition: transform 0.2s;
+/* centralizando isso  */
+#carrosel{
+    display: flex;  
 }
- 
-.like-btn:hover {
-  transform: scale(1.2);
+#img{
+    display: flex;
+    justify-content: space-between;
 }
+/* fim carrosel de imagens vey */

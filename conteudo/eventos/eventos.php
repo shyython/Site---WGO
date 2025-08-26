@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="eventos.css">
 </header>
 <header>
-        <a href="/conteudo/inicio/index.html"><img class="Logo" src="/conteudo/imagens/WgoIcon.png" alt="Logo"></a>
+        <a href="../inicio/home.php"><img class="Logo" src="../imagens/WgoIcon.png" alt="Logo"></a>
         <form class="form">
             <!-- Barra de pesquisa -->
             <input class="input" placeholder="Pesquisar" required="" type="text">
@@ -22,7 +22,7 @@
             <!-- Cadastros -->
 
         </form>
-        <a href="/conteudo/eventos/eventos.html">Eventos</a>
+        <a href="evento_indi.php">Eventos</a>
         <a href="">Login</a>
     </header>
 <body>

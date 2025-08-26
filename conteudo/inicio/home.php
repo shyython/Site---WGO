@@ -4,100 +4,95 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="home.css">
     <script></script>
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">    
     <title>Bem-vindo ao WGO!</title>
 </head>
 
 <body>
-    <header>
-        <!-- LOGO -->
-        <a href="home.php"><img class="Logo" src="../conteudo/imagens/WgoIcon.png" alt="Logo"></a>
+    <header id="header">
+    <!-- logo -->
+    <a href="../inicio/home.php">
+      <img class="Logo" src="../imagens/WgoIcon2.png" alt="Logo">
+    </a>
 
-        <!-- Barra de pesquisa -->
-        <form class="form">
-            <button>
-                <svg width="17" height="16" fill="none" xmlns="http://www.w3.org/2000/svg" role="img"
-                    aria-labelledby="search">
-                    <path d="M7.667 12.667A5.333 5.333 0 107.667 2a5.333 5.333 0 000 10.667zM14.334 14l-2.9-2.9"
-                        stroke="currentColor" stroke-width="1.333" stroke-linecap="round" stroke-linejoin="round">
-                    </path>
-                </svg>
-            </button>
-            <input class="input" placeholder="Type your text" required="" type="text">
-            <button class="reset" type="reset">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
-                    stroke="currentColor" stroke-width="2">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"></path>
-                </svg>
-            </button>
+    <nav>
+      <ul>
+        <li><a href="../inicio/home.php">Início</a></li>
+        <li><a href="Blog.html">Blog</a></li>
+        <li><a href="../Eventos/Eventos.php">Eventos</a></li>
+        <li class="config">
+          <a href="#" onclick="abrirMenuConf(event)">Configurações</a>
+          <ul id="configMenu">
+            <li><a href="../conteudo/cadastrar/cadastrar.html">Cadastrar</a></li>
+            <li><a href="../conteudo/conf_perfil/Configuracao_Perfil.html">Perfil</a></li>
+            <li><a href="../conteudo/privacidade.html">Ajuda</a></li>
+          </ul>
+        </li>
+        </li>
+      </ul>
+    </nav>
 
-        </form>
-        <!-- botão de notificações -->
-
-        <nav>
-            <div class="icon" onclick="abrirNotifi()">
-                <img src="../imagens/Sino.png" alt=""> <span>17</span>
-            </div>
-            <div class="notifi-box" id="box">
-                <h2>Notifications <span>17</span></h2>
-                <div class="notifi-item">
-                    <img src="/conteudo/imagens/Davi.jpg" alt="img" class="img-not">
-                    <div class="text">
-                        <h4>Davi Silva</h4>
-                        <p>@lorem ipsum dolor sit amet</p>
-                    </div>
-                </div>
-
-                <div class="notifi-item">
-                    <img src="/conteudo/imagens/Ella.jpg" alt="img" class="img-not">
-                    <div class="text">
-                        <h4>Ella Prado</h4>
-                        <p>@lorem ipsum dolor sit amet</p>
-                    </div>
-                </div>
-
-                <div class="notifi-item">
-                    <img src="/conteudo/imagens/Bea.jpg" alt="img" class="img-not">
-                    <div class="text">
-                        <h4>Beatriz macedo</h4>
-                        <p>@lorem ipsum dolor sit amet</p>
-                    </div>
-                </div>
-
-
-                <div class="notifi-item">
-                    <img src="/conteudo/imagens/Thiago.jpg" alt="img" class="img-not">
-                    <div class="text">
-                        <h4>Thiago Silva</h4>
-                        <p>@lorem ipsum dolor sit amet</p>
-                    </div>
-                </div>
-
-            </div>
-        </nav>
-    </header>
-
-    <div class="menu">
-
-        <ul>
-            <li><a href="home.php " class="itens">Inicio</a></li>
-            <li> <a href="../blog/blog.html" class="itens">Amigos</a></li>
-            <li> <a href="../Eventos/Eventos.html" class="itens3">Eventos</a></li>
-            
-
-            <li>
-                <a href="#" class="itens" onclick="abrirMenuConf()">Configurações</a>
-                <ul id="configMenu" style="display: none;">
-                    <li><a href="../conf_perfil/Configuracao_Perfil.html">Perfil</a></li>
-                    <li><a href="privacidade.html">Ajuda</a></li>
-
-                </ul>
-            </li>
-        </ul>
-
+    <!-- search -->
+    <div class="pesquisar">
+      <input type="text" name="text" class="input" required placeholder="Search...">
+      <div class="icon">
+        <svg xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512">
+          <title>Search</title>
+          <path d="M221.09 64a157.09 157.09 0 10157.09 157.09A157.1 157.1 0 00221.09 64z" fill="none"
+            stroke="currentColor" stroke-miterlimit="10" stroke-width="32"></path>
+          <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="32"
+            d="M338.29 338.29L448 448"></path>
+        </svg>
+      </div>
     </div>
+
+    <!-- sininho -->
+    <div class="btnNot" onclick="abrirNotifi(event)">
+      <img src="../imagens/Sino.png" alt="Notificações">
+      <span class="badge">17</span>
+    </div>
+
+    <!-- box sininho -->
+    <div class="notifi-box" id="box">
+      <h2>Notificações <span>17</span></h2>
+
+      <div class="notifi-item">
+        <img src="/conteudo/imagens/Dav.jpg" alt="Davi" class="img-not">
+        <div class="text">
+          <h4>Davi Silva</h4>
+          <p>@lorem ipsum dolor sit amet</p>
+        </div>
+      </div>
+
+      <div class="notifi-item">
+        <img src="/conteudo/imagens/Ell.jpg" alt="Ella" class="img-not">
+        <div class="text">
+          <h4>Ella Prado</h4>
+          <p>@lorem ipsum dolor sit amet</p>
+        </div>
+      </div>
+
+      <div class="notifi-item">
+        <img src="../imagens/Bea.jpg" alt="Beatriz" class="img-not">
+        <div class="text">
+          <h4>Beatriz Macedo</h4>
+          <p>@lorem ipsum dolor sit amet</p>
+        </div>
+      </div>
+
+      <div class="notifi-item">
+        <img src="../imagens/Thiago.jpg" alt="Thiago" class="img-not">
+        <div class="text">
+          <h4>Thiago Silva</h4>
+          <p>@lorem ipsum dolor sit amet</p>
+        </div>
+      </div>
+    </div>
+  </header>
+
+ 
 
 
     <div class="container">

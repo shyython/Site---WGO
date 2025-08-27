@@ -22,7 +22,7 @@
             <!-- Cadastros -->
 
         </form>
-        <a href="evento_indi.php">Eventos</a>
+        <a href="procurar.php">Eventos</a>
         <a href="">Login</a>
     </header>
 <body>

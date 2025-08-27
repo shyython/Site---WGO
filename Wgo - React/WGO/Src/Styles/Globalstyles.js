@@ -321,7 +321,7 @@ export const escuro = StyleSheet.create({
   //CADASTRAR
    Cad_container: {
     flex: 1,
-    backgroundColor: '#121212', // fundo escuro padrão
+    backgroundColor: '#272727', // fundo escuro padrão
   },
   Cad_txt: {
     color: '#E0E0E0', // texto claro
@@ -376,16 +376,17 @@ export const escuro = StyleSheet.create({
   Cad_Check: {
     width: 30,
     height: 30,
-    tintColor: '#3A68CD',
+    tintColor: '#E55B06',
   },
   Cad_TxtTopicos: {
-    color: '#E0E0E0',
+    color: '#FFFFFF',
+    fontWeight: 'bold',
     fontSize: 16,
     maxWidth: '80%',
     marginLeft: 10,
   },
   Cad_Txtinput: {
-    backgroundColor: '#686868ff',
+    backgroundColor: '#474747',
     color: '#FFFFFF',
     width: '90%',
     height: 50,
@@ -397,6 +398,21 @@ export const escuro = StyleSheet.create({
     borderColor: '#333',
 
   },
+  Cad_TxtinputD: {
+    backgroundColor: '#474747',
+    color: '#FFFFFF',
+    width: '90%',
+    height: 50,
+    borderRadius: 10,
+    paddingLeft: 20,
+    marginRight: 10,
+    marginTop: 20,
+    alignSelf: 'center',
+    borderWidth: 1,
+    borderColor: '#333',
+    textAlign: 'center',
+
+  },
   Cad_Inputs: {
     display: 'flex',
     flexDirection: 'row',
@@ -404,8 +420,23 @@ export const escuro = StyleSheet.create({
     alignItems: 'center',
     marginLeft: 18,
   },
+
+  Cad_Txtinput_meio: {
+    backgroundColor: '#474747',
+    color: '#FFFFFF',
+    width: '80%',
+    height: 50,
+    borderRadius: 10,
+    paddingLeft: 20,
+    marginTop: 20,
+    textAlign: 'center',
+    alignSelf: 'center',
+    borderWidth: 1,
+    borderColor: '#333',
+  },
+
   Cad_Btn: {
-    backgroundColor: '#3A68CD',
+    backgroundColor: '#E55B06',
     padding: 10,
     width: '90%',
     alignItems: 'center',

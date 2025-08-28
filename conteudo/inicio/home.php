@@ -1,3 +1,6 @@
+
+
+
 <!DOCTYPE html> 
 <html lang="en">  
 
@@ -92,6 +95,7 @@
     </div>
   </header>
 
+<<<<<<< HEAD
   <!-- destaques -->
   <div class="carrossel" >
       <div class="imagens">
@@ -102,6 +106,28 @@
       </div>
   </div>
   <!-- fim destaques -->
+=======
+ 
+
+
+    <div class="container">
+        <aside class="containerlateral">
+
+            <div class="itensordem1">
+                <p>Restaurantes</p>
+            </div>
+
+            <div class="itensordem2">
+                <p class="textolateral">Show</p>
+            </div>
+
+            <div class="itensordem3">
+                <p class="textolateral">Standup's</p>
+            </div>
+        </aside>
+    </div>
+
+>>>>>>> d07f80c63c0c7f240ef470c3cf724d8781832483
 
     </div>
     <script src="script.js"></script>

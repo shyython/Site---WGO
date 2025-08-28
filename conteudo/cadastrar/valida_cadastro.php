@@ -13,7 +13,7 @@
 
     // PEGA OS DADOS DO FORMULÁRIO
     $nome = $_POST['nome'];
-    $senha = md5($_POST['senha']); // Considere usar password_hash no futuro
+    $senha = md5($_POST['senhaUsuario']);
 
     // INSERÇÃO DOS DADOS NO BANCO
     $sql = "INSERT INTO usuarios (nomeUsuario, emailUsuario, senhaUsuario) VALUES ('$nome', '$email', '$senha')";

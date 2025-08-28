@@ -294,32 +294,4 @@ nav ul li a:hover {
 
 }
 
-.carrossel {
-    width: 600px;
-    overflow: hidden; 
-    position: relative;
-    margin: 0 auto;
-    display: flex;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px;
-}
 
-.imagens {
-    display: flex; 
-    transition: transform 1s ease;
-    
-}
-
-.imagens img {
-    width: 600px;
-    height: auto; 
-}
-/* centralizando isso  */
-#carrosel{
-    display: flex;  
-}
-#img{
-    display: flex;
-    justify-content: space-between;
-}
-/* fim carrosel de imagens vey */

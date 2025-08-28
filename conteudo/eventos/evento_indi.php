@@ -1,6 +1,7 @@
 <?php
 require_once "../ConfigBd/porta.php";
-  $sql = "SELECT * FROM eventos";
+$evento = $_GET["id"];
+  $sql = "SELECT * FROM eventos where Id_Evento = $evento";
    
             $res = $conexao->query($sql);
             $qtd = $res->num_rows;

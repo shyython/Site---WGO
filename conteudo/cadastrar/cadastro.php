@@ -13,7 +13,8 @@
     <img class="avatar" src="../imagens/Icone-usuario.png" alt="User" />
 
     <form action="valida_cadastro.php" method="POST">
-        <input type="text" name="nomeUsuario" placeholder="Nome completo" required />
+        <input type="text" name="nome" placeholder="Nome completo" required />
+        <input type="text" name="nomeUsuario" placeholder="User" required>
         <input type="email" name="emailUsuario" placeholder="Email" required />
         <input type="password" name="senhaUsuario" placeholder="Password" required />
        
@@ -36,6 +37,8 @@
         <?php } ?>
 
         <button type="submit">Cadastrar</button>
+       
+
 
     </form>
 
@@ -43,6 +46,7 @@
         <p>Já tem uma conta? <a href="login.php">Login</a></p>
     </div>
 
+            
 </body>
 
 </html>

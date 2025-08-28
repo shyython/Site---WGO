@@ -10,7 +10,6 @@
 </head>
 
 <body>
-
     <!-- Cabeçalho geral -->
     <header>
         <a href="/conteudo/inicio/index.html"><img class="Logo" src="/conteudo/imagens/WgoIcon.png" alt="Logo"></a>
@@ -112,8 +111,7 @@
                     <div class="div-seguidores">
                         <div class="div-img">
                             <img src="/conteudo/imagens/Icone-usuario.png" alt="" id="ImagemPerfil">
-                            <input name="arquivo" type="file">
-                            <button name="upload" type="submit">enviar foto</button>
+                           
                         </div>
                         <label for="">posts</label>
                         <label for="">seguidores</label>
@@ -124,7 +122,7 @@
                         <a href="">teste</a>
                     </div>
                     <div class="container-btns">
-                        <button class="BtnEditar"><a href="/conteudo/editar_perfil/editar_perfil.php">Editar Perfil</a></button>
+                        <button class="BtnEditar"><a href="editar_perfil.php">Editar Perfil</a></button>
                         <button class="BtnCompartilhar">Compartilhar Perfil</button>
                     </div>
                     <div class="resumo">

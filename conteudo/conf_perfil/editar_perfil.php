@@ -29,6 +29,8 @@ if(isset($_FILES['arquivos'])) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+     <input name="arquivo" type="file">
+     <button name="upload" type="submit">enviar foto</button>
 </head>
 <body>
     

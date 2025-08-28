@@ -12,7 +12,7 @@
 <body>
     <!-- Cabeçalho geral -->
     <header>
-        <a href="/conteudo/inicio/index.html"><img class="Logo" src="/conteudo/imagens/WgoIcon.png" alt="Logo"></a>
+        <a href="/conteudo/inicio/index.html"><img class="Logo" src="/conteudo/sobre/src/WgoIcon2.png" alt="Logo"></a>
         <form class="form">
             <!-- Barra de pesquisa -->
             <input class="input" placeholder="Pesquisar" required="" type="text">
@@ -25,73 +25,12 @@
                 </svg>
             </button>
             <!-- Cadastros -->
+
         </form>
-
-        <!-- NOTICACOES  -->
-        <nav>
-            <div class="icon" onclick="abrirNotifi()">
-                <img src="/conteudo/imagens/Sino.png" alt=""> <span>17</span>
-            </div>
-            <div class="notifi-box" id="box">
-                <h2>Notifications <span>17</span></h2>
-                <div class="notifi-item">
-                    <img src="/conteudo/imagens/Dav.jpg" alt="img" class="img-not">
-                    <div class="text">
-                        <h4>Davi Silva</h4>
-                        <p>@lorem ipsum dolor sit amet</p>
-                    </div>
-                </div>
-
-                <div class="notifi-item">
-                    <img src="/conteudo/imagens/Ell.jpg" alt="img" class="img-not">
-                    <div class="text">
-                        <h4>Ella Prado</h4>
-                        <p>@lorem ipsum dolor sit amet</p>
-                    </div>
-                </div>
-
-                <div class="notifi-item">
-                    <img src="/conteudo/imagens/Bea.jpg" alt="img" class="img-not">
-                    <div class="text">
-                        <h4>Beatriz macedo</h4>
-                        <p>@lorem ipsum dolor sit amet</p>
-                    </div>
-                </div>
-
-
-                <div class="notifi-item">
-                    <img src="/conteudo/imagens/Thiago.jpg" alt="img" class="img-not">
-                    <div class="text">
-                        <h4>Thiago Silva</h4>
-                        <p>@lorem ipsum dolor sit amet</p>
-                    </div>
-                </div>
-
-            </div>
-        </nav>
-
-
+        <a href=""></a>
+        <a href="/conteudo/eventos/eventos.html">Eventos</a>
+        <a href="">Home</a>
     </header>
-    <!-- Barra de interações -->
-    <div class="menu">
-
-        <ul>
-            <li><a href="/conteudo/inicio/" class="itens">Inicio</a></li>
-            <li> <a href="/conteudo/amigos/Amigos.html" class="itens">Amigos</a></li>
-            <li> <a href="/conteudo/Eventos/Eventos.html" class="itens">Eventos</a></li>
-            <li>
-                <a href="#" class="itens" onclick="abrirMenuConf()">Configurações</a>
-                <ul id="configMenu" style="display: none;">
-                    <li><a href="/conteudo/cadastrar/cadastrar.html ">Cadastrar</a></li>
-                    <li><a href="/conteudo/conf_perfil/Configuracao_Perfil.html">Perfil</a></li>
-                    <li><a href="privacidade.html">Ajuda</a></li>
-
-                </ul>
-            </li>
-
-        </ul>
-    </div>
-
     <main>
         <!-- Perfil -->
         <form enctype="multipart/form-data" action="">

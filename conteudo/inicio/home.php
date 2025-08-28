@@ -92,28 +92,7 @@
     </div>
   </header>
 
- 
-
-
-    <div class="container">
-        <aside class="containerlateral">
-
-            <div class="itensordem1">
-                <p>Restaurantes</p>
-            </div>
-
-            <div class="itensordem2">
-                <p class="textolateral">Show</p>
-            </div>
-
-            <div class="itensordem3">
-                <p class="textolateral">Standup's</p>
-            </div>
-        </aside>
-    </div>
-
   <!-- destaques -->
-  <p class="Destaque"> Destaque em:</p>
   <div class="carrossel" >
       <div class="imagens">
           <img src="https://www.infomoney.com.br/wp-content/uploads/2025/03/cidadedesaopaulo.com-lollapalooza-brasil-2025-cidadedesaopaulo.com-lollapalooza-brasil-2025-lollapalooza-publico-250322-fotos-daniel-deak-0043.jpg?fit=1250%2C833&quality=50&strip=all" alt="Imagem 1">

@@ -1,20 +1,17 @@
-
-
-
-<!DOCTYPE html> 
-<html lang="en">  
+<!DOCTYPE html>
+<html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="home.css">
-    <script></script>
-    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">    
-    <title>Bem-vindo ao WGO!</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="homee.css">
+  <script></script>
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+  <title>Bem-vindo ao WGO!</title>
 </head>
 
 <body>
-    <header id="header">
+  <header id="header">
     <!-- logo -->
     <a href="../inicio/home.php">
       <img class="Logo" src="../imagens/WgoIcon2.png" alt="Logo">
@@ -95,29 +92,42 @@
     </div>
   </header>
 
- 
 
 
-    <div class="container">
-        <aside class="containerlateral">
 
-            <div class="itensordem1">
-                <p>Restaurantes</p>
-            </div>
+  <div class="container">
+    <aside class="containerlateral">
 
-            <div class="itensordem2">
-                <p class="textolateral">Show</p>
-            </div>
+      <div class="itensordem1">
+        <p>Restaurantes</p>
+      </div>
 
-            <div class="itensordem3">
-                <p class="textolateral">Standup's</p>
-            </div>
-        </aside>
-    </div>
+      <div class="itensordem2">
+        <p class="textolateral">Show</p>
+      </div>
 
+      <div class="itensordem3">
+        <p class="textolateral">Standup's</p>
+      </div>
+    </aside>
+  </div>
 
-    </div>
-    <script src="script.js"></script>
+  <div class="carrosel">
+    <div class="card"><img src="Bistro Calistro.jpg" alt=""></div>
+    <div class="card">card 2</div>
+    <div class="card">card 3</div>
+    <div class="card">card 4</div>
+    <div class="card">card 5</div>
+    <div class="card">card 6</div>
+    <div class="card">card 7</div>
+    <div class="card">card 8</div>
+    <div class="card">card 9</div>
+    <div class="card">card 10</div>
+  </div>
+
+  <script src="script.js"></script>
 </body>
+
 </html>
+
 </html>

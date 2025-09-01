@@ -1,0 +1,468 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+ 
+body {
+    background-color: #F5F5F5;
+    font-family: Arial, Helvetica, sans-serif;
+}
+ 
+.color-int{
+    background-color: #000000;
+    width: 100%;
+    height: 10px;
+}
+ 
+ 
+.color-int-bottom{
+    background-color: #000000;
+    width: 100%;
+    height: 10px;
+}
+ 
+ 
+.div-introducao-basica {
+    background-image: url('./src/back-friends-2.png');
+    width: 100%;
+    background-size: cover;
+    height: 500px;
+    background-repeat: no-repeat;
+    background-color: #F5F5F5;
+    background-position: center;
+   
+}
+ 
+.hero-section {
+    height: 500px;
+    /* altura total da viewport */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+    color: #fff;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.5);
+    /* sobreposição para melhorar a legibilidade do texto */
+}
+ 
+.div-conteudo-intbas {
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    align-items: end;
+    margin-bottom: 200px;
+    padding: 20px;
+   
+}
+ 
+/* Ajustes para telas menores */
+@media (max-width: 768px) {
+    .hero-section {
+        height: 100vh;
+        /* mantém sempre a tela cheia */
+    }
+}
+ 
+@media (max-width: 480px) {
+    .hero-section {
+        height: 100vh;
+        /* mesma lógica para mobile */
+    }
+}
+ 
+.div-introducao-conteudo {
+    /* width: 100%;
+    height:500px;
+    background: rgba(0, 0, 0, 0.342); */
+}
+ 
+.Titulo-WGO {
+    font-size: 100px;
+    color: #e55b06;
+    text-align: center;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    -webkit-text-stroke-width: 2px; /* Largura da borda */
+    -webkit-text-stroke-color: black; /* Cor da borda */
+}
+ 
+.subtitulo-card {
+    font-size: 30px;
+    color: #174348;
+    margin-bottom: 20px;
+}
+ 
+.txt-italico {
+    font-size: 50px;
+    font-style: italic;
+    color: #fe6a07;
+    -webkit-text-stroke-width: 2px; /* Largura da borda */
+    -webkit-text-stroke-color: black; /* Cor da borda */
+}
+ 
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+ 
+header {
+    display: flex;
+    background-color: #21385e;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    align-items: center;
+    color: #fffff7;
+    justify-content: space-around;
+    flex-flow: row wrap;
+}
+ 
+a {
+    color: #F5F5F5;
+}
+ 
+.Login {
+ 
+    color: beige;
+}
+ 
+.Logo {
+    width: 120px;
+    height: auto;
+    margin-right: 20px;
+    border-radius: 100%;
+ 
+}
+ 
+.itens-home {
+    list-style-type: none;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+ 
+}
+ 
+.linksHome {
+    font-size: 19px;
+    margin: 3px;
+    color: #fffff7;
+    text-decoration: none;
+    flex-flow: row wrap;
+ 
+}
+ 
+.form button {
+    border: none;
+    background: none;
+    color: #8b8ba7;
+}
+ 
+.form {
+    --timing: 0.3s;
+    --width-of-input: 500px;
+    --height-of-input: 40px;
+    --border-height: 2px;
+    --input-bg: #fff;
+    --border-color: #2f2ee9;
+    --border-radius: 30px;
+    --after-border-radius: 1px;
+    position: relative;
+    width: var(--width-of-input);
+    height: var(--height-of-input);
+    display: flex;
+    align-items: center;
+    padding-inline: 0.8em;
+    border-radius: var(--border-radius);
+    transition: border-radius 0.5s ease;
+    background: var(--input-bg, #fff);
+}
+ 
+.input {
+    font-size: 0.9rem;
+    background-color: transparent;
+    width: 100%;
+    height: 100%;
+    padding-inline: 0.5em;
+    padding-block: 0.7em;
+    border: none;
+}
+ 
+.form:before {
+    content: "";
+    position: absolute;
+    background: var(--border-color);
+    transform: scaleX(0);
+    transform-origin: center;
+    width: 100%;
+    height: var(--border-height);
+    left: 0;
+    bottom: 0;
+    border-radius: 1px;
+    transition: transform var(--timing) ease;
+}
+ 
+.form:focus-within {
+    border-radius: var(--after-border-radius);
+}
+ 
+input:focus {
+    outline: none;
+}
+ 
+.form:focus-within:before {
+    transform: scale(1);
+}
+ 
+.div-introducao {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+ 
+.Titulo-card {
+    font-size: 50px;
+    padding: 15px;
+}
+ 
+.subtitulo-card {
+    font-size: 30px;
+}
+ 
+.div-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+ 
+.img-evento {
+    border-radius: 5px;
+}
+ 
+.div-texto-eventos {
+    text-align: center;
+    margin-bottom: 20px;
+}
+ 
+.Titulo {}
+ 
+.paragrafo {
+    padding: 10px;
+}
+ 
+.btn-curtir-compartilhar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+ 
+.card-secao-eventos {
+    display: flex;
+    width: 350px;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin: 10px;
+    padding: 10px;
+}
+ 
+.btn-secao {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+ 
+.btn-interacoes {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+}
+ 
+/* From Uiverse.io by KSAplay */
+.container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+ 
+.container {
+    display: block;
+    position: relative;
+    cursor: pointer;
+    font-size: 20px;
+    user-select: none;
+    transition: 100ms;
+}
+ 
+.checkmark {
+    top: 0;
+    left: 0;
+    height: 2em;
+    width: 2em;
+    transition: 100ms;
+    animation: dislike_effect 400ms ease;
+}
+ 
+.container input:checked~.checkmark path {
+    fill: #ff5353;
+    stroke-width: 0;
+}
+ 
+.container input:checked~.checkmark {
+    animation: like_effect 400ms ease;
+}
+ 
+.container:hover {
+    transform: scale(1.1);
+}
+ 
+@keyframes like_effect {
+    0% {
+        transform: scale(0);
+    }
+ 
+    50% {
+        transform: scale(1.2);
+    }
+ 
+    100% {
+        transform: scale(1);
+    }
+}
+ 
+@keyframes dislike_effect {
+    0% {
+        transform: scale(0);
+    }
+ 
+    50% {
+        transform: scale(1.2);
+    }
+ 
+    100% {
+        transform: scale(1);
+    }
+}
+ 
+@keyframes enlarge {
+    0% {
+        transform: scale(0.5);
+    }
+ 
+    100% {
+        transform: scale(1.2);
+    }
+}
+ 
+ 
+a {
+    text-decoration: none;
+}
+ 
+.txt-num {
+    margin: 5px;
+}
+ 
+.div-curtir {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+ 
+}
+ 
+.imgint {
+ 
+    margin-right: 5px;
+ 
+}
+ 
+.btn-ver-evento {
+    background-color: #587fff;
+    color: #fff;
+    border: none;
+    padding: 10px;
+    width: 100%;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 10px;
+}
+ 
+ 
+.btn-confirmar {
+    background-color: #587fff;
+    color: #fff;
+    border: none;
+    padding: 10px;
+    width: 120px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+ 
+.btn-recusar {
+    background-color: #e92e2e;
+    color: #fff;
+    border: none;
+    padding: 10px;
+    width: 120px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+ 
+.div-usuarios-presente {
+    display: flex;
+    justify-content: center;
+    padding: 5px;
+}
+ 
+.usuarios-presente {
+    text-align: center;
+    margin-bottom: 5px;
+    font-size: 12px;
+}
+ 
+.img-usuario-presente {
+ 
+    width: 20px;
+    height: 20px;
+    border-radius: 100px;
+}
+ 
+/* categorias */
+ 
+.div-categoria {
+    display: flex;
+    justify-content: space-evenly;
+    text-align: center;
+    align-items: center;
+    padding: 15px;
+}
+ 
+.div-img-icone {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #e92e2e;
+    width: 90px;
+    height: 90px;
+    border-radius: 50px;
+}
+ 
+.todo{
+    padding: 1.5em;
+    border-radius: .5em;
+    background-color: var(--bg-light);
+    opacity: 0;
+    transition: 1000ms ease-in-out;
+}
+.todo.show {
+    opacity: 1;
+}   

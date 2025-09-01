@@ -3,7 +3,7 @@ session_start();
 
 // Verifica se o usuário está autenticado
 if (!isset($_SESSION['autenticado']) || $_SESSION['autenticado'] != 'sim') {
-    header('location: index.php?login=erro2');
+    header('location: login.php?login=erro2');
     exit;
 }
 
@@ -14,6 +14,6 @@ if (!isset($_SESSION['email']) || !filter_var($_SESSION['email'], FILTER_VALIDAT
 }
 
 // Redireciona para home.php se tudo estiver ok
-header('location: ../inicio/home.php');
+header('location: ../home/home.php');
 exit;
 ?>

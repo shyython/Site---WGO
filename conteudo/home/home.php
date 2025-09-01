@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -113,12 +115,12 @@
   </div>
 
   <div class="carrosel">
-    <div class="card"><img src="Bistro Calistro.jpg" alt=""></div>
-    <div class="card">card 2</div>
-    <div class="card">card 3</div>
-    <div class="card">card 4</div>
-    <div class="card">card 5</div>
-    <div class="card">card 6</div>
+    <div class="card"><?php print "<img class='MiniImg' src='" . $row->Img1 . "' alt=''>"; ?></div>
+    <div class="card"><?php print "<img class='MiniImg' src='" . $row->Img2 . "' alt=''>"; ?></div>
+    <div class="card"><?php print "<img class='MiniImg' src='" . $row->Img3 . "' alt=''>"; ?></div>
+    <div class="card"><?php print "<img class='MiniImg' src='" . $row->Img4 . "' alt=''>"; ?></div>
+    <div class="card"><?php print "<img class='MiniImg' src='" . $row->Img5 . "' alt=''>"; ?></div>
+    <div class="card"><?php print "<img class='MiniImg' src='" . $row->Img6 . "' alt=''>"; ?></div>
     <div class="card">card 7</div>
     <div class="card">card 8</div>
     <div class="card">card 9</div>
@@ -130,4 +132,3 @@
 
 </html>
 
-</html>

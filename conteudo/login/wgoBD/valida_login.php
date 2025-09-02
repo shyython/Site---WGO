@@ -25,12 +25,12 @@ if ($emailUsuario == $row->emailUsuario && $senhaUsuario == $row->senhaUsuario) 
 if ($usuarioAutenticado) {
     // VALIDANDO A SESSÃO
     $_SESSION['autenticado'] = 'sim';
-    header('location: ./inicio/home.php');
+    header('location: ../home/home.php');
     exit;
 } else {
     // VALIDANDO A SESSÃO
     $_SESSION['autenticado'] = 'nao';
-    header('location: index.php?login=erro');
+    header('location: login.php?login=erro');
     exit;
 }
 

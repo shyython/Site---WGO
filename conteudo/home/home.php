@@ -1,20 +1,18 @@
 
-
-
-<!DOCTYPE html> 
-<html lang="en">  
+<!DOCTYPE html>
+<html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="home.css">
-    <script></script>
-    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">    
-    <title>Bem-vindo ao WGO!</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="homee.css">
+ 
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+  <title>Bem-vindo ao WGO!</title>
 </head>
 
 <body>
-    <header id="header">
+  <header id="header">
     <!-- logo -->
     <a href="../inicio/home.php">
       <img class="Logo" src="../imagens/WgoIcon2.png" alt="Logo">
@@ -94,8 +92,7 @@
       </div>
     </div>
   </header>
-
-<<<<<<< HEAD
+  
   <!-- destaques -->
   <div class="carrossel" >
       <div class="imagens">
@@ -106,31 +103,41 @@
       </div>
   </div>
   <!-- fim destaques -->
-=======
- 
 
 
-    <div class="container">
-        <aside class="containerlateral">
+  <div class="container">
+    <aside class="containerlateral">
 
-            <div class="itensordem1">
-                <p>Restaurantes</p>
-            </div>
+      <div class="itensordem1">
+        <p>Restaurantes</p>
+      </div>
 
-            <div class="itensordem2">
-                <p class="textolateral">Show</p>
-            </div>
+      <div class="itensordem2">
+        <p class="textolateral">Show</p>
+      </div>
 
-            <div class="itensordem3">
-                <p class="textolateral">Standup's</p>
-            </div>
-        </aside>
-    </div>
+      <div class="itensordem3">
+        <p class="textolateral">Standup's</p>
+      </div>
+    </aside>
+  </div>
 
->>>>>>> d07f80c63c0c7f240ef470c3cf724d8781832483
 
-    </div>
-    <script src="script.js"></script>
+  <div class="carrosel">
+    <div class="card"><?php print "<img class='MiniImg' src='" . $row->Img1 . "' alt=''>"; ?></div>
+    <div class="card"><?php print "<img class='MiniImg' src='" . $row->Img2 . "' alt=''>"; ?></div>
+    <div class="card"><?php print "<img class='MiniImg' src='" . $row->Img3 . "' alt=''>"; ?></div>
+    <div class="card"><?php print "<img class='MiniImg' src='" . $row->Img4 . "' alt=''>"; ?></div>
+    <div class="card"><?php print "<img class='MiniImg' src='" . $row->Img5 . "' alt=''>"; ?></div>
+    <div class="card"><?php print "<img class='MiniImg' src='" . $row->Img6 . "' alt=''>"; ?></div>
+    <div class="card">card 7</div>
+    <div class="card">card 8</div>
+    <div class="card">card 9</div>
+    <div class="card">card 10</div>
+  </div>
+
+  <script src="script.js"></script>
 </body>
+
 </html>
-</html>
+

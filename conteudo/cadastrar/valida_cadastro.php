@@ -1,5 +1,5 @@
 <?php
-    include('../config.php');
+    include('../login/config.php');
 
     // VERIFICA SE O E-MAIL JÁ ESTÁ CADASTRADO
     $email = $_POST['emailUsuario'];
@@ -21,8 +21,8 @@
 
     // REDIRECIONA COM BASE NO RESULTADO
     if ($res === true) {
-        header('Location: ../index.php?usuario=sucesso');
+        header('Location: ../login/login.php?usuario=sucesso');
     } else {
-        header('Location: cadastro.php?usuario=falha');
+        header('Location: ../cadastrar/cadastro.php?usuario=falha');
     }
 ?>

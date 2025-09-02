@@ -89,7 +89,7 @@
                 <!-- card 1 -->
                 <div class="card-secao-eventos">
                     <div class="div-usuarios-presente">
-                        <img class="img-usuario-presente" src=".imagens/Dav.jpg" alt="">
+                        <img class="img-usuario-presente" src=".    /imagens/Dav.jpg" alt="">
                         <p class="usuarios-presente">Davi, Ella e outras pessoas confirmaram presença</p>
                     </div>
                     <img class="img-evento" src="/conteudo/sobre/src/img-card-festa.png">

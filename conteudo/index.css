@@ -23,7 +23,7 @@ body {
  
  
 .div-introducao-basica {
-    background-image: url('./src/back-friends-2.png');
+    background-image: url('./imagens/backImage2.png');
     width: 100%;
     background-size: cover;
     height: 500px;
@@ -39,18 +39,19 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: flex-end;
+    align-items: flex-start;
     color: #fff;
     text-align: center;
     background: rgba(0, 0, 0, 0.5);
+   
     /* sobreposição para melhorar a legibilidade do texto */
 }
  
 .div-conteudo-intbas {
     display: flex;
     flex-direction: column;
-    justify-content: end;
-    align-items: end;
+    justify-content: center;
+    align-items: center;
     margin-bottom: 200px;
     padding: 20px;
    
@@ -78,16 +79,17 @@ body {
 }
  
 .Titulo-WGO {
-    font-size: 100px;
+    /* font-size: 400px;
     color: #e55b06;
     text-align: center;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-    -webkit-text-stroke-width: 2px; /* Largura da borda */
-    -webkit-text-stroke-color: black; /* Cor da borda */
+    padding-left: 10px; */
+    /* text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); */
+    /*-webkit-text-stroke-width: 2px;  Largura da borda 
+    -webkit-text-stroke-color: black; Cor da borda */
 }
  
 .subtitulo-card {
-    font-size: 30px;
+    font-size: 40px;
     color: #174348;
     margin-bottom: 20px;
 }

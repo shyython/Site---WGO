@@ -11,7 +11,7 @@
 <body>
     <!-- apresentando a ideia do aplicativo -->
     <header>
-        <a href="index.php"><img class="Logo" src="../conteudo/imagens/WgoIcon2.png" alt="Logo"></a>
+        <a href="index.php"><img class="Logo" src="../conteudo/imagens/WgoIcon2.png" alt="Logo" style="width: 150px;"></a>
         <!-- <form class="form">
             Barra de pesquisa
             <input class="input" placeholder="Pesquisar" required="" type="text">
@@ -39,10 +39,11 @@
             <div class="div-introducao-conteudo">
                 <div class="hero-section">
                     <div class="div-conteudo-intbas">
-                        <h1 class="Titulo-wgo">A festa começa quando você diz <span class="txt-italico">SIM!</span></h1>
-                        <h1 class="Titulo-WGO">WE GO OUT?</h1>
-                        <p class="subtitulo-WGO"></p>
+                        <p class="Titulo-wgo" style="font-size: 80px; color: #ffffffff; text-align: center; text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); -webkit-text-stroke-width: 2px; -webkit-text-stroke-color: black; padding-left: 100px; ">A festa começa <br> quando você diz <span class="txt-italico">SIM!</span></p>
+                        <!-- <h1 class="Titulo-WGO">WE GO OUT?</h1> -->
+                        <p class="subtitulo-WGO">Descubra os melhores eventos da sua cidade com o WeGoOut!</p>
                         <div class="div-btns-dowload">
+                            <button style="background-color: #fe6a07; color: #fff; border: none; padding: 10px; border-radius: 5px; cursor: pointer; transition: background-color 0.3s ease;" onclick="location.href='./cadastrar/cadastro.php'"> Venha fazer parte!</button>
                         </div>
                     </div>
                 </div>
@@ -51,11 +52,12 @@
         <div class="color-int">
 
         </div>
-   
+
         <!-- ideia de incentivar as pessoas a sairem mais e curtirem com seus amigos -->
         <div class="todo">
             <div class="div-introducao">
                 <h1 class="Titulo-card">Chegou o fim de semana?</h1>
+               
                 <div>
                     <p class="subtitulo-card">Junte a galera e descubra os melhores eventos da sua cidade. Não fique de
                         fora
@@ -89,10 +91,10 @@
                 <!-- card 1 -->
                 <div class="card-secao-eventos">
                     <div class="div-usuarios-presente">
-                        <img class="img-usuario-presente" src=".    /imagens/Dav.jpg" alt="">
+                        <img class="img-usuario-presente" src="./imagens/Dav.jpg" alt="">
                         <p class="usuarios-presente">Davi, Ella e outras pessoas confirmaram presença</p>
                     </div>
-                    <img class="img-evento" src="/conteudo/sobre/src/img-card-festa.png">
+                    <img class="img-evento" src="../imagem/Viela.jpg">
                     <div class="card-texto">
                         <h2 class="Titulo">EVENTO 1</h2>
                         <p class="paragrafo">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatem atque

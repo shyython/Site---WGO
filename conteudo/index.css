@@ -457,6 +457,88 @@ a {
     height: 90px;
     border-radius: 50px;
 }
+
+/* eventos */
+
+.entenda{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.conheca{
+    display:flex;
+    flex-direction: row;
+    margin-bottom: 50px;
+}
+.resumo{
+ display: flex;
+ align-items: center;
+}
+.Categoria{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.Imgresumo{
+    max-width: 50px;
+    max-height: 50px;
+    margin-left: 5px;
+    margin-right: 10px;
+}
+.ImgCategoria{
+    max-width: 100px;
+    max-height: 90px;
+    min-height: 90px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+.CardCategoria{
+    display: flex;
+    width: 100px;
+    height: 120px;
+    flex-direction: column;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    background-color: rgb(205, 205, 205);
+    padding: 2px;
+    margin: 5px;
+    text-align: center;
+    font-size: 10px;
+    align-items: center;
+    justify-content: center;
+    transition: 0.5s;
+
+}
+.CardCategoria:hover{
+   scale: 1.2;
+   transition: 0.5s;
+   background-color: #e55b06;
+   color: white;
+   margin-left: 15px;
+   margin-right: 15px;
+   font-weight: bold;
+}
+.Explorar{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color:#2f4d6a ;
+    padding: 12px;
+    border-radius: 5px;
+}
+.TxtExplorar{
+    color: white;
+}
+.BtnExplorar{
+    background-color: white;
+    border: none;
+    padding: 5px;
+    border-radius: 5px;
+    color: #155088 ;
+    font-weight: bold;
+    
+}
  
 .todo{
     padding: 1.5em;
@@ -468,3 +550,4 @@ a {
 .todo.show {
     opacity: 1;
 }   
+

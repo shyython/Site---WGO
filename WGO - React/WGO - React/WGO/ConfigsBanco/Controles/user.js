@@ -44,15 +44,18 @@ export const getEvent = (req,res) =>{
   });
 }
 export const getSeach = (req, res) => {
-  const search = req.body.procurar;
+  console.log("req.query:", req.query);
+  console.log("req.url:", req.url);
+  console.log("req.path:", req.path);
 
+  const search = req.query.procurar || "";
   const q = "SELECT * FROM eventos WHERE Nome_Evento LIKE ?";
 
   db.query(q, [`%${search}%`], (err, data) => {
     if (err) {
+      console.error("Erro MySQL:", err);
       return res.status(500).json(err);
     }
-    console.log(data);
     return res.status(200).json(data);
   });
 };

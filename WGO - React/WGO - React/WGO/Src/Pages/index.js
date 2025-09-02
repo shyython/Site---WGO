@@ -39,7 +39,7 @@ const VerificaLogin = () => {
     return;
   }
   const usuario = users.find(
-    (usu) => usu.Email === Email && usu.Senha === Senha
+    (usu) => usu.Email === Email && usu.Senha === Senha 
   );
   if (usuario) {
     NavegaHome();
@@ -66,7 +66,7 @@ const VerificaLogin = () => {
             <Text  style={estilo.label} onPress={NavegaCad}>Cadastrar</Text>
           </TouchableOpacity>
         </View>
-        <TouchableOpacity style={estilo.Btn} onPress={VerificaLogin}>
+        <TouchableOpacity style={estilo.Btn} onPress={NavegaHome}>
           <Text>Entrar</Text>
         </TouchableOpacity>
         <StatusBar style="auto" />

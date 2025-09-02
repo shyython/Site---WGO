@@ -6,7 +6,8 @@ import {claro, escuro} from '../Styles/Globalstyles';
 import { useNavigation } from '@react-navigation/native';
 
 
-export default function Home() {
+export default function Home({}) {
+
   const theme = useColorScheme();
      const estilo = theme === 'dark' ? escuro : claro;
 

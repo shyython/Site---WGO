@@ -593,6 +593,55 @@ export const escuro = StyleSheet.create({
   ResultadoPesquisa:{
     backgroundColor:'blue',
   },
+
+  //Perfil
+
+  containerPerfil:{
+    backgroundColor:"#272727"
+  },
+  ImgPerfil:{
+    width:100,
+    height:100
+  },
+  Txtnome:{
+    color:'white',
+    fontWeight:'bold',
+  },
+  Txtnickname:{
+    color:'white',
+    fontWeight:'bold',
+    fontSize:20
+  },
+  ContainerFoto:{
+    display:'flex',
+    flexDirection:'row',
+    justifyContent:'space-evenly',
+    marginBottom:30,
+  },
+  Atividade:{
+    display:'flex',
+    flexDirection:'row',
+
+  },
+  TxtAtividade:{
+    color:'white',
+    marginLeft:6
+  },
+  ContainerBtns:{
+    display:'flex',
+    flexDirection:'row',
+    justifyContent:'space-evenly'
+
+  },
+  Btn:{
+    borderWidth:1,
+    borderColor:'gray'
+    
+  },
+  TxtBtn:{
+    color:'white'
+  }
 });
+
 
 

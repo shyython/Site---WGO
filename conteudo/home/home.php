@@ -109,29 +109,35 @@
     </aside>
   </div>
 
-  <label for="cidade">Escolha a cidade:</label>
-  <select id="cidade">
-    <option value="">-- Selecione --</option>
-    <option value="sao-paulo">São Paulo</option>
-    <option value="rio-janeiro">Rio de Janeiro</option>
-  </select>
 
-  <div class="carrosel">
-    <div class="card"></div>
-    <div class="card"></div>
-    <div class="card"></div>
-    <div class="card"></div>
-    <div class="card"></div>
-    <div class="card"></div>
-    <div class="card"></div>
-    <div class="card"></div>
-    <div class="card"></div>
-    <div class="card"></div>
-    <div class="card"></div>
-    <div class="card"></div>
-    <div class="card"></div>
+  <div class="containerlateral">
+    <label for="cidade">Selecione a cidade:</label>
+    <select id="cidade">
+      <option value="">-- Selecione --</option>
+      <option value="sao-paulo">São Paulo</option>
+      <option value="rio-janeiro">Rio de Janeiro</option>
+      <option value="santos">Santos</option>
+      <option value="belo-horizonte">Belo Horizonte</option>
+      <option value="curitiba">Curitiba</option>
+      <option value="porto-alegre">Porto Alegre</option>
+      <option value="recife">Recife</option>
+      <option value="brasilia">Brasília</option>
+      <option value="florianopolis">Florianópolis</option>
+      <option value="campinas">Campinas</option>
+    </select>
   </div>
 
+  <div class="carrosel-container">
+    <button id="prev" class="nav-btn">‹</button>
+    <div class="carrosel" id="carrosel">
+      <img id="slide" src="" alt="Evento" />
+    </div>
+    <button id="next" class="nav-btn">›</button>
+  </div>s
+</div>
+
+
+  <p id="legenda" style="text-align:center; margin-top: 10px; font-weight:bold;"></p>
   <script src="script.js"></script>
 </body>
 

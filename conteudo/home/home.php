@@ -94,19 +94,6 @@
     </div>
   </header>
 
-
-  <!-- destaques -->
-  <div class="carrossel" >
-      <div class="imagens">
-          <img src="https://www.infomoney.com.br/wp-content/uploads/2025/03/cidadedesaopaulo.com-lollapalooza-brasil-2025-cidadedesaopaulo.com-lollapalooza-brasil-2025-lollapalooza-publico-250322-fotos-daniel-deak-0043.jpg?fit=1250%2C833&quality=50&strip=all" alt="Imagem 1">
-          <img src="https://i.em.com.br/i3TLHVhw911tL6tnkIPNnbKXQ5c=/1200x720/smart/imgsapp.em.com.br/app/noticia_127983242361/2023/08/31/1554448/the-town_1_158021.jpeg" alt="Imagem 2">
-          <img src="https://s.abcnews.com/images/Entertainment/coachella-2017-02-gty-jc-180411_hpMain.jpg" alt="Imagem 3">
-          <img src="https://ingresso-a.akamaihd.net/b2b/production/uploads/article/image/175/imagem-destaque-rock-in-rio-card-2022.jpg" alt="Imagem 4">
-      </div>
-  </div>
-  <!-- fim destaques -->
-
-
   <div class="container">
     <aside class="containerlateral">
 
@@ -126,16 +113,19 @@
 
 
   <div class="carrosel">
-    <div class="card"><?php print "<img class='MiniImg' src='" . $row->Img1 . "' alt=''>"; ?></div>
-    <div class="card"><?php print "<img class='MiniImg' src='" . $row->Img2 . "' alt=''>"; ?></div>
-    <div class="card"><?php print "<img class='MiniImg' src='" . $row->Img3 . "' alt=''>"; ?></div>
-    <div class="card"><?php print "<img class='MiniImg' src='" . $row->Img4 . "' alt=''>"; ?></div>
-    <div class="card"><?php print "<img class='MiniImg' src='" . $row->Img5 . "' alt=''>"; ?></div>
-    <div class="card"><?php print "<img class='MiniImg' src='" . $row->Img6 . "' alt=''>"; ?></div>
-    <div class="card">card 7</div>
-    <div class="card">card 8</div>
-    <div class="card">card 9</div>
-    <div class="card">card 10</div>
+    <div class="card"></div>
+    <div class="card"></div>
+    <div class="card"></div>
+    <div class="card"></div>
+    <div class="card"></div>
+    <div class="card"></div>
+    <div class="card"></div>
+    <div class="card"></div>
+    <div class="card"></div>
+    <div class="card"></div>
+    <div class="card"></div>
+    <div class="card"></div>
+    <div class="card"></div>
   </div>
 
   <script src="script.js"></script>

@@ -7,7 +7,7 @@
 /* ===================== HEADER ===================== */
 header {
     font-family: "Lato", sans-serif;
-    position: fixed;
+    position: solid;
     top: 0;
     left: 0;
     width: 100%;
@@ -17,7 +17,7 @@ header {
     padding: 10px 30px;
     z-index: 1000;
     transition:  0.3s, box-shadow 0.3s;
-    background: #0000005d;
+    background: #3C4E69;
 }
  
 header.solid {

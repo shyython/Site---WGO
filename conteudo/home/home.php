@@ -1,5 +1,3 @@
-
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -7,7 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="homee.css">
- 
+
   <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
   <title>Bem-vindo ao WGO!</title>
 </head>
@@ -111,6 +109,12 @@
     </aside>
   </div>
 
+  <label for="cidade">Escolha a cidade:</label>
+  <select id="cidade">
+    <option value="">-- Selecione --</option>
+    <option value="sao-paulo">São Paulo</option>
+    <option value="rio-janeiro">Rio de Janeiro</option>
+  </select>
 
   <div class="carrosel">
     <div class="card"></div>
@@ -132,4 +136,3 @@
 </body>
 
 </html>
-

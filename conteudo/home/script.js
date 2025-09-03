@@ -79,11 +79,11 @@ document.addEventListener('click', function (e) {
 });
 
 // 'solid' ao rolar
-window.addEventListener('scroll', function () {
-    const header = document.getElementById('header');
-    if (window.scrollY > 50) {
-        header.classList.add('solid');
-    } else {
-        header.classList.remove('solid');
-    }
-});
+// window.addEventListener('scroll', function () {
+//     const header = document.getElementById('header');
+//     if (window.scrollY > 50) {
+//         header.classList.add('solid');
+//     } else {
+//         header.classList.remove('solid');
+//     }
+// });

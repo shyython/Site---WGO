@@ -21,7 +21,7 @@
 
     <nav>
       <ul>
-        <li><a href="../inicio/home.php">Início</a></li>
+        <li><a href="../home/home.php">Início</a></li>
         <li><a href="Blog.html">Blog</a></li>
         <li><a href="../Eventos/Eventos.php">Eventos</a></li>
         <li class="config">

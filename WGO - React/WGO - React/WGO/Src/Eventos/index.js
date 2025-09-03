@@ -3,11 +3,23 @@ import { StyleSheet, Text, View, useColorScheme, TextInput, TouchableOpacity, Im
 import {claro, escuro} from '../Styles/Globalstyles';
 import { Feather } from '@expo/vector-icons';
 import { ScrollView } from 'react-native-gesture-handler';
+import { useNavigation } from '@react-navigation/native';
+
 
 
 export default function Eventos(){
-    const theme = useColorScheme();
+         const theme = useColorScheme();
          const estilo = theme === 'dark' ? escuro : claro;
+
+            const Restaurante = 'Categoria'
+
+
+           const navigation = useNavigation();  
+            function NavegaPesquisa(){
+            navigation.navigate('Pesquisa', {
+            Categoria: Restaurante})
+              }
+
     return(
     <View  style={estilo.containerEventos}>
             <View style={estilo.Header}>
@@ -20,9 +32,9 @@ export default function Eventos(){
                 <Feather name='bell' color={'white'} size={35} style={estilo.Notif}/> 
             </View>
         </View >    
-        <TouchableOpacity>
+        <TouchableOpacity onPress={NavegaPesquisa}>
             <View style={estilo.Categoria}>
-                <Text style={estilo.Label}>Restaurantes</Text>
+                <Text style={estilo.Label} value={Restaurante}>Restaurantes</Text>
                 <Image source={{uri:'https://cdn-icons-png.flaticon.com/128/254/254434.png'}} style={estilo.arrow}/>
             </View>
         </TouchableOpacity>

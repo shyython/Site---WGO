@@ -587,11 +587,23 @@ export const escuro = StyleSheet.create({
   //PESQUISA
 
   ContainerPesquisa:{
+    flex:1,
     backgroundColor:'#272727',
     marginTop: 25,
   },
   ResultadoPesquisa:{
-    backgroundColor:'blue',
+    backgroundColor:'#272727',
+  },
+  EventosPesquisa:{
+    backgroundColor:'#272727',
+    alignItems:'center'
+
+  },
+  BtnVerMaisPesquisa:{
+    backgroundColor:'#E55B06',
+    padding:2,
+    width:'40%',
+    borderRadius:3
   },
 
   //Perfil

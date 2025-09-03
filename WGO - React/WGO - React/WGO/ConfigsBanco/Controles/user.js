@@ -43,14 +43,16 @@ export const getEvent = (req,res) =>{
     return res.status(200).json(data); 
   });
 }
+
 export const getSeach = (req, res) => {
-  console.log("req.query:", req.query);
-  console.log("req.url:", req.url);
-  console.log("req.path:", req.path);
+  console.log("req.body:", req.body);
 
-  const search = req.query.procurar || "";
+  const search = req.body.procurar || "";
+  if (!search) {
+    return res.status(400).json({ error: "Parâmetro 'procurar' é obrigatório" });
+  }
+
   const q = "SELECT * FROM eventos WHERE Nome_Evento LIKE ?";
-
   db.query(q, [`%${search}%`], (err, data) => {
     if (err) {
       console.error("Erro MySQL:", err);

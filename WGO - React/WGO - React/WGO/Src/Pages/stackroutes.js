@@ -6,6 +6,7 @@ import Eventos from "../Eventos";
 import Perfil from "../Perfil";
 import Configuracoes from "../Configuracoes";
 import Pesquisa from "../Eventos/Pesquisa";
+import Evento_Individual from "../Eventos/Evento_Individual";
 
 const Tab = createBottomTabNavigator();
 const Stack = createStackNavigator();
@@ -26,6 +27,7 @@ export default function StackRoutes() {
     <Stack.Navigator>
       <Stack.Screen name="Main" component={TabRoutes} options={{ headerShown: false }} />
       <Stack.Screen name="Pesquisa" component={Pesquisa} options={{ headerShown: false }} />
+      <Stack.Screen name="Evento_Individual" component={Evento_Individual} options={{ headerShown: false }} />
     </Stack.Navigator>
   );
 }

@@ -12,18 +12,17 @@ export default function Home({}) {
      const estilo = theme === 'dark' ? escuro : claro;
 
     const [pesquisa, setPesquisa] = useState('')
+    const [evento, setEvento] = useState('')
     
   const [eventos, setEventos] = useState([]);
   const navigation = useNavigation();
   function NavegaPesquisa(){
-  navigation.navigate('Pesquisa', {
-            setPesquisa: pesquisa})
+  navigation.navigate('Pesquisa', {setPesquisa: pesquisa})
    }
   useEffect(() => {
     const getEvent = async () => {
       try {
         const res = await axios.get("http://192.168.56.1:8800/usuarios/eventos");
-        console.log(res.data)
         setEventos(res.data.sort((a, b) => (a.Id_Evento > b.Id_Evento ? 1 : (b.Id_Evento > a.Id_Evento ? 1 : -1))));
       } catch (err) {
         console.log(err);
@@ -31,6 +30,8 @@ export default function Home({}) {
     };
     getEvent();
   }, []);
+
+  
 
   return (
      <View style={estilo.containerHome}>
@@ -77,11 +78,17 @@ export default function Home({}) {
                 source={{ uri: evento.Img3}} 
                 style={estilo.ImgEvento}
               />
-              <Text style={estilo.Txtevento}>{evento.Nome_Evento}</Text>
+              <Text style={estilo.Txtevento} onChangeText={setEvento}>{evento.Nome_Evento}</Text>
               <Text style={estilo.Txtevento}>4.8</Text>
-              <TouchableOpacity style={estilo.BtnVerMais}>
-                <Text style={estilo.TextBtnVer}>Ver Mais</Text>
-              </TouchableOpacity>
+               <TouchableOpacity 
+          style={estilo.BtnVerMais} 
+          onPress={() => navigation.navigate("Evento_Individual", {
+            idEvento: evento.Id_Evento,  // 👉 envia ID
+            nomeEvento: evento.Nome_Evento // 👉 envia nome (se quiser)
+          })}
+        >
+          <Text style={estilo.TextBtnVer}>Ver Mais</Text>
+        </TouchableOpacity>
             </View>
           ))}
                    </View>

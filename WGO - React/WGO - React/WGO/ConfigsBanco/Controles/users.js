@@ -8,6 +8,6 @@ router.post('/', addUser);
 
 router.get('/eventos', getEvent)
 
-router.get('/eventos/search', getSeach)
+router.post('/eventos/search', getSeach);
 
 export default router;

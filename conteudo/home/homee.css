@@ -265,16 +265,9 @@ nav ul li a:hover {
 }
  
 /* menu lateral D */
-select:required:invalid {
-  color: gray;
-}
-option[value=""][disabled] {
+  .estado option[value="-- Selecione --"] {
   display: none;
 }
-option {
-  color: black;
-}
- 
 /*  container */
 .carrossel {
   font-family: "Lato", sans-serif;

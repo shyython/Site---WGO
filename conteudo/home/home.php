@@ -101,7 +101,7 @@
   
    <label for="">Selecione seu Estado:</label>
     <select id="estado">
-      <option disabled selected>- Selecione -</option>
+        <option value="" disabled selected>-- Selecione --</option>
         <option value="AC">Acre</option>
         <option value="AL">Alagoas</option>
         <option value="AP">Amapá</option>

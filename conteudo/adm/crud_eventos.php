@@ -30,7 +30,14 @@ VALUES ('nome_evento', 'categoria', 'Endereco', 'tipo', horario, descricao, img1
                 </div>
                 <div class="dados_evento">
                     <label for="">Categoria</label>
-                    <input type="text"  name="categoria" placeholder="Categoria" required>
+                    <select name="Categoria" id="">
+                        <option value="">Restaurante</option>
+                        <option value="">Bar</option>
+                        <option value="">Show</option>
+                        <option value="">Parque</option>
+                        <option value="">Cinema</option>
+                        <option value=""></option>
+                    </select>
                     <button>Adicionar</button>
                 </div>
                 <div class="dados_evento">
@@ -39,9 +46,15 @@ VALUES ('nome_evento', 'categoria', 'Endereco', 'tipo', horario, descricao, img1
                     <button>Adicionar</button>
                 </div>
                 <div class="dados_evento">
-                    <label for="">Tipo</label>
-                    <input type="text"  name="Tipo" placeholder="Geek, cultura..." required>
-                    <button>Adicionar </button>
+                    <select name="Tipo" id="">
+                        <option value="">Geek</option>
+                        <option value="">Cultura</option>
+                        <option value="">Música</option>
+                        <option value="">Evento</option>
+                        <option value="">Infantil</option>
+                        <option value="">Pet</option>
+                        <option value=""></option>
+                    </select>
                 </div>
                 <div class="dados_evento">
                     <label for="">Horário</label>

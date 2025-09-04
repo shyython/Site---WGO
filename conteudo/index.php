@@ -10,9 +10,10 @@
 
 <body>
     <!-- apresentando a ideia do aplicativo -->
-    <header>
+    <header id="header">
         <a href="index.php"><img class="Logo" src="../conteudo/imagens/WgoIcon2.png" alt="Logo"
                 style="width: 150px;"></a>
+        <a style="padding-right: 50px;"  href="login/login.php"><img src="../conteudo/imagens/loginn.png" alt="" width="64px" color="white"></a>
         <!-- <form class="form">
             Barra de pesquisa
             <input class="input" placeholder="Pesquisar" required="" type="text">
@@ -27,9 +28,7 @@
             Cadastros
 
         </form> -->
-        <a href=""></a>
-        <a href="/conteudo/eventos/eventos.html">Eventos</a>
-        <a href="login/login.php">Login</a>
+
     </header>
     <main>
         <!-- imagem introducao -->
@@ -81,74 +80,25 @@
 
 
         <div class="b">
-        <div class="todo">
-            <!-- ideia de ver os amigos marcando presença nos proximos eventos -->
-            <div class="div-texto-eventos">
-                <h1 class="Titulo-card">Veja o que seus amigos estão planejando</h1>
-                <p class="subtitulo-card">Curta, comente e marque a presença nos próximos eventos</p>
-            </div>
-            <div class="div-cards">
-
-
-                <!-- card 1 -->
-                <div class="card-secao-eventos">
-                    <div class="div-usuarios-presente">
-                        <img class="img-usuario-presente" src="./imagens/Dav.jpg" alt="">
-                        <p class="usuarios-presente">Davi, Ella e outras pessoas confirmaram presença</p>
-                    </div>
-                    <img class="img-evento" src="../imagem/Viela.jpg">
-                    <div class="card-texto">
-                        <h2 class="Titulo">EVENTO 1</h2>
-                        <p class="paragrafo">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatem
-                            atque
-                            modi
-                            autem unde
-                            corporis
-                            eos
-                            cupiditate, fugiat vel praesentium quaerat a dolor</p>
-                    </div>
-                    <div class="btn-interacoes">
-                        <div class="btn-curtir-compartilhar">
-
-                            <div class="div-curtir">
-                                <button class="btn-curtir"><img class="imgint"
-                                        src="https://cdn-icons-png.flaticon.com/128/4675/4675168.png" alt=""
-                                        width="28px"></button>
-                                <p class="txt-num">1,3mil</p>
-                            </div>
-
-                            <div class="div-curtir">
-                                <img class="imgint" src="https://cdn-icons-png.flaticon.com/128/589/589671.png" alt=""
-                                    width="28px">
-                                <p class="txt-num">1,3mil</p>
-                            </div>
-
-                            <div class="div-curtir">
-                                <img class="imgint" src="https://cdn-icons-png.flaticon.com/128/17190/17190356.png"
-                                    alt="" width="28px">
-                                <p class="txt-num">1,3mil</p>
-                            </div>
-                        </div>
-                        <div>
-                            <img src="https://cdn-icons-png.flaticon.com/128/5186/5186087.png" alt="" width="26px">
-                        </div>
-                    </div>
-                    <div class="btn-secao">
-                        <button class="btn-ver-evento">Ver evento</button>
-                        <!-- <button class="btn-confirmar">Tô dentro!</button>
-                    <button class="btn-recusar">Tô fora</button> -->
-                    </div>
-
+            <div class="todo">
+                <!-- ideia de ver os amigos marcando presença nos proximos eventos -->
+                <div class="div-texto-eventos">
+                    <h1 class="Titulo-card">Veja o que seus amigos estão planejando</h1>
+                    <p class="subtitulo-card">Curta, comente e marque a presença nos próximos eventos</p>
                 </div>
+                <div class="div-cards">
 
 
-                <div class="todo">
+                    <!-- card 1 -->
                     <div class="card-secao-eventos">
-                        <img src="/conteudo/sobre/src/img-card-festa.png">
+                        <div class="div-usuarios-presente">
+                            <img class="img-usuario-presente" src="./imagens/Dav.jpg" alt="">
+                            <p class="usuarios-presente">Davi, Ella e outras pessoas confirmaram presença</p>
+                        </div>
+                        <img class="img-evento" src="../imagem/Viela.jpg">
                         <div class="card-texto">
-                            <h2 class="paragrafo">EVENTO 1</h2>
-                            <p class="paragrafo">Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                                Voluptatem
+                            <h2 class="Titulo">EVENTO 1</h2>
+                            <p class="paragrafo">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatem
                                 atque
                                 modi
                                 autem unde
@@ -159,190 +109,241 @@
                         <div class="btn-interacoes">
                             <div class="btn-curtir-compartilhar">
 
+                                <div class="div-curtir">
+                                    <button class="btn-curtir"><img class="imgint"
+                                            src="https://cdn-icons-png.flaticon.com/128/4675/4675168.png" alt=""
+                                            width="28px"></button>
+                                    <p class="txt-num">1,3mil</p>
+                                </div>
+
+                                <div class="div-curtir">
+                                    <img class="imgint" src="https://cdn-icons-png.flaticon.com/128/589/589671.png"
+                                        alt="" width="28px">
+                                    <p class="txt-num">1,3mil</p>
+                                </div>
+
+                                <div class="div-curtir">
+                                    <img class="imgint" src="https://cdn-icons-png.flaticon.com/128/17190/17190356.png"
+                                        alt="" width="28px">
+                                    <p class="txt-num">1,3mil</p>
+                                </div>
                             </div>
-                            <div class="div-curtir">
-                                <label class="container">
-                                    <input checked="checked" type="checkbox" />
-                                    <div class="checkmark">
-                                        <svg viewBox="0 0 256 256">
-                                            <rect fill="none" height="256" width="256"></rect>
-                                            <path
-                                                d="M224.6,51.9a59.5,59.5,0,0,0-43-19.9,60.5,60.5,0,0,0-44,17.6L128,59.1l-7.5-7.4C97.2,28.3,59.2,26.3,35.9,47.4a59.9,59.9,0,0,0-2.3,87l83.1,83.1a15.9,15.9,0,0,0,22.6,0l81-81C243.7,113.2,245.6,75.2,224.6,51.9Z"
-                                                stroke-width="20px" stroke="#000" fill="none"></path>
-                                        </svg>
+                            <div>
+                                <img src="https://cdn-icons-png.flaticon.com/128/5186/5186087.png" alt="" width="26px">
+                            </div>
+                        </div>
+                        <div class="btn-secao">
+                            <button class="btn-ver-evento">Ver evento</button>
+                            <!-- <button class="btn-confirmar">Tô dentro!</button>
+                    <button class="btn-recusar">Tô fora</button> -->
+                        </div>
+
+                    </div>
+
+
+                    <div class="todo">
+                        <div class="card-secao-eventos">
+                            <img src="/conteudo/sobre/src/img-card-festa.png">
+                            <div class="card-texto">
+                                <h2 class="paragrafo">EVENTO 1</h2>
+                                <p class="paragrafo">Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                                    Voluptatem
+                                    atque
+                                    modi
+                                    autem unde
+                                    corporis
+                                    eos
+                                    cupiditate, fugiat vel praesentium quaerat a dolor</p>
+                            </div>
+                            <div class="btn-interacoes">
+                                <div class="btn-curtir-compartilhar">
+
+                                </div>
+                                <div class="div-curtir">
+                                    <label class="container">
+                                        <input checked="checked" type="checkbox" />
+                                        <div class="checkmark">
+                                            <svg viewBox="0 0 256 256">
+                                                <rect fill="none" height="256" width="256"></rect>
+                                                <path
+                                                    d="M224.6,51.9a59.5,59.5,0,0,0-43-19.9,60.5,60.5,0,0,0-44,17.6L128,59.1l-7.5-7.4C97.2,28.3,59.2,26.3,35.9,47.4a59.9,59.9,0,0,0-2.3,87l83.1,83.1a15.9,15.9,0,0,0,22.6,0l81-81C243.7,113.2,245.6,75.2,224.6,51.9Z"
+                                                    stroke-width="20px" stroke="#000" fill="none"></path>
+                                            </svg>
+                                        </div>
+                                    </label>
+
+                                    <p class="txt-num">1,3mil</p>
+                                </div>
+
+                                <div class="div-curtir">
+                                    <img class="imgint" src="https://cdn-icons-png.flaticon.com/128/589/589671.png"
+                                        alt="" width="28px">
+                                    <p class="txt-num">1,3mil</p>
+                                </div>
+
+                                <div class="div-curtir">
+                                    <img class="imgint" src="https://cdn-icons-png.flaticon.com/128/17190/17190356.png"
+                                        alt="" width="28px">
+                                    <p class="txt-num">1,3mil</p>
+                                </div>
+                            </div>
+                            <div>
+                                <img src="https://cdn-icons-png.flaticon.com/128/5186/5186087.png" alt="" width="26px">
+                            </div>
+                        </div>
+                        <div class="btn-secao">
+                            <button class="btn-ver-evento"><a href="/conteudo/sobre/evento1/evento-1.html">Ver
+                                    evento</a></button>
+                            <!-- <button class="btn-confirmar">Tô dentro!</button>
+                    <button class="btn-recusar">Tô fora</button> -->
+
+                        </div>
+                    </div>
+
+
+                    <!-- card 3 -->
+                    <div class="todo">
+                        <div class="card-secao-eventos">
+                            <img src="/conteudo/sobre/src/img-card-festa.png">
+                            <div class="card-texto">
+                                <h2 class="paragrafo">EVENTO 1</h2>
+                                <p class="paragrafo">Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                                    Voluptatem
+                                    atque
+                                    modi
+                                    autem unde
+                                    corporis
+                                    eos
+                                    cupiditate, fugiat vel praesentium quaerat a dolor</p>
+                            </div>
+                            <div class="btn-interacoes">
+                                <div class="btn-curtir-compartilhar">
+
+                                    <div class="div-curtir">
+                                        <button class="btn-curtir"><img class="imgint"
+                                                src="https://cdn-icons-png.flaticon.com/128/4675/4675168.png" alt=""
+                                                width="28px"></button>
+                                        <p class="txt-num">1,3mil</p>
                                     </div>
-                                </label>
 
-                                <p class="txt-num">1,3mil</p>
-                            </div>
+                                    <div class="div-curtir">
+                                        <img class="imgint" src="https://cdn-icons-png.flaticon.com/128/589/589671.png"
+                                            alt="" width="28px">
+                                        <p class="txt-num">1,3mil</p>
+                                    </div>
 
-                            <div class="div-curtir">
-                                <img class="imgint" src="https://cdn-icons-png.flaticon.com/128/589/589671.png" alt=""
-                                    width="28px">
-                                <p class="txt-num">1,3mil</p>
+                                    <div class="div-curtir">
+                                        <img class="imgint"
+                                            src="https://cdn-icons-png.flaticon.com/128/17190/17190356.png" alt=""
+                                            width="28px">
+                                        <p class="txt-num">1,3mil</p>
+                                    </div>
+                                </div>
+                                <div>
+                                    <img src="https://cdn-icons-png.flaticon.com/128/5186/5186087.png" alt=""
+                                        width="26px">
+                                </div>
                             </div>
-
-                            <div class="div-curtir">
-                                <img class="imgint" src="https://cdn-icons-png.flaticon.com/128/17190/17190356.png"
-                                    alt="" width="28px">
-                                <p class="txt-num">1,3mil</p>
-                            </div>
-                        </div>
-                        <div>
-                            <img src="https://cdn-icons-png.flaticon.com/128/5186/5186087.png" alt="" width="26px">
-                        </div>
-                    </div>
-                    <div class="btn-secao">
-                        <button class="btn-ver-evento"><a href="/conteudo/sobre/evento1/evento-1.html">Ver
-                                evento</a></button>
-                        <!-- <button class="btn-confirmar">Tô dentro!</button>
+                            <div class="btn-secao">
+                                <button class="btn-ver-evento" onclick="">Ver evento</button>
+                                <!-- <button class="btn-confirmar">Tô dentro!</button>
                     <button class="btn-recusar">Tô fora</button> -->
 
+                            </div>
+                        </div>
                     </div>
                 </div>
 
             </div>
-            <!-- card 3 -->
-            <div class="todo">
-                <div class="card-secao-eventos">
-                    <img src="/conteudo/sobre/src/img-card-festa.png">
-                    <div class="card-texto">
-                        <h2 class="paragrafo">EVENTO 1</h2>
-                        <p class="paragrafo">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatem
-                            atque
-                            modi
-                            autem unde
-                            corporis
-                            eos
-                            cupiditate, fugiat vel praesentium quaerat a dolor</p>
-                    </div>
-                    <div class="btn-interacoes">
-                        <div class="btn-curtir-compartilhar">
-
-                            <div class="div-curtir">
-                                <button class="btn-curtir"><img class="imgint"
-                                        src="https://cdn-icons-png.flaticon.com/128/4675/4675168.png" alt=""
-                                        width="28px"></button>
-                                <p class="txt-num">1,3mil</p>
-                            </div>
-
-                            <div class="div-curtir">
-                                <img class="imgint" src="https://cdn-icons-png.flaticon.com/128/589/589671.png" alt=""
-                                    width="28px">
-                                <p class="txt-num">1,3mil</p>
-                            </div>
-
-                            <div class="div-curtir">
-                                <img class="imgint" src="https://cdn-icons-png.flaticon.com/128/17190/17190356.png"
-                                    alt="" width="28px">
-                                <p class="txt-num">1,3mil</p>
-                            </div>
-                        </div>
-                        <div>
-                            <img src="https://cdn-icons-png.flaticon.com/128/5186/5186087.png" alt="" width="26px">
-                        </div>
-                    </div>
-                    <div class="btn-secao">
-                        <button class="btn-ver-evento" onclick="">Ver evento</button>
-                        <!-- <button class="btn-confirmar">Tô dentro!</button>
-                    <button class="btn-recusar">Tô fora</button> -->
-
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        </div>
         </div>
 
         <!-- card 2 -->
 
 
 
+        <div class="b">
+            <div class="todo">
+                <!-- ideia de marcar presença -->
+                <h1>Não fique de fora dos role!</h1>
+                <p>"O fim de semana tá chegando e a diversão te espera!
+                    Com o nosso app, você encontra os melhores eventos, festas, shows e experiências da sua cidade, tudo
+                    em um só lugar.
+                    <br>
+                    Monte a galera, escolha o rolê perfeito e viva momentos inesquecíveis!
+                    Não perca tempo, baixe agora e bora curtir! 🚀🎶"
+                </p>
+                <img src="" alt="">
+            </div>
+            <!-- apresentando as categorias disponiveis -->
 
-        <div class="todo">
-            <!-- ideia de marcar presença -->
-            <h1>Não fique de fora dos role!</h1>
-            <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-                dolore
-                magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-                commodo
-                consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-                pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim
-                id
-                est
-                laborum."
-            </p>
-            <img src="" alt="">
-        </div>
-        <!-- apresentando as categorias disponiveis -->
-
-        <div class="todo">
-            <div class="main">
-                <div class="entenda">
-                    <h2>Como funciona</h2>
-                    <div class="conheca">
-                        <Div class="Descubra resumo">
-                            <img class="Imgresumo" src="https://cdn-icons-png.flaticon.com/128/5088/5088025.png" alt="">
-                            <div>
-                                <h2>Descubra</h2>
-                                <p>Veja eventos perto de você</p>
-                            </div>
-                        </Div>
-                        <Div class="Convide resumo">
-                            <img class="Imgresumo" src="https://cdn-icons-png.flaticon.com/128/11735/11735198.png"
-                                alt="">
-                            <div>
-                                <h2>Convide</h2>
-                                <p>Marque presença com amigos</p>
-                            </div>
-                        </Div>
-                        <Div class="Curta resumo">
-                            <img class="Imgresumo" src="https://cdn-icons-png.flaticon.com/128/5877/5877962.png" alt="">
-                            <div>
-                                <h2>Curta</h2>
-                                <p>Aproveie a experiência</p>
-                            </div>
-                        </Div>
+            <div class="todo">
+                <div class="main">
+                    <div class="entenda">
+                        <h2>Como funciona</h2>
+                        <div class="conheca">
+                            <Div class="Descubra resumo">
+                                <img class="Imgresumo" src="https://cdn-icons-png.flaticon.com/128/5088/5088025.png"
+                                    alt="">
+                                <div>
+                                    <h2>Descubra</h2>
+                                    <p>Veja eventos perto de você</p>
+                                </div>
+                            </Div>
+                            <Div class="Convide resumo">
+                                <img class="Imgresumo" src="https://cdn-icons-png.flaticon.com/128/11735/11735198.png"
+                                    alt="">
+                                <div>
+                                    <h2>Convide</h2>
+                                    <p>Marque presença com amigos</p>
+                                </div>
+                            </Div>
+                            <Div class="Curta resumo">
+                                <img class="Imgresumo" src="https://cdn-icons-png.flaticon.com/128/5877/5877962.png"
+                                    alt="">
+                                <div>
+                                    <h2>Curta</h2>
+                                    <p>Aproveie a experiência</p>
+                                </div>
+                            </Div>
+                        </div>
                     </div>
-                </div>
-                <h2 style="text-align: center;">Veja o que há por perto</h2>
-                <div class="Categoria">
-                    <div class="CardCategoria">
-                        <img src="https://media-cdn.tripadvisor.com/media/photo-m/1280/19/ca/cb/0d/photo2jpg.jpg" alt=""
-                            class="ImgCategoria">
-                        <p class="TxtCategoria">Restaurantes</p>
+                    <h2 style="text-align: center;">Veja o que há por perto</h2>
+                    <div class="Categoria">
+                        <div class="CardCategoria">
+                            <img src="https://media-cdn.tripadvisor.com/media/photo-m/1280/19/ca/cb/0d/photo2jpg.jpg"
+                                alt="" class="ImgCategoria">
+                            <p class="TxtCategoria">Restaurantes</p>
+                        </div>
+                        <div class="CardCategoria">
+                            <img src="https://media.gettyimages.com/id/517708666/pt/foto/jovens-amigos-a-divertir-se-com-enfeites-na-festa-noite-clube.jpg?s=612x612&w=0&k=20&c=lgjJnBNDJ4z2HLUQF1bFBDAMhl5QgaWtJaDXRmKRNXE="
+                                alt="" class="ImgCategoria">
+                            <p class="TxtCategoria">Baladas</p>
+                        </div>
+                        <div class="CardCategoria">
+                            <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0f/b6/80/4f/salao-do-pregao.jpg?w=900&h=500&s=1"
+                                alt="" class="ImgCategoria">
+                            <p class="TxtCategoria">Cultura</p>
+                        </div>
+                        <div class="CardCategoria">
+                            <img src="https://webrun.com.br/wp-content/uploads/2020/01/10-KM-2019-Vanessa_Rodrigues_A_Tribuna-30.jpg"
+                                alt="" class="ImgCategoria">
+                            <p class="TxtCategoria">Esportes</p>
+                        </div>
+                        <div class="CardCategoria">
+                            <img src="https://cdn.diariodolitoral.com.br/upload/dn_arquivo/2021/06/aquario-pms.jpg"
+                                alt="" class="ImgCategoria">
+                            <p class="TxtCategoria">Crianças</p>
+                        </div>
                     </div>
-                    <div class="CardCategoria">
-                        <img src="https://media.gettyimages.com/id/517708666/pt/foto/jovens-amigos-a-divertir-se-com-enfeites-na-festa-noite-clube.jpg?s=612x612&w=0&k=20&c=lgjJnBNDJ4z2HLUQF1bFBDAMhl5QgaWtJaDXRmKRNXE="
-                            alt="" class="ImgCategoria">
-                        <p class="TxtCategoria">Baladas</p>
+                    <div class="Explorar">
+                        <div>
+                            <p class="TxtExplorar">Não perca o próximo rolê!</p>
+                            <p class="TxtExplorar">Baixe agora e fique por dentro.</p>
+                        </div>
+                        <button class="BtnExplorar">Explorar Eventos</button>
                     </div>
-                    <div class="CardCategoria">
-                        <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0f/b6/80/4f/salao-do-pregao.jpg?w=900&h=500&s=1"
-                            alt="" class="ImgCategoria">
-                        <p class="TxtCategoria">Cultura</p>
-                    </div>
-                    <div class="CardCategoria">
-                        <img src="https://webrun.com.br/wp-content/uploads/2020/01/10-KM-2019-Vanessa_Rodrigues_A_Tribuna-30.jpg"
-                            alt="" class="ImgCategoria">
-                        <p class="TxtCategoria">Esportes</p>
-                    </div>
-                    <div class="CardCategoria">
-                        <img src="https://cdn.diariodolitoral.com.br/upload/dn_arquivo/2021/06/aquario-pms.jpg" alt=""
-                            class="ImgCategoria">
-                        <p class="TxtCategoria">Crianças</p>
-                    </div>
-                </div>
-                <div class="Explorar">
-                    <div>
-                        <p class="TxtExplorar">Não perca o próximo rolê!</p>
-                        <p class="TxtExplorar">Baixe agora e fique por dentro.</p>
-                    </div>
-                    <button class="BtnExplorar">Explorar Eventos</button>
                 </div>
             </div>
-        </div>
 
     </main>
 

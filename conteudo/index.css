@@ -2,22 +2,21 @@
     margin: 0;
     padding: 0;
 }
- 
+
+/* ===================== BODY ===================== */
 body {
     background-color: #F5F5F5;
     font-family: Arial, Helvetica, sans-serif;
 }
- 
 
- 
- 
-.color-int-bottom{
+/* ===================== BARRA INFERIOR ===================== */
+.color-int-bottom {
     background-color: #000000;
     width: 100%;
     height: 10px;
 }
- 
- 
+
+/* ===================== INTRODUÇÃO ===================== */
 .div-introducao-basica {
     background-image: url('./imagens/backImage2.png');
     width: 100%;
@@ -26,12 +25,10 @@ body {
     background-repeat: no-repeat;
     background-color: #F5F5F5;
     background-position: center;
-   
 }
- 
+
 .hero-section {
     height: 500px;
-    /* altura total da viewport */
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -39,10 +36,27 @@ body {
     color: #fff;
     text-align: center;
     background: rgba(0, 0, 0, 0.5);
-   
-    /* sobreposição para melhorar a legibilidade do texto */
 }
- 
+
+
+
+/* Ajustes para telas menores */
+@media (max-width: 768px) {
+    .hero-text {
+        max-width: 90%;
+        font-size: 1.4rem;
+        /* 🔹 Reduz o tamanho do texto */
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-text {
+        font-size: 1.1rem;
+        /* 🔹 Ajusta para celular */
+    }
+}
+
+
 .div-conteudo-intbas {
     display: flex;
     flex-direction: column;
@@ -50,111 +64,88 @@ body {
     align-items: center;
     margin-bottom: 200px;
     padding: 20px;
-   
 }
- 
-/* Ajustes para telas menores */
-@media (max-width: 768px) {
-    .hero-section {
-        height: 100vh;
-        /* mantém sempre a tela cheia */
-    }
-}
- 
-@media (max-width: 480px) {
-    .hero-section {
-        height: 100vh;
-        /* mesma lógica para mobile */
-    }
-}
- 
-.div-introducao-conteudo {
-    /* width: 100%;
-    height:500px;
-    background: rgba(0, 0, 0, 0.342); */
-}
- 
-.Titulo-WGO {
-    /* font-size: 400px;
-    color: #e55b06;
-    text-align: center;
-    padding-left: 10px; */
-    /* text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); */
-    /*-webkit-text-stroke-width: 2px;  Largura da borda 
-    -webkit-text-stroke-color: black; Cor da borda */
-}
- 
+
+.div-introducao-conteudo {}
+
+.Titulo-WGO {}
+
 .subtitulo-card {
     font-size: 40px;
     color: #174348;
     margin-bottom: 20px;
 }
- 
+
 .txt-italico {
     font-size: 50px;
     font-style: italic;
     color: #fe6a07;
-    -webkit-text-stroke-width: 2px; /* Largura da borda */
-    -webkit-text-stroke-color: black; /* Cor da borda */
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: black;
 }
- 
+
+/* ===================== MAIN ===================== */
 main {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
 }
- 
+
+/* ===================== HEADER ===================== */
 header {
+    font-family: "Lato", sans-serif;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
     display: flex;
-    background-color: #21385e;
-    padding-top: 5px;
-    padding-bottom: 5px;
     align-items: center;
-    color: #fffff7;
-    justify-content: space-around;
-    flex-flow: row wrap;
+    justify-content: space-between;
+    padding: 10px 30px;
+    z-index: 1000;
+    transition: 0.3s, box-shadow 0.3s;
+    background: #0000005d;
+    flex-wrap: wrap;
 }
- 
+
+header.solid {
+    background-color: #3C4E69;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* ===================== LINKS ===================== */
 a {
     color: #F5F5F5;
+    text-decoration: none;
 }
- 
+
 .Login {
- 
     color: beige;
 }
- 
+
 .Logo {
     width: 120px;
     height: auto;
     margin-right: 20px;
     border-radius: 100%;
- 
 }
- 
+
 .itens-home {
     list-style-type: none;
     text-align: center;
     font-family: Arial, Helvetica, sans-serif;
- 
 }
- 
+
 .linksHome {
     font-size: 19px;
     margin: 3px;
     color: #fffff7;
     text-decoration: none;
     flex-flow: row wrap;
- 
 }
- 
-.form button {
-    border: none;
-    background: none;
-    color: #8b8ba7;
-}
- 
+
+/* ===================== FORM ===================== */
 .form {
     --timing: 0.3s;
     --width-of-input: 500px;
@@ -174,7 +165,7 @@ a {
     transition: border-radius 0.5s ease;
     background: var(--input-bg, #fff);
 }
- 
+
 .input {
     font-size: 0.9rem;
     background-color: transparent;
@@ -184,7 +175,13 @@ a {
     padding-block: 0.7em;
     border: none;
 }
- 
+
+.form button {
+    border: none;
+    background: none;
+    color: #8b8ba7;
+}
+
 .form:before {
     content: "";
     position: absolute;
@@ -198,75 +195,73 @@ a {
     border-radius: 1px;
     transition: transform var(--timing) ease;
 }
- 
+
 .form:focus-within {
     border-radius: var(--after-border-radius);
 }
- 
+
 input:focus {
     outline: none;
 }
- 
+
 .form:focus-within:before {
     transform: scale(1);
 }
- 
+
+/* ===================== INTRODUÇÃO TEXTO ===================== */
 .div-introducao {
     display: flex;
     width: 500px;
     border-radius: 10px;
-    
     flex-wrap: wrap;
     justify-content: flex;
     align-items: center;
     text-align: center;
 }
-.a{
+
+.a {
     width: 100%;
-    margin-top: 200px;
+    margin-top: 400px;
     margin-bottom: 200px;
     background-repeat: no-repeat;
-    
 }
 
- 
+/* ===================== CARDS ===================== */
 .Titulo-card {
     font-size: 50px;
     padding: 15px;
 }
- 
+
 .subtitulo-card {
     font-size: 30px;
 }
- 
+
 .div-cards {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
 }
- 
+
 .img-evento {
     border-radius: 5px;
 }
- 
+
 .div-texto-eventos {
     text-align: center;
     margin-bottom: 20px;
 }
- 
-.Titulo {}
- 
+
 .paragrafo {
     padding: 10px;
 }
- 
+
 .btn-curtir-compartilhar {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
- 
+
 .card-secao-eventos {
     display: flex;
     width: 350px;
@@ -278,21 +273,21 @@ input:focus {
     margin: 10px;
     padding: 10px;
 }
- 
+
 .btn-secao {
     display: flex;
-    justify-content: space-around;
+    justify-content: around;
     align-items: center;
 }
- 
+
 .btn-interacoes {
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin-top: 10px;
 }
- 
-/* From Uiverse.io by KSAplay */
+
+/* ===================== LIKE & DISLIKE ===================== */
 .container input {
     position: absolute;
     opacity: 0;
@@ -300,7 +295,7 @@ input:focus {
     height: 0;
     width: 0;
 }
- 
+
 .container {
     display: block;
     position: relative;
@@ -309,7 +304,7 @@ input:focus {
     user-select: none;
     transition: 100ms;
 }
- 
+
 .checkmark {
     top: 0;
     left: 0;
@@ -318,80 +313,73 @@ input:focus {
     transition: 100ms;
     animation: dislike_effect 400ms ease;
 }
- 
+
 .container input:checked~.checkmark path {
     fill: #ff5353;
     stroke-width: 0;
 }
- 
+
 .container input:checked~.checkmark {
     animation: like_effect 400ms ease;
 }
- 
+
 .container:hover {
     transform: scale(1.1);
 }
- 
+
 @keyframes like_effect {
     0% {
         transform: scale(0);
     }
- 
+
     50% {
         transform: scale(1.2);
     }
- 
+
     100% {
         transform: scale(1);
     }
 }
- 
+
 @keyframes dislike_effect {
     0% {
         transform: scale(0);
     }
- 
+
     50% {
         transform: scale(1.2);
     }
- 
+
     100% {
         transform: scale(1);
     }
 }
- 
+
 @keyframes enlarge {
     0% {
         transform: scale(0.5);
     }
- 
+
     100% {
         transform: scale(1.2);
     }
 }
- 
- 
-a {
-    text-decoration: none;
-}
- 
+
+/* ===================== BOTÕES ===================== */
 .txt-num {
     margin: 5px;
 }
- 
+
 .div-curtir {
     display: flex;
     justify-content: space-between;
     align-items: center;
- 
 }
- 
+
 .imgint {
- 
     margin-right: 5px;
- 
 }
- 
+
 .btn-ver-evento {
     background-color: #587fff;
     color: #fff;
@@ -403,8 +391,7 @@ a {
     transition: background-color 0.3s ease;
     margin-top: 10px;
 }
- 
- 
+
 .btn-confirmar {
     background-color: #587fff;
     color: #fff;
@@ -415,7 +402,7 @@ a {
     cursor: pointer;
     transition: background-color 0.3s ease;
 }
- 
+
 .btn-recusar {
     background-color: #e92e2e;
     color: #fff;
@@ -426,28 +413,27 @@ a {
     cursor: pointer;
     transition: background-color 0.3s ease;
 }
- 
+
+/* ===================== USUÁRIOS PRESENTES ===================== */
 .div-usuarios-presente {
     display: flex;
     justify-content: center;
     padding: 5px;
 }
- 
+
 .usuarios-presente {
     text-align: center;
     margin-bottom: 5px;
     font-size: 12px;
 }
- 
+
 .img-usuario-presente {
- 
     width: 20px;
     height: 20px;
     border-radius: 100px;
 }
- 
-/* categorias */
- 
+
+/* ===================== CATEGORIAS ===================== */
 .div-categoria {
     display: flex;
     justify-content: space-evenly;
@@ -455,7 +441,7 @@ a {
     align-items: center;
     padding: 15px;
 }
- 
+
 .div-img-icone {
     display: flex;
     align-items: center;
@@ -466,41 +452,46 @@ a {
     border-radius: 50px;
 }
 
-/* eventos */
-
-.entenda{
+/* ===================== EVENTOS ===================== */
+.entenda {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
-.conheca{
-    display:flex;
+
+.conheca {
+    display: flex;
     flex-direction: row;
     margin-bottom: 50px;
 }
-.resumo{
- display: flex;
- align-items: center;
+
+.resumo {
+    display: flex;
+    align-items: center;
 }
-.Categoria{
+
+.Categoria {
     display: flex;
     align-items: center;
     justify-content: center;
 }
-.Imgresumo{
+
+.Imgresumo {
     max-width: 50px;
     max-height: 50px;
     margin-left: 5px;
     margin-right: 10px;
 }
-.ImgCategoria{
+
+.ImgCategoria {
     max-width: 100px;
     max-height: 90px;
     min-height: 90px;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
 }
-.CardCategoria{
+
+.CardCategoria {
     display: flex;
     width: 100px;
     height: 120px;
@@ -515,46 +506,49 @@ a {
     align-items: center;
     justify-content: center;
     transition: 0.5s;
+}
 
+.CardCategoria:hover {
+    scale: 1.2;
+    transition: 0.5s;
+    background-color: #e55b06;
+    color: white;
+    margin-left: 15px;
+    margin-right: 15px;
+    font-weight: bold;
 }
-.CardCategoria:hover{
-   scale: 1.2;
-   transition: 0.5s;
-   background-color: #e55b06;
-   color: white;
-   margin-left: 15px;
-   margin-right: 15px;
-   font-weight: bold;
-}
-.Explorar{
+
+.Explorar {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
     align-items: center;
-    background-color:#2f4d6a ;
+    background-color: #2f4d6a;
     padding: 12px;
     border-radius: 5px;
 }
-.TxtExplorar{
+
+.TxtExplorar {
     color: white;
 }
-.BtnExplorar{
+
+.BtnExplorar {
     background-color: white;
     border: none;
     padding: 5px;
     border-radius: 5px;
-    color: #155088 ;
+    color: #155088;
     font-weight: bold;
-    
 }
- 
-.todo{
+
+/* ===================== ANIMAÇÕES ===================== */
+.todo {
     padding: 1.5em;
     border-radius: .5em;
     opacity: 0;
     transition: 1000ms all;
 }
+
 .todo.show {
     opacity: 1;
-}   
-
+}

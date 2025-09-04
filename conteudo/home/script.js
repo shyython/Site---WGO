@@ -78,15 +78,15 @@ document.addEventListener('click', function (e) {
     }
 });
  
-// 'solid' ao rolar
-// window.addEventListener('scroll', function () {
-//     const header = document.getElementById('header');
-//     if (window.scrollY > 50) {
-//         header.classList.add('solid');
-//     } else {
-//         header.classList.remove('solid');
-//     }
-// });
+// MUDAR COR DO HEADER AO ROLAR A PÁGINA
+window.addEventListener('scroll', function () {
+    const header = document.getElementById('header');
+    if (window.scrollY > 50) {
+        header.classList.add('solid');
+    } else {
+        header.classList.remove('solid');
+    }
+});
  
  
 // const eventosPorCidade = {

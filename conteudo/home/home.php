@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
- 
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,14 +11,14 @@
   <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
   <title>Bem-vindo ao WGO!</title>
 </head>
- 
+
 <body>
   <header id="header">
     <!-- logo -->
     <a href="../home/home.php">
       <img class="Logo" src="../imagens/WgoIcon2.png" alt="Logo">
     </a>
- 
+
     <nav>
       <ul>
         <li><a href="../home/home.php">Início</a></li>
@@ -35,7 +35,7 @@
         </li>
       </ul>
     </nav>
- 
+
     <!-- search -->
     <div class="pesquisar">
       <input type="text" name="text" class="input" required placeholder="Search...">
@@ -49,17 +49,17 @@
         </svg>
       </div>
     </div>
- 
+
     <!-- sininho -->
     <div class="btnNot" onclick="abrirNotifi(event)">
       <img src="../imagens/Sino.png" alt="Notificações">
       <span class="badge">17</span>
     </div>
- 
+
     <!-- box sininho -->
     <div class="notifi-box" id="box">
       <h2>Notificações <span>17</span></h2>
- 
+
       <div class="notifi-item">
         <img src="/conteudo/imagens/Dav.jpg" alt="Davi" class="img-not">
         <div class="text">
@@ -67,7 +67,7 @@
           <p>@lorem ipsum dolor sit amet</p>
         </div>
       </div>
- 
+
       <div class="notifi-item">
         <img src="/conteudo/imagens/Ell.jpg" alt="Ella" class="img-not">
         <div class="text">
@@ -75,7 +75,7 @@
           <p>@lorem ipsum dolor sit amet</p>
         </div>
       </div>
- 
+
       <div class="notifi-item">
         <img src="../imagens/Bea.jpg" alt="Beatriz" class="img-not">
         <div class="text">
@@ -83,7 +83,7 @@
           <p>@lorem ipsum dolor sit amet</p>
         </div>
       </div>
- 
+
       <div class="notifi-item">
         <img src="../imagens/Thiago.jpg" alt="Thiago" class="img-not">
         <div class="text">
@@ -93,7 +93,7 @@
       </div>
     </div>
   </header>
- 
+
   <section class="carrossel">
     <div class="slides"></div>
     <div class="indicadores"></div>
@@ -139,5 +139,5 @@
   <p id="legenda" style="text-align:center; margin-top: 10px; font-weight:bold;"></p>
   <script src="script.js"></script>
 </body>
- 
+
 </html>

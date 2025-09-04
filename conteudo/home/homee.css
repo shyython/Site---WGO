@@ -265,6 +265,15 @@ nav ul li a:hover {
 }
  
 /* menu lateral D */
+select:required:invalid {
+  color: gray;
+}
+option[value=""][disabled] {
+  display: none;
+}
+option {
+  color: black;
+}
  
 /*  container */
 .carrossel {
@@ -342,7 +351,7 @@ nav ul li a:hover {
   background: white;
 }
  
-/* 📱 Responsividade */
+
 @media (max-width: 1024px) {
   .carrossel {
     height: 300px; /* tablets */

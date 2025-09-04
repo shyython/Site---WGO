@@ -1,8 +1,20 @@
 <?php
 require_once "../ConfigBd/porta.php";
 
+// $nomeE = $_POST["nome_evento"];
+// $categoriaE = $_POST["categoria"];
+// $enderecoE = $_POST["endereco"];
+// $tipoE= $_POST["tipo"];
+// $tipoE= $_POST["horario"];
+// $tipoE= $_POST["descricao"];
+// $tipoE= $_POST["img1"];
+// $tipoE= $_POST["img2"];
+// $tipoE= $_POST["img3"];
+// $tipoE= $_POST["img4"];
+// $tipoE= $_POST["telefone"];
+
 $sql = "INSERT INTO eventos (Nome_Evento, Categoria, Endereco, Tipo, Horario, Descricao, Img1, Img2, Img3, Img4, Telefone)
-VALUES ('nome_evento', 'categoria', 'Endereco', 'tipo', horario, descricao, img1, img2, img3, img4, telefone')";
+VALUES ('nome_evento', 'categoria', 'endereco', 'tipo', horario, descricao, img1, img2, img3, img4, telefone')";
 // if ($conexao->query($sql) === TRUE) {
 //     echo "Novo evento criado com sucesso";
 // } else {
@@ -20,58 +32,60 @@ VALUES ('nome_evento', 'categoria', 'Endereco', 'tipo', horario, descricao, img1
 </head>
 <body>
     <main>
-        <h1>Adicionar evento </h1>
-        <form action="Post">
+        <!-- <h1>Adicionar evento </h1> -->
+        <form action="Post" action="eventos\evento_indi.php">
             <div class="container-evento">
                 <div class="dados_evento">
                     <label for="">Nome</label>
                     <input type="text" name="nome_evento" placeholder="Nome" required>
-                    <button>Adicionar</button>
+                   
                 </div>
                 <div class="dados_evento">
                     <label for="">Categoria</label>
                     <select name="Categoria" id="">
-                        <option value="">Restaurante</option>
-                        <option value="">Bar</option>
-                        <option value="">Show</option>
-                        <option value="">Parque</option>
-                        <option value="">Cinema</option>
-                        <option value=""></option>
+                        <option value="0">Restaurante</option>
+                        <option value="bar">Bar</option>
+                        <option value="show">Show</option>
+                        <option value="parque">Parque</option>
+                        <option value="cinema">Cinema</option>
+                        <option value="museu">Museu</option>
                     </select>
-                    <button>Adicionar</button>
+              
                 </div>
                 <div class="dados_evento">
                     <label for="">Endereço</label>
                     <input type="text"  name="endereco" placeholder="Endereço" required>
-                    <button>Adicionar</button>
+                    
                 </div>
                 <div class="dados_evento">
                     <select name="Tipo" id="">
-                        <option value="">Geek</option>
-                        <option value="">Cultura</option>
-                        <option value="">Música</option>
-                        <option value="">Evento</option>
-                        <option value="">Infantil</option>
-                        <option value="">Pet</option>
+                        <option value="0">Geek</option>
+                        <option value="cultura">Cultura</option>
+                        <option value="musica">Música</option>
+                        <option value="evento">Evento</option>
+                        <option value="infantil">Infantil</option>
+                        <option value="pet">Pet</option>
                         <option value=""></option>
                     </select>
                 </div>
                 <div class="dados_evento">
                     <label for="">Horário</label>
                     <input type="text" name="horario" placeholder="Horário" required>
-                    <button>Adicionar</button>
+                    
                 </div>
                 <div class="dados_evento">
                     <label for="">Descrição</label>
                     <input type="text"  name="descricao" placeholder="Descrição" required>
-                    <button>Adicionar</button>
+                    
                 </div>
                     <div class="dados_evento">
                     <label for="">Telefone</label>
                     <input type="number"  name="telefone" placeholder="Telefone" required>
-                    <button>Adicionar</button>
+                    
                 </div>
+                <button>Adicionar</button>
             </div>
+            
         </form>
     </main>
 </body>

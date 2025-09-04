@@ -31,7 +31,9 @@ export default function Home({}) {
     getEvent();
   }, []);
 
-  
+  function NavegaEvento(evento) {
+  navigation.navigate('Evento_Individual', { evento });
+  }
 
   return (
      <View style={estilo.containerHome}>
@@ -80,15 +82,9 @@ export default function Home({}) {
               />
               <Text style={estilo.Txtevento} onChangeText={setEvento}>{evento.Nome_Evento}</Text>
               <Text style={estilo.Txtevento}>4.8</Text>
-               <TouchableOpacity 
-          style={estilo.BtnVerMais} 
-          onPress={() => navigation.navigate("Evento_Individual", {
-            idEvento: evento.Id_Evento,  // 👉 envia ID
-            nomeEvento: evento.Nome_Evento // 👉 envia nome (se quiser)
-          })}
-        >
-          <Text style={estilo.TextBtnVer}>Ver Mais</Text>
-        </TouchableOpacity>
+               <TouchableOpacity onPress={() => NavegaEvento(evento)} style={estilo.BtnVerMais}>
+                <Text>Ver Mais</Text>
+              </TouchableOpacity>
             </View>
           ))}
                    </View>

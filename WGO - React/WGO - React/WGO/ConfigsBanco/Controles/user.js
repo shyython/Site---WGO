@@ -61,3 +61,18 @@ export const getSeach = (req, res) => {
     return res.status(200).json(data);
   });
 };
+
+export const getEventoById = (req, res) => {
+  const id = req.params.id; 
+   const q = "SELECT * FROM eventos WHERE Id_Evento = ?";
+  db.query(q, [id], (err, data) => {
+    if (err) {
+      console.error("Erro MySQL:", err);
+      return res.status(500).json(err);
+    }
+    if (data.length === 0) {
+      return res.status(404).json({ message: "Evento não encontrado" });
+    }
+    return res.status(200).json(data[0]);
+  });
+};

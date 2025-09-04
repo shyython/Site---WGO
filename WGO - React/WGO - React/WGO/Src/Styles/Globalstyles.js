@@ -589,10 +589,12 @@ export const escuro = StyleSheet.create({
   ContainerPesquisa:{
     flex:1,
     backgroundColor:'#272727',
-    marginTop: 25,
+    
   },
   ResultadoPesquisa:{
     backgroundColor:'#272727',
+    marginTop: 25,
+    alignItems:'center'
   },
   EventosPesquisa:{
     backgroundColor:'#272727',
@@ -602,7 +604,9 @@ export const escuro = StyleSheet.create({
   BtnVerMaisPesquisa:{
     backgroundColor:'#E55B06',
     padding:2,
-    width:'40%',
+    width:150,
+    height:30,
+    alignItems:'center',
     borderRadius:3
   },
 
@@ -645,12 +649,65 @@ export const escuro = StyleSheet.create({
     justifyContent:'space-evenly'
 
   },
-  Btn:{
-    borderWidth:1,
-    borderColor:'gray'
-    
-  },
+
   TxtBtn:{
+    color:'white'
+  },
+
+  //EVENTO INDIVIDUAL
+
+  ImgEventoIndi:{
+            margintop:10,
+        borderTopLeftRadius:10,
+        borderTopRightRadius:10,
+        width:'100%',
+        height:'50%',
+            shadowColor: "#000",
+        shadowOffset: {
+            width: 0,
+            height: 2,
+        },
+        shadowOpacity: 0.25,
+        shadowRadius: 3.84,
+        elevation: 5,
+  },
+  TxtNomeEvento:{
+    color:'white',
+    fontWeight:'bold',
+    fontSize:40,
+    textAlign:'center'
+  },
+  MiniImg:{
+    width:100,
+    height:100,
+    borderColor:'gray',
+    borderWidth:2,
+    borderRadius:10,
+  },
+  ContainerMini:{
+    marginTop:-45,
+    display:'flex',
+    flexDirection:'row',
+    justifyContent:'space-evenly'
+  },
+  containerEvento:{
+    display:'flex',
+    flexDirection:'column',
+    backgroundColor:'#272727'
+  },
+  descricao:{
+    color:'white',
+    maxWidth:'80%',
+    textAlign:'center',
+    marginTop:15,
+    backgroundColor:'#E55B06',
+    padding:5,
+    borderRadius:5,
+  },
+  ContainerInformacoes:{
+    alignItems:'center'
+  },
+  Txtloc:{
     color:'white'
   }
 });

@@ -1,7 +1,7 @@
 <?php
     define('HOST','127.0.0.1');
     define('USER','root');
-    define('PASS','');
+    define('PASS','123456789');
     define('BASE','WGO');
     
     //Criar a string de conexão

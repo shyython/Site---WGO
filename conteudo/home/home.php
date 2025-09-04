@@ -13,7 +13,7 @@
 <body>
   <header id="header">
     <!-- logo -->
-    <a href="../inicio/home.php">
+    <a href="../home/home.php">
       <img class="Logo" src="../imagens/WgoIcon2.png" alt="Logo">
     </a>
  

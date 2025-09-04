@@ -241,31 +241,31 @@ nav ul li a:hover {
   width: 100%;
   height: 100%;
 }
-
-
+ 
+ 
 #configMenu {
     position: absolute;
     background-color: #3C4E69;
     display: none; /* Inicialmente oculto */
     z-index: 1;
 }
-
+ 
 #configMenu li {
     border-top: 1px solid #6c757d;
 }
-
+ 
 #configMenu a {
     padding: 10px 15px;
     color: white;
 }
-
+ 
 #configMenu a:hover {
     background-color: #6c757d;
-
+ 
 }
-
+ 
 /* menu lateral D */
-
+ 
 /*  container */
 .carrossel {
   font-family: "Lato", sans-serif;
@@ -275,12 +275,12 @@ nav ul li a:hover {
   z-index: -1;
   overflow: hidden;
 }
-
+ 
 .slides {
   width: 100%;
   height: 100%;
 }
-
+ 
 .slide {
   position: absolute;
   width: 100%;
@@ -288,18 +288,18 @@ nav ul li a:hover {
   opacity: 0;
   transition: opacity 1s ease-in-out;
 }
-
+ 
 .slide.ativo {
   opacity: 1;
 }
-
+ 
 .slide img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   filter: brightness(0.7);
 }
-
+ 
 .conteudo {
   position: absolute;
   bottom: 15%;
@@ -309,16 +309,16 @@ nav ul li a:hover {
   color: white;
   text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
 }
-
+ 
 .conteudo h2 {
   font-size: 2rem;
   margin-bottom: 10px;
 }
-
+ 
 .conteudo p {
   font-size: 1.2rem;
 }
-
+ 
 /* Indicadores (bolinhas) */
 .indicadores {
   position: absolute;
@@ -328,7 +328,7 @@ nav ul li a:hover {
   display: flex;
   gap: 8px;
 }
-
+ 
 .indicador {
   width: 12px;
   height: 12px;
@@ -337,11 +337,11 @@ nav ul li a:hover {
   cursor: pointer;
   transition: 0.3s;
 }
-
+ 
 .indicador.ativo {
   background: white;
 }
-
+ 
 /* 📱 Responsividade */
 @media (max-width: 1024px) {
   .carrossel {
@@ -354,7 +354,7 @@ nav ul li a:hover {
     font-size: 1rem;
   }
 }
-
+ 
 @media (max-width: 600px) {
   .carrossel {
     height: 220px; /* celulares */

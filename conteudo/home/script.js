@@ -1,33 +1,33 @@
-
-// let index = 0; 
+ 
+// let index = 0;
 // const imagens = document.querySelector('.imagens');
 // const totalImagens = document.querySelectorAll('.imagens img').length;
-
+ 
 // function mudarImagem() {
-//     index = (index + 1) % totalImagens; 
-//     const deslocamento = -index * 600; 
+//     index = (index + 1) % totalImagens;
+//     const deslocamento = -index * 600;
 //     imagens.style.transform = `translateX(${deslocamento}px)`;
 // }
-
+ 
 // // mundando a imagem a cada 3 segundos
 // setInterval(mudarImagem, 3000);
-
+ 
 // /* noticacoes */
 // var box  = document.getElementById('box');
 // var down = false;
-
+ 
 // function abrirNotifi(){
-// 	if (down) {
-// 		box.style.height  = '0px';
-// 		box.style.opacity = 0;
-// 		down = false;
-// 	}else {
-// 		box.style.height  = '510px';
-// 		box.style.opacity = 1;
-// 		down = true;
-// 	}
+//  if (down) {
+//    box.style.height  = '0px';
+//    box.style.opacity = 0;
+//    down = false;
+//  }else {
+//    box.style.height  = '510px';
+//    box.style.opacity = 1;
+//    down = true;
+//  }
 // }
-
+ 
 // /* configurações */
 // function abrirMenuConf() {
 //     const configMenu = document.getElementById('configMenu');
@@ -37,7 +37,7 @@
 //         configMenu.style.display = 'none'; // Oculta o submenu
 //     }
 // }
-
+ 
 // // Para ocultar o menu ao clicar fora dele (opcional)
 // window.onclick = function(event) {
 //     if (!event.target.matches('.itens')) {
@@ -47,37 +47,37 @@
 //         }
 //     }
 // }
-
+ 
 // ABRIR/FECHAR NOTIFICAÇÕES
 function abrirNotifi(event) {
     const box = document.getElementById('box');
     box.classList.toggle('active');
 }
-
+ 
 // ABRIR/FECHAR MENU DE CONFIGURAÇÃO
 function abrirMenuConf(event) {
     const configMenu = document.getElementById('configMenu');
     configMenu.classList.toggle('active');
 }
-
+ 
 // FECHAR NOTIFICAÇÃO E MENU AO CLICAR FORA
 document.addEventListener('click', function (e) {
     const box = document.getElementById('box');
     const btnNot = document.querySelector('.btnNot');
     const configMenu = document.getElementById('configMenu');
     const configWrapper = document.querySelector('.config');
-
+ 
     // Fechar notificações
     if (!box.contains(e.target) && !btnNot.contains(e.target)) {
         box.classList.remove('active');
     }
-
+ 
     // Fechar menu de configurações
     if (!configWrapper.contains(e.target)) {
         configMenu.classList.remove('active');
     }
 });
-
+ 
 // 'solid' ao rolar
 // window.addEventListener('scroll', function () {
 //     const header = document.getElementById('header');
@@ -87,8 +87,8 @@ document.addEventListener('click', function (e) {
 //         header.classList.remove('solid');
 //     }
 // });
-
-
+ 
+ 
 // const eventosPorCidade = {
 //   "sao-paulo": [
 //     { imagem: "https://s2-gshow.glbimg.com/8L8Ht7bNMaXASHSIYhy-eknpj9Y=/0x0:2816x1893/984x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_e84042ef78cb4708aeebdf1c68c6cbd6/internal_photos/bs/2025/h/f/OIfFavScaorF3OA8Om0Q/the-town-mapa-2025.png", legenda: "The Town 2025" },
@@ -211,19 +211,19 @@ document.addEventListener('click', function (e) {
 //     { imagem: "https://placehold.co/600x350?text=Show+Zeca+Baleiro", legenda: "Show Zeca Baleiro – setembro" }
 //   ]
 // };
-
-
-
+ 
+ 
+ 
 // const cidadeSelect = document.getElementById("cidade");
 // const slide = document.getElementById("slide");
 // const legenda = document.getElementById("legenda");
 // const prevBtn = document.getElementById("prev");
 // const nextBtn = document.getElementById("next");
-
+ 
 // let eventosAtuais = eventosPorCidade["sao-paulo"];
 // let indiceAtual = 0;
 // let intervalo;
-
+ 
 // Atualiza a imagem e a legenda
 // function atualizarSlide() {
 //   slide.style.opacity = 0; // efeito de fade-out
@@ -233,25 +233,25 @@ document.addEventListener('click', function (e) {
 //     slide.style.opacity = 1; // efeito de fade-in
 //   }, 300);
 // }
-
+ 
 // Avança para o próximo slide
 // function proximoSlide() {
 //   indiceAtual = (indiceAtual + 1) % eventosAtuais.length;
 //   atualizarSlide();
 // }
-
+ 
 // Volta para o slide anterior
 // function slideAnterior() {
 //   indiceAtual = (indiceAtual - 1 + eventosAtuais.length) % eventosAtuais.length;
 //   atualizarSlide();
 // }
-
+ 
 // Troca automática a cada 5 segundos
 // function iniciarTrocaAutomatica() {
 //   clearInterval(intervalo);
 //   intervalo = setInterval(proximoSlide, 5000);
 // }
-
+ 
 // Quando troca a cidade, reinicia o carrossel
 // cidadeSelect.addEventListener("change", () => {
 //   if (!cidadeSelect.value) return; // evita erro se não selecionar nada
@@ -260,27 +260,27 @@ document.addEventListener('click', function (e) {
 //   atualizarSlide();
 //   iniciarTrocaAutomatica();
 // });
-
+ 
 // Botões de navegação
 // nextBtn.addEventListener("click", () => {
 //   proximoSlide();
 //   iniciarTrocaAutomatica();
 // });
-
+ 
 // prevBtn.addEventListener("click", () => {
 //   slideAnterior();
 //   iniciarTrocaAutomatica();
 // });
-
+ 
 // Inicialização
 // atualizarSlide();
 // iniciarTrocaAutomatica();
 const slidesContainer = document.querySelector(".slides");
 const indicadoresContainer = document.querySelector(".indicadores");
-
+ 
 let indiceAtual = 0;
 let intervalo;
-
+ 
 // Lista fixa de slides
 const eventos = [
   { img: "https://www.neoenergia.com/documents/107588/1663781/PALCO+MUNDO.jpg/c30ee153-7fee-d7f3-72b4-2999c248a304?version=1.0&t=1724864091054", titulo: "Rock in Rio", descricao: "Viva intensamente cada acorde, cada grito e cada show no festival que faz o mundo olhar para o Brasil!" },
@@ -288,14 +288,14 @@ const eventos = [
   { img: "https://www.midiorama.com/wp-content/uploads/2018/07/villa-mix-2018-nick-jonas6.jpg", titulo: "VillaMix", descricao: "Do sertanejo ao pop, o VillaMix é a mistura perfeita para quem ama música e diversão sem limites!" },
   { img: "https://cultura.am.gov.br/wp-content/uploads/2024/06/choso_dito-2.png", titulo: "Festival de Parintins", descricao: "Sinta a emoção do duelo entre Garantido e Caprichoso no Festival de Parintins, a maior celebração cultural da Amazônia!" }
 ];
-
+ 
 // Atualiza o slide exibido
 function atualizarSlide() {
   slidesContainer.innerHTML = "";
   indicadoresContainer.innerHTML = "";
-
+ 
   const evento = eventos[indiceAtual];
-
+ 
   const slide = document.createElement("div");
   slide.classList.add("slide", "ativo");
   slide.innerHTML = `
@@ -306,7 +306,7 @@ function atualizarSlide() {
     </div>
   `;
   slidesContainer.appendChild(slide);
-
+ 
   eventos.forEach((_, i) => {
     const indicador = document.createElement("div");
     indicador.classList.add("indicador");
@@ -319,20 +319,22 @@ function atualizarSlide() {
     indicadoresContainer.appendChild(indicador);
   });
 }
-
+ 
 // Próximo slide
 function proximoSlide() {
   indiceAtual = (indiceAtual + 1) % eventos.length;
   atualizarSlide();
 }
-
+ 
 // Auto-play
 function iniciarTrocaAutomatica() {
   clearInterval(intervalo);
   intervalo = setInterval(proximoSlide, 5000);
 }
-
+ 
 // Inicialização
 atualizarSlide();
 iniciarTrocaAutomatica();
-
+ 
+ 
+ 

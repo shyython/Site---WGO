@@ -92,49 +92,10 @@
     </div>
   </header>
 
-  <div class="container">
-    <aside class="containerlateral">
-
-      <div class="itensordem1">
-        <p>Restaurantes</p>
-      </div>
-
-      <div class="itensordem2">
-        <p class="textolateral">Show</p>
-      </div>
-
-      <div class="itensordem3">
-        <p class="textolateral">Standup's</p>
-      </div>
-    </aside>
-  </div>
-
-
-  <div class="containerlateral">
-    <label for="cidade">Selecione a cidade:</label>
-    <select id="cidade">
-      <option value="">-- Selecione --</option>
-      <option value="sao-paulo">São Paulo</option>
-      <option value="rio-janeiro">Rio de Janeiro</option>
-      <option value="santos">Santos</option>
-      <option value="belo-horizonte">Belo Horizonte</option>
-      <option value="curitiba">Curitiba</option>
-      <option value="porto-alegre">Porto Alegre</option>
-      <option value="recife">Recife</option>
-      <option value="brasilia">Brasília</option>
-      <option value="florianopolis">Florianópolis</option>
-      <option value="campinas">Campinas</option>
-    </select>
-  </div>
-
-  <div class="carrosel-container">
-    <button id="prev" class="nav-btn">‹</button>
-    <div class="carrosel" id="carrosel">
-      <img id="slide" src="" alt="Evento" />
-    </div>
-    <button id="next" class="nav-btn">›</button>
-  </div>s
-</div>
+  <section class="carrossel">
+    <div class="slides"></div>
+    <div class="indicadores"></div>
+  </section>
 
 
   <p id="legenda" style="text-align:center; margin-top: 10px; font-weight:bold;"></p>

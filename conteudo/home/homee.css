@@ -7,7 +7,7 @@
 /* ===================== HEADER ===================== */
 header {
     font-family: "Lato", sans-serif;
-    position: solid;
+    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
@@ -17,7 +17,7 @@ header {
     padding: 10px 30px;
     z-index: 1000;
     transition:  0.3s, box-shadow 0.3s;
-    background: #3C4E69;
+    background: #0000005d;
 }
  
 header.solid {
@@ -29,16 +29,6 @@ header.solid {
     width: 180px;
     height: 60px;
     object-fit: cover;
-}
- 
-.FundoPraia {
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 500px;
-    object-fit: cover;
-    z-index: -1;
-    filter: brightness(0.7);
 }
 /* ===================== MENU DE NAVEGAÇÃO ===================== */
 nav ul {
@@ -277,72 +267,106 @@ nav ul li a:hover {
 /* menu lateral D */
 
 /*  container */
-.container {
-    width: 10vw;
-    display: flex;
-    flex-direction: row;
-    padding: 5px;
+.carrossel {
+  font-family: "Lato", sans-serif;
+  position: relative;
+  width: 100%;
+  height: 500px;
+  z-index: -1;
+  overflow: hidden;
 }
 
-.containerlateral {
-    background-color: #F5F5F5;
-    border-radius: 5px;
-    margin-top: 5px;
-    font-family: Arial, Helvetica, sans-serif;
-    display: inline-block;
-    flex-flow: column wrap;
-    justify-content: space-around;
-    width: 10vw;
-
+.slides {
+  width: 100%;
+  height: 100%;
 }
 
-.carrosel-container {
-    width: 600px;
-    margin: 2em auto;
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.slide {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
 }
 
-.carrosel {
-    width: 100%;
-    height: 350px;
-    overflow: hidden;
-    border-radius: .5em;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+.slide.ativo {
+  opacity: 1;
 }
 
-.carrosel img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: opacity 0.8s ease-in-out;
-    border-radius: .5em;
+.slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(0.7);
 }
 
-.nav-btn {
-    background-color: rgba(0, 0, 0, 0.5);
-    color: white;
-    border: none;
-    font-size: 2rem;
-    cursor: pointer;
-    padding: 10px;
-    border-radius: 50%;
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    transition: background-color 0.3s;
+.conteudo {
+  position: absolute;
+  bottom: 15%;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  color: white;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
 }
 
-.nav-btn:hover {
-    background-color: rgba(0, 0, 0, 0.8);
+.conteudo h2 {
+  font-size: 2rem;
+  margin-bottom: 10px;
 }
 
-#prev {
-    left: -50px;
+.conteudo p {
+  font-size: 1.2rem;
 }
 
-#next {
-    right: -50px;
+/* Indicadores (bolinhas) */
+.indicadores {
+  position: absolute;
+  bottom: 15px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 8px;
+}
+
+.indicador {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.5);
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.indicador.ativo {
+  background: white;
+}
+
+/* 📱 Responsividade */
+@media (max-width: 1024px) {
+  .carrossel {
+    height: 300px; /* tablets */
+  }
+  .conteudo h2 {
+    font-size: 1.6rem;
+  }
+  .conteudo p {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .carrossel {
+    height: 220px; /* celulares */
+  }
+  .conteudo h2 {
+    font-size: 1.2rem;
+  }
+  .conteudo p {
+    font-size: 0.9rem;
+  }
+  .indicador {
+    width: 10px;
+    height: 10px;
+  }
 }

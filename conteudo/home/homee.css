@@ -30,16 +30,6 @@ header.solid {
     height: 60px;
     object-fit: cover;
 }
- 
-.FundoPraia {
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 500px;
-    object-fit: cover;
-    z-index: -1;
-    filter: brightness(0.7);
-}
 /* ===================== MENU DE NAVEGAÇÃO ===================== */
 nav ul {
     display: flex;
@@ -275,97 +265,108 @@ nav ul li a:hover {
 }
 
 /* menu lateral D */
-.container {
-    width: 10vw;
-    display: flex;
-    flex-direction: row;
-    padding: 5px;
+
+/*  container */
+.carrossel {
+  font-family: "Lato", sans-serif;
+  position: relative;
+  width: 100%;
+  height: 500px;
+  z-index: -1;
+  overflow: hidden;
 }
 
-.containerlateral {
-    background-color: #F5F5F5;
-    border-radius: 5px;
-    margin-top: 5px;
-    font-family: Arial, Helvetica, sans-serif;
-    display: inline-block;
-    flex-flow: column wrap;
-    justify-content: space-around;
-    width: 10vw;
-
+.slides {
+  width: 100%;
+  height: 100%;
 }
 
-.carrosel{
-    width: 50%;
-    overflow-x: auto;
-    margin: 3em auto;
-    display: flex;
-    gap: 1em;
-    scroll-behavior: smooth;
-    anchor-name: --carrosel;
-    scroll-snap-type:x mandatory ;
-    scroll-marker-group: after;
+.slide {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
 }
-.carrosel::scroll-marker-group{
-    display: flex;
-    justify-content: center;
-    gap: 1%;
+
+.slide.ativo {
+  opacity: 1;
 }
-.card::scroll-marker{
-    content: '';
-    height: 10px;
+
+.slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(0.7);
+}
+
+.conteudo {
+  position: absolute;
+  bottom: 15%;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  color: white;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+}
+
+.conteudo h2 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.conteudo p {
+  font-size: 1.2rem;
+}
+
+/* Indicadores (bolinhas) */
+.indicadores {
+  position: absolute;
+  bottom: 15px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 8px;
+}
+
+.indicador {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.5);
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.indicador.ativo {
+  background: white;
+}
+
+/* 📱 Responsividade */
+@media (max-width: 1024px) {
+  .carrossel {
+    height: 300px; /* tablets */
+  }
+  .conteudo h2 {
+    font-size: 1.6rem;
+  }
+  .conteudo p {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .carrossel {
+    height: 220px; /* celulares */
+  }
+  .conteudo h2 {
+    font-size: 1.2rem;
+  }
+  .conteudo p {
+    font-size: 0.9rem;
+  }
+  .indicador {
     width: 10px;
-    background-color: rgb(0, 0, 0);
-    border-radius: 50%;
-}
-
-.card::scroll-marker:target-current{
-    background-color: grey;
-}
-
-.carrosel::-webkit-scrollbar{
-    display: none;
-}
-.carrosel::scroll-button(right), .carrosel::scroll-button(left){
-    content: '>';
-    border: none;
-    background-color: var(--brand-color);
-    font-family: Consolas;
-    font-size: 3rem;
-    color: black;
-    height: 60px;
-    width: 60px;
-    border-radius: 50%;
-    padding-bottom: .1em;
-    cursor: pointer;
-    position: fixed;
-    position-anchor: --carrosel;
-    position-area: right center;
-    translate: -50%;
-}
-.carrosel::scroll-button(left){
-    content: '<';
-     position-area: left center;
-     translate: 50%;
-}
-
-.carrosel::scroll-button(right), .carrosel::scroll-button(left):disabled{
-    opacity: 0.5;
-    cursor: auto;
-}
-
-.card{
-    scroll-snap-align: start;
-    flex: 0 0 20em;
-    height: 12em;
-    background-color: var(--primary-color);
-    padding: 1em;
-    border-radius: .5em;
-    text-align: center;
-    align-content: center;
-}
-
-@media(max-width: 500px){
-    .card{
-        flex: 0 0 100%;
-    }
+    height: 10px;
+  }
 }

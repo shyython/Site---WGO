@@ -9,7 +9,7 @@
 
 <body>
 
-    <h2>Create Account</h2>
+    <h2>Crie sua conta</h2>
     <img class="avatar" src="../imagens/Icone-usuario.png" alt="User" />
 
     <form action="valida_cadastro.php" method="POST">

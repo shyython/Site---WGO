@@ -71,6 +71,7 @@ body {
 
 .Titulo-WGO {}
 
+
 .subtitulo-card {
     font-size: 40px;
     color: #174348;
@@ -215,22 +216,48 @@ input:focus {
     width: 500px;
     border-radius: 10px;
     flex-wrap: wrap;
-    justify-content: flex;
+    justify-content: center;
     align-items: center;
     text-align: center;
+
 }
+.introducao2{
+    font-size: 20px;
+    color: #174348;
+    margin-bottom: 20px;
+    text-align: justify;
+    text-justify: inter-word;
+    width: 500px;
+    
+}
+
 
 .a {
     width: 100%;
     margin-top: 400px;
     margin-bottom: 200px;
+    /* background-image: url("https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExOWluamJjbmw5bjN6cXZqZGR1c3BlZmp2NTJ0MWlrdGw0eWVzaWF5ZSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/Pm9uJ1OHELY5WEMx4M/giphy.gif");
     background-repeat: no-repeat;
+  background-attachment: fixed; */
 }
 
+.b{
+    display: flex;
+    width: 100%;
+    margin-top: 400px;
+    margin-bottom: 400px;
+    justify-content: flex-end;
+}
+
+
+
 /* ===================== CARDS ===================== */
-.Titulo-card {
-    font-size: 50px;
+.Titulo {
+    display: flex;
+    font-size: 20px;
     padding: 15px;
+    justify-content: center;
+   
 }
 
 .subtitulo-card {

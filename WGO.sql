@@ -10,13 +10,16 @@ num_endereco int
 );
 
 
+
 CREATE TABLE usuarios (
     id_usuario INT PRIMARY KEY AUTO_INCREMENT,
     nome VARCHAR(100) NOT NULL,
     nomeUsuario VARCHAR(50) NOT NULL,
+    
     emailUsuario VARCHAR(100) NOT NULL UNIQUE,
     senhaUsuario VARCHAR(100) NOT NULL			
 );
+
 
 
 create table Dados_Contato (

@@ -265,12 +265,12 @@ nav ul li a:hover {
 }
  
 /* menu lateral D */
-.selectEstado {
+.selectEstado1 {
    justify-content: center;
    display: flex;
    margin-top: 20px;
 }
-#estado {
+#estado1 {
     width: 300px; /* maior largura */
     height: 45px; /* maior altura */
     padding: 10px 15px;

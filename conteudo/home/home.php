@@ -99,8 +99,8 @@
     <div class="indicadores"></div>
   </section>
   
-  <div class="selectEstado">
-    <select id="estado">
+  <div class="selectEstado1">
+    <select id="estado1">
         <option value="" disabled selected class="selectTxt">Selecione seu Estado</option>
         <option value="AC">Acre</option>
         <option value="AL">Alagoas</option>

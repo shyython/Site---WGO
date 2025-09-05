@@ -4,7 +4,7 @@ import { useNavigation } from '@react-navigation/native';
 import { claro, escuro } from '../Styles/Globalstyles';
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
-
+import { API_URL } from '../../ConfigsBanco/Config.js';
 
 
 
@@ -25,7 +25,7 @@ const [users, setUsers] = useState([]);
 
     const getUsers = async () => {
       try {
-        const res = await axios.get("http://192.168.56.1:8800/usuarios");
+        const res = await axios.get(`${API_URL}/usuarios`);
         setUsers(res.data.sort((a, b) => (a.Id_Usuario > b.Id_Usuario ? 1 : (b.Id_Usuario > a.Id_Usuario ? 1 : -1))));
       } catch (err) {
         console.log(err);

@@ -3,7 +3,7 @@ import { StyleSheet, Text, View, Image, Button, TouchableOpacity, useColorScheme
 import { TextInput } from 'react-native-gesture-handler';
 import { claro, escuro } from '../Styles/Globalstyles';
 import axios from 'axios';
-
+import { API_URL } from '../../ConfigsBanco/Config.js';
 
 export default function Cadastrar(){
     const theme = useColorScheme();
@@ -21,7 +21,7 @@ export default function Cadastrar(){
     }
 
     try {
-      const res = await axios.post("http://10.59.47.20:8800/usuarios", {
+      const res = await axios.post(`${API_URL}usuarios`, {
         Nome,
         Email,
         Data_Nasc,

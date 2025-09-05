@@ -3,6 +3,7 @@ import { StyleSheet, Text, View, useColorScheme, Image, TouchableOpacity } from 
 import {claro, escuro} from '../../Styles/Globalstyles';
 import { useState, useEffect } from 'react';
 import axios from 'axios';
+import { API_URL } from '../../../ConfigsBanco/Config.js/index.js';
 
 
 export default function Pesquisa({route}){
@@ -17,7 +18,7 @@ export default function Pesquisa({route}){
   useEffect(() => {
   const getSearch = async () => {
     try {
-      const res = await axios.post("http://192.168.56.1:8800/usuarios/eventos/search", {
+      const res = await axios.post(`${API_URL}/usuarios/eventos/search`, {
         procurar:  setPesquisa 
       });
       console.log(res.data);

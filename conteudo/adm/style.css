@@ -9,7 +9,7 @@ main {
     align-items: center;
 }
 
-.container-evento {
+form{
     display: flex;
     flex-direction: column;
     background-color: rgb(209, 209, 209);
@@ -17,22 +17,25 @@ main {
     align-items: center;
     text-align: center;
     border-radius: 10px;
-    padding: 30px;
-    width: 100%;
+    width: 40%;
+    padding: 10px;
+}
+
+.container-evento{
+    padding: 10px;
 }
 
 .dados_evento {
     display: flex;
     text-align: center;
     align-items: center;
-    margin: 5px;
+    margin-bottom: 10px;
 }
 
 input {
     padding: 10px;
     border-radius: 10px;
     border: none;
-    margin: 5px;
 }
 
 select {
@@ -40,7 +43,6 @@ select {
     width: 200px;
     border-radius: 10px;
     border: none;
-    margin: 5px;
 }
 
 button {
@@ -49,6 +51,4 @@ button {
     border-radius: 10px;
     border: none;
     color: azure;
-    margin: 5px;
-    justify-content: center;
 }

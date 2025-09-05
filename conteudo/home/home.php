@@ -99,9 +99,9 @@
     <div class="indicadores"></div>
   </section>
   
-   <label for="">Selecione seu Estado:</label>
+  <div class="selectEstado">
     <select id="estado">
-        <option value="" disabled selected>-- Selecione --</option>
+        <option value="" disabled selected class="selectTxt">Selecione seu Estado</option>
         <option value="AC">Acre</option>
         <option value="AL">Alagoas</option>
         <option value="AP">Amapá</option>
@@ -130,6 +130,7 @@
         <option value="SE">Sergipe</option>
         <option value="TO">Tocantins</option>
     </select>
+  </div>
     <script>
         $(document).ready(function() {
             $('#estado').select2();

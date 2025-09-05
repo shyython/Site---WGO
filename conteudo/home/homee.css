@@ -265,9 +265,36 @@ nav ul li a:hover {
 }
  
 /* menu lateral D */
-  .estado option[value="-- Selecione --"] {
-  display: none;
+.selectEstado {
+   justify-content: center;
+   display: flex;
+   margin-top: 20px;
 }
+#estado {
+    width: 300px; /* maior largura */
+    height: 45px; /* maior altura */
+    padding: 10px 15px;
+    border-radius: 8px;
+    border: none;
+    font-size: 18px;
+    background-color: #3C4E69;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    appearance: none; /* remove estilo padrão do select */
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-image: url("data:image/svg+xml;charset=US-ASCII,%3Csvg%20width%3D%2210%22%20height%3D%227%22%20viewBox%3D%220%200%2010%207%22%20fill%3D%22none%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Cpath%20d%3D%22M1%201L5%206L9%201%22%20stroke%3D%22white%22%20stroke-width%3D%222%22/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 15px center;
+    background-size: 10px 7px;
+    position: relative;
+}
+/* Deixar a primeira opção invisível */
+#estado option.selectTxt {
+    display: none;
+}
+
 /*  container */
 .carrossel {
   font-family: "Lato", sans-serif;

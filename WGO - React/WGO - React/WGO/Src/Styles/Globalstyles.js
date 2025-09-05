@@ -661,7 +661,7 @@ export const escuro = StyleSheet.create({
         borderTopLeftRadius:10,
         borderTopRightRadius:10,
         width:'100%',
-        height:'50%',
+        height:'30%',
             shadowColor: "#000",
         shadowOffset: {
             width: 0,
@@ -693,7 +693,8 @@ export const escuro = StyleSheet.create({
   containerEvento:{
     display:'flex',
     flexDirection:'column',
-    backgroundColor:'#272727'
+    backgroundColor:'#272727',
+    minHeight:1500,
   },
   descricao:{
     color:'white',
@@ -708,7 +709,27 @@ export const escuro = StyleSheet.create({
     alignItems:'center'
   },
   Txtloc:{
-    color:'white'
+    color:'white',
+    maxWidth:'60%'
+  },
+  Txthorario:{
+    color:'white',
+  },
+  Det:{
+    marginTop:10,
+    marginBottom:40,
+    display:'flex',
+    flexDirection:'row',
+    justifyContent:'space-evenly'
+  },
+  curtir:{
+    width:40,
+    height:40,
+  },
+  ContainerSalva:{
+    display:'flex',
+    flexDirection:'row',
+    marginLeft:280,
   }
 });
 

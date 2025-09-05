@@ -4,6 +4,7 @@ import { Text, View, Image, TextInput, TouchableOpacity, useColorScheme, ScrollV
 import { Feather } from '@expo/vector-icons';
 import {claro, escuro} from '../Styles/Globalstyles';
 import { useNavigation } from '@react-navigation/native';
+import { API_URL } from '../../ConfigsBanco/Config.js';
 
 
 export default function Home({}) {
@@ -22,7 +23,7 @@ export default function Home({}) {
   useEffect(() => {
     const getEvent = async () => {
       try {
-        const res = await axios.get("http://192.168.56.1:8800/usuarios/eventos");
+        const res = await axios.get(`${API_URL}/usuarios/eventos`);
         setEventos(res.data.sort((a, b) => (a.Id_Evento > b.Id_Evento ? 1 : (b.Id_Evento > a.Id_Evento ? 1 : -1))));
       } catch (err) {
         console.log(err);

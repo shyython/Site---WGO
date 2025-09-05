@@ -2,8 +2,8 @@
     include('../login/config.php');
 
     // VERIFICA SE O E-MAIL JÁ ESTÁ CADASTRADO
-    $email = $_POST['emailUsuario'];
-    $sql = "SELECT * FROM usuarios WHERE emailUsuario = '$email'";
+    $emailUsuario = $_POST['emailUsuario'];
+    $sql = "SELECT * FROM usuarios WHERE emailUsuario = '$emailUsuario'";
     $res = $conexao->query($sql);
 
     if ($res->num_rows > 0) {
@@ -12,11 +12,15 @@
     }
 
     // PEGA OS DADOS DO FORMULÁRIO
-    $nome = $_POST['nome'];
-    $senha = md5($_POST['senhaUsuario']);
+    $nome = $_POST['nomeCompleto'];
+    $nomeUsuario = $_POST['nomeUsuario'];
+    $tipoUsuario = "usuario";
+    $senhaUsuario = md5($_POST['senhaUsuario']);
+
+   
 
     // INSERÇÃO DOS DADOS NO BANCO
-    $sql = "INSERT INTO usuarios (nomeUsuario, emailUsuario, senhaUsuario) VALUES ('$nome', '$email', '$senha')";
+    $sql = "INSERT INTO usuarios (nome, nomeUsuario, tipoUsuario, emailUsuario, senhaUsuario) VALUES ('$nome', '$nomeUsuario', '$tipoUsuario', '$emailUsuario', '$senhaUsuario')";
     $res = $conexao->query($sql);
 
     // REDIRECIONA COM BASE NO RESULTADO
@@ -26,3 +30,7 @@
         header('Location: ../cadastrar/cadastro.php?usuario=falha');
     }
 ?>
+
+
+
+

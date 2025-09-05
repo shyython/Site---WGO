@@ -13,7 +13,7 @@
     <img class="avatar" src="../imagens/Icone-usuario.png" alt="User" />
 
     <form action="valida_cadastro.php" method="POST">
-        <input type="text" name="nome" placeholder="Nome completo" required />
+        <input type="text" name="nomeCompleto" placeholder="Nome completo" required />
         <input type="text" name="nomeUsuario" placeholder="User" required>
         <input type="email" name="emailUsuario" placeholder="Email" required />
         <input type="password" name="senhaUsuario" placeholder="Password" required />

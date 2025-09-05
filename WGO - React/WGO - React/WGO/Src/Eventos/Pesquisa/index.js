@@ -3,6 +3,7 @@ import { StyleSheet, Text, View, useColorScheme, Image, TouchableOpacity } from 
 import {claro, escuro} from '../../Styles/Globalstyles';
 import { useState, useEffect } from 'react';
 import axios from 'axios';
+import { useNavigation } from '@react-navigation/native';
 import { API_URL } from '../../../ConfigsBanco/Config.js/index.js';
 
 
@@ -32,8 +33,10 @@ export default function Pesquisa({route}){
     getSearch();
   }
 }, [setPesquisa]);
-
-        
+  const navigation = useNavigation();
+  function NavegaEvento(evento) {
+  navigation.navigate('Evento_Individual', { evento });
+  }
         
      return (
     <View style={estilo.ContainerPesquisa}>
@@ -47,7 +50,7 @@ export default function Pesquisa({route}){
             />
             <Text style={estilo.Txtevento}>{evento.Nome_Evento}</Text>
             <Text style={estilo.Txtevento}>4.8</Text>
-            <TouchableOpacity style={estilo.BtnVerMaisPesquisa}>
+            <TouchableOpacity onPress={() => NavegaEvento(evento)} style={estilo.BtnVerMaisPesquisa}>
               <Text style={estilo.TextBtnVer}>Ver Mais</Text>
             </TouchableOpacity>
           </View>

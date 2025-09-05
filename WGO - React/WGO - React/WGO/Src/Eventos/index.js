@@ -66,8 +66,8 @@ export default function Eventos(){
                 <Text style={estilo.Label}>Passeios</Text>
                 <Image source={{uri:'https://cdn-icons-png.flaticon.com/128/254/254434.png'}} style={estilo.arrow}/>
             </View>
-    </TouchableOpacity>
-    <ScrollView horizontal={true}>
+        </TouchableOpacity>
+    <ScrollView horizontal={true} scrollEnabled={true}>
         <View style={estilo.ListaEventos} scrollEnabled={true} >
 
             <View style={estilo.Eventos}>

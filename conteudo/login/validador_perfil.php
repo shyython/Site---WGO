@@ -8,7 +8,7 @@ if (!isset($_SESSION['autenticado']) || $_SESSION['autenticado'] != 'sim') {
 }
 
 // Verifica se o e-mail da sessão está presente e é válido
-if (!isset($_SESSION['emailUsuario']) || !filter_var($_SESSION['emailUsuario'], FILTER_VALIDATE_EMAIL)) { 
+if (!isset($_SESSION['email']) || !filter_var($_SESSION['email'], FILTER_VALIDATE_EMAIL)) {
     header('location: home.php?permissao=nao');
     exit;
 }

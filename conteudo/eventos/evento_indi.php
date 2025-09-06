@@ -1,6 +1,5 @@
 <?php
 require_once "../login/validador_acesso.php";
-require_once "../login/config.php ";
 require_once "../ConfigBd/porta.php";
 $evento = $_GET["id"];
   $sql = "SELECT * FROM eventos where Id_Evento = $evento";
@@ -19,7 +18,7 @@ $evento = $_GET["id"];
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Evento</title>
     <link rel="stylesheet" href="evento_indi.css">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script>
@@ -57,7 +56,7 @@ $(document).ready(function () {
 <body>
     <header>
        <img src="../imagens/WgoIcon2.png" class="ImgLogo" alt="">
-        <form class="form">
+        <!-- <form class="form">
             <button>
                 <svg width="17" height="16" fill="none" xmlns="http://www.w3.org/2000/svg" role="img"
                     aria-labelledby="search">
@@ -73,8 +72,8 @@ $(document).ready(function () {
                     <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"></path>
                 </svg>
             </button>
-        </form>
-        <p>Home</p>
+        </form> -->
+         <a href="../logOut.php"><img src="../imagens/sair.png" alt="" width="50px"></a>
     </header>
     <main>
         <div class="div-Eventos">

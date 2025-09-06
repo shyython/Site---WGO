@@ -21,7 +21,7 @@ https://www.loopnerd.com.br/codigos-css-prontos/page/2/#gsc.tab=0 */
 header {
     display: flex;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: space-between;
      background-color: #2f4d6a;
     padding: 10px;
 }

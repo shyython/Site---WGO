@@ -108,7 +108,7 @@ $row = $res->fetch_object();
       </div>
     </div>
     <nav>
-      <a href="../logOut.php"><img src="../imagens/sair.png" alt="" width="50px">Sair</a>
+      <a href="../logOut.php"><img src="../imagens/sair.png" alt="" width="50px"></a>
   </header>
 
   <section class="carrossel">

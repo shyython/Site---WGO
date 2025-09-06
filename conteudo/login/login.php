@@ -9,7 +9,7 @@
 </head>
 
 <header id="header">
-    <a href="index.php"><img class="Logo" src="../imagens/WgoIcon2.png" alt="Logo" style="width: 150px;"></a>
+    <a href="login.php"><img class="Logo" src="../imagens/WgoIcon2.png" alt="Logo" style="width: 150px;"></a>
     <a style="padding-right: 50px;" href="login/login.php"><img src="../conteudo/imagens/loginn.png" alt="" width="64px"
             color="white"></a>
 </header>

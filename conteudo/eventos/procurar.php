@@ -1,7 +1,5 @@
 <?php
-
 require_once "../login/validador_acesso.php";
-require_once "../login/config.php ";
 
 require_once '../ConfigBd/porta.php';
  $recomendados = random_int(1, 10);
@@ -40,7 +38,7 @@ require_once '../ConfigBd/porta.php';
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="procurar.css">
-    <title>Document</title>
+    <title>Eventos</title>
 </head>
 <header>
         <a href="../inicio/home.php"><img class="Logo" src="../imagens/WgoIcon.png" alt="Logo"></a>

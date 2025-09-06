@@ -9,6 +9,13 @@
 
 <body>
 
+    <header id="header">
+        <a href="cadasto.php"><img class="Logo" src="../imagens/WgoIcon2.png" alt="Logo" style="width: 150px;"></a>
+        <a style="padding-right: 50px;" href="login/login.php"><img src="../conteudo/imagens/loginn.png" alt=""
+                width="64px" color="white"></a>
+    </header>
+
+
     <h2>Crie sua conta</h2>
     <img class="avatar" src="../imagens/Icone-usuario.png" alt="User" />
 
@@ -17,9 +24,9 @@
         <input type="text" name="nomeUsuario" placeholder="User" required>
         <input type="email" name="emailUsuario" placeholder="Email" required />
         <input type="password" name="senhaUsuario" placeholder="Password" required />
-       
-       
-       <?php //VALIDA SE O USUÁRIO JÁ NÃO ESTAVA CADASTRADO
+
+
+        <?php //VALIDA SE O USUÁRIO JÁ NÃO ESTAVA CADASTRADO
         if (isset($_GET['email']) && $_GET['email'] === 'erro') { ?>
             <div class="text-danger" style="text-align: center;"> E-Mail já cadastrado!</div>
         <?php } ?>
@@ -37,16 +44,16 @@
         <?php } ?>
 
         <button type="submit">Cadastrar</button>
-       
+
 
 
     </form>
 
     <div class="links">
-        <p>Já tem uma conta? <a href="login.php">Login</a></p>
+        <p>Já tem uma conta? <a href="../login/login.php">Login</a></p>
     </div>
 
-            
+
 </body>
 
 </html>

@@ -2,7 +2,7 @@
     define('HOST','127.0.0.1');
     define('USER','root');
     define('PASS','');
-    define('BASE','WGO');
+    define('BASE','wgo');
     
     //Criar a string de conexão
     $conexao = new mysqli(HOST,USER,PASS,BASE);

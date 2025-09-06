@@ -29,13 +29,15 @@ $row = $res->fetch_object();
     <!-- logo -->
     <a href="../home/home.php">
       <img class="Logo" src="../imagens/WgoIcon2.png" alt="Logo">
+
+
     </a>
 
     <nav>
       <ul>
         <li><a href="../home/home.php">Início</a></li>
         <li><a href="../blog/Blog.php">Blog</a></li>
-        <li><a href="../eventos/eventos.php">Eventos</a></li>
+        <li><a href="../eventos/procurar.php">Eventos</a></li>
         <li class="config">
           <a href="#" onclick="abrirMenuConf(event)">Configurações</a>
           <ul id="configMenu">
@@ -44,12 +46,13 @@ $row = $res->fetch_object();
             <li><a href="../conteudo/privacidade.html">Ajuda</a></li>
           </ul>
         </li>
-        </li>
+
+
       </ul>
     </nav>
 
     <!-- search -->
-    <div class="pesquisar">
+    <!-- <div class="pesquisar">
       <input type="text" name="text" class="input" required placeholder="Search...">
       <div class="icon">
         <svg xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512">
@@ -60,7 +63,7 @@ $row = $res->fetch_object();
             d="M338.29 338.29L448 448"></path>
         </svg>
       </div>
-    </div>
+    </div> -->
 
     <!-- sininho -->
     <div class="btnNot" onclick="abrirNotifi(event)">
@@ -73,7 +76,7 @@ $row = $res->fetch_object();
       <h2>Notificações <span>17</span></h2>
 
       <div class="notifi-item">
-        <img src="/conteudo/imagens/Dav.jpg" alt="Davi" class="img-not">
+        <img src="../imagens/Dav.jpg" alt="Davi" class="img-not">
         <div class="text">
           <h4>Davi Silva</h4>
           <p>@lorem ipsum dolor sit amet</p>
@@ -81,7 +84,7 @@ $row = $res->fetch_object();
       </div>
 
       <div class="notifi-item">
-        <img src="/conteudo/imagens/Ell.jpg" alt="Ella" class="img-not">
+        <img src="../imagens/Ell.jpg" alt="Ella" class="img-not">
         <div class="text">
           <h4>Ella Prado</h4>
           <p>@lorem ipsum dolor sit amet</p>
@@ -104,6 +107,8 @@ $row = $res->fetch_object();
         </div>
       </div>
     </div>
+    <nav>
+      <a href="../logOut.php"><img src="../imagens/sair.png" alt="" width="50px">Sair</a>
   </header>
 
   <section class="carrossel">

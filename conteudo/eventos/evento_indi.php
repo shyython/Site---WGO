@@ -1,4 +1,6 @@
 <?php
+require_once "../login/validador_acesso.php";
+require_once "../login/config.php ";
 require_once "../ConfigBd/porta.php";
 $evento = $_GET["id"];
   $sql = "SELECT * FROM eventos where Id_Evento = $evento";

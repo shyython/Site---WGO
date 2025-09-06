@@ -1,3 +1,8 @@
+<?php
+require_once "../login/validador_acesso.php";
+require_once "../login/config.php";
+?>
+
 <!DOCTYPE html>
 <html lang="pt">
 
@@ -61,7 +66,7 @@
       <h2>Notificações <span>17</span></h2>
 
       <div class="notifi-item">
-        <img src="/conteudo/imagens/Dav.jpg" alt="Davi" class="img-not">
+        <img src="../conteudo/imagens/Dav.jpg" alt="Davi" class="img-not">
         <div class="text">
           <h4>Davi Silva</h4>
           <p>@lorem ipsum dolor sit amet</p>
@@ -69,7 +74,7 @@
       </div>
 
       <div class="notifi-item">
-        <img src="/conteudo/imagens/Ell.jpg" alt="Ella" class="img-not">
+        <img src="../conteudo/imagens/Ell.jpg" alt="Ella" class="img-not">
         <div class="text">
           <h4>Ella Prado</h4>
           <p>@lorem ipsum dolor sit amet</p>
@@ -92,6 +97,8 @@
         </div>
       </div>
     </div>
+
+    <a href="../login/logOut.php"><img src="../imagens/sair.png" alt="" width="50px"></a>
   </header>
 
   <img src="../imagens/Blog/fundoBlog.jpg" alt="" class="FundoPraia">

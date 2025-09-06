@@ -1,4 +1,8 @@
 <?php
+
+require_once "../login/validador_acesso.php";
+require_once "../login/config.php ";
+
 require_once '../ConfigBd/porta.php';
  $recomendados = random_int(1, 10);
  $recomendados2 = random_int(1, 10);

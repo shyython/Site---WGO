@@ -1,0 +1,142 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\xampp\\htdocs\\bea\\Site---WGO\\Wgo\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{8BEA35D9-97E5-410A-9E45-6F34B151895D}|Wgo\\Wgo.csproj|C:\\xampp\\htdocs\\bea\\Site---WGO\\Wgo\\wgo\\form2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{8BEA35D9-97E5-410A-9E45-6F34B151895D}|Wgo\\Wgo.csproj|solutionrelative:wgo\\form2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8BEA35D9-97E5-410A-9E45-6F34B151895D}|Wgo\\Wgo.csproj|c:\\xampp\\htdocs\\bea\\site---wgo\\wgo\\wgo\\form2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8BEA35D9-97E5-410A-9E45-6F34B151895D}|Wgo\\Wgo.csproj|solutionrelative:wgo\\form2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8BEA35D9-97E5-410A-9E45-6F34B151895D}|Wgo\\Wgo.csproj|c:\\xampp\\htdocs\\bea\\site---wgo\\wgo\\wgo\\form3.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{8BEA35D9-97E5-410A-9E45-6F34B151895D}|Wgo\\Wgo.csproj|solutionrelative:wgo\\form3.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8BEA35D9-97E5-410A-9E45-6F34B151895D}|Wgo\\Wgo.csproj|c:\\xampp\\htdocs\\bea\\site---wgo\\wgo\\wgo\\form3.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8BEA35D9-97E5-410A-9E45-6F34B151895D}|Wgo\\Wgo.csproj|solutionrelative:wgo\\form3.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8BEA35D9-97E5-410A-9E45-6F34B151895D}|Wgo\\Wgo.csproj|c:\\xampp\\htdocs\\bea\\site---wgo\\wgo\\wgo\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8BEA35D9-97E5-410A-9E45-6F34B151895D}|Wgo\\Wgo.csproj|solutionrelative:wgo\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8BEA35D9-97E5-410A-9E45-6F34B151895D}|Wgo\\Wgo.csproj|C:\\xampp\\htdocs\\bea\\Site---WGO\\Wgo\\wgo\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{8BEA35D9-97E5-410A-9E45-6F34B151895D}|Wgo\\Wgo.csproj|solutionrelative:wgo\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8BEA35D9-97E5-410A-9E45-6F34B151895D}|Wgo\\Wgo.csproj|c:\\xampp\\htdocs\\bea\\site---wgo\\wgo\\wgo\\wgo.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|",
+      "RelativeMoniker": "D:0:0:{8BEA35D9-97E5-410A-9E45-6F34B151895D}|Wgo\\Wgo.csproj|solutionrelative:wgo\\wgo.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 5,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{75188d03-9892-4ae2-abf1-207126247ce5}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Form3.cs",
+              "DocumentMoniker": "C:\\xampp\\htdocs\\bea\\Site---WGO\\Wgo\\Wgo\\Form3.cs",
+              "RelativeDocumentMoniker": "Wgo\\Form3.cs",
+              "ToolTip": "C:\\xampp\\htdocs\\bea\\Site---WGO\\Wgo\\Wgo\\Form3.cs",
+              "RelativeToolTip": "Wgo\\Form3.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAhwBUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-08T15:56:25.409Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Form3.cs [Projeto]",
+              "DocumentMoniker": "C:\\xampp\\htdocs\\bea\\Site---WGO\\Wgo\\Wgo\\Form3.cs",
+              "RelativeDocumentMoniker": "Wgo\\Form3.cs",
+              "ToolTip": "C:\\xampp\\htdocs\\bea\\Site---WGO\\Wgo\\Wgo\\Form3.cs [Projeto]",
+              "RelativeToolTip": "Wgo\\Form3.cs [Projeto]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-08T15:55:27.197Z",
+              "EditorCaption": " [Projeto]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Form2.cs",
+              "DocumentMoniker": "C:\\xampp\\htdocs\\bea\\Site---WGO\\Wgo\\Wgo\\Form2.cs",
+              "RelativeDocumentMoniker": "Wgo\\Form2.cs",
+              "ToolTip": "C:\\xampp\\htdocs\\bea\\Site---WGO\\Wgo\\Wgo\\Form2.cs",
+              "RelativeToolTip": "Wgo\\Form2.cs",
+              "ViewState": "AgIAAIAAAAAAAAAAAAAAAJwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-06T19:11:16.832Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Form2.cs [Projeto]",
+              "DocumentMoniker": "C:\\xampp\\htdocs\\bea\\Site---WGO\\Wgo\\Wgo\\Form2.cs",
+              "RelativeDocumentMoniker": "Wgo\\Form2.cs",
+              "ToolTip": "C:\\xampp\\htdocs\\bea\\Site---WGO\\Wgo\\Wgo\\Form2.cs [Projeto]",
+              "RelativeToolTip": "Wgo\\Form2.cs [Projeto]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-06T19:11:01.702Z",
+              "EditorCaption": " [Projeto]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Form1.cs",
+              "DocumentMoniker": "C:\\xampp\\htdocs\\bea\\Site---WGO\\Wgo\\Wgo\\Form1.cs",
+              "RelativeDocumentMoniker": "Wgo\\Form1.cs",
+              "ToolTip": "C:\\xampp\\htdocs\\bea\\Site---WGO\\Wgo\\Wgo\\Form1.cs",
+              "RelativeToolTip": "Wgo\\Form1.cs",
+              "ViewState": "AgIAABQAAAAAAAAAAAAlwCYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-06T18:57:01.768Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Form1.cs [Projeto]",
+              "DocumentMoniker": "C:\\xampp\\htdocs\\bea\\Site---WGO\\Wgo\\Wgo\\Form1.cs",
+              "RelativeDocumentMoniker": "Wgo\\Form1.cs",
+              "ToolTip": "C:\\xampp\\htdocs\\bea\\Site---WGO\\Wgo\\Wgo\\Form1.cs [Projeto]",
+              "RelativeToolTip": "Wgo\\Form1.cs [Projeto]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-06T18:55:46.356Z",
+              "EditorCaption": " [Projeto]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Wgo",
+              "DocumentMoniker": "C:\\xampp\\htdocs\\bea\\Site---WGO\\Wgo\\Wgo\\Wgo.csproj",
+              "RelativeDocumentMoniker": "Wgo\\Wgo.csproj",
+              "ToolTip": "C:\\xampp\\htdocs\\bea\\Site---WGO\\Wgo\\Wgo\\Wgo.csproj",
+              "RelativeToolTip": "Wgo\\Wgo.csproj",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-09-06T18:48:05.887Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

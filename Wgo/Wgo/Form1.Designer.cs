@@ -149,7 +149,7 @@
             groupBox1.Controls.Add(LblEmail);
             groupBox1.Controls.Add(TextSenha);
             groupBox1.Controls.Add(TextEmail);
-            groupBox1.Location = new Point(253, 120);
+            groupBox1.Location = new Point(499, 51);
             groupBox1.Name = "groupBox1";
             groupBox1.Size = new Size(289, 293);
             groupBox1.TabIndex = 11;

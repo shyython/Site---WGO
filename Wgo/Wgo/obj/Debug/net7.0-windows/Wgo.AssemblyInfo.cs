@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Wgo")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+2b9cb92ba5f242188252657aedbf787f2f5ff376")]
 [assembly: System.Reflection.AssemblyProductAttribute("Wgo")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Wgo")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -151,5 +151,10 @@ namespace Wgo
         {
 
         }
+
+        private void TxtNomeEmpresa_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -69,6 +69,7 @@
             TxtNomeEmpresa.Name = "TxtNomeEmpresa";
             TxtNomeEmpresa.Size = new Size(169, 29);
             TxtNomeEmpresa.TabIndex = 0;
+            TxtNomeEmpresa.TextChanged += TxtNomeEmpresa_TextChanged;
             // 
             // LblNomeEmpresa
             // 

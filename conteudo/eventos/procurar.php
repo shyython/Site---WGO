@@ -2,35 +2,31 @@
 require_once "../login/validador_acesso.php";
 require_once "../ConfigBd/porta.php";
 
-// sorteia 3 ids únicos
-$ids = [];
-while (count($ids) < 3) {
-    $rand = random_int(1, 10);
-    if (!in_array($rand, $ids)) {
-        $ids[] = $rand;
-    }
-}
-
-// eventos (todos)
-$sqlEventos = "SELECT * FROM eventos WHERE Id_Evento IN (" . implode(',', $ids) . ")";
+/* ========================
+   SORTEAR 3 EVENTOS
+======================== */
+$sqlEventos = "SELECT * FROM eventos ORDER BY RAND() LIMIT 3";
 $resEventos = $conexao->query($sqlEventos);
 
-// guarda os resultados em objetos individuais (para manter o HTML igual)
+// pega 3 registros (ou menos, se não houver)
 $row  = $resEventos->fetch_object();
 $row2 = $resEventos->fetch_object();
 $row3 = $resEventos->fetch_object();
 
-// restaurantes
+/* ========================
+   SORTEAR 3 RESTAURANTES
+======================== */
 $sqlRestaurantes = "SELECT * FROM eventos 
                     WHERE Categoria = 'Restaurante' 
-                    AND Id_Evento IN (" . implode(',', $ids) . ")";
+                    ORDER BY RAND() LIMIT 3";
 $resR = $conexao->query($sqlRestaurantes);
 
-// pega até 3 restaurantes (se houver)
+// pega até 3 restaurantes
 $rowR  = $resR->fetch_object();
 $rowR2 = $resR->fetch_object();
 $rowR3 = $resR->fetch_object();
 ?>
+
 
 
 <!DOCTYPE html>

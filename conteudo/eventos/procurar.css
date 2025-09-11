@@ -1,4 +1,4 @@
-*{
+* {
     margin: 0;
     padding: 0;
 
@@ -117,6 +117,7 @@ a {
     flex-flow: row wrap;
 
 }
+
 .Destaques {
     display: flex;
     flex-direction: row;
@@ -125,34 +126,43 @@ a {
     width: 100%;
     justify-content: space-evenly;
 }
-.CardDestaque{
+
+.CardDestaque {
     max-width: 30%;
     max-height: 10%;
     background-color: #fff;
     border-radius: 10px;
     padding: 2px;
 }
-.InfoDestaque{
+
+.InfoDestaque {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     text-align: center;
 }
+
+
 .ImgDestaque {
-    max-width:100%;
-    max-height: 40%;
-    min-height: 40%;
-    min-width: 100%;
-    border-radius: 10px;
-   
+    width: 100%;
+    /* ocupa toda a largura do card */
+    height: 200px;
+    /* altura fixa */
+    object-fit: cover;
+    /* corta a imagem sem distorcer */
+    border-radius: 12px;
+    /* opcional, deixa as bordas arredondadas */
 }
-.IconDestaque{
+
+
+.IconDestaque {
     width: 25px;
 }
-.BtnSaibaMais{
+
+.BtnSaibaMais {
     width: 95%;
-    border:none;
+    border: none;
     background-color: #E55B06;
     color: #fff;
     font-weight: bold;
@@ -160,4 +170,3 @@ a {
     border-radius: 5px;
     margin-top: 5px;
 }
-

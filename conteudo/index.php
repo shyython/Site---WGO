@@ -19,7 +19,7 @@
 
 
     <main>
-        
+
         <div class="div-introducao-basica">
             <div class="div-introducao-conteudo">
                 <div class="hero-section">
@@ -178,14 +178,15 @@
                         <div>
                             <img src="https://cdn-icons-png.flaticon.com/128/5186/5186087.png" alt="" width="26px">
                         </div>
-                    </div>
-                    <div class="btn-secao">
-                        <button class="btn-ver-evento"><a href="/conteudo/sobre/evento1/evento-1.html">Ver
-                                evento</a></button>
-                        <!-- <button class="btn-confirmar">Tô dentro!</button>
-                    <button class="btn-recusar">Tô fora</button> -->
 
+                        <div class="btn-secao">
+                            <button class="btn-ver-evento"><a href="/conteudo/sobre/evento1/evento-1.html">Ver
+                                    evento</a></button>
+                           
+
+                        </div>
                     </div>
+
                 </div>
 
 
@@ -243,8 +244,7 @@
                             </div>
                             <div class="btn-secao">
                                 <button class="btn-ver-evento" onclick="">Ver evento</button>
-                                <!-- <button class="btn-confirmar">Tô dentro!</button>
-                    <button class="btn-recusar">Tô fora</button> -->
+
 
                             </div>
                         </div>
@@ -278,18 +278,18 @@
         <!-- apresentando as categorias disponiveis -->
 
         <div class="todo">
-            <div class="main">
+            <div class="rodape">
                 <div class="entenda">
                     <h2>Como funciona</h2>
                     <div class="conheca">
-                        <Div class="Descubra resumo">
+                        <Div class="Descubra-resumo">
                             <img class="Imgresumo" src="https://cdn-icons-png.flaticon.com/128/5088/5088025.png" alt="">
                             <div>
                                 <h2>Descubra</h2>
                                 <p>Veja eventos perto de você</p>
                             </div>
                         </Div>
-                        <Div class="Convide resumo">
+                        <Div class="Convide-resumo">
                             <img class="Imgresumo" src="https://cdn-icons-png.flaticon.com/128/11735/11735198.png"
                                 alt="">
                             <div>
@@ -297,7 +297,7 @@
                                 <p>Marque presença com amigos</p>
                             </div>
                         </Div>
-                        <Div class="Curta resumo">
+                        <Div class="Curta-resumo">
                             <img class="Imgresumo" src="https://cdn-icons-png.flaticon.com/128/5877/5877962.png" alt="">
                             <div>
                                 <h2>Curta</h2>
@@ -309,40 +309,43 @@
                 <h2 style="text-align: center;">Veja o que há por perto</h2>
                 <div class="Categoria">
                     <div class="CardCategoria">
-                        <img src="https://media-cdn.tripadvisor.com/media/photo-m/1280/19/ca/cb/0d/photo2jpg.jpg" alt=""
-                            class="ImgCategoria">
+                        <img src="./imagens/restaurantes.jpg" alt="" class="ImgCategoria">
                         <p class="TxtCategoria">Restaurantes</p>
                     </div>
                     <div class="CardCategoria">
-                        <img src="https://media.gettyimages.com/id/517708666/pt/foto/jovens-amigos-a-divertir-se-com-enfeites-na-festa-noite-clube.jpg?s=612x612&w=0&k=20&c=lgjJnBNDJ4z2HLUQF1bFBDAMhl5QgaWtJaDXRmKRNXE="
-                            alt="" class="ImgCategoria">
+                        <img src="./imagens/baladas.jpg" alt="" class="ImgCategoria" alt="" class="ImgCategoria">
                         <p class="TxtCategoria">Baladas</p>
                     </div>
                     <div class="CardCategoria">
-                        <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0f/b6/80/4f/salao-do-pregao.jpg?w=900&h=500&s=1"
-                            alt="" class="ImgCategoria">
+                        <img src="./imagens/cultura.jpg" alt="" class="ImgCategoria" alt="" class="ImgCategoria">
+
                         <p class="TxtCategoria">Cultura</p>
                     </div>
                     <div class="CardCategoria">
-                        <img src="https://webrun.com.br/wp-content/uploads/2020/01/10-KM-2019-Vanessa_Rodrigues_A_Tribuna-30.jpg"
-                            alt="" class="ImgCategoria">
+                        <img src="./imagens/Esportes.jpg" alt="" class="ImgCategoria" alt="" class="ImgCategoria">
+
                         <p class="TxtCategoria">Esportes</p>
                     </div>
                     <div class="CardCategoria">
-                        <img src="https://cdn.diariodolitoral.com.br/upload/dn_arquivo/2021/06/aquario-pms.jpg" alt=""
-                            class="ImgCategoria">
+                        <img src="./imagens/criancas.jpg" alt="" class="ImgCategoria">
+
                         <p class="TxtCategoria">Crianças</p>
                     </div>
                 </div>
-                <div class="Explorar">
+
+
+              
+            </div>
+        </div>
+
+          <div class="Explorar">
                     <div>
                         <p class="TxtExplorar">Não perca o próximo rolê!</p>
                         <p class="TxtExplorar">Baixe agora e fique por dentro.</p>
                     </div>
                     <button class="BtnExplorar">Explorar Eventos</button>
                 </div>
-            </div>
-        </div>
+
 
     </main>
 

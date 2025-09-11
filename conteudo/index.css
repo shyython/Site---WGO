@@ -479,10 +479,28 @@ input:focus {
     height: 90px;
     border-radius: 50px;
 }
+.TxtCategoria {
+    font-size: 15px;
+    color: #174348;
+    margin-top: 10px;
+    text-align: center;
+}
 
-/* ===================== EVENTOS ===================== */
+/* ===================== EVENTOS ===================== *
+
+/* rodape */
+.rodape {
+  display: flex;
+    width: 100%;
+    flex-direction: column;
+    color: #174348;
+    text-align: center;
+    margin-top: 50px;
+}
+
 .entenda {
     display: flex;
+    width: 100%;
     flex-direction: column;
     align-items: center;
 }
@@ -491,6 +509,9 @@ input:focus {
     display: flex;
     flex-direction: row;
     margin-bottom: 50px;
+}
+ .Convide-resumo, .Curta-resumo {
+    padding-left: 400px;
 }
 
 .resumo {
@@ -512,8 +533,8 @@ input:focus {
 }
 
 .ImgCategoria {
-    max-width: 100px;
-    max-height: 90px;
+    max-width: 250px;
+    max-height: 200px;
     min-height: 90px;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
@@ -521,7 +542,7 @@ input:focus {
 
 .CardCategoria {
     display: flex;
-    width: 100px;
+    /* width: 100px; */
     height: 120px;
     flex-direction: column;
     border-top-left-radius: 10px;
@@ -549,10 +570,12 @@ input:focus {
 .Explorar {
     display: flex;
     flex-direction: row;
+    width: 100%;
+    height: 50px;
     justify-content: space-evenly;
     align-items: center;
     background-color: #2f4d6a;
-    padding: 12px;
+    padding: auto;
     border-radius: 5px;
 }
 
@@ -568,6 +591,7 @@ input:focus {
     color: #155088;
     font-weight: bold;
 }
+
 
 /* ===================== ANIMAÇÕES ===================== */
 .todo {

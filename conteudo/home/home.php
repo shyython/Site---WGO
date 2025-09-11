@@ -131,6 +131,38 @@
         <option value="TO">Tocantins</option>
     </select>
   </div>
+
+  <div class="categoria">
+    <div class="categoria2">
+     <img src="../imagens/home/baladaHome.webp" alt="" class="imgBalada">
+     <p class="txtCategoria">Baladas</p>
+    </div>
+    <div class="categoria2">
+     <img src="../imagens/home/esportesHome.jpg" alt="" class="imgBalada">
+     <p class="txtCategoria">Esportes</p>
+    </div>
+    <div class="categoria2">
+     <img src="../imagens/home/restaurantesHome.jpg" alt="" class="imgBalada">
+     <p class="txtCategoria">Restaurantes</p>
+    </div>
+    <div class="categoria2">
+     <img src="../imagens/home/culturaHome.jpg" alt="" class="imgBalada">
+     <p class="txtCategoria">Cultura</p>
+    </div>
+    <div class="categoria2">
+     <img src="../imagens/home/eventosComuniHome.jpg" alt="" class="imgBalada">
+     <p class="txtCategoria">Eventos Comunitários</p>
+    </div>
+      <div class="categoria2">
+     <img src="../imagens/home/historicoHome.webp" alt="" class="imgBalada">
+     <p class="txtCategoria">Pontos Turísticos e Históricos</p>
+    </div>
+      <div class="categoria2">
+     <img src="../imagens/home/praiaHome.jpg" alt="" class="imgBalada">
+     <p class="txtCategoria">Praias e Ar Livre</p>
+    </div>
+  </div>
+
     <script>
         $(document).ready(function() {
             $('#estado').select2();

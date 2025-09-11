@@ -268,17 +268,17 @@ nav ul li a:hover {
 .selectEstado1 {
    justify-content: center;
    display: flex;
-   margin-top: 20px;
+   margin-top: 40px;
 }
 #estado1 {
-    width: 300px; /* maior largura */
+    width: 400px; /* maior largura */
     height: 45px; /* maior altura */
     padding: 10px 15px;
     border-radius: 8px;
+    background-color: rgb(180, 180, 180);
+    color: white;
     border: none;
     font-size: 18px;
-    background-color: #3C4E69;
-    color: white;
     cursor: pointer;
     transition: background-color 0.3s;
     appearance: none; /* remove estilo padrão do select */
@@ -398,4 +398,44 @@ nav ul li a:hover {
     width: 10px;
     height: 10px;
   }
+}
+
+.categoria {
+    font-family: "Lato", sans-serif;
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    cursor: pointer;
+    transition: transform 0.3s;
+    margin-top: 80px;
+}
+
+.categoria2{
+    display: flex;
+    cursor: pointer;
+    transition: transform 0.3s;
+    flex-direction: column;
+    align-items: center;
+    margin-right: 20px;
+    margin-left: 20px;
+    margin-bottom: 30px;
+}
+
+.categoria2:hover {
+    transform: scale(1.05);
+}
+
+.imgBalada {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 15px;
+} 
+
+.txtCategoria {
+  display: flex;
+    font-size: 20px;
+    color: #333;
 }

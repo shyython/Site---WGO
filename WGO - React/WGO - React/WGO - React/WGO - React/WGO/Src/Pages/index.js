@@ -29,7 +29,6 @@ const [users, setUsers] = useState([]);
         setUsers(res.data.sort((a, b) => (a.Id_Usuario > b.Id_Usuario ? 1 : (b.Id_Usuario > a.Id_Usuario ? 1 : -1))));
       } catch (err) {
         console.log(err);
-        console.log(API_URL)
       }
       
     };

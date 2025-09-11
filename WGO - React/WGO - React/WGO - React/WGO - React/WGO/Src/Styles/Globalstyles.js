@@ -579,7 +579,12 @@ export const escuro = StyleSheet.create({
     display:'flex',
     flexDirection:'row',
     marginLeft:280,
-  }
+  },
+  //EDITAR PERFIL
+  container_edit:{
+    flex: 1,
+    backgroundColor: '#272727',
+  },
 });
 
 

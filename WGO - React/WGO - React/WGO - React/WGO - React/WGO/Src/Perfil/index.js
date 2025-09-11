@@ -5,12 +5,17 @@ import { useColorScheme } from 'react-native';
 import { getUser } from '../../ConfigsBanco/UsuarioGlobal';
 import axios from 'axios';
 import { API_URL } from '../../ConfigsBanco/Config.js';
+import { useNavigation } from '@react-navigation/core';
 
 export default function Perfil() {
   const theme = useColorScheme();
   const estilo = theme === 'dark' ? escuro : claro;
 
   const [usuario, setUsuario] = useState(null);
+  const navigation = useNavigation();
+   function NavegaEdit(){
+    navigation.navigate('Editar_Perfil')
+   }
 
 useEffect(() => {
   const getPerfil = async () => {
@@ -24,6 +29,8 @@ useEffect(() => {
   };
 
   getPerfil();
+
+   
 }, []);
 
 
@@ -41,7 +48,7 @@ useEffect(() => {
       <View style={estilo.ContainerFoto}>
         <Image
           style={estilo.ImgPerfil}
-          source={{ uri:usuario.Foto }}
+          source={{ uri:usuario.Foto  }}
         />
         <View>
           <Text style={estilo.Txtnome}>{usuario.Nome}</Text>
@@ -55,7 +62,7 @@ useEffect(() => {
         </View>
       </View>
       <View style={estilo.ContainerBtns}>
-        <TouchableOpacity style={estilo.BtnPefil}>
+        <TouchableOpacity style={estilo.BtnPefil} onPress={NavegaEdit}>
           <Text style={estilo.TxtBtn}>editar perfil</Text>
         </TouchableOpacity>
         <TouchableOpacity style={estilo.BtnPefil}>

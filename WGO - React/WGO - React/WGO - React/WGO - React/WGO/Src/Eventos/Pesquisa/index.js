@@ -43,7 +43,7 @@ export default function Pesquisa({route}){
      return (
     <View style={estilo.ContainerPesquisa}>
       <View style={estilo.ResultadoPesquisa}>
-        <Text style={estilo.Label}>Resultados para: {setPesquisa ? `Resultados para: ${setPesquisa}` : `Categoria: ${setCategoria}`}</Text>
+        <Text style={estilo.Label}>Resultados para: {setPesquisa ? `${setPesquisa}` : `Categoria: ${setCategoria}`}</Text>
         {eventos.map((evento, index) => (
           <View key={index} style={estilo.EventosPesquisa}>
             <Image 

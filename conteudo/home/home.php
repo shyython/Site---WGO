@@ -165,10 +165,9 @@
 
   <!--janela-->
     <div class="janelaInfo" id="janela">
-      <h2 id="janelaTxt">Título do Post</h2>
+      <h2 id="janelaTxt">titulo</h2>
       <p>
-        Aqui será exibido o conteúdo detalhado do post selecionado.
-        Você pode colocar texto, imagens, vídeos ou formulários.
+       aaaaaaaaaaaaaaaaaa
       </p>
       <button id="btnFechar">Fechar</button>
     </div>

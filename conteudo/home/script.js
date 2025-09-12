@@ -346,13 +346,13 @@ categoria2.forEach(categoria2 => {
   categoria2.addEventListener('click', () => {
     const title = categoria2.getAttribute('data-title');
     janelaTxt.textContent = title;
-    janela.classList.add('open');
+    janela.classList.add('abrir');
     janela.scrollIntoView({ behavior: 'smooth' });
   });
 });
 
 btnFechar.addEventListener('click', () => {
-  janela.classList.remove('open');
+  janela.classList.remove('abrir');
 });
 
  

@@ -98,7 +98,7 @@
     <div class="slides"></div>
     <div class="indicadores"></div>
   </section>
-  
+<!--select estado-->
   <div class="selectEstado1">
     <select id="estado1">
         <option value="" disabled selected class="selectTxt">Selecione seu Estado</option>
@@ -131,35 +131,46 @@
         <option value="TO">Tocantins</option>
     </select>
   </div>
-
+<!--categorias-->
   <div class="categoria">
     <div class="categoria2">
-     <img src="../imagens/home/baladaHome.webp" alt="" class="imgBalada">
-     <p class="txtCategoria">Baladas</p>
+      <img src="../imagens/home/baladaHome.webp" alt="" class="imgCategoria">
+      <p class="txtCategoria">Baladas</p>
     </div>
     <div class="categoria2">
-     <img src="../imagens/home/esportesHome.jpg" alt="" class="imgBalada">
-     <p class="txtCategoria">Esportes</p>
+      <img src="../imagens/home/esportesHome.jpg" alt="" class="imgCategoria">
+      <p class="txtCategoria">Esportes</p>
     </div>
     <div class="categoria2">
-     <img src="../imagens/home/restaurantesHome.jpg" alt="" class="imgBalada">
-     <p class="txtCategoria">Restaurantes</p>
+      <img src="../imagens/home/restaurantesHome.jpg" alt="" class="imgCategoria">
+      <p class="txtCategoria">Restaurantes</p>
     </div>
     <div class="categoria2">
-     <img src="../imagens/home/culturaHome.jpg" alt="" class="imgBalada">
-     <p class="txtCategoria">Cultura</p>
+      <img src="../imagens/home/culturaHome.jpg" alt="" class="imgCategoria">
+      <p class="txtCategoria">Cultura</p>
     </div>
     <div class="categoria2">
-     <img src="../imagens/home/eventosComuniHome.jpg" alt="" class="imgBalada">
-     <p class="txtCategoria">Eventos Comunitários</p>
+      <img src="../imagens/home/eventosComuniHome.jpg" alt="" class="imgCategoria">
+      <p class="txtCategoria">Eventos Comunitários</p>
     </div>
-      <div class="categoria2">
-     <img src="../imagens/home/historicoHome.webp" alt="" class="imgBalada">
-     <p class="txtCategoria">Pontos Turísticos e Históricos</p>
+    <div class="categoria2">
+      <img src="../imagens/home/historicoHome.webp" alt="" class="imgCategoria">
+      <p class="txtCategoria">Pontos Turísticos e Históricos</p>
     </div>
-      <div class="categoria2">
-     <img src="../imagens/home/praiaHome.jpg" alt="" class="imgBalada">
-     <p class="txtCategoria">Praias e Ar Livre</p>
+    <div class="categoria2">
+      <img src="../imagens/home/praiaHome.jpg" alt="" class="imgCategoria">
+      <p class="txtCategoria">Praias e Ar Livre</p>
+    </div>
+  </div>
+
+  <!--janela-->
+    <div class="janelaInfo" id="janela">
+      <h2 id="janelaTxt">Título do Post</h2>
+      <p>
+        Aqui será exibido o conteúdo detalhado do post selecionado.
+        Você pode colocar texto, imagens, vídeos ou formulários.
+      </p>
+      <button id="btnFechar">Fechar</button>
     </div>
   </div>
 

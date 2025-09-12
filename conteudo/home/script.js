@@ -277,7 +277,7 @@ window.addEventListener('scroll', function () {
 // iniciarTrocaAutomatica();
 const slidesContainer = document.querySelector(".slides");
 const indicadoresContainer = document.querySelector(".indicadores");
- 
+
 let indiceAtual = 0;
 let intervalo;
  
@@ -335,6 +335,26 @@ function iniciarTrocaAutomatica() {
 // Inicialização
 atualizarSlide();
 iniciarTrocaAutomatica();
+
+// Janela separada
+const categoria2 = document.querySelectorAll('.categoria2');
+const janela = document.getElementById('janela');
+const janelaTxt = document.getElementById('janelaTxt');
+const btnFechar = document.getElementById('btnFechar');
+
+categoria2.forEach(categoria2 => {
+  categoria2.addEventListener('click', () => {
+    const title = categoria2.getAttribute('data-title');
+    janelaTxt.textContent = title;
+    janela.classList.add('open');
+    janela.scrollIntoView({ behavior: 'smooth' });
+  });
+});
+
+btnFechar.addEventListener('click', () => {
+  janela.classList.remove('open');
+});
+
  
  
  

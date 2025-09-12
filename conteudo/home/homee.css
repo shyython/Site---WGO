@@ -432,7 +432,7 @@ nav ul li a:hover {
     transform: scale(1.05);
 }
 
-.imgBalada {
+.imgCategoria {
     width: 200px;
     height: 200px;
     border-radius: 50%;
@@ -444,4 +444,29 @@ nav ul li a:hover {
   display: flex;
     font-size: 20px;
     color: #333;
+}
+
+/* Janela Categoria */
+.janelaInfo {
+  margin-top: 20px;
+  background: #07142a;
+  border-radius: 12px;
+  padding: 20px;
+  display: none;
+  animation: slideDown 0.4s ease;
+}
+
+.janelaInfo.open {
+  display: block;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }

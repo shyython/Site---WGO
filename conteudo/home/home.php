@@ -164,10 +164,11 @@
   </div>
 
   <!--janela-->
+  <div class="container-janela">
     <div class="janelaInfo" id="janela">
-      <h2 id="janelaTxt">titulo</h2>
+      <h2 id="janelaTitle">tituloadasdadad</h2>
       <p>
-       aaaaaaaaaaaaaaaaaa
+       aaaaaaaaaaaaaaaaaazzzzzzz
       </p>
       <button id="btnFechar">Fechar</button>
     </div>

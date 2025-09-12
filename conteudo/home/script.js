@@ -339,13 +339,12 @@ iniciarTrocaAutomatica();
 // Janela separada
 const categoria2 = document.querySelectorAll('.categoria2');
 const janela = document.getElementById('janela');
-const janelaTxt = document.getElementById('janelaTxt');
+const janelaTitle = document.getElementById('janelaTitle');
 const btnFechar = document.getElementById('btnFechar');
 
 categoria2.forEach(categoria2 => {
   categoria2.addEventListener('click', () => {
-    const title = categoria2.getAttribute('data-title');
-    janelaTxt.textContent = title;
+    const title = categoria2.getAttribute('janela');
     janela.classList.add('abrir');
     janela.scrollIntoView({ behavior: 'smooth' });
   });

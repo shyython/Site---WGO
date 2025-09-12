@@ -45,6 +45,29 @@ $rowE = $resE->fetch_object();
 $rowE2 = $resE->fetch_object();
 $rowE3 = $resE->fetch_object();
 
+// Show's
+$sqlShows = "SELECT * FROM eventos 
+                    WHERE Categoria = 'Show' 
+                    ORDER BY RAND() LIMIT 3";
+$resS = $conexao->query($sqlShows);
+
+// pega até 3 lugares culturais
+$rowS = $resS->fetch_object();
+$rowS2 = $resS->fetch_object();
+$rowS3 = $resS->fetch_object();
+
+
+// Baladas
+$sqlBaladas = "SELECT * FROM eventos 
+                    WHERE Categoria = 'Balada' 
+                    ORDER BY RAND() LIMIT 3";
+$resB = $conexao->query($sqlBaladas);
+
+// pega até 3 lugares culturais
+$rowB = $resB->fetch_object();
+$rowB2 = $resB->fetch_object();
+$rowB3 = $resB->fetch_object();
+
 
 ?>
 
@@ -368,122 +391,124 @@ $rowE3 = $resE->fetch_object();
 
             </Div>
         </div>
+        <!-- Show's -->
+        <br>
+        <h2>Show's</h2>
 
-            <br>
-            <h2>Show's</h2>
+        <div class="Destaques">
+            <Div class="CardDestaque">
 
-            <div class="Destaques">
-                <Div class="CardDestaque">
+                <img class='ImgDestaque' src=' <?php print $rowS->Img1 ?>' alt=''>
 
-                    <img class='ImgDestaque' src=' <?php print $rowE->Img1 ?>' alt=''>
+                <form action="evento_indi.php?id=<?php print $rowS->Id_Evento ?>" method="GET">
 
-                    <form action="evento_indi.php?id=<?php print $rowE->Id_Evento ?>" method="GET">
+                    <div class='InfoDestaque'>
+                        <h3><?php print $rowS->Nome_Evento; ?></h3>
+                        <p><img class='IconDestaque' src='https://cdn-icons-png.flaticon.com/128/149/149060.png' />
+                            <?php print $rowS->Endereco; ?></p>
+                        <a class="BtnSaibaMais" href="evento_indi.php?id=<?php print $rowS->Id_Evento ?>">Ver
+                            mais</a>
 
-                        <div class='InfoDestaque'>
-                            <h3><?php print $rowE->Nome_Evento; ?></h3>
-                            <p><img class='IconDestaque' src='https://cdn-icons-png.flaticon.com/128/149/149060.png' />
-                                <?php print $rowE->Endereco; ?></p>
-                            <a class="BtnSaibaMais" href="evento_indi.php?id=<?php print $rowE->Id_Evento ?>">Ver
-                                mais</a>
+                    </div>
+                </form>
 
-                        </div>
-                    </form>
+            </Div>
+            <Div class="CardDestaque">
 
-                </Div>
-                <Div class="CardDestaque">
+                <img class='ImgDestaque' src=' <?php print $rowS2->Img1 ?>' alt=''>
 
-                    <img class='ImgDestaque' src=' <?php print $rowE2->Img1 ?>' alt=''>
+                <form action="evento_indi.php?id=<?php print $rowS2->Id_Evento ?>" method="GET">
 
-                    <form action="evento_indi.php?id=<?php print $rowE2->Id_Evento ?>" method="GET">
+                    <div class='InfoDestaque'>
+                        <h3><?php print $rowS2->Nome_Evento; ?></h3>
+                        <p><img class='IconDestaque' src='https://cdn-icons-png.flaticon.com/128/149/149060.png' />
+                            <?php print $rowS2->Endereco; ?></p>
+                        <a class="BtnSaibaMais" href="evento_indi.php?id=<?php print $rowS2->Id_Evento ?>">Ver
+                            mais</a>
 
-                        <div class='InfoDestaque'>
-                            <h3><?php print $rowE2->Nome_Evento; ?></h3>
-                            <p><img class='IconDestaque' src='https://cdn-icons-png.flaticon.com/128/149/149060.png' />
-                                <?php print $rowE2->Endereco; ?></p>
-                            <a class="BtnSaibaMais" href="evento_indi.php?id=<?php print $rowE2->Id_Evento ?>">Ver
-                                mais</a>
+                    </div>
+                </form>
 
-                        </div>
-                    </form>
+            </Div>
+            <Div class="CardDestaque">
 
-                </Div>
-                <Div class="CardDestaque">
+                <img class='ImgDestaque' src=' <?php print $rowS3->Img1 ?>' alt=''>
 
-                    <img class='ImgDestaque' src=' <?php print $rowE3->Img1 ?>' alt=''>
+                <form action="evento_indi.php?id=<?php print $rowS3->Id_Evento ?>" method="GET">
 
-                    <form action="evento_indi.php?id=<?php print $rowE3->Id_Evento ?>" method="GET">
+                    <div class='InfoDestaque'>
+                        <h3><?php print $rowS3->Nome_Evento; ?></h3>
+                        <p><img class='IconDestaque' src='https://cdn-icons-png.flaticon.com/128/149/149060.png' />
+                            <?php print $rowS3->Endereco; ?></p>
+                        <a class="BtnSaibaMais" href="evento_indi.php?id=<?php print $rowS3->Id_Evento ?>">Ver
+                            mais</a>
 
-                        <div class='InfoDestaque'>
-                            <h3><?php print $rowE3->Nome_Evento; ?></h3>
-                            <p><img class='IconDestaque' src='https://cdn-icons-png.flaticon.com/128/149/149060.png' />
-                                <?php print $rowE3->Endereco; ?></p>
-                            <a class="BtnSaibaMais" href="evento_indi.php?id=<?php print $rowE3->Id_Evento ?>">Ver
-                                mais</a>
+                    </div>
+                </form>
 
-                        </div>
-                    </form>
+            </Div>
+        </div>
 
-                </Div>
-            </div>
-            <br>
-            <h2>Baladas</h2>
+        <!-- Baladas -->
+        <br>
+        <h2>Baladas</h2>
 
-            <div class="Destaques">
-                <Div class="CardDestaque">
+        <div class="Destaques">
+            <Div class="CardDestaque">
 
-                    <img class='ImgDestaque' src=' <?php print $rowE->Img1 ?>' alt=''>
+                <img class='ImgDestaque' src=' <?php print $rowB->Img1 ?>' alt=''>
 
-                    <form action="evento_indi.php?id=<?php print $rowE->Id_Evento ?>" method="GET">
+                <form action="evento_indi.php?id=<?php print $rowB->Id_Evento ?>" method="GET">
 
-                        <div class='InfoDestaque'>
-                            <h3><?php print $rowE->Nome_Evento; ?></h3>
-                            <p><img class='IconDestaque' src='https://cdn-icons-png.flaticon.com/128/149/149060.png' />
-                                <?php print $rowE->Endereco; ?></p>
-                            <a class="BtnSaibaMais" href="evento_indi.php?id=<?php print $rowE->Id_Evento ?>">Ver
-                                mais</a>
+                    <div class='InfoDestaque'>
+                        <h3><?php print $rowB->Nome_Evento; ?></h3>
+                        <p><img class='IconDestaque' src='https://cdn-icons-png.flaticon.com/128/149/149060.png' />
+                            <?php print $rowB->Endereco; ?></p>
+                        <a class="BtnSaibaMais" href="evento_indi.php?id=<?php print $rowB->Id_Evento ?>">Ver
+                            mais</a>
 
-                        </div>
-                    </form>
+                    </div>
+                </form>
 
-                </Div>
-                <Div class="CardDestaque">
+            </Div>
+            <Div class="CardDestaque">
 
-                    <img class='ImgDestaque' src=' <?php print $rowE2->Img1 ?>' alt=''>
+                <img class='ImgDestaque' src=' <?php print $rowB2->Img1 ?>' alt=''>
 
-                    <form action="evento_indi.php?id=<?php print $rowE2->Id_Evento ?>" method="GET">
+                <form action="evento_indi.php?id=<?php print $rowB2->Id_Evento ?>" method="GET">
 
-                        <div class='InfoDestaque'>
-                            <h3><?php print $rowE2->Nome_Evento; ?></h3>
-                            <p><img class='IconDestaque' src='https://cdn-icons-png.flaticon.com/128/149/149060.png' />
-                                <?php print $rowE2->Endereco; ?></p>
-                            <a class="BtnSaibaMais" href="evento_indi.php?id=<?php print $rowE2->Id_Evento ?>">Ver
-                                mais</a>
+                    <div class='InfoDestaque'>
+                        <h3><?php print $rowB2->Nome_Evento; ?></h3>
+                        <p><img class='IconDestaque' src='https://cdn-icons-png.flaticon.com/128/149/149060.png' />
+                            <?php print $rowB2->Endereco; ?></p>
+                        <a class="BtnSaibaMais" href="evento_indi.php?id=<?php print $rowB2->Id_Evento ?>">Ver
+                            mais</a>
 
-                        </div>
-                    </form>
+                    </div>
+                </form>
 
-                </Div>
-                <Div class="CardDestaque">
+            </Div>
+            <Div class="CardDestaque">
 
-                    <img class='ImgDestaque' src=' <?php print $rowE3->Img1 ?>' alt=''>
+                <img class='ImgDestaque' src=' <?php print $rowB3->Img1 ?>' alt=''>
 
-                    <form action="evento_indi.php?id=<?php print $rowE3->Id_Evento ?>" method="GET">
+                <form action="evento_indi.php?id=<?php print $rowB3->Id_Evento ?>" method="GET">
 
-                        <div class='InfoDestaque'>
-                            <h3><?php print $rowE3->Nome_Evento; ?></h3>
-                            <p><img class='IconDestaque' src='https://cdn-icons-png.flaticon.com/128/149/149060.png' />
-                                <?php print $rowE3->Endereco; ?></p>
-                            <a class="BtnSaibaMais" href="evento_indi.php?id=<?php print $rowE3->Id_Evento ?>">Ver
-                                mais</a>
+                    <div class='InfoDestaque'>
+                        <h3><?php print $rowB3->Nome_Evento; ?></h3>
+                        <p><img class='IconDestaque' src='https://cdn-icons-png.flaticon.com/128/149/149060.png' />
+                            <?php print $rowB3->Endereco; ?></p>
+                        <a class="BtnSaibaMais" href="evento_indi.php?id=<?php print $rowB3->Id_Evento ?>">Ver
+                            mais</a>
 
-                        </div>
-                    </form>
+                    </div>
+                </form>
 
-                </Div>
+            </Div>
 
-            </div>
+        </div>
 
-            <script src="procurar.js"></script>
+        <script src="procurar.js"></script>
 </body>
 
 </html>

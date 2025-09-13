@@ -47,7 +47,7 @@ $rowE3 = $resE->fetch_object();
 
 // Show's
 $sqlShows = "SELECT * FROM eventos 
-                    WHERE Categoria = 'Show' 
+                    WHERE Categoria = 'Shows' 
                     ORDER BY RAND() LIMIT 3";
 $resS = $conexao->query($sqlShows);
 

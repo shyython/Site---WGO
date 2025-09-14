@@ -26,8 +26,7 @@
 
 
             <form action="valida_login.php" method="POST">
-                <input type="text" name="emailUsuario" placeholder="E-mail" required>
-
+                <input type="text" name="cnpjEmpresa" placeholder="CNPJ" required>
                 <input type="password" name="senhaUsuario" placeholder="Senha" required>
                 <button type="submit">LOGIN</button>
             </form>

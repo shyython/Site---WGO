@@ -25,7 +25,7 @@
         <input type="email" name="emailEmpresa" placeholder="Email" required />
         <input type="number" name="telefoneEmpresa" placeholder="Telefone" required style="width: 310px; height: 30px; border-top:0px; border-left: 0px; border-right: 0px;" />
         <input type="text" name="enderecoEmpresa" placeholder="Endereço" required />
-        <input type="text" name="cep" placeholder="CEP" required />
+        <input type="text" name="cepEmpresa" placeholder="CEP" required />
         <input type="password" name="senhaEmpresa" placeholder="Password" required />
 
 

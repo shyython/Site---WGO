@@ -1,5 +1,6 @@
 <?php
 require_once "../login/validador_acesso.php";
+// require_once "../loginE/validador_acesso.php";
 require_once "../login/config.php";
 
 $sql = "SELECT tipoUsuario FROM usuarios WHERE id_usuario ={$_SESSION['id_usuario']}";

@@ -32,16 +32,11 @@
                 <button type="submit">LOGIN</button>
             </form>
 
-            
+          
 
             <div class="links">
                 <p><a href="#">Esqueceu seu <b>Nome</b> / <b>Senha</b>?</a></p>
                 <p>Não tem uma conta? <a href="../cadastrar/cadastro.php">Cadastrar</a></p>
-            </div>
-
-            <div class="links">
-                <p><a href="empresa.php">Acessar como <b>Empresa</b> / <b>Evento</b></a></p>
-              
             </div>
         </div>
     </div>

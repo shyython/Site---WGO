@@ -40,7 +40,7 @@
             </div>
 
             <div class="links">
-                <p><a href="../loginE/empresa.php">Acessar como <b>Empresa</b> / <b>Evento</b></a></p>
+                <p><a href="../loginE/loginE.php">Acessar como <b>Empresa</b> / <b>Evento</b></a></p>
               
             </div>
         </div>

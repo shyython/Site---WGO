@@ -2,8 +2,8 @@
     include('../login/config.php');
 
     // VERIFICA SE O E-MAIL JÁ ESTÁ CADASTRADO
-    $emailUsuario = $_POST['emailEmpresa'];
-    $sql = "SELECT * FROM usuarios WHERE emailUsuario = '$emailUsuario'";
+    $emailEmpresa = $_POST['emailEmpresa'];
+    $sql = "SELECT * FROM Dados_Empresa WHERE emailEmpresa = '$emailEmpresa'";
     $res = $conexao->query($sql);
 
     if ($res->num_rows > 0) {
@@ -12,9 +12,12 @@
     }
 
     // PEGA OS DADOS DO FORMULÁRIO
-    $nome = $_POST['nomeCompleto'];
-    $nomeUsuario = $_POST['nomeUsuario'];
-    $tipoUsuario = "usuario";
+    $nomeEmpresa = $_POST['nomeEmpresa'];
+    $cnpjEmpresa = $_POST['cnpjEmpresa'];
+    $telefoneEmpresa = $_POST['telefoneEmpresa'];
+    $enderecoEmpresa = $_POST['enderecoEmpresa'];
+    $cepEmpresa = $_POST['cepEmpresa'];
+    tipo
     $senhaUsuario = md5($_POST['senhaUsuario']);
 
    

@@ -36,7 +36,7 @@
 
             <div class="links">
                 <p><a href="#">Esqueceu seu <b>Nome</b> / <b>Senha</b>?</a></p>
-                <p>Não tem uma conta? <a href="../cadastrar/cadastro.php">Cadastrar</a></p>
+                <p>Não tem uma conta? <a href="../cadastroE/cadastro.php">Cadastrar</a></p>
             </div>
         </div>
     </div>

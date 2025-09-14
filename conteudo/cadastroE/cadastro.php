@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="cadastro.css">
+    <link rel="stylesheet" href="cadastroE.css">
     <title>Sign Up</title>
 
 <body>
@@ -20,10 +20,13 @@
     <img class="avatar" src="../imagens/Icone-usuario.png" alt="User" />
 
     <form action="valida_cadastro.php" method="POST">
-        <input type="text" name="nomeCompleto" placeholder="Nome" required />
-        <input type="text" name="nomeUsuario" placeholder="User" required>
-        <input type="email" name="emailUsuario" placeholder="Email" required />
-        <input type="password" name="senhaUsuario" placeholder="Password" required />
+        <input type="text" name="nomeEmpresa" placeholder="Nome Fantasia" required />
+        <input type="text" name="cnpjEmpresa" placeholder="CNPJ" required>
+        <input type="email" name="emailEmpresa" placeholder="Email" required />
+        <input type="number" name="telefoneEmpresa" placeholder="Telefone" required style="width: 310px; height: 30px; border-top:0px; border-left: 0px; border-right: 0px;" />
+        <input type="text" name="enderecoEmpresa" placeholder="Endereço" required />
+        <input type="text" name="cep" placeholder="CEP" required />
+        <input type="password" name="senhaEmpresa" placeholder="Password" required />
 
 
         <?php //VALIDA SE O USUÁRIO JÁ NÃO ESTAVA CADASTRADO

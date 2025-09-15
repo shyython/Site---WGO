@@ -38,7 +38,12 @@ require_once "../login/validador_acesso.php";
           <ul id="configMenu">
             <li><a href="../conteudo/conf_perfil/Configuracao_Perfil.html">Perfil</a></li>
             <li><a href="../conteudo/privacidade.html">Ajuda</a></li>
-            <li><a href="../crudEventos/criar/criar.php">Criar evento</a></li>
+             <?php
+            // Verifica se o tipo de usuário é 'empresa'
+            if ($tipoUsuario === 'empresa') {
+                echo '<li><a href="../crudEventos/criar/criar.php">Criar evento</a></li>';
+            }
+            ?>
           </ul>
         </li>
 

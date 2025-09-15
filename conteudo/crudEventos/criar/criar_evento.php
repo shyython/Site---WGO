@@ -8,37 +8,26 @@ $endereco = $_POST['endereco'];
 $tipo = $_POST['tipo'];
 $horario = $_POST['horario'];
 $descricao = $_POST['descricao'];
+// $data_inicio = $_POST['data_inicio'];
 
-// Pasta pública para salvar as imagens (deve estar acessível via navegador)
-$pasta = "../uploads/"; // ajuste conforme a estrutura do seu projeto
-$urlPasta = "uploads/"; // caminho usado no HTML para exibir
+// $hora_inicio = $_POST['hora_inicio'];
+// $data_fim = $_POST['data_fim'];
+// $hora_fim = $_POST['hora_fim'];
 
-if (!is_dir($pasta)) {
-    mkdir($pasta, 0777, true);
-}
-
-$nomesImagens = [];
-
-// Processa o upload das imagens (até 4)
-if (!empty($_FILES['imagens']['name'][0])) {
-    foreach ($_FILES['imagens']['tmp_name'] as $key => $tmp_name) {
-        if ($key < 4 && is_uploaded_file($tmp_name)) {
-            $nomeOriginal = basename($_FILES['imagens']['name'][$key]);
-            $novoNome = uniqid() . "_" . $nomeOriginal;
-            move_uploaded_file($tmp_name, $pasta . $novoNome);
-            $nomesImagens[] = $novoNome;
-        }
-    }
-}
-
-// Garantir sempre 4 valores no array
-while (count($nomesImagens) < 4) {
-    $nomesImagens[] = null;
-}
+// Recebe as URLs das imagens
+$img1 = !empty($_POST['img1']) ? $_POST['img1'] : null;
+$img2 = !empty($_POST['img2']) ? $_POST['img2'] : null;
+$img3 = !empty($_POST['img3']) ? $_POST['img3'] : null;
+$img4 = !empty($_POST['img4']) ? $_POST['img4'] : null;
+// data_inicio,hora_inicio,data_fim,hora_fim Img1
+// $data_inicio,
+//     $hora_inicio,
+//     $data_fim,
+//     $hora_fim,
 
 // Prepara a query com placeholders
 $sql = "INSERT INTO Eventos 
-(Nome_Evento, Categoria, Endereco, Tipo, Horario, Descricao, Img1, Img2, Img3, Img4)
+(Nome_Evento, Categoria, Endereco, Tipo,horario,descricao, iMG1 ,Img2, Img3, Img4)
 VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
 
 $stmt = $conexao->prepare($sql);
@@ -50,23 +39,24 @@ $stmt->bind_param(
     $tipo,
     $horario,
     $descricao,
-    $nomesImagens[0],
-    $nomesImagens[1],
-    $nomesImagens[2],
-    $nomesImagens[3]
+    $img1,
+    $img2,
+    $img3,
+    $img4
 );
 
-if ($stmt->execute()) {
-    echo "Evento criado com sucesso!<br>";
 
-    // Exibe as imagens no navegador
-    foreach ($nomesImagens as $img) {
+if ($stmt->execute()) {
+    echo "✅ Evento criado com sucesso!<br>";
+
+    // Exibe as imagens (se tiverem sido preenchidas)
+    foreach ([$img1, $img2, $img3, $img4] as $img) {
         if ($img) {
-            echo '<img src="' . $urlPasta . $img . '" alt="Evento" width="200" style="margin:10px;">';
+            echo '<img src="' . htmlspecialchars($img) . '" alt="Evento" width="200" style="margin:10px;">';
         }
     }
 } else {
-    echo "Erro: " . $stmt->error;
+    echo "❌ Erro: " . $stmt->error;
 }
 
 $stmt->close();

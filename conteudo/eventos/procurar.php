@@ -40,7 +40,7 @@ $sqlEntrenimento = "SELECT * FROM eventos
                     ORDER BY RAND() LIMIT 3";
 $resE = $conexao->query($sqlEntrenimento);
 
-// pega até 3 lugares culturais
+// pega até 3 entretenimentos
 $rowE = $resE->fetch_object();
 $rowE2 = $resE->fetch_object();
 $rowE3 = $resE->fetch_object();
@@ -51,7 +51,7 @@ $sqlShows = "SELECT * FROM eventos
                     ORDER BY RAND() LIMIT 3";
 $resS = $conexao->query($sqlShows);
 
-// pega até 3 lugares culturais
+// pega até 3  shows
 $rowS = $resS->fetch_object();
 $rowS2 = $resS->fetch_object();
 $rowS3 = $resS->fetch_object();
@@ -63,7 +63,7 @@ $sqlBaladas = "SELECT * FROM eventos
                     ORDER BY RAND() LIMIT 3";
 $resB = $conexao->query($sqlBaladas);
 
-// pega até 3 lugares culturais
+// pega até 3  baladas
 $rowB = $resB->fetch_object();
 $rowB2 = $resB->fetch_object();
 $rowB3 = $resB->fetch_object();
@@ -91,24 +91,23 @@ $rowB3 = $resB->fetch_object();
             <img class="" src="../imagens/WgoIcon2.png" alt="Logo" width="150px">
         </a>
 
-        <nav>
-            <ul>
-                <li><a href="../home/home.php">Início</a></li>
-                <li><a href="../blog/Blog.php">Blog</a></li>
-                <li><a href="../eventos/procurar.php">Eventos</a></li>
-                <li class="config">
-                    <a href="#" onclick="abrirMenuConf(event)">Configurações</a>
-                    <ul id="configMenu">
-                        <li><a href="../conteudo/cadastrar/cadastrar.html">Cadastrar</a></li>
-                        <li><a href="../conteudo/conf_perfil/Configuracao_Perfil.html">Perfil</a></li>
-                        <li><a href="../conteudo/privacidade.html">Ajuda</a></li>
-                    </ul>
-                </li>
+         <nav>
+      <ul>
+        <li><a href="../home/home.php">Início</a></li>
+        <li><a href="../blog/Blog.php">Blog</a></li>
+        <li><a href="../eventos/procurar.php">Eventos</a></li>
+        <li class="config">
+          <a href="#" onclick="abrirMenuConf(event)">Configurações</a>
+          <ul id="configMenu">
+            <li><a href="../conteudo/conf_perfil/Configuracao_Perfil.html">Perfil</a></li>
+            <li><a href="../conteudo/privacidade.html">Ajuda</a></li>
+            <li><a href="../crudEventos/criar/criar.php">Criar evento</a></li>
+          </ul>
+        </li>
 
 
-            </ul>
-        </nav>
-
+      </ul>
+    </nav>
         <!-- search -->
         <!-- <div class="pesquisar">
         <input type="text" name="text" class="input" required placeholder="Search...">
@@ -498,7 +497,7 @@ $rowB3 = $resB->fetch_object();
                         <h3><?php print $rowB3->Nome_Evento; ?></h3>
                         <p><img class='IconDestaque' src='https://cdn-icons-png.flaticon.com/128/149/149060.png' />
                             <?php print $rowB3->Endereco; ?></p>
-                        <a class="BtnSaibaMais" href="evento_indi.php?id=<?php print $rowB3->Id_Evento ?>">Ver
+                        <a class="BtnSaibaMais" href="evento_indi.php?id=<?php print $rowB2->Id_Evento ?>">Ver
                             mais</a>
 
                     </div>

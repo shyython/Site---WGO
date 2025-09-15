@@ -11,14 +11,14 @@ export default function Home({}) {
 
   const theme = useColorScheme();
      const estilo = theme === 'dark' ? escuro : claro;
-
+    const categoria = 'Museu'
     const [pesquisa, setPesquisa] = useState('')
     const [evento, setEvento] = useState('')
     
   const [eventos, setEventos] = useState([]);
   const navigation = useNavigation();
   function NavegaPesquisa(){
-  navigation.navigate('Pesquisa', {setPesquisa: pesquisa})
+  navigation.navigate('Pesquisa', {setPesquisa: pesquisa || categoria})
    }
   useEffect(() => {
     const getEvent = async () => {
@@ -48,7 +48,7 @@ export default function Home({}) {
                 <Feather name='bell' color={'white'} size={35} style={estilo.Notif}/> 
                 <TextInput placeholder="Pesquisar" style={estilo.input} onEndEditing={NavegaPesquisa} value={pesquisa} onChangeText={setPesquisa}/>
                 <View style={estilo.Indicacoes}>
-                    <TouchableOpacity style={estilo.botoes}>
+                    <TouchableOpacity style={estilo.botoes} onPress={() => NavegaPesquisa(categoria)} >
                         <Image source={require('../Assets/Restaurantes.png')} style={estilo.icon}/>
                     </TouchableOpacity>
                     <TouchableOpacity style={estilo.botoes}>
@@ -62,10 +62,10 @@ export default function Home({}) {
                     </TouchableOpacity>
                 </View>
                 <View style={estilo.TextIndicacoes}>
-                    <Text style={estilo.Text}>Restaurantes</Text>
-                    <Text style={estilo.Text}>Cafe</Text>
-                    <Text style={estilo.Text}>Shows</Text>
-                    <Text style={estilo.Text}>Bares</Text>
+                    <Text style={estilo.Text} value={categoria}>Restaurantes</Text>
+                    <Text style={estilo.Text} value={categoria}>Cafe</Text>
+                    <Text style={estilo.Text} value={categoria}>Shows</Text>
+                    <Text style={estilo.Text} value={categoria}>Bares</Text>
                 </View>
             </View>
         </View>

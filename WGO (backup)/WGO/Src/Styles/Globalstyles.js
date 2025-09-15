@@ -116,6 +116,19 @@ export const claro = StyleSheet.create({
   ContainerSalva: { display: 'flex', flexDirection: 'row', marginLeft: 280 },
 });
 export const escuro = StyleSheet.create({
+  BtnVoltar:{
+   position: "absolute",
+    top: 40,
+    left: 10,
+    zIndex: 10,
+    backgroundColor: "rgba(143, 143, 143, 0.27)",
+    padding: 8,
+    borderRadius: 50,
+  },
+  TxtVoltar:{
+    fontSize:45,
+    color:'#E55B06',
+  },
   container: {
     flex: 1,
     alignItems: 'center',
@@ -455,7 +468,8 @@ export const escuro = StyleSheet.create({
   //Perfil
 
   containerPerfil:{
-    backgroundColor:"#272727"
+    backgroundColor:"#272727",
+    flex:1
   },
   ImgPerfil:{
     width:100,
@@ -506,7 +520,6 @@ export const escuro = StyleSheet.create({
   //EVENTO INDIVIDUAL
 
   ImgEventoIndi:{
-            margintop:10,
         borderTopLeftRadius:10,
         borderTopRightRadius:10,
         width:'100%',
@@ -580,6 +593,10 @@ export const escuro = StyleSheet.create({
     flexDirection:'row',
     marginLeft:280,
   },
+  ContainerInfoEve:{
+    alignItems:'center',
+    marginTop:10,
+  },
   //EDITAR PERFIL
   container_edit:{
     flex: 1,
@@ -599,8 +616,10 @@ export const escuro = StyleSheet.create({
     marginTop:5,
     borderRadius:12,
     width:250,
+    height:50,
     borderWidth:1,
-    borderColor:'#fff'
+    borderColor:'#fff',
+    textAlign:'center'
   },
   InputEditBio:{
     backgroundColor:'#272727',

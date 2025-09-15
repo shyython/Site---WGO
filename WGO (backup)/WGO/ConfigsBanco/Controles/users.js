@@ -1,5 +1,5 @@
 import express from 'express';
-import { getUsers, addUser, getEvent, getSeach, getEventoById, getPerfil } from './user.js';
+import { getUsers, addUser, getEvent, getSeach, getSeachbyCat, getEventoById, getPerfil, updatePerfil } from './user.js';
 const router = express.Router();
 
 router.get('/', getUsers);
@@ -10,8 +10,12 @@ router.get('/eventos', getEvent)
 
 router.post('/eventos/search', getSeach);
 
+router.post('/eventos/search', getSeachbyCat);
+
 router.get('/eventos/:id', getEventoById);
 
-router.get("/search/:id", getPerfil);
+router.get('/search/:id', getPerfil);
+
+router.put('/update/:id', updatePerfil);
 
 export default router;

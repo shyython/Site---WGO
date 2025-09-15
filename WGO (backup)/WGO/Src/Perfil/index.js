@@ -47,7 +47,7 @@ useEffect(() => {
       <View style={estilo.ContainerFoto}>
         <Image
           style={estilo.ImgPerfil}
-          source={{ uri:usuario.Foto  }}
+          source={{ uri: "https://w7.pngwing.com/pngs/1000/665/png-transparent-computer-icons-profile-s-free-angle-sphere-profile-cliparts-free.png" || usuario.Foto  }}
         />
         <View>
           <Text style={estilo.Txtnome}>{usuario.Nome}</Text>

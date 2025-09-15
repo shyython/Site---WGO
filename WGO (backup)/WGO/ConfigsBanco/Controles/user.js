@@ -61,6 +61,23 @@ export const getSeach = (req, res) => {
     return res.status(200).json(data);
   });
 };
+export const getSeachbyCat = (req, res) => {
+  console.log("req.body:", req.body);
+
+  const search = req.body.procurar || "";
+  if (!search) {
+    return res.status(400).json({ error: "Parâmetro 'procurar' é obrigatório" });
+  }
+
+  const q = "SELECT * FROM eventos WHERE Categoria LIKE ?";
+  db.query(q, [`%${search}%`], (err, data) => {
+    if (err) {
+      console.error("Erro MySQL:", err);
+      return res.status(500).json(err);
+    }
+    return res.status(200).json(data);
+  });
+};
 
 export const getEventoById = (req, res) => {
   const id = req.params.id; 
@@ -92,5 +109,33 @@ export const getPerfil = (req, res) => {
     }
 
     return res.status(200).json(data[0]); 
+  });
+};
+
+export const updatePerfil = (req, res) => {
+  const id = req.params.id;
+  const {Foto, Descricao, Username, Email, Telefone} = req.body;
+  console.log("Body recebido:", req.body);
+  console.log("ID recebido:", id);
+
+  const q = `
+    UPDATE Dados_Usuarios 
+    SET Foto = ?, Descricao = ?, Username = ?, Email = ?, Telefone = ?
+    WHERE Id_Usuario = ?
+  `;
+
+  const values = [Foto, Descricao, Username, Email, Telefone, id];
+
+  db.query(q, values, (err, data) => {
+    if (err) {
+      console.error("Erro ao atualizar perfil:", err);
+      return res.status(500).json({ error: "Erro ao atualizar perfil" });
+    }
+
+    if (data.affectedRows === 0) {
+      return res.status(404).json({ error: "Usuário não encontrado" });
+    }
+
+    return res.status(200).json({ message: "Perfil atualizado com sucesso" });
   });
 };

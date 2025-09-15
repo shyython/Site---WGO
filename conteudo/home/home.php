@@ -133,46 +133,79 @@
   </div>
 <!--categorias-->
   <div class="categoria">
-    <div class="categoria2">
-      <img src="../imagens/home/baladaHome.webp" alt="" class="imgCategoria">
-      <p class="txtCategoria">Baladas</p>
-    </div>
-    <div class="categoria2">
-      <img src="../imagens/home/esportesHome.jpg" alt="" class="imgCategoria">
-      <p class="txtCategoria">Esportes</p>
-    </div>
-    <div class="categoria2">
-      <img src="../imagens/home/restaurantesHome.jpg" alt="" class="imgCategoria">
-      <p class="txtCategoria">Restaurantes</p>
-    </div>
-    <div class="categoria2">
-      <img src="../imagens/home/culturaHome.jpg" alt="" class="imgCategoria">
-      <p class="txtCategoria">Cultura</p>
-    </div>
-    <div class="categoria2">
-      <img src="../imagens/home/eventosComuniHome.jpg" alt="" class="imgCategoria">
-      <p class="txtCategoria">Eventos Comunitários</p>
-    </div>
-    <div class="categoria2">
-      <img src="../imagens/home/historicoHome.webp" alt="" class="imgCategoria">
-      <p class="txtCategoria">Pontos Turísticos e Históricos</p>
-    </div>
-    <div class="categoria2">
-      <img src="../imagens/home/praiaHome.jpg" alt="" class="imgCategoria">
-      <p class="txtCategoria">Praias e Ar Livre</p>
-    </div>
+  <div class="categoria2" 
+       janela-title="Baladas" 
+       janela-descri="As melhores baladas da cidade para você curtir a noite." 
+       janela-img="../imagens/home/baladaHome.webp"
+       
+       janela-title2="Baladas" 
+       janela-descri2="As melhores baladas da cidade para você curtir a noite." 
+       janela-img2="../imagens/home/baladaHome.webp">
+    <img src="../imagens/home/baladaHome.webp" alt="Baladas" class="imgCategoria">
+    <p class="txtCategoria">Baladas</p>
   </div>
 
-  <!--janela-->
-  <div class="container-janela">
-    <div class="janelaInfo" id="janela">
-      <h2 id="janelaTitle">tituloadasdadad</h2>
-      <p>
-       aaaaaaaaaaaaaaaaaazzzzzzz
-      </p>
-      <button id="btnFechar">Fechar</button>
-    </div>
+  <div class="categoria2" 
+       janela-title="Esportes" 
+       janela-descri="Locais e eventos esportivos para praticar e assistir." 
+       janela-img="../imagens/home/esportesHome.jpg">
+    <img src="../imagens/home/esportesHome.jpg" alt="Esportes" class="imgCategoria">
+    <p class="txtCategoria">Esportes</p>
   </div>
+
+  <div class="categoria2" 
+       janela-title="Restaurantes" 
+       janela-descri="Restaurantes variados para todos os gostos." 
+       janela-img="../imagens/home/restaurantesHome.jpg">
+    <img src="../imagens/home/restaurantesHome.jpg" alt="Restaurantes" class="imgCategoria">
+    <p class="txtCategoria">Restaurantes</p>
+  </div>
+
+  <div class="categoria2" 
+       janela-title="Cultura" 
+       janela-descri="Experiências culturais e artísticas para todos." 
+       janela-img="../imagens/home/culturaHome.jpg">
+    <img src="../imagens/home/culturaHome.jpg" alt="Cultura" class="imgCategoria">
+    <p class="txtCategoria">Cultura</p>
+  </div>
+
+  <div class="categoria2" 
+       janela-title="Eventos Comunitários" 
+       janela-descri="Participe de eventos locais e comunitários." 
+       janela-img="../imagens/home/eventosComuniHome.jpg">
+    <img src="../imagens/home/eventosComuniHome.jpg" alt="Eventos Comunitários" class="imgCategoria">
+    <p class="txtCategoria">Eventos Comunitários</p>
+  </div>
+
+  <div class="categoria2" 
+       janela-title="Pontos Turísticos e Históricos" 
+       janela-descri="Conheça os principais pontos turísticos e históricos da região." 
+       janela-img="../imagens/home/historicoHome.webp">
+    <img src="../imagens/home/historicoHome.webp" alt="Pontos Turísticos e Históricos" class="imgCategoria">
+    <p class="txtCategoria">Pontos Turísticos e Históricos</p>
+  </div>
+
+  <div class="categoria2" 
+       janela-title="Praias e Ar Livre" 
+       janela-descri="Aproveite praias e atividades ao ar livre." 
+       janela-img="../imagens/home/praiaHome.jpg">
+    <img src="../imagens/home/praiaHome.jpg" alt="Praias e Ar Livre" class="imgCategoria">
+    <p class="txtCategoria">Praias e Ar Livre</p>
+  </div>
+</div>
+
+
+  <!--janela-->
+
+<div class="container-janela">
+  <div class="janelaInfo" id="janela">
+    <h2 id="janelaTitle">Título inicial</h2>
+    <img id="janelaImg" src="" alt="Imagem da categoria" style="max-width:100%;border-radius:8px;margin:10px 0;">
+    <p id="janelaContent">Conteúdo da janela</p>
+    <button id="btnFechar">Fechar</button>
+  </div>
+</div>
+
 
     <script>
         $(document).ready(function() {

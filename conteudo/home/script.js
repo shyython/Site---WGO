@@ -340,20 +340,30 @@ iniciarTrocaAutomatica();
 const categoria2 = document.querySelectorAll('.categoria2');
 const janela = document.getElementById('janela');
 const janelaTitle = document.getElementById('janelaTitle');
+const janelaContent = document.getElementById('janelaContent');
+const janelaImg = document.getElementById('janelaImg');
 const btnFechar = document.getElementById('btnFechar');
 
 categoria2.forEach(categoria2 => {
   categoria2.addEventListener('click', () => {
-    const title = categoria2.getAttribute('janela');
+    const title = categoria2.getAttribute('janela-title');
+    const content = categoria2.getAttribute('janela-descri');
+    const img = categoria2.getAttribute('janela-img');
+
+    janelaTitle.textContent = title;
+    janelaContent.textContent = content;
+    janelaImg.src = img;
+
     janela.classList.add('abrir');
+    janela.style.display = "block";
     janela.scrollIntoView({ behavior: 'smooth' });
   });
 });
 
 btnFechar.addEventListener('click', () => {
   janela.classList.remove('abrir');
+  janela.style.display = "none";
 });
-
  
  
  

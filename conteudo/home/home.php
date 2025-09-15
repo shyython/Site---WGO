@@ -200,7 +200,7 @@
 
     <main class="janela-galeria" role="main" aria-label="Galeria de imagens" style="display:none;">
       <button id="esquerda-button" aria-label="Slide para a esquerda">
-      <img src="../imagens/home/arrow.png" alt="seta esquerda" />
+      <img src="../imagens/home/arrow2.png" alt="seta esquerda" />
       </button>
 
       <div class="janela-img"></div>

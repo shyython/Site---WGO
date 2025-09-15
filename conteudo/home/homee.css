@@ -483,6 +483,15 @@ nav ul li a:hover {
   }
 }
 
+.janela-img{
+  width: 100%;
+  max-width: 600px;
+  height: auto;
+  border-radius: 8px;
+  justify-self: unset;
+  display: flex;
+}
+
 .container-galeria {
   width: 100%;
   max-width: 1200px;
@@ -557,10 +566,4 @@ nav ul li a:hover {
   opacity: 1;
   pointer-events: auto;
   position: relative;
-}
-
-#janela-img{
-  width: 100%;
-  height: auto;
-  border-radius: 8px;
 }

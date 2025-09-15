@@ -14,14 +14,14 @@ if ($res->num_rows > 0) {
 // PEGA OS DADOS DO FORMULÁRIO
 $nomeEmpresa = $_POST['nomeEmpresa'];
 $emailEmpresa = $_POST['emailEmpresa'];
-$tipoUsuario= 'usuario';
 $telefoneEmpresa = $_POST['telefoneEmpresa'];
 $enderecoEmpresa = $_POST['enderecoEmpresa'];
+$tipoUsuario = 'empresa';
 $cepEmpresa = $_POST['cepEmpresa'];
 $senhaEmpresa = md5($_POST['senhaEmpresa']);
 
 // INSERÇÃO DOS DADOS NO BANCO
-$sql = "INSERT INTO Dados_Empresa  (nomeEmpresa, cnpjEmpresa ,emailEmpresa, tipoUsuario, telefoneEmpresa, enderecoEmpresa, cepEmpresa, senhaEmpresa)  VALUES  ('$nomeEmpresa', '$cnpjEmpresa', '$emailEmpresa','$tipoUsuario', '$telefoneEmpresa', '$enderecoEmpresa', '$cepEmpresa', '$senhaEmpresa')";   
+$sql = "INSERT INTO Dados_Empresa  (nomeEmpresa, cnpjEmpresa ,emailEmpresa, telefoneEmpresa, enderecoEmpresa, cepEmpresa, senhaEmpresa)  VALUES  ('$nomeEmpresa', '$cnpjEmpresa', '$emailEmpresa', '$telefoneEmpresa', '$enderecoEmpresa', '$cepEmpresa', '$senhaEmpresa')";   
 $res = $conexao->query($sql);
 
 // REDIRECIONA COM BASE NO RESULTADO

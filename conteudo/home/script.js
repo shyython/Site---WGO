@@ -342,17 +342,157 @@ const janela = document.getElementById('janela');
 const janelaTitle = document.getElementById('janelaTitle');
 const janelaContent = document.getElementById('janelaContent');
 const janelaImg = document.getElementById('janelaImg');
+const janelaGaleria = document.querySelector('.janela-galeria');
+const descricaoTitulo = document.querySelector('.titulo-destaque');
+const descricaoParagrafo = document.querySelector('.descricao');
 const btnFechar = document.getElementById('btnFechar');
 
-categoria2.forEach(categoria2 => {
-  categoria2.addEventListener('click', () => {
-    const title = categoria2.getAttribute('janela-title');
-    const content = categoria2.getAttribute('janela-descri');
-    const img = categoria2.getAttribute('janela-img');
+const slides = document.querySelectorAll('.image');
+const btnEsquerda = document.getElementById('esquerda-button');
+const btnDireita = document.getElementById('direita-button');
+
+let currentIndex = 0;
+let currentSlides = []; // imagens do carrossel dinâmico
+let currentDescricoes = []; // textos do carrossel dinâmico
+
+// --- Dados de cada categoria ---
+const carrosseis = {
+  "Baladas": {
+    imagens: [
+      "../imagens/home/baladaHome.webp",
+      "../imagens/home/balada2.jpg",
+      "../imagens/home/balada3.jpg"
+    ],
+    descricoes: [
+      { titulo: "Noite Inesquecível", descricao: "As melhores festas para você dançar até amanhecer." },
+      { titulo: "DJ's Internacionais", descricao: "Grandes nomes da música eletrônica direto na sua cidade." },
+      { titulo: "Ambiente Vibrante", descricao: "Som, luz e energia que você nunca vai esquecer." }
+    ]
+  },
+  "Esportes": {
+    imagens: [
+      "../imagens/home/teleferico.jpg",
+      "../imagens/home/aTribuna.jpg",
+      "../imagens/home/esporte3.jpg"
+    ],
+    descricoes: [
+      { titulo: "Adrenalina Pura", descricao: "Participe de eventos esportivos e viva a emoção de competir." },
+      { titulo: "Aventura ao Ar Livre", descricao: "Atividades radicais e esportes para todos os gostos." },
+      { titulo: "Esportes em Grupo", descricao: "Futebol, vôlei, basquete e muito mais para você curtir com os amigos." }
+    ]
+  },
+  "Restaurantes": {
+    imagens: [
+      "../imagens/home/restaurantesHome.jpg",
+      "../imagens/home/restaurante2.jpg",
+      "../imagens/home/restaurante3.jpg"
+    ],
+    descricoes: [
+      { titulo: "Tradição e Sabor", descricao: "Culinária regional feita com amor e ingredientes frescos." },
+      { titulo: "Ambiente Aconchegante", descricao: "Um lugar perfeito para jantar com amigos e família." },
+      { titulo: "Sabores Únicos", descricao: "Experimente pratos exclusivos preparados por chefs renomados." }
+    ]
+  },
+   "Cultura": {
+    imagens: [
+      "../imagens/home/restaurantesHome.jpg",
+      "../imagens/home/restaurante2.jpg",
+      "../imagens/home/restaurante3.jpg"
+    ],
+    descricoes: [
+      { titulo: "Tradição e Sabor", descricao: "Culinária regional feita com amor e ingredientes frescos." },
+      { titulo: "Ambiente Aconchegante", descricao: "Um lugar perfeito para jantar com amigos e família." },
+      { titulo: "Sabores Únicos", descricao: "Experimente pratos exclusivos preparados por chefs renomados." }
+    ]
+  },
+   "Eventos Comunitários": {
+    imagens: [
+      "../imagens/home/restaurantesHome.jpg",
+      "../imagens/home/restaurante2.jpg",
+      "../imagens/home/restaurante3.jpg"
+    ],
+    descricoes: [
+      { titulo: "Tradição e Sabor", descricao: "Culinária regional feita com amor e ingredientes frescos." },
+      { titulo: "Ambiente Aconchegante", descricao: "Um lugar perfeito para jantar com amigos e família." },
+      { titulo: "Sabores Únicos", descricao: "Experimente pratos exclusivos preparados por chefs renomados." }
+    ]
+  },
+     "Pontos Turísticos e Históricos": {
+    imagens: [
+      "../imagens/home/restaurantesHome.jpg",
+      "../imagens/home/restaurante2.jpg",
+      "../imagens/home/restaurante3.jpg"
+    ],
+    descricoes: [
+      { titulo: "Tradição e Sabor", descricao: "Culinária regional feita com amor e ingredientes frescos." },
+      { titulo: "Ambiente Aconchegante", descricao: "Um lugar perfeito para jantar com amigos e família." },
+      { titulo: "Sabores Únicos", descricao: "Experimente pratos exclusivos preparados por chefs renomados." }
+    ]
+  },
+     "Praias e Ar Livre": {
+    imagens: [
+      "../imagens/home/restaurantesHome.jpg",
+      "../imagens/home/restaurante2.jpg",
+      "../imagens/home/restaurante3.jpg"
+    ],
+    descricoes: [
+      { titulo: "Tradição e Sabor", descricao: "Culinária regional feita com amor e ingredientes frescos." },
+      { titulo: "Ambiente Aconchegante", descricao: "Um lugar perfeito para jantar com amigos e família." },
+      { titulo: "Sabores Únicos", descricao: "Experimente pratos exclusivos preparados por chefs renomados." }
+    ]
+  },
+  // 👉 aqui você adiciona Cultura, Eventos Comunitários, Pontos Turísticos, etc
+};
+
+// --- Atualiza carrossel no modal ---
+function updateCarousel() {
+  const janelaImgs = document.querySelector('.janela-img');
+  janelaImgs.innerHTML = ""; // limpa imagens antigas
+
+  currentSlides.forEach((src, index) => {
+    const img = document.createElement("img");
+    img.src = src;
+    img.classList.add("image");
+    if (index === currentIndex) img.classList.add("on");
+    janelaImgs.appendChild(img);
+  });
+
+  descricaoTitulo.textContent = currentDescricoes[currentIndex].titulo;
+  descricaoParagrafo.textContent = currentDescricoes[currentIndex].descricao;
+}
+
+btnDireita.addEventListener('click', () => {
+  currentIndex = (currentIndex + 1) % currentSlides.length;
+  updateCarousel();
+});
+
+btnEsquerda.addEventListener('click', () => {
+  currentIndex = (currentIndex - 1 + currentSlides.length) % currentSlides.length;
+  updateCarousel();
+});
+
+// --- Clique em categoria ---
+categoria2.forEach(categoria => {
+  categoria.addEventListener('click', () => {
+    const title = categoria.getAttribute('janela-title');
+    const content = categoria.getAttribute('janela-descri');
 
     janelaTitle.textContent = title;
     janelaContent.textContent = content;
-    janelaImg.src = img;
+
+    if (carrosseis[title]) {
+      currentSlides = carrosseis[title].imagens;
+      currentDescricoes = carrosseis[title].descricoes;
+      currentIndex = 0;
+
+      janelaImg.style.display = "none"; // esconde imagem única
+      janelaGaleria.style.display = "block"; // mostra carrossel
+      updateCarousel();
+    } else {
+      janelaImg.src = categoria.getAttribute('janela-img');
+      janelaImg.style.display = "block";
+      janelaGaleria.style.display = "none";
+    }
 
     janela.classList.add('abrir');
     janela.style.display = "block";
@@ -364,6 +504,7 @@ btnFechar.addEventListener('click', () => {
   janela.classList.remove('abrir');
   janela.style.display = "none";
 });
- 
+
+
  
  

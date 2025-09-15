@@ -136,11 +136,7 @@
   <div class="categoria2" 
        janela-title="Baladas" 
        janela-descri="As melhores baladas da cidade para você curtir a noite." 
-       janela-img="../imagens/home/baladaHome.webp"
-       
-       janela-title2="Baladas" 
-       janela-descri2="As melhores baladas da cidade para você curtir a noite." 
-       janela-img2="../imagens/home/baladaHome.webp">
+       janela-img="../imagens/home/baladaHome.webp">
     <img src="../imagens/home/baladaHome.webp" alt="Baladas" class="imgCategoria">
     <p class="txtCategoria">Baladas</p>
   </div>
@@ -173,8 +169,9 @@
        janela-title="Eventos Comunitários" 
        janela-descri="Participe de eventos locais e comunitários." 
        janela-img="../imagens/home/eventosComuniHome.jpg">
-    <img src="../imagens/home/eventosComuniHome.jpg" alt="Eventos Comunitários" class="imgCategoria">
-    <p class="txtCategoria">Eventos Comunitários</p>
+   <img src="../imagens/home/eventosComuniHome.jpg" alt="Pontos Turísticos e Históricos" class="imgCategoria">
+   <p class="txtCategoria">Eventos Comunitários</p>
+
   </div>
 
   <div class="categoria2" 
@@ -195,16 +192,33 @@
 </div>
 
 
-  <!--janela-->
-
 <div class="container-janela">
   <div class="janelaInfo" id="janela">
     <h2 id="janelaTitle">Título inicial</h2>
-    <img id="janelaImg" src="" alt="Imagem da categoria" style="max-width:100%;border-radius:8px;margin:10px 0;">
+
+    <img id="janelaImg" src="" alt="Imagem da categoria">
+
+    <main class="janela-galeria" role="main" aria-label="Galeria de imagens" style="display:none;">
+      <button id="esquerda-button" aria-label="Slide para a esquerda">
+      <img src="../imagens/home/arrow.png" alt="seta esquerda" />
+      </button>
+
+      <div class="janela-img"></div>
+      <button id="direita-button" aria-label="Slide para a direita">
+      <img src="../imagens/home/arrow.png" alt="seta direita" />
+      </button>
+
+      <aside class="destaques-janela">
+        <h2 class="titulo-destaque">Título destaque</h2>
+        <p class="descricao">Descrição destaque</p>
+      </aside>
+    </main>
+
     <p id="janelaContent">Conteúdo da janela</p>
     <button id="btnFechar">Fechar</button>
   </div>
 </div>
+
 
 
     <script>

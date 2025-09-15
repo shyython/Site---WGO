@@ -1,13 +1,7 @@
 <?php
 require_once "../login/validador_acesso.php";
-// require_once "../loginE/validador_acesso.php";
-require_once "../login/config.php";
-
-$sql = "SELECT tipoUsuario FROM usuarios WHERE id_usuario ={$_SESSION['id_usuario']}";
-$res = $conexao->query($sql);
-$row = $res->fetch_object();
-
 ?>
+
 
 
 <!DOCTYPE html>
@@ -42,9 +36,9 @@ $row = $res->fetch_object();
         <li class="config">
           <a href="#" onclick="abrirMenuConf(event)">Configurações</a>
           <ul id="configMenu">
-            <li><a href="../conteudo/cadastrar/cadastrar.html">Cadastrar</a></li>
             <li><a href="../conteudo/conf_perfil/Configuracao_Perfil.html">Perfil</a></li>
             <li><a href="../conteudo/privacidade.html">Ajuda</a></li>
+            <li><a href="../crudEventos/criar/criar.php">Criar evento</a></li>
           </ul>
         </li>
 

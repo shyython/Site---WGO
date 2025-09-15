@@ -16,6 +16,7 @@ $nomeEmpresa = $_POST['nomeEmpresa'];
 $emailEmpresa = $_POST['emailEmpresa'];
 $telefoneEmpresa = $_POST['telefoneEmpresa'];
 $enderecoEmpresa = $_POST['enderecoEmpresa'];
+$tipoUsuario = 'empresa';
 $cepEmpresa = $_POST['cepEmpresa'];
 $senhaEmpresa = md5($_POST['senhaEmpresa']);
 

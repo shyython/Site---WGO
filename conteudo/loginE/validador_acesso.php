@@ -1,7 +1,10 @@
 <?php
-  session_start();
+session_start();
 
-  if(!isset($_SESSION['autenticado']) || ($_SESSION['autenticado'] != 'sim')){
-    header('location: ./login/login.php?login=erro2');
-  }
+// Verifica se o usuário está autenticado
+if (!isset($_SESSION['autenticado']) || $_SESSION['autenticado'] !== 'sim') {
+    header('Location: ../loginE/login.php?login=erro2');
+    exit;
+}
+
 ?>

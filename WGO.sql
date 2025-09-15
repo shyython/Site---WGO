@@ -1,15 +1,19 @@
 create database wgo;
 
 create table Dados_Empresa (
-CNPJ int primary key auto_increment,
-Nome varchar(100),
+id_empresa int primary key auto_increment,
+nomeEmpresa varchar(100) NOT NULL,
+cnpjEmpresa  varchar(100) UNIQUE NOT NULL,
 emailEmpresa varchar(100),
-Telefone int,
-CEP int,
-num_endereco int
+tipoUsuario varchar(20),
+telefoneEmpresa int UNIQUE NOT NULL,
+enderecoEmpresa varchar(100),
+cepEmpresa int,
+senhaEmpresa varchar(100)
 );
 
-
+select * from Dados_Empresa;
+drop table Dados_Empresa;
 
 CREATE TABLE usuarios (
     id_usuario INT PRIMARY KEY AUTO_INCREMENT,

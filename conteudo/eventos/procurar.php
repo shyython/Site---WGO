@@ -6,7 +6,7 @@ require_once "../ConfigBd/porta.php";
 $sqlEventos = "SELECT * FROM eventos ORDER BY RAND() LIMIT 3";
 $resEventos = $conexao->query($sqlEventos);
 
-// pega 3 registros (ou menos, se não houver)
+// pega 3 registrosZ
 $row = $resEventos->fetch_object();
 $row2 = $resEventos->fetch_object();
 $row3 = $resEventos->fetch_object();

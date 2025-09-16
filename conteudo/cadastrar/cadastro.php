@@ -21,10 +21,13 @@
 
     <form action="valida_cadastro.php" method="POST">
         <input type="text" name="nomeCompleto" placeholder="Nome completo" required />
-        <input type="text" name="nomeUsuario" placeholder="User" required>
+        <input type="text" name="username" placeholder="User" required>
+        <input type="date" name="dataNascimento" placeholder="Data de Nascimento" required />
         <input type="email" name="emailUsuario" placeholder="Email" required />
         <input type="password" name="senhaUsuario" placeholder="Password" required />
-
+        <input type="url" id="imgPerfil" name="imgPerfil" placeholder="https://...">
+        <input type="text" name="telefone" placeholder="Telefone" required />
+        <input type="text" name="descricao" placeholder="Descrição" required />
 
         <?php //VALIDA SE O USUÁRIO JÁ NÃO ESTAVA CADASTRADO
         if (isset($_GET['email']) && $_GET['email'] === 'erro') { ?>

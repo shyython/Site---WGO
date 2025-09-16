@@ -9,7 +9,7 @@ $cnpjEmpresa  = preg_replace('/[^0-9]/', '', $_POST['cnpjEmpresa']);
 $senhaEmpresa = md5($_POST['senhaEmpresa']);
 
 // BUSCANDO NO BANCO AS INFORMAÇÕES
-$sql = "SELECT * FROM Dados_Empresa WHERE cnpjEmpresa='{$cnpjEmpresa}'";
+$sql = "SELECT * FROM Dados_Empresa WHERE cnpjEmpresa='{$cnpjEmpresa}' LIMIT 1";
 $res = $conexao->query($sql);
 
 if ($res && $res->num_rows > 0) {
@@ -23,13 +23,11 @@ if ($res && $res->num_rows > 0) {
     }
 }
 
-if ($empresaAutentificada === true) {
-    // VALIDANDO A SESSÃO
+if ($empresaAutentificada) {
     $_SESSION['autenticado'] = 'sim';
     header('location: ../home/home.php');
     exit;
 } else {
-    // VALIDANDO A SESSÃO
     $_SESSION['autenticado'] = 'nao';
     header('location: login.php?login=erro');
     exit;

@@ -9,7 +9,7 @@ $emailUsuario = $_POST['emailUsuario'];
 $senhaUsuario = md5($_POST['senhaUsuario']);
 
 //BUSCANDO NO BANCO AS INFORMAÇÕES
-$sql = "SELECT * FROM usuarios WHERE emailUsuario='{$emailUsuario}'";
+$sql = "SELECT * FROM dados_usuarios WHERE emailUsuario='{$emailUsuario}'";
 $res = $conexao->query($sql);
 $row = $res->fetch_object();
 

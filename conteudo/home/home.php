@@ -4,7 +4,7 @@ include('../login/config.php');
 require_once "../loginE/validador_acesso.php";
 
 // Tenta pegar de usuarios
-$stmt = $conexao->prepare("SELECT tipoUsuario FROM usuarios WHERE id_usuario = ?");
+$stmt = $conexao->prepare("SELECT tipoUsuario FROM dados_usuarios WHERE id_usuario = ?");
 $stmt->bind_param("i", $_SESSION['id_usuario']);
 $stmt->execute();
 $stmt->bind_result($tipoUsuario);

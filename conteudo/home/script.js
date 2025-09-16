@@ -347,104 +347,53 @@ const descricaoTitulo = document.querySelector('.titulo-destaque');
 const descricaoParagrafo = document.querySelector('.descricao');
 const btnFechar = document.getElementById('btnFechar');
 
-const slides = document.querySelectorAll('.image');
 const btnEsquerda = document.getElementById('esquerda-button');
 const btnDireita = document.getElementById('direita-button');
 
 let currentIndex = 0;
-let currentSlides = []; // imagens do carrossel dinâmico
-let currentDescricoes = []; // textos do carrossel dinâmico
+let currentSlides = [];
+let currentDescricoes = [];
 
-// --- Dados de cada categoria ---
 const carrosseis = {
   "Baladas": {
     imagens: [
-      "../imagens/home/baladaHome.webp",
-      "../imagens/home/balada2.jpg",
-      "../imagens/home/balada3.jpg"
+      "../imagens/home/estacaoVerao.jpg",
+      "../imagens/home/laroc.jpg",
+      "../imagens/home/cadillac.webp"
     ],
     descricoes: [
-      { titulo: "Noite Inesquecível", descricao: "As melhores festas para você dançar até amanhecer." },
-      { titulo: "DJ's Internacionais", descricao: "Grandes nomes da música eletrônica direto na sua cidade." },
-      { titulo: "Ambiente Vibrante", descricao: "Som, luz e energia que você nunca vai esquecer." }
+      { titulo: "Estação Verão", descricao: "As melhores festas para você dançar até amanhecer." },
+      { titulo: "Laroc Guarujá", descricao: "Grandes nomes da música eletrônica direto na sua cidade." },
+      { titulo: "Cadillac Vintage Bar", descricao: "Som, luz e energia que você nunca vai esquecer." }
     ]
   },
   "Esportes": {
     imagens: [
       "../imagens/home/teleferico.jpg",
       "../imagens/home/aTribuna.jpg",
-      "../imagens/home/esporte3.jpg"
+      "../imagens/home/playJump.png"
     ],
     descricoes: [
-      { titulo: "Adrenalina Pura", descricao: "Participe de eventos esportivos e viva a emoção de competir." },
-      { titulo: "Aventura ao Ar Livre", descricao: "Atividades radicais e esportes para todos os gostos." },
-      { titulo: "Esportes em Grupo", descricao: "Futebol, vôlei, basquete e muito mais para você curtir com os amigos." }
+      { titulo: "Teleferico", descricao: "Participe de eventos esportivos e viva a emoção de competir." },
+      { titulo: "Corrida Sesc Santos", descricao: "Atividades radicais e esportes para todos os gostos." },
+      { titulo: "Play Jump", descricao: "Futebol, vôlei, basquete e muito mais para você curtir com os amigos." }
     ]
   },
   "Restaurantes": {
     imagens: [
-      "../imagens/home/restaurantesHome.jpg",
-      "../imagens/home/restaurante2.jpg",
-      "../imagens/home/restaurante3.jpg"
+      "../imagens/home/restauranteBublet.jpg",
+      "../imagens/home/restauranteJangada.jpg",
+      "../imagens/home/sushiBar.jpg"
     ],
     descricoes: [
-      { titulo: "Tradição e Sabor", descricao: "Culinária regional feita com amor e ingredientes frescos." },
-      { titulo: "Ambiente Aconchegante", descricao: "Um lugar perfeito para jantar com amigos e família." },
-      { titulo: "Sabores Únicos", descricao: "Experimente pratos exclusivos preparados por chefs renomados." }
+      { titulo: "Bublet Casual Food", descricao: "O Bublet abre suas portas com a proposta de uma cozinha descomplicada, ambiente informal, moderno e aconchegante." },
+      { titulo: "Restaurante Jangada", descricao: "A genialidade do especialista em peixes e frutos-do-mar traz uma experiência única da nossa cozinha para o seu prato." },
+      { titulo: "Sushi Bar", descricao: "A precisão nos cortes, a delicadeza no preparo e o frescor dos produtos, fazem com que nossos uramakis estejam sempre entre os mais pedidos pelos nossos clientes." }
     ]
   },
-   "Cultura": {
-    imagens: [
-      "../imagens/home/restaurantesHome.jpg",
-      "../imagens/home/restaurante2.jpg",
-      "../imagens/home/restaurante3.jpg"
-    ],
-    descricoes: [
-      { titulo: "Tradição e Sabor", descricao: "Culinária regional feita com amor e ingredientes frescos." },
-      { titulo: "Ambiente Aconchegante", descricao: "Um lugar perfeito para jantar com amigos e família." },
-      { titulo: "Sabores Únicos", descricao: "Experimente pratos exclusivos preparados por chefs renomados." }
-    ]
-  },
-   "Eventos Comunitários": {
-    imagens: [
-      "../imagens/home/restaurantesHome.jpg",
-      "../imagens/home/restaurante2.jpg",
-      "../imagens/home/restaurante3.jpg"
-    ],
-    descricoes: [
-      { titulo: "Tradição e Sabor", descricao: "Culinária regional feita com amor e ingredientes frescos." },
-      { titulo: "Ambiente Aconchegante", descricao: "Um lugar perfeito para jantar com amigos e família." },
-      { titulo: "Sabores Únicos", descricao: "Experimente pratos exclusivos preparados por chefs renomados." }
-    ]
-  },
-     "Pontos Turísticos e Históricos": {
-    imagens: [
-      "../imagens/home/restaurantesHome.jpg",
-      "../imagens/home/restaurante2.jpg",
-      "../imagens/home/restaurante3.jpg"
-    ],
-    descricoes: [
-      { titulo: "Tradição e Sabor", descricao: "Culinária regional feita com amor e ingredientes frescos." },
-      { titulo: "Ambiente Aconchegante", descricao: "Um lugar perfeito para jantar com amigos e família." },
-      { titulo: "Sabores Únicos", descricao: "Experimente pratos exclusivos preparados por chefs renomados." }
-    ]
-  },
-     "Praias e Ar Livre": {
-    imagens: [
-      "../imagens/home/restaurantesHome.jpg",
-      "../imagens/home/restaurante2.jpg",
-      "../imagens/home/restaurante3.jpg"
-    ],
-    descricoes: [
-      { titulo: "Tradição e Sabor", descricao: "Culinária regional feita com amor e ingredientes frescos." },
-      { titulo: "Ambiente Aconchegante", descricao: "Um lugar perfeito para jantar com amigos e família." },
-      { titulo: "Sabores Únicos", descricao: "Experimente pratos exclusivos preparados por chefs renomados." }
-    ]
-  },
-  // 👉 aqui você adiciona Cultura, Eventos Comunitários, Pontos Turísticos, etc
+  // Adicione outras categorias conforme necessário
 };
 
-// --- Atualiza carrossel no modal ---
 function updateCarousel() {
   const janelaImgs = document.querySelector('.janela-img');
   janelaImgs.innerHTML = ""; // limpa imagens antigas
@@ -462,16 +411,17 @@ function updateCarousel() {
 }
 
 btnDireita.addEventListener('click', () => {
+  if (currentSlides.length === 0) return;
   currentIndex = (currentIndex + 1) % currentSlides.length;
   updateCarousel();
 });
 
 btnEsquerda.addEventListener('click', () => {
+  if (currentSlides.length === 0) return;
   currentIndex = (currentIndex - 1 + currentSlides.length) % currentSlides.length;
   updateCarousel();
 });
 
-// --- Clique em categoria ---
 categoria2.forEach(categoria => {
   categoria.addEventListener('click', () => {
     const title = categoria.getAttribute('janela-title');
@@ -486,16 +436,18 @@ categoria2.forEach(categoria => {
       currentIndex = 0;
 
       janelaImg.style.display = "none"; // esconde imagem única
-      janelaGaleria.style.display = "block"; // mostra carrossel
+      janelaGaleria.style.display = "flex"; // mostra carrossel
       updateCarousel();
     } else {
       janelaImg.src = categoria.getAttribute('janela-img');
       janelaImg.style.display = "block";
       janelaGaleria.style.display = "none";
+      currentSlides = [];
+      currentDescricoes = [];
     }
 
     janela.classList.add('abrir');
-    janela.style.display = "block";
+    janela.style.display = "flex";
     janela.scrollIntoView({ behavior: 'smooth' });
   });
 });
@@ -503,8 +455,6 @@ categoria2.forEach(categoria => {
 btnFechar.addEventListener('click', () => {
   janela.classList.remove('abrir');
   janela.style.display = "none";
+  currentSlides = [];
+  currentDescricoes = [];
 });
-
-
- 
- 

@@ -220,7 +220,6 @@
 </div>
 
 
-
     <script>
         $(document).ready(function() {
             $('#estado').select2();

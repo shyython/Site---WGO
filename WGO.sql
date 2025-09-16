@@ -15,16 +15,20 @@ senhaEmpresa varchar(100)
 select * from Dados_Empresa;
 drop table Dados_Empresa;
 
-CREATE TABLE usuarios (
+CREATE TABLE dados_usuarios (
     id_usuario INT PRIMARY KEY AUTO_INCREMENT,
     tipoUsuario VARCHAR(100) NOT NULL,
     nome VARCHAR(100) NOT NULL,
-    nomeUsuario VARCHAR(50) NOT NULL,
+    username VARCHAR(50) NOT NULL,
+    data_nasc VARCHAR(50) NOT NULL,
+    foto varchar (255) not null,
     emailUsuario VARCHAR(100) NOT NULL UNIQUE,
-    senhaUsuario VARCHAR(100) NOT NULL
+    senhaUsuario VARCHAR(100) NOT NULL,
+    descricao text,
+    telefone VARCHAR (30)
 );
-drop table usuarios;
-select * from usuarios;
+drop table dados_usuarios;
+select * from dados_usuarios;
 
 
 create table Dados_Contato (
@@ -105,4 +109,4 @@ INSERT INTO eventosDestaques (cidade, nome, imagem, legenda) VALUES
 ('rio-de-janeiro', 'Ensaios da Anitta', 'imagens/anitta.jpg', 'Show especial da Anitta'),
 ('rio-de-janeiro', 'Show da Katy Perry', 'imagens/katy.jpg', 'Turnê mundial no RJ');
 
-drop database w
+drop database wgo;

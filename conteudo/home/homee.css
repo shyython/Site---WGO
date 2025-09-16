@@ -450,120 +450,164 @@ nav ul li a:hover {
 .container-janela {
   display: flex;
   justify-content: center;
+  width: 100%;
+  margin-top: 20px;
 }
 
+/* Janela da categoria */
 .janelaInfo {
-  margin-top: 20px;
-  background: #63048f;
+  background: #979797;
   border-radius: 12px;
   width: 80%;
+  max-width: 800px;
   padding: 20px;
-  display: none;
+  display: none; 
   opacity: 0;
   transform: translateY(-20px);
   transition: all 0.4s ease;
   color: white;
   text-align: center;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center; 
 }
 
 .janelaInfo.abrir {
-  display: block;
+  display: flex;
   opacity: 1;
   transform: translateY(0);
 }
 
-@keyframes slideDown {
-  from {
-    opacity: 0;
-    transform: translateY(-20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+#janelaTitle {
+  font-size: 1.5rem;
+  margin-bottom: 15px;
 }
 
-.janela-img{
+#janelaContent {
+  font-size: 1rem;
+  margin-top: 15px;
+}
+
+/* Carrossel dentro da janela */
+.janela-galeria {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+  position: relative;
+  width: 100%;
+}
+
+.janela-img {
+  position: relative;
   width: 100%;
   max-width: 600px;
-  height: auto;
-  border-radius: 8px;
-  justify-self: unset;
+  height: 350px;
+  border-radius: 12px;
+  overflow: hidden;
   display: flex;
+  align-items: center;      
+  justify-content: center;   
 }
 
-.container-galeria {
+
+.janela-img .image {
   width: 100%;
-  max-width: 1200px;
-  margin: 20px auto 20px;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 20px;
-  align-items: flex-start;
-  padding: 0 15px;
-  box-sizing: border-box;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 12px;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+  position: relative;
+}
+
+.janela-img .image.on {
+  opacity: 1;
 }
 
 #esquerda-button,
 #direita-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
   width: 40px;
   height: 40px;
   border: none;
-  background-color: transparent;
-  cursor: pointer;
-  flex-shrink: 0;
+  background: rgba(0,0,0,0.4);
+  color: white;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 0;
-  user-select: none;
-  transition: transform 0.2s ease;
+  cursor: pointer;
+  border-radius: 50%;
+  transition: 0.3s;
+  z-index: 10;
 }
 
 #esquerda-button:hover,
-#direita-button:hover,
-#esquerda-button:focus,
-#direita-button:focus {
-  outline: none;
-  transform: scale(1.2); /* efeito de "saltar" no hover */
+#direita-button:hover {
+  background: rgba(0,0,0,0.7);
+}
+
+#esquerda-button {
+  left: 10px;
+}
+
+#direita-button {
+  right: 10px;
 }
 
 #esquerda-button img,
 #direita-button img {
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-  user-select: none;
-  pointer-events: none;
+  width: 20px;
+  height: 20px;
 }
 
 
-/* Imagens */
-.container-images {
-  position: relative;
-  border-radius: 12px;
-  overflow: hidden;
-  flex-shrink: 0;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+.destaques-janela {
+  margin-top: 15px;
+  text-align: center;
 }
 
-.image {
-  opacity: 0;
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  border-radius: 10px;
-  object-fit: cover;
-  transition: opacity 0.5s ease;
-  user-select: none;
-  pointer-events: none;
+.destaques-janela .titulo-destaque {
+  font-size: 1.2rem;
+  margin-bottom: 5px;
 }
 
-.on {
-  opacity: 1;
-  pointer-events: auto;
-  position: relative;
+.destaques-janela .descricao {
+  font-size: 0.9rem;
+  color: #ccc;
 }
+
+/* Botão fechar */
+#btnFechar {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #3C4E69;
+  border: none;
+  color: white;
+  font-size: 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+#btnFechar:hover {
+  background-color: #2b3750;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .janela-img {
+    width: 100%;
+    height: 250px;
+  }
+
+  #esquerda-button,
+  #direita-button {
+    width: 30px;
+    height: 30px;
+  }
+}
+

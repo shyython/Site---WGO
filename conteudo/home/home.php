@@ -1,5 +1,33 @@
 <?php
-require_once "../login/validador_acesso.php";
+include('../login/config.php');   
+// require_once "../login/validador_acesso.php";
+require_once "../loginE/validador_acesso.php";
+
+// Tenta pegar de usuarios
+$stmt = $conexao->prepare("SELECT tipoUsuario FROM usuarios WHERE id_usuario = ?");
+$stmt->bind_param("i", $_SESSION['id_usuario']);
+$stmt->execute();
+$stmt->bind_result($tipoUsuario);
+if ($stmt->fetch()) {
+    // Achou usuário
+    
+    $stmt->close();
+} else {
+    // Não achou em usuarios → tenta em dados_empresa
+    $stmt->close();
+
+    $stmt = $conexao->prepare("SELECT tipoUsuario FROM Dados_empresa WHERE id_empresa = ?");
+    $stmt->bind_param("i", $_SESSION['id_empresa']);
+    $stmt->execute();
+    $stmt->bind_result($tipoUsuario);
+    $stmt->fetch();
+    $stmt->close();
+  
+}
+
+  echo $tipoUsuario;
+
+
 ?>
 
 
@@ -38,10 +66,11 @@ require_once "../login/validador_acesso.php";
           <ul id="configMenu">
             <li><a href="../conteudo/conf_perfil/Configuracao_Perfil.html">Perfil</a></li>
             <li><a href="../conteudo/privacidade.html">Ajuda</a></li>
-             <?php
+            <?php
             // Verifica se o tipo de usuário é 'empresa'
+            
             if ($tipoUsuario === 'empresa') {
-                echo '<li><a href="../crudEventos/criar/criar.php">Criar evento</a></li>';
+              echo '<li><a href="../crudEventos/criar/criar.php">Criar evento</a></li>';
             }
             ?>
           </ul>
@@ -116,6 +145,7 @@ require_once "../login/validador_acesso.php";
     <div class="indicadores"></div>
   </section>
 
+
   <label for="">Selecione seu Estado:</label>
   <select id="estado">
     <option value="" disabled selected>-- Selecione --</option>
@@ -147,6 +177,7 @@ require_once "../login/validador_acesso.php";
     <option value="SE">Sergipe</option>
     <option value="TO">Tocantins</option>
   </select>
+
   <script>
     $(document).ready(function () {
       $('#estado').select2();

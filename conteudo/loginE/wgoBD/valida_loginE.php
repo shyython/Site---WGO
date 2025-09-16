@@ -2,7 +2,7 @@
 session_start();
 require 'config.php';
 
-$empresaAutentificada = true;
+$empresaAutentificada = false;
 
 // RECEBENDO OS DADOS VIA POST
 $cnpjEmpresa  = preg_replace('/[^0-9]/', '', $_POST['cnpjEmpresa']); 

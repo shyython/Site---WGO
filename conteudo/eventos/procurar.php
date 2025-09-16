@@ -497,7 +497,7 @@ $rowB3 = $resB->fetch_object();
                         <h3><?php print $rowB3->Nome_Evento; ?></h3>
                         <p><img class='IconDestaque' src='https://cdn-icons-png.flaticon.com/128/149/149060.png' />
                             <?php print $rowB3->Endereco; ?></p>
-                        <a class="BtnSaibaMais" href="evento_indi.php?id=<?php print $rowB2->Id_Evento ?>">Ver
+                        <a class="BtnSaibaMais" href="evento_indi.php?id=<?php print $rowB3->Id_Evento ?>">Ver
                             mais</a>
 
                     </div>

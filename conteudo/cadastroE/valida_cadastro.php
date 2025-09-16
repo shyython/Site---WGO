@@ -21,7 +21,7 @@ $cepEmpresa = $_POST['cepEmpresa'];
 $senhaEmpresa = md5($_POST['senhaEmpresa']);
 
 // INSERÇÃO DOS DADOS NO BANCO
-$sql = "INSERT INTO Dados_Empresa  (nomeEmpresa, cnpjEmpresa ,emailEmpresa, telefoneEmpresa, enderecoEmpresa, cepEmpresa, senhaEmpresa)  VALUES  ('$nomeEmpresa', '$cnpjEmpresa', '$emailEmpresa', '$telefoneEmpresa', '$enderecoEmpresa', '$cepEmpresa', '$senhaEmpresa')";   
+$sql = "INSERT INTO Dados_Empresa  (nomeEmpresa, cnpjEmpresa ,emailEmpresa, telefoneEmpresa, enderecoEmpresa, tipoUsuario, cepEmpresa, senhaEmpresa)  VALUES  ('$nomeEmpresa', '$cnpjEmpresa', '$emailEmpresa', '$telefoneEmpresa', '$enderecoEmpresa', '$tipoUsuario', '$cepEmpresa', '$senhaEmpresa')";   
 $res = $conexao->query($sql);
 
 // REDIRECIONA COM BASE NO RESULTADO

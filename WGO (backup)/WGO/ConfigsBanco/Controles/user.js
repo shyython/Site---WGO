@@ -62,19 +62,17 @@ export const getSeach = (req, res) => {
   });
 };
 export const getSeachbyCat = (req, res) => {
-  console.log("req.body:", req.body);
 
-  const search = req.body.procurar || "";
+
+  const search = req.query.procurar || "";
   if (!search) {
     return res.status(400).json({ error: "Parâmetro 'procurar' é obrigatório" });
   }
 
-  const q = "SELECT * FROM eventos WHERE Categoria LIKE ?";
-  db.query(q, [`%${search}%`], (err, data) => {
-    if (err) {
-      console.error("Erro MySQL:", err);
-      return res.status(500).json(err);
-    }
+  
+  const q = "SELECT * FROM eventos WHERE Categoria = ?";
+  db.query(q, [search], (err, data) => {
+    if (err) return res.status(500).json(err);
     return res.status(200).json(data);
   });
 };

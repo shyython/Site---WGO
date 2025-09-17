@@ -10,7 +10,7 @@ router.get('/eventos', getEvent)
 
 router.post('/eventos/search', getSeach);
 
-router.post('/eventos/search', getSeachbyCat);
+router.get("/buscar", getSeachbyCat);
 
 router.get('/eventos/:id', getEventoById);
 

@@ -11,15 +11,28 @@ export default function Home({}) {
 
   const theme = useColorScheme();
      const estilo = theme === 'dark' ? escuro : claro;
-    const categoria = 'Museu'
+   const categorias = {
+  restaurante: "Restaurante",
+  cultural: "Cultural",
+  show: "Shows",
+  balada: "balada"
+};
     const [pesquisa, setPesquisa] = useState('')
     const [evento, setEvento] = useState('')
     
   const [eventos, setEventos] = useState([]);
   const navigation = useNavigation();
-  function NavegaPesquisa(){
-  navigation.navigate('Pesquisa', {setPesquisa: pesquisa || categoria})
-   }
+ function NavegaPesquisa(params = {}) {
+    if (!pesquisa.trim() && !params.categoria) {
+      console.log("Pesquisa vazia, não vou buscar no banco");
+      return;
+    }
+
+    navigation.navigate('Pesquisa', {
+      pesquisa,
+      ...params
+    });
+  }
   useEffect(() => {
     const getEvent = async () => {
       try {
@@ -48,24 +61,35 @@ export default function Home({}) {
                 <Feather name='bell' color={'white'} size={35} style={estilo.Notif}/> 
                 <TextInput placeholder="Pesquisar" style={estilo.input} onEndEditing={NavegaPesquisa} value={pesquisa} onChangeText={setPesquisa}/>
                 <View style={estilo.Indicacoes}>
-                    <TouchableOpacity style={estilo.botoes} onPress={() => NavegaPesquisa(categoria)} >
-                        <Image source={require('../Assets/Restaurantes.png')} style={estilo.icon}/>
+                     <TouchableOpacity 
+                      style={estilo.botoes} 
+                      onPress={() => NavegaPesquisa({ categoria: categorias.restaurante })}>
+                      <Image source={require('../Assets/Restaurantes.png')} style={estilo.icon}/>
                     </TouchableOpacity>
-                    <TouchableOpacity style={estilo.botoes}>
-                        <Image source={require('../Assets/Cafe.png')} style={estilo.icon}/>
+
+                    <TouchableOpacity 
+                      style={estilo.botoes} 
+                      onPress={() => NavegaPesquisa({ categoria: categorias.cultural })}>
+                      <Image source={require('../Assets/Teatro.png')} style={estilo.icon}/>
                     </TouchableOpacity>
-                    <TouchableOpacity style={estilo.botoes}>
-                        <Image source={require('../Assets/Show.png')} style={estilo.icon}/>
+
+                    <TouchableOpacity 
+                      style={estilo.botoes} 
+                      onPress={() => NavegaPesquisa({ categoria: categorias.show })}>
+                      <Image source={require('../Assets/Show.png')} style={estilo.icon}/>
                     </TouchableOpacity>
-                    <TouchableOpacity style={estilo.botoes}>
-                        <Image source={require('../Assets/Bar.png')} style={estilo.icon}/>
+
+                    <TouchableOpacity 
+                      style={estilo.botoes} 
+                      onPress={() => NavegaPesquisa({ categoria: categorias.balada })}>
+                      <Image source={require('../Assets/Bar.png')} style={estilo.icon}/>
                     </TouchableOpacity>
                 </View>
                 <View style={estilo.TextIndicacoes}>
-                    <Text style={estilo.Text} value={categoria}>Restaurantes</Text>
-                    <Text style={estilo.Text} value={categoria}>Cafe</Text>
-                    <Text style={estilo.Text} value={categoria}>Shows</Text>
-                    <Text style={estilo.Text} value={categoria}>Bares</Text>
+                    <Text style={estilo.Text} >Restaurantes</Text>
+                    <Text style={estilo.Text} >Cultural</Text>
+                    <Text style={estilo.Text} >Shows</Text>
+                    <Text style={estilo.Text} >baladaes</Text>
                 </View>
             </View>
         </View>

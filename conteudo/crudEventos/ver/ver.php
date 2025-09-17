@@ -4,16 +4,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="crud.css">
-    <title>Eventos</title>
+    <link rel="stylesheet" href="ver.css">
+    <title>Ver Evento</title>
 </head>
 
 <body>
-
     <header id="header">
         <!-- logo -->
         <a href="../home/home.php">
-            <img class="Logo" src="../imagens/WgoIcon2.png" alt="Logo">
+            <img class="Logo" src="../../imagens/WgoIcon2.png" alt="Logo">
 
 
         </a>
@@ -28,23 +27,15 @@
                     <ul id="configMenu">
                         <li><a href="../conteudo/conf_perfil/Configuracao_Perfil.html">Perfil</a></li>
                         <li><a href="../conteudo/privacidade.html">Ajuda</a></li>
-                        <?php
-                        // Verifica se o tipo de usuário é 'empresa'
-                        
-                        if ($tipoUsuario === 'empresa') {
-                            echo '<li><a href="../crudEventos/crud_eventos.php">Eventos</a></li>';
-                        }
-                        ?>
+                        <li><a href="../crudEventos/criar/criar.php">Criar evento</a></li>
                     </ul>
                 </li>
-
-
             </ul>
         </nav>
 
         <!-- sininho -->
         <div class="btnNot" onclick="abrirNotifi(event)">
-            <img src="../imagens/Sino.png" alt="Notificações">
+            <img src="../../imagens/Sino.png" alt="Notificações">
             <span class="badge">17</span>
         </div>
 
@@ -53,7 +44,7 @@
             <h2>Notificações <span>17</span></h2>
 
             <div class="notifi-item">
-                <img src="../imagens/Dav.jpg" alt="Davi" class="img-not">
+                <img src="../../imagens/Dav.jpg" alt="Davi" class="img-not">
                 <div class="text">
                     <h4>Davi Silva</h4>
                     <p>@lorem ipsum dolor sit amet</p>
@@ -61,7 +52,7 @@
             </div>
 
             <div class="notifi-item">
-                <img src="../imagens/Ell.jpg" alt="Ella" class="img-not">
+                <img src="../../imagens/Ell.jpg" alt="Ella" class="img-not">
                 <div class="text">
                     <h4>Ella Prado</h4>
                     <p>@lorem ipsum dolor sit amet</p>
@@ -69,7 +60,7 @@
             </div>
 
             <div class="notifi-item">
-                <img src="../imagens/Bea.jpg" alt="Beatriz" class="img-not">
+                <img src="../../imagens/Bea.jpg" alt="Beatriz" class="img-not">
                 <div class="text">
                     <h4>Beatriz Macedo</h4>
                     <p>@lorem ipsum dolor sit amet</p>
@@ -77,7 +68,7 @@
             </div>
 
             <div class="notifi-item">
-                <img src="../imagens/Thiago.jpg" alt="Thiago" class="img-not">
+                <img src="../../imagens/Thiago.jpg" alt="Thiago" class="img-not">
                 <div class="text">
                     <h4>Thiago Silva</h4>
                     <p>@lorem ipsum dolor sit amet</p>
@@ -87,36 +78,6 @@
         <nav>
             <a href="../logOut.php"><img src="../imagens/sair.png" alt="" width="50px"></a>
     </header>
-
 </body>
-
-
-<div class="container">
-    <div class="crud">
-
-    <!-- criar -->
-        <div class="criar">
-            <a href="criar/criar.php"><img src="../imagens/criar.png" alt=""></a>
-            <a href="criar/criar.php">Criar novo evento</a>
-        </div>
-
-        <!-- ver -->
-        <div class="ver">
-           <a href="ver/ver.php"><img src="../imagens/ver.png" alt=""></a>
-            <a href="ver/ver.php">Ver eventos</a>
-        </div>
-
-        <!-- atualizar -->
-        <div class="atualizar">
-          <a href="atualizar/atualizar.php"><img src="../imagens/atualizar.png" alt=""></a>
-            <a href="atualizar/atualizar.php">Atualizar eventos</a>
-        </div>
-
-        <!-- deletar -->
-        <div class="deletar">
-            <a href="deletar/deletar.php"><img src="../imagens/deletar.png" alt=""></a>
-            <a href="deletar/deletar.php">Deletar eventos</a>
-        </div>
-    </div>
 
 </html>

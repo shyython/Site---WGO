@@ -152,8 +152,7 @@ $stmt->close();
                         <label for="">seguindo</label>
                     </div>
                     <div class="div-descricao">
-                        <p>Descrição</p>
-                        <a href="">teste</a>
+                    <p id="NomePerfil"><?php echo htmlspecialchars($usuario['descricao']); ?></p>
                     </div>
                     <div class="container-btns">
                         <button class="BtnEditar">Editar Perfil</button>

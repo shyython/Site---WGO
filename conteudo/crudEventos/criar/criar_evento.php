@@ -45,11 +45,11 @@ $stmt->bind_param(
 
 // Executa e redireciona
 if ($stmt->execute()) {
-    header("Location: ver.php");
+    header("Location: ../ver/ver.php");
     exit();
 } else {
     // Se quiser redirecionar com erro, pode passar ?erro=1 na URL
-    header("Location: ver.php?erro=1");
+    header("Location: ../ver/ver.php?erro=1");
     exit();
 }
 

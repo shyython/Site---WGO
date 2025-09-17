@@ -5,11 +5,16 @@
     box-sizing: border-box;
 }
 /* ===================== HEADER ===================== */
-body {
-    font-family: "Lato", sans-serif;
-    background-color: #f4f4f4;
-    margin: 0;
-    padding: 0;
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+main, .conteudo-principal {
+  flex: 1;
 }
 header {
     font-family: "Lato", sans-serif;
@@ -58,7 +63,7 @@ nav ul li a {
 }
  
 nav ul li a:hover {
-    background-color: rgba(255,255,255,0.2);
+    background-color: #e55b06;
 }
  
 /* menu config */
@@ -407,14 +412,13 @@ nav ul li a:hover {
 }
 
 .categoria {
-    font-family: "Lato", sans-serif;
-    display: flex;
-    justify-content: center;
-    margin-top: 30px;
-    margin-bottom: 30px;
-    cursor: pointer;
-    transition: transform 0.3s;
-    margin-top: 80px;
+  font-family: "Lato", sans-serif;
+  display: flex;
+  flex-wrap: wrap;       /* <<< permite quebrar em várias linhas */
+  justify-content: center;
+  gap: 20px;             /* espaço entre os itens */
+  margin-top: 80px;
+  max-width: 100%;
 }
 
 .categoria2{
@@ -423,8 +427,6 @@ nav ul li a:hover {
     transition: transform 0.3s;
     flex-direction: column;
     align-items: center;
-    margin-right: 20px;
-    margin-left: 20px;
     margin-bottom: 30px;
 }
 
@@ -670,6 +672,57 @@ nav ul li a:hover {
   line-height: 1.5;
   user-select: text;
 }
+
+.rodape{
+    font-family: "Lato", sans-serif;
+    background-color: #3C4E69;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    bottom: 0;
+    width: 100%;
+    margin-top: 40px;
+    display: block;
+}
+.icon-rodape {
+    width: 50px;
+    height: 50px;
+    gap: 20px;
+    padding: 0;
+    margin-bottom: 40px;
+    margin-left: 15px;
+    margin-top: 10px;
+}
+.contato-rodape {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding: 0px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+.telefone-rodape {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    padding: 0;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    margin-left: 70px;
+}
+.email-rodape {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    padding: 0;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    margin-left: 100px;
+}
+
 
 /* Responsividade */
 @media (max-width: 768px) {

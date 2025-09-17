@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="homee.css">
   <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-beta.1/dist/css/select2.min.css" rel="stylesheet" />
+  <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/3.0.0/uicons-brands/css/uicons-brands.css'>
   <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-beta.1/dist/js/select2.min.js"></script>
   <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
@@ -61,7 +62,7 @@
       <h2>Notificações <span>17</span></h2>
 
       <div class="notifi-item">
-        <img src="/conteudo/imagens/Dav.jpg" alt="Davi" class="img-not">
+        <img src="../imagens/Dav.jpg" alt="Davi" class="img-not">
         <div class="text">
           <h4>Davi Silva</h4>
           <p>@lorem ipsum dolor sit amet</p>
@@ -69,7 +70,7 @@
       </div>
 
       <div class="notifi-item">
-        <img src="/conteudo/imagens/Ell.jpg" alt="Ella" class="img-not">
+        <img src="../imagens/Ell.jpg" alt="Ella" class="img-not">
         <div class="text">
           <h4>Ella Prado</h4>
           <p>@lorem ipsum dolor sit amet</p>
@@ -94,10 +95,12 @@
     </div>
   </header>
 
-  <section class="carrossel">
-    <div class="slides"></div>
-    <div class="indicadores"></div>
-  </section>
+  <main class="conteudo-principal">
+
+    <section class="carrossel">
+      <div class="slides"></div>
+      <div class="indicadores"></div>
+    </section>
 <!--select estado-->
   <div class="selectEstado1">
     <select id="estado1">
@@ -198,8 +201,7 @@
 
     <img id="janelaImg" src="" alt="Imagem da categoria">
 
-    <main class="janela-galeria" role="main" aria-label="Galeria de imagens" style="display:none;">
-      <button id="esquerda-button" aria-label="Slide para a esquerda">
+      <button id="esquerda-button" aria-label="Slide para a esquerda"> 
       <img src="../imagens/home/arrow2.png" alt="seta esquerda" />
       </button>
 
@@ -208,10 +210,13 @@
       <img src="../imagens/home/arrow.png" alt="seta direita" />
       </button>
 
+    <main class="janela-galeria" role="main" aria-label="Galeria de imagens" style="display:none;">
+
       <aside class="destaques-janela">
         <h2 class="titulo-destaque">Título destaque</h2>
         <p class="descricao">Descrição destaque</p>
       </aside>
+      
     </main>
 
     <p id="janelaContent">Conteúdo da janela</p>
@@ -219,7 +224,38 @@
   </div>
 </div>
 
+  <div class="rodape">
+    <ul class="rodape-icons">
+      <a href="#"><img src="../imagens/home/facebook.png" alt="Facebook" class="icon-rodape"></a>
+      <a href="#"><img src="../imagens/home/insta.png" alt="Instagram" class="icon-rodape"></a>
+      <a href="#"><img src="../imagens/home/github.png" alt="Github" class="icon-rodape"></a>
+    </ul>
+    <div class="dados-rodape">
+      <p>Av. Conselheiro Nébias, 309 - Vila Mathias - Santos - SP</p>
+      <p style="margin-top: 10px;">© 2025 WGO. O mundo é vasto e cheio de surpresas – permita-se descobrir, sentir e se apaixonar por novos lugares.</p>
 
+<div class="contato-rodape">
+
+  <div class="telefone-rodape">
+      <img src="../imagens/home/telefone.png" alt="" style="width: 20px; height: auto;">
+      <p>+55 13930801523</p>
+  </div>
+
+  <div class="email-rodape">
+      <img src="../imagens/home/email.png" alt="" style="width: 20px;">
+      <p>wegooutturimo@hotmail.com</p>
+  </div>
+
+</div>
+
+      <div class="logo-rodape">
+        <img src="../imagens/WgoIcon2.png" alt="" style="width: 200px; height: auto;">
+      </div>
+
+    </div>
+  </div>
+
+</main>
     <script>
         $(document).ready(function() {
             $('#estado').select2();

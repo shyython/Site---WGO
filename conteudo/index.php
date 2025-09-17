@@ -18,8 +18,8 @@
     </header>
 
 
-    <main>
-        
+    <main class="conteudo-principal">
+
         <div class="div-introducao-basica">
             <div class="div-introducao-conteudo">
                 <div class="hero-section">
@@ -178,14 +178,15 @@
                         <div>
                             <img src="https://cdn-icons-png.flaticon.com/128/5186/5186087.png" alt="" width="26px">
                         </div>
-                    </div>
-                    <div class="btn-secao">
-                        <button class="btn-ver-evento"><a href="/conteudo/sobre/evento1/evento-1.html">Ver
-                                evento</a></button>
-                        <!-- <button class="btn-confirmar">Tô dentro!</button>
-                    <button class="btn-recusar">Tô fora</button> -->
 
+                        <div class="btn-secao">
+                            <button class="btn-ver-evento"><a href="/conteudo/sobre/evento1/evento-1.html">Ver
+                                    evento</a></button>
+
+
+                        </div>
                     </div>
+
                 </div>
 
 
@@ -243,8 +244,7 @@
                             </div>
                             <div class="btn-secao">
                                 <button class="btn-ver-evento" onclick="">Ver evento</button>
-                                <!-- <button class="btn-confirmar">Tô dentro!</button>
-                    <button class="btn-recusar">Tô fora</button> -->
+
 
                             </div>
                         </div>
@@ -275,80 +275,76 @@
                 </div>
             </div>
         </div>
-        <!-- apresentando as categorias disponiveis -->
 
+        <!-- apresentando as categorias disponiveis -->
         <div class="todo">
-            <div class="main">
-                <div class="entenda">
-                    <h2>Como funciona</h2>
-                    <div class="conheca">
-                        <Div class="Descubra resumo">
-                            <img class="Imgresumo" src="https://cdn-icons-png.flaticon.com/128/5088/5088025.png" alt="">
-                            <div>
-                                <h2>Descubra</h2>
-                                <p>Veja eventos perto de você</p>
-                            </div>
-                        </Div>
-                        <Div class="Convide resumo">
-                            <img class="Imgresumo" src="https://cdn-icons-png.flaticon.com/128/11735/11735198.png"
-                                alt="">
-                            <div>
-                                <h2>Convide</h2>
-                                <p>Marque presença com amigos</p>
-                            </div>
-                        </Div>
-                        <Div class="Curta resumo">
-                            <img class="Imgresumo" src="https://cdn-icons-png.flaticon.com/128/5877/5877962.png" alt="">
-                            <div>
-                                <h2>Curta</h2>
-                                <p>Aproveie a experiência</p>
-                            </div>
-                        </Div>
-                    </div>
-                </div>
-                <h2 style="text-align: center;">Veja o que há por perto</h2>
-                <div class="Categoria">
-                    <div class="CardCategoria">
-                        <img src="https://media-cdn.tripadvisor.com/media/photo-m/1280/19/ca/cb/0d/photo2jpg.jpg" alt=""
-                            class="ImgCategoria">
-                        <p class="TxtCategoria">Restaurantes</p>
-                    </div>
-                    <div class="CardCategoria">
-                        <img src="https://media.gettyimages.com/id/517708666/pt/foto/jovens-amigos-a-divertir-se-com-enfeites-na-festa-noite-clube.jpg?s=612x612&w=0&k=20&c=lgjJnBNDJ4z2HLUQF1bFBDAMhl5QgaWtJaDXRmKRNXE="
-                            alt="" class="ImgCategoria">
-                        <p class="TxtCategoria">Baladas</p>
-                    </div>
-                    <div class="CardCategoria">
-                        <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0f/b6/80/4f/salao-do-pregao.jpg?w=900&h=500&s=1"
-                            alt="" class="ImgCategoria">
-                        <p class="TxtCategoria">Cultura</p>
-                    </div>
-                    <div class="CardCategoria">
-                        <img src="https://webrun.com.br/wp-content/uploads/2020/01/10-KM-2019-Vanessa_Rodrigues_A_Tribuna-30.jpg"
-                            alt="" class="ImgCategoria">
-                        <p class="TxtCategoria">Esportes</p>
-                    </div>
-                    <div class="CardCategoria">
-                        <img src="https://cdn.diariodolitoral.com.br/upload/dn_arquivo/2021/06/aquario-pms.jpg" alt=""
-                            class="ImgCategoria">
-                        <p class="TxtCategoria">Crianças</p>
-                    </div>
-                </div>
-                <div class="Explorar">
-                    <div>
-                        <p class="TxtExplorar">Não perca o próximo rolê!</p>
-                        <p class="TxtExplorar">Baixe agora e fique por dentro.</p>
-                    </div>
-                    <button class="BtnExplorar">Explorar Eventos</button>
+
+            <div class="entenda">
+                <h2>Como funciona</h2>
+                <div class="conheca">
+                    <Div class="Descubra-resumo">
+                        <img class="Imgresumo" src="https://cdn-icons-png.flaticon.com/128/5088/5088025.png" alt="">
+                        <div>
+                            <h2>Descubra</h2>
+                            <p>Veja eventos perto de você</p>
+                        </div>
+                    </Div>
+                    <Div class="Convide-resumo">
+                        <img class="Imgresumo" src="https://cdn-icons-png.flaticon.com/128/11735/11735198.png" alt="">
+                        <div>
+                            <h2>Convide</h2>
+                            <p>Marque presença com amigos</p>
+                        </div>
+                    </Div>
+                    <Div class="Curta-resumo">
+                        <img class="Imgresumo" src="https://cdn-icons-png.flaticon.com/128/5877/5877962.png" alt="">
+                        <div>
+                            <h2>Curta</h2>
+                            <p>Aproveie a experiência</p>
+                        </div>
+                    </Div>
                 </div>
             </div>
+
         </div>
 
-    </main>
+
+        <div class="rodape">
+
+            <ul class="rodape-icons">
+                <a href="#"><img src="./imagens/home/facebook.png" alt="Facebook" class="icon-rodape"></a>
+                <a href="#"><img src="./imagens/home/insta.png" alt="Instagram" class="icon-rodape"></a>
+                <a href="#"><img src="./imagens/home/github.png" alt="Github" class="icon-rodape"></a>
+            </ul <div class="dados-rodape">
+            <p>Av. Conselheiro Nébias, 309 - Vila Mathias - Santos - SP</p>
+            <p style="margin-top: 10px;">© 2025 WGO. O mundo é vasto e cheio de surpresas – permita-se
+                descobrir, sentir
+                e se apaixonar por novos lugares.</p>
+
+            <div class="contato-rodape">
+
+                <div class="telefone-rodape">
+                    <img src="./imagens/home/telefone.png" alt="" style="width: 20px; height: auto;">
+                    <p>+55 13930801523</p>
+                </div>
+
+                <div class="email-rodape">
+                    <img src="./imagens/home/email.png" alt="" style="width: 20px;">
+                    <p>wegooutturimo@hotmail.com</p>
+                </div>
+
+            </div>
+
+            <div class="logo-rodape">
+                <img src="./imagens/WgoIcon2.png" alt="" style="width: 200px; height: auto;">
+            </div>
+
+        </div>
+        </div>
 
 
 
-    <script src="script.js"></script>
+        <script src="script.js"></script>
 </body>
 
 </html>

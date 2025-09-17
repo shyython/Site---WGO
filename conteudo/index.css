@@ -16,8 +16,11 @@ body {
     height: 10px;
 }
 
+
+
 /* ===================== INTRODUÇÃO ===================== */
 .div-introducao-basica {
+    display: flex;
     background-image: url('./imagens/backImage2.png');
     width: 100%;
     background-size: cover;
@@ -211,24 +214,29 @@ input:focus {
 }
 
 /* ===================== INTRODUÇÃO TEXTO ===================== */
-.div-introducao {
+.inicio {
     display: flex;
-    width: 500px;
-    border-radius: 10px;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-
+    margin-top: 500px;
+    justify-content: center; /* ou space-between, flex-start, etc */
+    flex-wrap: wrap; /* permite quebra de linha em telas menores */
+    gap: 20px; /* espaço entre os blocos */
+    padding: 20px; /* opcional */
 }
-.introducao2{
+
+.div-introducao {
+    width: 500px; /* ajuste para o tamanho desejado */
+    /* já tem estilo aplicado no seu CSS atual */
+}
+
+
+.introducao2 {
     font-size: 20px;
     color: #174348;
     margin-bottom: 20px;
     text-align: justify;
     text-justify: inter-word;
     width: 500px;
-    
+
 }
 
 
@@ -241,7 +249,7 @@ input:focus {
   background-attachment: fixed; */
 }
 
-.b{
+.b {
     display: flex;
     width: 100%;
     margin-top: 400px;
@@ -257,7 +265,7 @@ input:focus {
     font-size: 20px;
     padding: 15px;
     justify-content: center;
-   
+
 }
 
 .subtitulo-card {
@@ -479,6 +487,7 @@ input:focus {
     height: 90px;
     border-radius: 50px;
 }
+
 .TxtCategoria {
     font-size: 15px;
     color: #174348;
@@ -490,7 +499,7 @@ input:focus {
 
 /* rodape */
 .rodape {
-  display: flex;
+    display: flex;
     width: 100%;
     flex-direction: column;
     color: #174348;
@@ -510,7 +519,9 @@ input:focus {
     flex-direction: row;
     margin-bottom: 50px;
 }
- .Convide-resumo, .Curta-resumo {
+
+.Convide-resumo,
+.Curta-resumo {
     padding-left: 400px;
 }
 

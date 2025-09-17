@@ -42,7 +42,7 @@
 
         <!-- ideia de incentivar as pessoas a sairem mais e curtirem com seus amigos -->
 
-        <div class="a">
+        <div class="inicio">
             <div class="todo">
                 <div class="div-introducao">
                     <h1 class="Titulo-card">Chegou o fim de semana?</h1>
@@ -60,8 +60,24 @@
                     </div>
                     <img src="/conteudo/sobre/src/img-card-festa.png" alt="" width="250px">
 
+                    <!-- ideia de incentivar as pessoas a sairem mais e curtirem com seus amigos -->
                 </div>
 
+                </div>
+
+                <div class="todo">
+                <div class="div-introducao">
+                    <!-- ideia de marcar presença -->
+                    <h1 class="Titulo-card">Não fique de fora dos role!</h1>
+                    <p class="subtitulo-card">O fim de semana tá chegando e a diversão te espera!
+                        Com o nosso app, você encontra os melhores eventos, festas, shows e experiências da sua cidade,
+                        tudo
+                        em um só lugar.
+                        Monte a galera, escolha o rolê perfeito e viva momentos inesquecíveis!
+                        Não perca tempo, baixe agora e bora curtir! 🚀🎶"
+                    </p>
+                    <img src="" alt="">
+                </div>
             </div>
         </div>
 
@@ -182,7 +198,7 @@
                         <div class="btn-secao">
                             <button class="btn-ver-evento"><a href="/conteudo/sobre/evento1/evento-1.html">Ver
                                     evento</a></button>
-                           
+
 
                         </div>
                     </div>
@@ -257,24 +273,7 @@
 
 
 
-        <!-- ideia de incentivar as pessoas a sairem mais e curtirem com seus amigos -->
-        <div class="b">
-            <div class="todo">
-                <div class="introducao2">
-                    <!-- ideia de marcar presença -->
-                    <h1>Não fique de fora dos role!</h1>
-                    <p>"O fim de semana tá chegando e a diversão te espera!
-                        Com o nosso app, você encontra os melhores eventos, festas, shows e experiências da sua cidade,
-                        tudo
-                        em um só lugar.
-                        <br>
-                        Monte a galera, escolha o rolê perfeito e viva momentos inesquecíveis!
-                        Não perca tempo, baixe agora e bora curtir! 🚀🎶"
-                    </p>
-                    <img src="" alt="">
-                </div>
-            </div>
-        </div>
+
         <!-- apresentando as categorias disponiveis -->
 
         <div class="todo">
@@ -334,17 +333,17 @@
                 </div>
 
 
-              
+
             </div>
         </div>
 
-          <div class="Explorar">
-                    <div>
-                        <p class="TxtExplorar">Não perca o próximo rolê!</p>
-                        <p class="TxtExplorar">Baixe agora e fique por dentro.</p>
-                    </div>
-                    <button class="BtnExplorar">Explorar Eventos</button>
-                </div>
+        <div class="Explorar">
+            <div>
+                <p class="TxtExplorar">Não perca o próximo rolê!</p>
+                <p class="TxtExplorar">Baixe agora e fique por dentro.</p>
+            </div>
+            <button class="BtnExplorar">Explorar Eventos</button>
+        </div>
 
 
     </main>

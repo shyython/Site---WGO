@@ -27,7 +27,7 @@
 
             <form action="valida_login.php" method="POST">
                 <input type="text" name="cnpjEmpresa" placeholder="CNPJ" required>
-                <input type="password" name="senhaUsuario" placeholder="Senha" required>
+                <input type="password" name="senhaEmpresa" placeholder="Senha" required>
                 <button type="submit">LOGIN</button>
             </form>
 

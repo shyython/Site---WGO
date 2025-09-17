@@ -25,7 +25,6 @@ if ($stmt->fetch()) {
   
 }
 
-  echo $tipoUsuario;
 
 
 ?>

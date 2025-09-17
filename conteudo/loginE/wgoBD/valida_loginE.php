@@ -5,8 +5,8 @@ require 'config.php';
 $empresaAutentificada = false;
 
 // RECEBENDO OS DADOS VIA POST
-$cnpjEmpresa  = preg_replace('/[^0-9]/', '', $_POST['cnpjEmpresa']); 
-$senhaEmpresa = md5($_POST['senhaEmpresa']);
+$cnpjEmpresa  = isset($_POST['cnpjEmpresa']) ? preg_replace('/[^0-9]/', '', $_POST['cnpjEmpresa']) : '';
+$senhaEmpresa = isset($_POST['senhaEmpresa']) ? md5($_POST['senhaEmpresa']) : '';
 
 // BUSCANDO NO BANCO AS INFORMAÇÕES
 $sql = "SELECT * FROM Dados_Empresa WHERE cnpjEmpresa='{$cnpjEmpresa}' LIMIT 1";
@@ -28,7 +28,7 @@ if ($empresaAutentificada) {
     header('location: ../home/home.php');
     exit;
 } else {
-    $_SESSION['autenticado'] = 'nao';
+    $_SESSION['autenticado'] = 'não';
     header('location: login.php?login=erro');
     exit;
 }

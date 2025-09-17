@@ -20,20 +20,22 @@ header {
     justify-content: space-around;
     padding: 10px 30px;
     z-index: 1000;
-    transition:  0.3s, box-shadow 0.3s;
+    transition: 0.3s, box-shadow 0.3s;
     background: #0000005d;
 }
- 
+
 header.solid {
-    background-color: #3C4E69; /* cor qnd rolar */
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    background-color: #3C4E69;
+    /* cor qnd rolar */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
- 
+
 .Logo {
     width: 180px;
     height: 60px;
     object-fit: cover;
 }
+
 /* ===================== MENU DE NAVEGAÇÃO ===================== */
 nav ul {
     display: flex;
@@ -41,24 +43,24 @@ nav ul {
     gap: 20px;
     align-items: center;
 }
- 
+
 nav ul li {
     position: relative;
 }
- 
+
 nav ul li a {
     text-decoration: none;
     color: #fff;
     font-size: 16px;
     padding: 8px 12px;
     border-radius: 6px;
-    transition:  0.3s;
+    transition: 0.3s;
 }
- 
+
 nav ul li a:hover {
-    background-color: rgba(255,255,255,0.2);
+    background-color: rgba(255, 255, 255, 0.2);
 }
- 
+
 /* menu config */
 #configMenu {
     position: absolute;
@@ -71,44 +73,44 @@ nav ul li a:hover {
     min-width: 150px;
     z-index: 10;
 }
- 
+
 #configMenu.active {
     display: block;
 }
- 
+
 #configMenu li a {
     display: block;
     padding: 10px;
     color: #fff;
 }
- 
+
 #configMenu li a:hover {
     background-color: #6c757d;
 }
- 
+
 /* sininho */
 .btnNot {
     width: 35px;
     height: 35px;
     border-radius: 50%;
-    background: rgba(255,255,255,0.1);
+    background: rgba(255, 255, 255, 0.1);
     display: flex;
     align-items: center;
     justify-content: center;
     position: relative;
     cursor: pointer;
-    transition:  0.3s;
+    transition: 0.3s;
 }
- 
+
 .btnNot:hover {
-    background: rgba(255,255,255,0.2);
+    background: rgba(255, 255, 255, 0.2);
 }
- 
+
 .btnNot img {
     width: 20px;
     height: 20px;
 }
- 
+
 .btnNot .badge {
     font-family: "Lato", sans-serif;
     position: absolute;
@@ -124,11 +126,11 @@ nav ul li a:hover {
     align-items: center;
     justify-content: center;
     font-weight: bold;
- 
+
 }
- 
+
 /* sininho box */
- 
+
 .notifi-box {
     font-family: "Lato", sans-serif;
     position: absolute;
@@ -140,27 +142,27 @@ nav ul li a:hover {
     overflow: hidden;
     background: #fff;
     border-radius: 12px;
-    box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
     transition: 0.3s all;
     z-index: 10;
 }
- 
+
 .notifi-box.active {
     height: 350px;
     opacity: 1;
 }
- 
+
 .notifi-box h2 {
     font-size: 14px;
     padding: 10px;
     background: #3C4E69;
     color: #fff;
 }
- 
+
 .notifi-box h2 span {
     color: red;
 }
- 
+
 .notifi-item {
     display: flex;
     gap: 10px;
@@ -170,27 +172,27 @@ nav ul li a:hover {
     margin: 5px;
     cursor: pointer;
     transition: all 0.2s;
- 
+
 }
- 
+
 .notifi-item:hover {
     background: #eee;
     border-left: 4px solid #3C4E69;
 }
- 
+
 .notifi-item img {
     width: 45px;
     height: 45px;
     border-radius: 50%;
     object-fit: cover;
 }
- 
+
 .notifi-item .text h4 {
     font-size: 14px;
     color: #333;
- 
+
 }
- 
+
 .notifi-item .text p {
     font-size: 12px;
     color: #666;
@@ -200,78 +202,81 @@ nav ul li a:hover {
     margin-top: 80px;
     padding: 20px;
 }
- 
-.aaa{
+
+.aaa {
     background: red;
     height: 2000px;
 }
- 
- 
+
+
 /* pesquisar */
 .pesquisar {
-  position: relative;
-  --size-button: 40px;
+    position: relative;
+    --size-button: 40px;
 }
- 
+
 .input {
-  padding-left: var(--size-button);
-  height: var(--size-button);
-  font-size: 15px;
-  border: none;
-  outline: none;
-  width: var(--size-button);
-  transition: all ease 0.3s;
-  border-radius: 50px;
-  cursor: pointer;
+    padding-left: var(--size-button);
+    height: var(--size-button);
+    font-size: 15px;
+    border: none;
+    outline: none;
+    width: var(--size-button);
+    transition: all ease 0.3s;
+    border-radius: 50px;
+    cursor: pointer;
 }
+
 .input:focus,
 .input:not(:invalid) {
-  width: 200px;
-  cursor: text;
+    width: 200px;
+    cursor: text;
 }
- 
-.input:focus + .icon,
-.input:not(:invalid) + .icon {
-  pointer-events: all;
-  cursor: pointer;
+
+.input:focus+.icon,
+.input:not(:invalid)+.icon {
+    pointer-events: all;
+    cursor: pointer;
 }
- 
+
 .pesquisar .icon {
-  position: absolute;
-  width: var(--size-button);
-  height: var(--size-button);
-  top: 0;
-  left: 0;
-  padding: 8px;
-  pointer-events: none;
+    position: absolute;
+    width: var(--size-button);
+    height: var(--size-button);
+    top: 0;
+    left: 0;
+    padding: 8px;
+    pointer-events: none;
 }
- 
+
 .pesquisar .icon svg {
-  width: 100%;
-  height: 100%;
+    width: 100%;
+    height: 100%;
 }
- 
- 
+
+
 #configMenu {
     position: absolute;
     background-color: #3C4E69;
-    display: none; /* Inicialmente oculto */
+    display: none;
+    /* Inicialmente oculto */
     z-index: 1;
 }
- 
+
 #configMenu li {
     border-top: 1px solid #6c757d;
 }
- 
+
 #configMenu a {
     padding: 10px 15px;
     color: white;
 }
- 
+
 #configMenu a:hover {
     background-color: #6c757d;
- 
+
 }
+
 /* ===================== HOME ===================== */
 
 
@@ -400,18 +405,20 @@ a {
 
 .ImgDestaque {
     width: 100%;
-    /* ocupa toda a largura do card */
+    /* ou um valor fixo ex: 300px */
     height: 200px;
-    /* altura fixa */
+    /* ajuste conforme desejar */
     object-fit: cover;
-    /* corta a imagem sem distorcer */
-    border-radius: 12px;
-    /* opcional, deixa as bordas arredondadas */
+    /* garante que a imagem preencha o espaço sem distorcer */
+    border-radius: 10px;
+    /* opcional: arredondar cantos */
+    min-width: 300px;
 }
 
 
+
 .IconDestaque {
-    width: 25px;
+    width: 30px;
 }
 
 .BtnSaibaMais {
@@ -423,4 +430,7 @@ a {
     height: 20px;
     border-radius: 5px;
     margin-top: 5px;
+}
+h2{
+    color: #3C4E69;
 }

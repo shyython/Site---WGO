@@ -52,7 +52,4 @@ if ($stmt->execute()) {
     header("Location: ../ver/ver.php?erro=1");
     exit();
 }
-
-$stmt->close();
-$conexao->close();
 ?>

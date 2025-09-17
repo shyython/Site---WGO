@@ -94,6 +94,7 @@ session_start(); // precisa sempre antes de usar $_SESSION
 
             <label for="categoria">Categoria:</label>
             <select class="categoria" name="categoria" id="categoria">
+                <option value="" style="text-align: center;">--Selecione--</option>
                 <option value="restaurante">Restaurante</option>
                 <option value="cultural">Cultura</option>
                 <option value="shows">Show</option>

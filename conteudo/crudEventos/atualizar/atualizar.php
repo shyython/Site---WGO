@@ -102,7 +102,7 @@ $evento = $result->fetch_object();
 
     <main class="container" style="max-width: 700px; margin: 40px auto;">
         <div class="card">
-            <h1 style="color: #3C4E69;">Atualizar Evento</h1>
+            <h1 style="color: #3C4E69;">Editar Evento</h1>
 
             <form action="config_evento.php" method="POST" enctype="multipart/form-data">
                 <input type="hidden" name="Id_Evento" value="<?php echo $evento->Id_Evento; ?>" />

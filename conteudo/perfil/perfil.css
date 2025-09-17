@@ -253,108 +253,153 @@ nav ul li a:hover {
     background-color: #6c757d;
 }
 
-.estado option[value="-- Selecione --"] {
-    display: none;
+main{
+    margin-top: 200px;
 }
-
-.carrossel {
-    font-family: "Lato", sans-serif;
-    position: relative;
-    width: 100%;
-    height: 500px;
-    z-index: -1;
-    overflow: hidden;
-}
-
-.slides {
-    width: 100%;
-    height: 100%;
-}
-
-.slide {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    opacity: 0;
-    transition: opacity 1s ease-in-out;
-}
-
-.slide.ativo {
-    opacity: 1;
-}
-
-.slide img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    filter: brightness(0.7);
-}
-
-.conteudo {
-    position: absolute;
-    bottom: 15%;
-    left: 50%;
-    transform: translateX(-50%);
+#container_perfil {
+    background-color: #F5F5F5;
+    border-radius: 5px;
+    margin: 30px auto;
+    max-width: 800px;
+    padding: 20px;
     text-align: center;
-    color: white;
-    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
 }
 
-.conteudo h2 {
-    font-size: 2rem;
-    margin-bottom: 10px;
-}
-
-.conteudo p {
-    font-size: 1.2rem;
-}
-
-.indicadores {
-    position: absolute;
-    bottom: 15px;
-    left: 50%;
-    transform: translateX(-50%);
+/* Usuario dentro do perfil */
+.usuario .div-itens-config {
     display: flex;
-    gap: 8px;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 20px;
 }
 
-.indicador {
-    width: 12px;
-    height: 12px;
-    border-radius: 50%;
-    background: rgba(255, 255, 255, 0.5);
+#NomePerfil {
+    font-size: 20px;
+    padding: 8px;
+    margin-bottom: 7px;
+}
+
+.btn-config {
+    border: none;
+    background-color: transparent;
     cursor: pointer;
-    transition: 0.3s;
 }
 
-.indicador.ativo {
-    background: white;
+.btn-config img.img-config {
+    width: 30px;
+    height: 30px;
 }
 
-@media (max-width: 1024px) {
-    .carrossel {
-        height: 300px;
-    }
-    .conteudo h2 {
-        font-size: 1.6rem;
-    }
-    .conteudo p {
-        font-size: 1rem;
-    }
+
+.container-obj {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
 }
 
-@media (max-width: 600px) {
-    .carrossel {
-        height: 220px;
-    }
-    .conteudo h2 {
-        font-size: 1.2rem;
-    }
-    .conteudo p {
-        font-size: 0.9rem;
-    }
-    .indicador {
-        width: 10px;
-        height: 10px;
-    }
+.div-seguidores {
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+    max-width: 400px;
+    align-items: center;
+    gap: 10px;
+}
+
+/* Imagem do perfil */
+.div-img img#ImagemPerfil {
+    width: 100px;
+    height: 100px;
+    border-radius: 150px;
+    border: 2px solid black;
+    object-fit: cover;
+}
+
+/* Labels próximos à imagem */
+.div-seguidores label {
+    font-weight: bold;
+    font-size: 14px;
+    text-align: center;
+    flex-grow: 1;
+}
+
+/* Div descrição */
+.div-descricao {
+    max-width: 400px;
+    text-align: center;
+}
+
+.div-descricao p {
+    margin-bottom: 5px;
+}
+
+/* Botões editar e compartilhar */
+.container-btns {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    width: 100%;
+    max-width: 400px;
+}
+
+.BtnEditar,
+.BtnCompartilhar {
+    flex: 1;
+    height: 40px;
+    border: none;
+    border-radius: 20px;
+    background-color: #8BA4D5;
+    color: white;
+    cursor: pointer;
+    font-size: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.BtnEditar {
+    justify-content: space-around;
+}
+
+/* Resumo (apelido, bio, redes sociais) */
+.resumo {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 15px;
+}
+
+/* Listagem inferior do perfil */
+.sla ul#li_perfil_funcoes {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    gap: 25px;
+    margin-top: 20px;
+}
+
+.sla ul#li_perfil_funcoes li.li_perfil_funcoes a {
+    color: #111;
+    text-decoration: none;
+    font-weight: bold;
+    padding-bottom: 5px;
+    display: inline-block;
+}
+
+.sla ul#li_perfil_funcoes li.li_perfil_funcoes a:hover {
+    background-color: #d1d1d1;
+    border-bottom: 2px solid #3C4E69;
+    border-radius: 3px;
+}
+
+/* Links padrão */
+a {
+    color: #3C4E69;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
 }

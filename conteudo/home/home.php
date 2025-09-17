@@ -63,7 +63,7 @@ if ($stmt->fetch()) {
         <li class="config">
           <a href="#" onclick="abrirMenuConf(event)">Configurações</a>
           <ul id="configMenu">
-            <li><a href="../conteudo/conf_perfil/Configuracao_Perfil.html">Perfil</a></li>
+            <li><a href="../perfil/perfil.php">Perfil</a></li>
             <li><a href="../conteudo/privacidade.html">Ajuda</a></li>
             <?php
             // Verifica se o tipo de usuário é 'empresa'

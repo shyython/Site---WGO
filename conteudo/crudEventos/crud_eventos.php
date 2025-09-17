@@ -106,17 +106,17 @@
             <a href="ver/ver.php">Ver eventos</a>
         </div>
 
-        <!-- atualizar -->
+        <!-- atualizar
         <div class="atualizar">
           <a href="atualizar/atualizar.php"><img src="../imagens/atualizar.png" alt=""></a>
             <a href="atualizar/atualizar.php">Atualizar eventos</a>
         </div>
 
-        <!-- deletar -->
+         deletar 
         <div class="deletar">
             <a href="deletar/deletar.php"><img src="../imagens/deletar.png" alt=""></a>
             <a href="deletar/deletar.php">Deletar eventos</a>
-        </div>
+        </div> -->
     </div>
 
 </html>

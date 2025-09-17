@@ -69,6 +69,30 @@ $rowB2 = $resB->fetch_object();
 $rowB3 = $resB->fetch_object();
 
 
+
+// Tenta pegar de usuarios
+$stmt = $conexao->prepare("SELECT tipoUsuario FROM dados_usuarios WHERE id_usuario = ?");
+$stmt->bind_param("i", $_SESSION['id_usuario']);
+$stmt->execute();
+$stmt->bind_result($tipoUsuario);
+if ($stmt->fetch()) {
+    // Achou usuário
+    
+    $stmt->close();
+} else {
+    // Não achou em usuarios → tenta em dados_empresa
+    $stmt->close();
+
+    $stmt = $conexao->prepare("SELECT tipoUsuario FROM Dados_empresa WHERE id_empresa = ?");
+    $stmt->bind_param("i", $_SESSION['id_empresa']);
+    $stmt->execute();
+    $stmt->bind_result($tipoUsuario);
+    $stmt->fetch();
+    $stmt->close();
+  
+}
+
+
 ?>
 
 
@@ -101,7 +125,13 @@ $rowB3 = $resB->fetch_object();
           <ul id="configMenu">
             <li><a href="../conteudo/conf_perfil/Configuracao_Perfil.html">Perfil</a></li>
             <li><a href="../conteudo/privacidade.html">Ajuda</a></li>
-            <li><a href="../crudEventos/criar/criar.php">Criar evento</a></li>
+           <?php
+            // Verifica se o tipo de usuário é 'empresa'
+            
+            if ($tipoUsuario === 'empresa') {
+              echo '<li><a href="../crudEventos/crud_eventos.php">Eventos</a></li>';
+            }
+            ?>
           </ul>
         </li>
 

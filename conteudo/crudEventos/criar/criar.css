@@ -279,7 +279,7 @@ nav ul li a:hover {
 }
 
 .container {
-   margin-top: 350px;
+   margin-top: 450px;
 }
 
 h2 {
@@ -310,7 +310,8 @@ form {
 input[type="text"],
 input[type="email"],
 input[type="password"],
-input[type="url"] {
+input[type="url"],
+input[type="time"] {
     width: 100%;
     padding: 10px;
     margin: 8px 0;
@@ -370,7 +371,7 @@ label {
     margin: 5px;
 }
 
-.datas {
+/* .datas {
     display: grid;
     grid-template-columns: 1fr 1fr; 
     gap: 15px 20px; 
@@ -385,4 +386,4 @@ label {
     margin-bottom: 5px;
     color: #3C4E69;
     font-weight: 600;
-}
+} */

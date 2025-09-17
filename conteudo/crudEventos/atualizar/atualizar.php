@@ -35,7 +35,6 @@ $evento = $result->fetch_object();
 
 <body>
     <header id="header">
-        <!-- logo -->
         <a href="../home/home.php">
             <img class="Logo" src="../../imagens/WgoIcon2.png" alt="Logo" />
         </a>
@@ -55,13 +54,11 @@ $evento = $result->fetch_object();
             </ul>
         </nav>
 
-        <!-- sininho -->
         <div class="btnNot" onclick="abrirNotifi(event)">
             <img src="../../imagens/Sino.png" alt="Notificações" />
             <span class="badge">17</span>
         </div>
 
-        <!-- box sininho -->
         <div class="notifi-box" id="box">
             <h2>Notificações <span>17</span></h2>
 
@@ -97,46 +94,74 @@ $evento = $result->fetch_object();
                 </div>
             </div>
         </div>
+
         <nav>
             <a href="../logOut.php"><img src="../imagens/sair.png" alt="" width="50px" /></a>
         </nav>
     </header>
 
     <main class="container" style="max-width: 700px; margin: 40px auto;">
-        <h1>Atualizar Evento</h1>
+        <div class="card">
+            <h1 style="color: #3C4E69;">Atualizar Evento</h1>
 
-        <form action="config_evento.php" method="POST" enctype="multipart/form-data">
-            <input type="hidden" name="Id_Evento" value="<?php echo $evento->Id_Evento; ?>" />
+            <form action="config_evento.php" method="POST" enctype="multipart/form-data">
+                <input type="hidden" name="Id_Evento" value="<?php echo $evento->Id_Evento; ?>" />
 
-            <label for="Nome_Evento">Nome do Evento:</label><br />
-            <input type="text" id="Nome_Evento" name="Nome_Evento" required value="<?php echo htmlspecialchars($evento->Nome_Evento); ?>" /><br /><br />
+                <label for="Nome_Evento">Nome do Evento:</label><br />
+                <input type="text" id="Nome_Evento" name="Nome_Evento" required
+                    value="<?php echo htmlspecialchars($evento->Nome_Evento); ?>" /><br /><br />
 
-            <label for="Categoria">Categoria:</label><br />
-            <input type="text" id="Categoria" name="Categoria" required value="<?php echo htmlspecialchars($evento->Categoria); ?>" /><br /><br />
+                <label for="Categoria">Categoria:</label><br />
+                <input type="text" id="Categoria" name="Categoria" required
+                    value="<?php echo htmlspecialchars($evento->Categoria); ?>" /><br /><br />
 
-            <label for="Endereco">Endereço:</label><br />
-            <input type="text" id="Endereco" name="Endereco" required value="<?php echo htmlspecialchars($evento->Endereco); ?>" /><br /><br />
+                <label for="Endereco">Endereço:</label><br />
+                <input type="text" id="Endereco" name="Endereco" required
+                    value="<?php echo htmlspecialchars($evento->Endereco); ?>" /><br /><br />
 
-            <label for="Tipo">Tipo:</label><br />
-            <input type="text" id="Tipo" name="Tipo" required value="<?php echo htmlspecialchars($evento->Tipo); ?>" /><br /><br />
+                <label for="Tipo">Tipo:</label><br />
+                <input type="text" id="Tipo" name="Tipo" required
+                    value="<?php echo htmlspecialchars($evento->Tipo); ?>" /><br /><br />
 
-            <label for="Horario">Horário:</label><br />
-            <input type="text" id="Horario" name="Horario" required value="<?php echo htmlspecialchars($evento->Horario); ?>" /><br /><br />
+                <label for="Horario">Horário:</label><br />
+                <input type="date" id="Horario" name="Horario" required
+                    value="<?php echo htmlspecialchars($evento->Horario); ?>" /><br /><br />
 
-            <label for="Descricao">Descrição:</label><br />
-            <textarea id="Descricao" name="Descricao" rows="5" required><?php echo htmlspecialchars($evento->Descricao); ?></textarea><br /><br />
+                <label for="Descricao">Descrição:</label><br />
+                <input type="text" id="Descricao" name="Descricao"
+                    value="<?php echo htmlspecialchars($evento->Descricao); ?>" /><br /><br />
 
-            <label for="Img1">Imagem 1 URL:</label><br />
-            <input type="text" id="Img1" name="Img1" value="<?php echo htmlspecialchars($evento->Img1); ?>" /><br /><br />
+                <label for="Img1">Imagem 1 URL:</label><br />
+                <input type="text" id="Img1" name="Img1"
+                    value="<?php echo htmlspecialchars($evento->Img1); ?>" /><br /><br />
 
-            <label for="Img2">Imagem 2 URL:</label><br />
-            <input type="text" id="Img2" name="Img2" value="<?php echo htmlspecialchars($evento->Img2); ?>" /><br /><br />
+                <label for="Img2">Imagem 2 URL:</label><br />
+                <input type="text" id="Img2" name="Img2"
+                    value="<?php echo htmlspecialchars($evento->Img2); ?>" /><br /><br />
 
-            <!-- Adicione mais campos Img3, Img4, se quiser -->
+                <label for="Img3">Imagem 3 URL:</label><br />
+                <input type="text" id="Img3" name="Img3"
+                    value="<?php echo htmlspecialchars($evento->Img3); ?>" /><br /><br />
 
-            <button type="submit" style="padding: 10px 20px; background-color: #3C4E69; color: white; border: none; cursor: pointer;">Salvar Alterações</button>
-        </form>
+                <label for="Img4">Imagem 4 URL:</label><br />
+                <input type="text" id="Img4" name="Img4"
+                    value="<?php echo htmlspecialchars($evento->Img4); ?>" /><br /><br />
+
+                <button type="submit"
+                    style="padding: 10px 20px; background-color: #fe6a07; color: white; border: none; cursor: pointer; width: 200px;">Salvar
+                    Alterações</button>
+            </form>
+
+            <form action="../deletar/deletar.php" method="POST"
+                onsubmit="return confirm('Tem certeza que deseja deletar este evento?');" style="display: inline;">
+                <input type="hidden" name="id_Evento" value="<?php echo $evento->Id_Evento; ?>">
+                <button type="submit" class="btn btn-delete"
+                    style="margin-top: 20px; background-color: #dc3545; color: white; padding: 10px 20px; border: none; cursor: pointer; width: 200px;">Deletar</button>
+            </form>
+        </div>
     </main>
+
+    <script src="atualizar.js"></script>
 </body>
 
 </html>

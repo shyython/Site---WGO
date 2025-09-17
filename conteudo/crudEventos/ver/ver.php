@@ -114,7 +114,7 @@
                 echo "<p style='text-align: center;'>Tipo: " . htmlspecialchars($evento['Tipo']) . "<br>";
                 echo "<p style='text-align: center;'>Horário: " . htmlspecialchars($evento['Horario']) . "<br>";
                 echo "<p style='text-align: center;     '>Descrição: " . nl2br(htmlspecialchars($evento['Descricao'])) . "<br>";
-                
+
                 // Exemplo para mostrar a primeira imagem, se existir
                 if (!empty($evento['Img1'])) {
                     echo "<img src='" . htmlspecialchars($evento['Img1']) . "' alt='Imagem do evento' style='max-width:300px; margin-bottom: 40px;'><br>";
@@ -123,18 +123,20 @@
 
                 echo "</p>";
                 echo "<a href='../atualizar/atualizar.php?id=" . $evento['Id_Evento'] . "' class='btn'>Editar</a> ";
-                echo "<a href='../deletar/deletar_evento.php?id=" . $evento['Id_Evento'] . "' class='btn btn-delete' onclick=\"return confirm('Tem certeza que deseja deletar este evento?');\">Deletar</a>";
                 echo "</div>";
             }
             echo "</ul>";
         } else {
-           echo "<p style='text-align: center;'>Nenhum evento encontrado para sua empresa.</p>";
+            echo "<p style='text-align: center;'>Nenhum evento encontrado para sua empresa.</p>";
         }
         echo "</div>";
 
         $stmt->close();
         $conexao->close();
         ?>
+
+
+
 
     </div>
 

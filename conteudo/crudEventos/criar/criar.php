@@ -87,7 +87,7 @@ session_start(); // precisa sempre antes de usar $_SESSION
     <div class="container">
 
         <form action="criar_evento.php" method="POST">
-            <h1>Criar Evento</h1>
+            <h1 style="color: #3C4E69;"> Criar Evento</h1>
 
             <label for="nome">Nome do evento:</label>
             <input type="text" id="nome" name="nome" required>
@@ -106,31 +106,9 @@ session_start(); // precisa sempre antes de usar $_SESSION
             <label for="tipo">Tipo:</label>
             <input type="text" id="tipo" name="tipo" required>
 
+            <label for="hora">Hora de hora inicio:</label>
+            <input type="time" id="horario" name="horario" required>
 
-
-            <h3>Data e Horário</h3>
-            <div class="datas">
-
-                <div>
-                    <label for="data_inicio">Hora de Início:</label>
-                    <input type="time" id="horario" name="horario" required>
-                </div>
-
-                <!-- <div>
-                        <label for="hora_inicio">Hora de Início:</label>
-                        <input type="time" id="hora_inicio" name="hora_inicio" required>
-                    </div>
-        
-                    <div>
-                        <label for="data_fim">Data de Término:</label>
-                        <input type="date" id="data_fim" name="data_fim" required>
-                    </div>
-
-                    <div>
-                        <label for="hora_fim">Hora de Término:</label>
-                        <input type="time" id="hora_fim" name="hora_fim" required>
-                    </div> -->
-            </div>
             <label for="descricao">Descrição:</label>
             <input type="text" id="descricao" name="descricao" required>
 

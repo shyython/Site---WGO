@@ -310,3 +310,11 @@ nav ul li a:hover {
   border-radius: 12px; /* bordas arredondadas na imagem também */
   margin-top: 10px;
 }
+
+.btn{
+    text-decoration: none;
+    color: #3C4E69;
+}
+.btn-delete{
+    color: red
+}

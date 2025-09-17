@@ -277,7 +277,7 @@ window.addEventListener('scroll', function () {
 // iniciarTrocaAutomatica();
 const slidesContainer = document.querySelector(".slides");
 const indicadoresContainer = document.querySelector(".indicadores");
- 
+
 let indiceAtual = 0;
 let intervalo;
  
@@ -335,6 +335,174 @@ function iniciarTrocaAutomatica() {
 // Inicialização
 atualizarSlide();
 iniciarTrocaAutomatica();
- 
- 
- 
+
+// Janela separada
+const categoria2 = document.querySelectorAll('.categoria2');
+const janela = document.getElementById('janela');
+const janelaTitle = document.getElementById('janelaTitle');
+const janelaContent = document.getElementById('janelaContent');
+const janelaImg = document.getElementById('janelaImg');
+const janelaGaleria = document.querySelector('.janela-galeria');
+const descricaoTitulo = document.querySelector('.titulo-destaque');
+const descricaoParagrafo = document.querySelector('.descricao');
+const btnFechar = document.getElementById('btnFechar');
+
+const btnEsquerda = document.getElementById('esquerda-button');
+const btnDireita = document.getElementById('direita-button');
+
+let currentIndex = 0;
+let currentSlides = [];
+let currentDescricoes = [];
+
+const carrosseis = {
+  "Baladas": {
+    imagens: [
+      "../imagens/home/estacaoVerao.jpg",
+      "../imagens/home/laroc.jpg",
+      "../imagens/home/cadillac.webp"
+    ],
+    descricoes: [
+      { titulo: "Estação Verão", descricao: "Quando o sol se põe, a noite começa: música, energia e dança até amanhecer." },
+      { titulo: "Laroc Guarujá", descricao: "O templo da música eletrônica chega ao litoral com DJs de nível mundial."},
+      { titulo: "Cadillac Vintage Bar", descricao: "Um mix de nostalgia e modernidade, onde cada noite vira uma memória inesquecível." }
+    ]
+  },
+  "Esportes": {
+    imagens: [
+      "../imagens/home/teleferico.jpg",
+      "../imagens/home/aTribuna.jpg",
+      "../imagens/home/playJump.png"
+    ],
+    descricoes: [
+      { titulo: "Teleferico", descricao: "A aventura começa nas alturas: vista única de São Vicente e adrenalina em movimento." },
+      { titulo: "Corrida Sesc Santos", descricao: "Superação, saúde e união em uma corrida que movimenta a cidade." },
+      { titulo: "Play Jump", descricao: "Diversão garantida com muitos pulos para todas as idades em um só lugar." }
+    ]
+  },
+  "Restaurantes": {
+    imagens: [
+      "../imagens/home/restauranteBublet.jpg",
+      "../imagens/home/restauranteJangada.jpg",
+      "../imagens/home/sushiBar.jpg"
+    ],
+    descricoes: [
+      { titulo: "Bublet Casual Food", descricao: "O Bublet abre suas portas com a proposta de uma cozinha descomplicada, ambiente informal, moderno e aconchegante." },
+      { titulo: "Restaurante Jangada", descricao: "A genialidade do especialista em peixes e frutos-do-mar traz uma experiência única da nossa cozinha para o seu prato." },
+      { titulo: "Sushi Bar", descricao: "A precisão nos cortes, a delicadeza no preparo e o frescor dos produtos, fazem com que nossos uramakis estejam sempre entre os mais pedidos pelos nossos clientes." }
+    ]
+  },
+    "Cultura": {
+    imagens: [
+      "../imagens/home/bauRaul.jpg",
+      "../imagens/home/florestaUtopica.jpg",
+      "../imagens/home/primaveraCriativa.jpeg"
+    ],
+    descricoes: [
+      { titulo: "Baú do Raul", descricao: "O Baú do Raul: Uma Homenagem a Raul Seixas é um tributo ao cantor Raul Seixas lançado no ano de 2004 em CD duplo e DVD."},
+      { titulo: "Floresta Utópica", descricao: "A mostra convida a uma imersão sensorial que une arte, tecnologia e natureza interior, criando uma experiência poética com luzes, sons e aromas." },
+      { titulo: "Primavera Criativa", descricao: "A Primavera Criativa celebra a chegada das flores em Santos com cores e inspiração." }
+    ]
+  },
+    "Eventos Comunitários": {
+    imagens: [
+      "../imagens/home/paradaLGBT.jpg",
+      "../imagens/home/concertoBig.webp",
+      "../imagens/home/carnavalEvento.jpg"
+    ],
+    descricoes: [
+      { titulo: "Parada LGBT", descricao: "Parada do Orgulho LGBT de São Paulo é uma parada LGBT que acontece desde 1997 na Avenida Paulista, no município de São Paulo, Brasil." },
+      { titulo: "Concerto Big Band", descricao: "A apresentação convida o público a embarcar em uma viagem musical por diferentes estilos e épocas do jazz, celebrando sua diversidade cultural e suas influências ao redor do planeta." },
+      { titulo: "Eventos Carnavalescos", descricao: "Ritmo, cores e alegria transformam Santos em um grande palco de festa e celebração." }
+    ]
+  },
+     "Pontos Turísticos e Históricos": {
+    imagens: [
+      "../imagens/home/masp.jpg",
+      "../imagens/home/museuIpiranga.webp",
+      "../imagens/home/forteAndradas.jpg"
+    ],
+    descricoes: [
+      { titulo: "MASP - Museu de Arte de São Paulo", descricao: "O MASP é um museu de arte privado, sem fins lucrativos, fundado em 1947 por Assis Chateaubriand em São Paulo." },
+      { titulo: "Museu do Ipiranga", descricao: "Museu público mais antigo da cidade de São Paulo, cuja sede é um monumento-edifício que faz parte do conjunto arquitetônico do Parque da Independência." },
+      { titulo: "Forte dos Andradas", descricao: "O Forte dos Andradas, localizado na ponta de Munduba em Guarujá, SP, abriga atualmente o Comando de Defesa Antiaérea do Exército." }
+    ]
+  },
+
+      "Praias e Ar Livre": {
+    imagens: [
+      "../imagens/home/praiaBonete.jpg",
+      "../imagens/home/projetoVerao.jpg",
+      "../imagens/home/umDiaParque.jpg"
+    ],
+    descricoes: [
+      { titulo: "Praia do Bonete", descricao: "É um paraíso isolado em Ilhabela, famoso pela sua beleza, mar agitado ideal para o surf e pela comunidade caiçara que vive da pesca e do artesanato." },
+      { titulo: "Projeto Verão no Clima", descricao: "O Governo de SP convida todos a cuidar das praias, promovendo educação ambiental e preservação do litoral durante o verão." },
+      { titulo: "Um Dia no Parque", descricao: "Um evento ao ar livre que convida famílias e amigos a aproveitar a natureza, atividades recreativas e momentos de lazer em meio a paisagens verdes e acolhedoras." }
+    ]
+  },
+};
+
+function updateCarousel() {
+  const janelaImgs = document.querySelector('.janela-img');
+  janelaImgs.innerHTML = ""; // limpa imagens antigas
+
+  currentSlides.forEach((src, index) => {
+    const img = document.createElement("img");
+    img.src = src;
+    img.classList.add("image");
+    if (index === currentIndex) img.classList.add("on");
+    janelaImgs.appendChild(img);
+  });
+
+  descricaoTitulo.textContent = currentDescricoes[currentIndex].titulo;
+  descricaoParagrafo.textContent = currentDescricoes[currentIndex].descricao;
+}
+
+btnDireita.addEventListener('click', () => {
+  if (currentSlides.length === 0) return;
+  currentIndex = (currentIndex + 1) % currentSlides.length;
+  updateCarousel();
+});
+
+btnEsquerda.addEventListener('click', () => {
+  if (currentSlides.length === 0) return;
+  currentIndex = (currentIndex - 1 + currentSlides.length) % currentSlides.length;
+  updateCarousel();
+});
+
+categoria2.forEach(categoria => {
+  categoria.addEventListener('click', () => {
+    const title = categoria.getAttribute('janela-title');
+    const content = categoria.getAttribute('janela-descri');
+
+    janelaTitle.textContent = title;
+    janelaContent.textContent = content;
+
+    if (carrosseis[title]) {
+      currentSlides = carrosseis[title].imagens;
+      currentDescricoes = carrosseis[title].descricoes;
+      currentIndex = 0;
+
+      janelaImg.style.display = "none"; // esconde imagem única
+      janelaGaleria.style.display = "flex"; // mostra carrossel
+      updateCarousel();
+    } else {
+      janelaImg.src = categoria.getAttribute('janela-img');
+      janelaImg.style.display = "block";
+      janelaGaleria.style.display = "none";
+      currentSlides = [];
+      currentDescricoes = [];
+    }
+
+    janela.classList.add('abrir');
+    janela.style.display = "flex";
+    janela.scrollIntoView({ behavior: 'smooth' });
+  });
+});
+
+btnFechar.addEventListener('click', () => {
+  janela.classList.remove('abrir');
+  janela.style.display = "none";
+  currentSlides = [];
+  currentDescricoes = [];
+});

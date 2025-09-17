@@ -587,7 +587,7 @@ nav ul li a:hover {
 .destaques-janela {
   margin-top: 20px;
   text-align: center;
-  max-width: 600px;
+  max-width: 300px;
   color: #f0f0f0;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   user-select: none;
@@ -632,7 +632,7 @@ nav ul li a:hover {
 .janelaInfo {
   background: linear-gradient(135deg, #3C4E69, #2e3c52);
   border-radius: 20px;
-  max-width: 150vh;
+  max-width: 110vh;
   padding: 30px 40px;
   display: none;
   opacity: 0;
@@ -669,6 +669,25 @@ nav ul li a:hover {
   max-width: 700px;
   line-height: 1.5;
   user-select: text;
+}
+.rodape{
+    margin-top: 50px;
+    background-color: #3C4E69;
+    color: white;
+    text-align: center;
+    padding: 15px 0;
+    font-family: "Lato", sans-serif;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+.rodape-icons{
+    
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
 }
 
 /* Responsividade */

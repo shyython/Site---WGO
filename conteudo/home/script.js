@@ -391,7 +391,55 @@ const carrosseis = {
       { titulo: "Sushi Bar", descricao: "A precisão nos cortes, a delicadeza no preparo e o frescor dos produtos, fazem com que nossos uramakis estejam sempre entre os mais pedidos pelos nossos clientes." }
     ]
   },
-  // Adicione outras categorias conforme necessário
+    "Cultura": {
+    imagens: [
+      "../imagens/home/bauRaul.jpg",
+      "../imagens/home/florestaUtopica.jpg",
+      "../imagens/home/primaveraCriativa.jpeg"
+    ],
+    descricoes: [
+      { titulo: "Baú do Raul", descricao: "O Bublet abre suas portas com a proposta de uma cozinha descomplicada, ambiente informal, moderno e aconchegante." },
+      { titulo: "Floresta Utópica", descricao: "A genialidade do especialista em peixes e frutos-do-mar traz uma experiência única da nossa cozinha para o seu prato." },
+      { titulo: "Primavera Criativa", descricao: "A precisão nos cortes, a delicadeza no preparo e o frescor dos produtos, fazem com que nossos uramakis estejam sempre entre os mais pedidos pelos nossos clientes." }
+    ]
+  },
+    "Eventos Comunitários": {
+    imagens: [
+      "../imagens/home/paradaLGBT.jpg",
+      "../imagens/home/concertoBig.webp",
+      "../imagens/home/carnavalEvento.jpg"
+    ],
+    descricoes: [
+      { titulo: "Parada LGBT", descricao: "O Bublet abre suas portas com a proposta de uma cozinha descomplicada, ambiente informal, moderno e aconchegante." },
+      { titulo: "Concerto Big Band", descricao: "A genialidade do especialista em peixes e frutos-do-mar traz uma experiência única da nossa cozinha para o seu prato." },
+      { titulo: "Eventos Carnavalescos", descricao: "A precisão nos cortes, a delicadeza no preparo e o frescor dos produtos, fazem com que nossos uramakis estejam sempre entre os mais pedidos pelos nossos clientes." }
+    ]
+  },
+     "Pontos Turísticos e Históricos": {
+    imagens: [
+      "../imagens/home/masp.jpg",
+      "../imagens/home/museuIpiranga.webp",
+      "../imagens/home/forteAndradas.jpg"
+    ],
+    descricoes: [
+      { titulo: "MASP - Museu de Arte de São Paulo", descricao: "O Bublet abre suas portas com a proposta de uma cozinha descomplicada, ambiente informal, moderno e aconchegante." },
+      { titulo: "Museu do Ipiranga", descricao: "A genialidade do especialista em peixes e frutos-do-mar traz uma experiência única da nossa cozinha para o seu prato." },
+      { titulo: "Forte dos Andradas", descricao: "A precisão nos cortes, a delicadeza no preparo e o frescor dos produtos, fazem com que nossos uramakis estejam sempre entre os mais pedidos pelos nossos clientes." }
+    ]
+  },
+
+      "Praias e Ar Livre": {
+    imagens: [
+      "../imagens/home/praiaBonete.jpg",
+      "../imagens/home/projetoVerao.jpg",
+      "../imagens/home/umDiaParque.jpg"
+    ],
+    descricoes: [
+      { titulo: "Praia do Bonete", descricao: "O Bublet abre suas portas com a proposta de uma cozinha descomplicada, ambiente informal, moderno e aconchegante." },
+      { titulo: "Projeto Verão no Clima", descricao: "A genialidade do especialista em peixes e frutos-do-mar traz uma experiência única da nossa cozinha para o seu prato." },
+      { titulo: "Um Dia no Parque", descricao: "A precisão nos cortes, a delicadeza no preparo e o frescor dos produtos, fazem com que nossos uramakis estejam sempre entre os mais pedidos pelos nossos clientes." }
+    ]
+  },
 };
 
 function updateCarousel() {

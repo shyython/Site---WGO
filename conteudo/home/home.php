@@ -219,6 +219,19 @@
   </div>
 </div>
 
+  <div class="rodape">
+    <ul class="rodape-icons">
+      <a href="#"><img src="../imagens/home/instaIcon.png" alt="Instagram"></a>
+      <a href="#"><img src="../imagens/home/faceIcon.png" alt="Facebook"></a>
+      <a href="#"><img src="../imagens/home/githubIcon.png" alt="GitHub"></a>
+      <a href="#"><img src="../imagens/home/telefoneIcon.png" alt="Telefone"></a>
+      <a href="#"><img src="../imagens/home/mailIcon.png" alt="Email"></a>
+    </ul>
+    <div class="loc">
+      <p>Av. Dr. Ademar de Barros, 271 - Vila Progresso, São José do Rio Preto - SP, 15015-350</p>
+      <p>© 2024 WGO. Todos os direitos reservados.</p>
+    </div>
+  </div>
 
     <script>
         $(document).ready(function() {

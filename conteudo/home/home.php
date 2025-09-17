@@ -69,7 +69,7 @@ if ($stmt->fetch()) {
             // Verifica se o tipo de usuário é 'empresa'
             
             if ($tipoUsuario === 'empresa') {
-              echo '<li><a href="../crudEventos/criar/criar.php">Criar evento</a></li>';
+              echo '<li><a href="../crudEventos/crud_eventos.php">Eventos</a></li>';
             }
             ?>
           </ul>

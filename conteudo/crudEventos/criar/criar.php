@@ -1,3 +1,7 @@
+<?php
+session_start(); // precisa sempre antes de usar $_SESSION
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 

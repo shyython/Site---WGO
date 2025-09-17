@@ -1,38 +1,35 @@
 <?php
+session_start();
 include('../../login/config.php');
 
-// Recebe os dados do formulário
-$nome = $_POST['nome'];
-$categoria = $_POST['categoria'];
-$endereco = $_POST['endereco'];
-$tipo = $_POST['tipo'];
-$horario = $_POST['horario'];
-$descricao = $_POST['descricao'];
-// $data_inicio = $_POST['data_inicio'];
+// Verifica se o usuário está autenticado
+if (!isset($_SESSION['id_empresa'])) {
+    die("Usuário não autenticado!");
+}
+$id_Empresa = $_SESSION['id_empresa'];
 
-// $hora_inicio = $_POST['hora_inicio'];
-// $data_fim = $_POST['data_fim'];
-// $hora_fim = $_POST['hora_fim'];
+// Recebe dados do formulário
+$nome = trim($_POST['nome']);
+$categoria = trim($_POST['categoria']);
+$endereco = trim($_POST['endereco']);
+$tipo = trim($_POST['tipo']);
+$horario = trim($_POST['horario']);
+$descricao = trim($_POST['descricao']);
 
-// Recebe as URLs das imagens
+// URLs das imagens (opcionais)
 $img1 = !empty($_POST['img1']) ? $_POST['img1'] : null;
 $img2 = !empty($_POST['img2']) ? $_POST['img2'] : null;
 $img3 = !empty($_POST['img3']) ? $_POST['img3'] : null;
 $img4 = !empty($_POST['img4']) ? $_POST['img4'] : null;
-// data_inicio,hora_inicio,data_fim,hora_fim Img1
-// $data_inicio,
-//     $hora_inicio,
-//     $data_fim,
-//     $hora_fim,
 
-// Prepara a query com placeholders
+// Query para inserir o evento
 $sql = "INSERT INTO Eventos 
-(Nome_Evento, Categoria, Endereco, Tipo,horario,descricao, iMG1 ,Img2, Img3, Img4)
-VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
+(Nome_Evento, Categoria, Endereco, Tipo, horario, descricao, Img1, Img2, Img3, Img4, id_empresa)
+VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
 
 $stmt = $conexao->prepare($sql);
 $stmt->bind_param(
-    "ssssssssss",
+    "ssssssssssi",
     $nome,
     $categoria,
     $endereco,
@@ -42,21 +39,18 @@ $stmt->bind_param(
     $img1,
     $img2,
     $img3,
-    $img4
+    $img4,
+    $id_Empresa
 );
 
-
+// Executa e redireciona
 if ($stmt->execute()) {
-    echo "✅ Evento criado com sucesso!<br>";
-
-    // Exibe as imagens (se tiverem sido preenchidas)
-    foreach ([$img1, $img2, $img3, $img4] as $img) {
-        if ($img) {
-            echo '<img src="' . htmlspecialchars($img) . '" alt="Evento" width="200" style="margin:10px;">';
-        }
-    }
+    header("Location: ver.php");
+    exit();
 } else {
-    echo "❌ Erro: " . $stmt->error;
+    // Se quiser redirecionar com erro, pode passar ?erro=1 na URL
+    header("Location: ver.php?erro=1");
+    exit();
 }
 
 $stmt->close();

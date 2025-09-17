@@ -362,9 +362,9 @@ const carrosseis = {
       "../imagens/home/cadillac.webp"
     ],
     descricoes: [
-      { titulo: "Estação Verão", descricao: "As melhores festas para você dançar até amanhecer." },
-      { titulo: "Laroc Guarujá", descricao: "Grandes nomes da música eletrônica direto na sua cidade." },
-      { titulo: "Cadillac Vintage Bar", descricao: "Som, luz e energia que você nunca vai esquecer." }
+      { titulo: "Estação Verão", descricao: "Quando o sol se põe, a noite começa: música, energia e dança até amanhecer." },
+      { titulo: "Laroc Guarujá", descricao: "O templo da música eletrônica chega ao litoral com DJs de nível mundial."},
+      { titulo: "Cadillac Vintage Bar", descricao: "Um mix de nostalgia e modernidade, onde cada noite vira uma memória inesquecível." }
     ]
   },
   "Esportes": {
@@ -374,9 +374,9 @@ const carrosseis = {
       "../imagens/home/playJump.png"
     ],
     descricoes: [
-      { titulo: "Teleferico", descricao: "Participe de eventos esportivos e viva a emoção de competir." },
-      { titulo: "Corrida Sesc Santos", descricao: "Atividades radicais e esportes para todos os gostos." },
-      { titulo: "Play Jump", descricao: "Futebol, vôlei, basquete e muito mais para você curtir com os amigos." }
+      { titulo: "Teleferico", descricao: "A aventura começa nas alturas: vista única de São Vicente e adrenalina em movimento." },
+      { titulo: "Corrida Sesc Santos", descricao: "Superação, saúde e união em uma corrida que movimenta a cidade." },
+      { titulo: "Play Jump", descricao: "Diversão garantida com muitos pulos para todas as idades em um só lugar." }
     ]
   },
   "Restaurantes": {
@@ -398,9 +398,9 @@ const carrosseis = {
       "../imagens/home/primaveraCriativa.jpeg"
     ],
     descricoes: [
-      { titulo: "Baú do Raul", descricao: "O Bublet abre suas portas com a proposta de uma cozinha descomplicada, ambiente informal, moderno e aconchegante." },
-      { titulo: "Floresta Utópica", descricao: "A genialidade do especialista em peixes e frutos-do-mar traz uma experiência única da nossa cozinha para o seu prato." },
-      { titulo: "Primavera Criativa", descricao: "A precisão nos cortes, a delicadeza no preparo e o frescor dos produtos, fazem com que nossos uramakis estejam sempre entre os mais pedidos pelos nossos clientes." }
+      { titulo: "Baú do Raul", descricao: "O Baú do Raul: Uma Homenagem a Raul Seixas é um tributo ao cantor Raul Seixas lançado no ano de 2004 em CD duplo e DVD."},
+      { titulo: "Floresta Utópica", descricao: "A mostra convida a uma imersão sensorial que une arte, tecnologia e natureza interior, criando uma experiência poética com luzes, sons e aromas." },
+      { titulo: "Primavera Criativa", descricao: "A Primavera Criativa celebra a chegada das flores em Santos com cores e inspiração." }
     ]
   },
     "Eventos Comunitários": {
@@ -410,9 +410,9 @@ const carrosseis = {
       "../imagens/home/carnavalEvento.jpg"
     ],
     descricoes: [
-      { titulo: "Parada LGBT", descricao: "O Bublet abre suas portas com a proposta de uma cozinha descomplicada, ambiente informal, moderno e aconchegante." },
-      { titulo: "Concerto Big Band", descricao: "A genialidade do especialista em peixes e frutos-do-mar traz uma experiência única da nossa cozinha para o seu prato." },
-      { titulo: "Eventos Carnavalescos", descricao: "A precisão nos cortes, a delicadeza no preparo e o frescor dos produtos, fazem com que nossos uramakis estejam sempre entre os mais pedidos pelos nossos clientes." }
+      { titulo: "Parada LGBT", descricao: "Parada do Orgulho LGBT de São Paulo é uma parada LGBT que acontece desde 1997 na Avenida Paulista, no município de São Paulo, Brasil." },
+      { titulo: "Concerto Big Band", descricao: "A apresentação convida o público a embarcar em uma viagem musical por diferentes estilos e épocas do jazz, celebrando sua diversidade cultural e suas influências ao redor do planeta." },
+      { titulo: "Eventos Carnavalescos", descricao: "Ritmo, cores e alegria transformam Santos em um grande palco de festa e celebração." }
     ]
   },
      "Pontos Turísticos e Históricos": {
@@ -422,9 +422,9 @@ const carrosseis = {
       "../imagens/home/forteAndradas.jpg"
     ],
     descricoes: [
-      { titulo: "MASP - Museu de Arte de São Paulo", descricao: "O Bublet abre suas portas com a proposta de uma cozinha descomplicada, ambiente informal, moderno e aconchegante." },
-      { titulo: "Museu do Ipiranga", descricao: "A genialidade do especialista em peixes e frutos-do-mar traz uma experiência única da nossa cozinha para o seu prato." },
-      { titulo: "Forte dos Andradas", descricao: "A precisão nos cortes, a delicadeza no preparo e o frescor dos produtos, fazem com que nossos uramakis estejam sempre entre os mais pedidos pelos nossos clientes." }
+      { titulo: "MASP - Museu de Arte de São Paulo", descricao: "O MASP é um museu de arte privado, sem fins lucrativos, fundado em 1947 por Assis Chateaubriand em São Paulo." },
+      { titulo: "Museu do Ipiranga", descricao: "Museu público mais antigo da cidade de São Paulo, cuja sede é um monumento-edifício que faz parte do conjunto arquitetônico do Parque da Independência." },
+      { titulo: "Forte dos Andradas", descricao: "O Forte dos Andradas, localizado na ponta de Munduba em Guarujá, SP, abriga atualmente o Comando de Defesa Antiaérea do Exército." }
     ]
   },
 
@@ -435,9 +435,9 @@ const carrosseis = {
       "../imagens/home/umDiaParque.jpg"
     ],
     descricoes: [
-      { titulo: "Praia do Bonete", descricao: "O Bublet abre suas portas com a proposta de uma cozinha descomplicada, ambiente informal, moderno e aconchegante." },
-      { titulo: "Projeto Verão no Clima", descricao: "A genialidade do especialista em peixes e frutos-do-mar traz uma experiência única da nossa cozinha para o seu prato." },
-      { titulo: "Um Dia no Parque", descricao: "A precisão nos cortes, a delicadeza no preparo e o frescor dos produtos, fazem com que nossos uramakis estejam sempre entre os mais pedidos pelos nossos clientes." }
+      { titulo: "Praia do Bonete", descricao: "É um paraíso isolado em Ilhabela, famoso pela sua beleza, mar agitado ideal para o surf e pela comunidade caiçara que vive da pesca e do artesanato." },
+      { titulo: "Projeto Verão no Clima", descricao: "O Governo de SP convida todos a cuidar das praias, promovendo educação ambiental e preservação do litoral durante o verão." },
+      { titulo: "Um Dia no Parque", descricao: "Um evento ao ar livre que convida famílias e amigos a aproveitar a natureza, atividades recreativas e momentos de lazer em meio a paisagens verdes e acolhedoras." }
     ]
   },
 };

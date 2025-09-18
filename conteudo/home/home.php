@@ -151,20 +151,23 @@
         <p class="txtCategoria">Esportes</p>
       </div>
 
-      <div class="categoria2" janela-title="Restaurantes" janela-descri="Restaurantes variados para todos os gostos."
+      <div class="categoria2" janela-title="Restaurantes" 
+        janela-descri="Restaurantes variados para todos os gostos."
         janela-img="../imagens/home/restaurantesHome.jpg">
         <img src="../imagens/home/restaurantesHome.jpg" alt="Restaurantes" class="imgCategoria">
         <p class="txtCategoria">Restaurantes</p>
       </div>
 
-      <div class="categoria2" janela-title="Cultura" janela-descri="Experiências culturais e artísticas para todos."
+      <div class="categoria2" janela-title="Cultura" 
+        janela-descri="Experiências culturais e artísticas para todos."
         janela-img="../imagens/home/culturaHome.jpg">
         <img src="../imagens/home/culturaHome.jpg" alt="Cultura" class="imgCategoria">
         <p class="txtCategoria">Cultura</p>
       </div>
 
       <div class="categoria2" janela-title="Eventos Comunitários"
-        janela-descri="Participe de eventos locais e comunitários." janela-img="../imagens/home/eventosComuniHome.jpg">
+        janela-descri="Participe de eventos locais e comunitários." 
+        janela-img="../imagens/home/eventosComuniHome.jpg">
         <img src="../imagens/home/eventosComuniHome.jpg" alt="Pontos Turísticos e Históricos" class="imgCategoria">
         <p class="txtCategoria">Eventos Comunitários</p>
 
@@ -178,7 +181,8 @@
       </div>
 
       <div class="categoria2" janela-title="Praias e Ar Livre"
-        janela-descri="Aproveite praias e atividades ao ar livre." janela-img="../imagens/home/praiaHome.jpg">
+        janela-descri="Aproveite praias e atividades ao ar livre." 
+        janela-img="../imagens/home/praiaHome.jpg">
         <img src="../imagens/home/praiaHome.jpg" alt="Praias e Ar Livre" class="imgCategoria">
         <p class="txtCategoria">Praias e Ar Livre</p>
       </div>
@@ -188,6 +192,8 @@
     <div class="container-janela">
       <div class="janelaInfo" id="janela">
         <h2 id="janelaTitle">Título inicial</h2>
+        <p id="janelaContent">Conteúdo da janela</p>
+        <button id="btnVerMais">Ver Mais</button>
 
         <img id="janelaImg" src="" alt="Imagem da categoria">
 
@@ -204,15 +210,16 @@
 
           <aside class="destaques-janela">
             <h2 class="titulo-destaque">Título destaque</h2>
-            <p class="descricao">Descrição destaque</p>
+             <p class="descricao">Descrição destaque</p>
           </aside>
 
         </main>
 
-        <p id="janelaContent">Conteúdo da janela</p>
         <button id="btnFechar">Fechar</button>
       </div>
     </div>
+
+      <img class="gif-home" src="../imagens/home/gifHome.gif" alt="">
 
     <div class="rodape">
       <ul class="rodape-icons">
@@ -245,7 +252,6 @@
 
       </div>
     </div>
-
   </main>
   <script>
     $(document).ready(function () {

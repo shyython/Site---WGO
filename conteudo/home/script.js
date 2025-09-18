@@ -346,6 +346,7 @@ const janelaGaleria = document.querySelector('.janela-galeria');
 const descricaoTitulo = document.querySelector('.titulo-destaque');
 const descricaoParagrafo = document.querySelector('.descricao');
 const btnFechar = document.getElementById('btnFechar');
+const btnVerMais = document.getElementById('btnVerMais');
 
 const btnEsquerda = document.getElementById('esquerda-button');
 const btnDireita = document.getElementById('direita-button');

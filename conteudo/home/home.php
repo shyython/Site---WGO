@@ -224,6 +224,7 @@ if ($stmt->fetch()) {
     <div class="container-janela">
       <div class="janelaInfo" id="janela">
         <h2 id="janelaTitle">Título inicial</h2>
+        <a href="../eventos/procurar.php"> <button id="btnVerMais">Ver Mais</button></a>
 
         <img id="janelaImg" src="" alt="Imagem da categoria">
 

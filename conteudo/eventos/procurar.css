@@ -405,13 +405,9 @@ a {
 
 .ImgDestaque {
     width: 100%;
-    /* ou um valor fixo ex: 300px */
     height: 200px;
-    /* ajuste conforme desejar */
     object-fit: cover;
-    /* garante que a imagem preencha o espaço sem distorcer */
     border-radius: 10px;
-    /* opcional: arredondar cantos */
     min-width: 300px;
 }
 

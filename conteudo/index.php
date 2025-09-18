@@ -73,8 +73,6 @@
                         Com o nosso app, você encontra os melhores eventos, festas, shows e experiências da sua cidade,
                         tudo
                         em um só lugar.
-                        Monte a galera, escolha o rolê perfeito e viva momentos inesquecíveis!
-                        Não perca tempo, baixe agora e bora curtir! 🚀🎶"
                     </p>
                     <img src="" alt="">
                 </div>
@@ -191,9 +189,9 @@
                                 <p class="txt-num">1,3mil</p>
                             </div>
                         </div>
-                        <div>
+                        <!-- <div>
                             <img src="https://cdn-icons-png.flaticon.com/128/5186/5186087.png" alt="" width="26px">
-                        </div>
+                        </div> -->
 
                         <div class="btn-secao">
                             <button class="btn-ver-evento"><a href="/conteudo/sobre/evento1/evento-1.html">Ver

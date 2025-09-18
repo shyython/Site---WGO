@@ -217,15 +217,16 @@ input:focus {
 .inicio {
     display: flex;
     margin-top: 500px;
-    justify-content: center; /* ou space-between, flex-start, etc */
-    flex-wrap: wrap; /* permite quebra de linha em telas menores */
-    gap: 20px; /* espaço entre os blocos */
-    padding: 20px; /* opcional */
+    justify-content: center; 
+    flex-wrap: wrap; 
+    gap: 20px; 
+    padding: 20px;
 }
 
 .div-introducao {
-    width: 500px; /* ajuste para o tamanho desejado */
-    /* já tem estilo aplicado no seu CSS atual */
+    display: flex;
+    flex-direction: column;
+    width: 500px;
 }
 
 

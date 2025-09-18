@@ -45,7 +45,7 @@
         <div class="inicio">
             <div class="todo">
                 <div class="div-introducao">
-                    <h1 class="Titulo-card">Chegou o fim de semana?</h1>
+                    <h1 class="Titulo-card"  >Chegou o fim de semana?</h1>
 
 
 

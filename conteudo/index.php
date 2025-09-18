@@ -56,7 +56,7 @@
                     <div class="gif1">
                         <img src="./imagens/gifIndex1.gif" alt="" style="border-radius: 10px;">
                     </div>
-                    
+
                 </div>
             </div>
         </div>
@@ -209,9 +209,9 @@
 
                                 <!-- descrição do evento -->
                                 <p class="paragrafo">🍔 Uma explosão de sabores te espera! Venha conhecer chefs
-                                    renomados, experimentar pratos incríveis e curtir boa música ao vivo. 🍷🎶
-                                    📍 Local: Parque Central
-                                    🗓 Data: 28/09
+                                    renomados, experimentar pratos incríveis e curtir boa música ao vivo. 🍷🎶<br>
+                                    📍 Local: Parque Central <br>
+                                    🗓 Data: 28/09 <br>
                                     ⏰ Horário: 12h</p>
                             </div>
 
@@ -264,26 +264,26 @@
         </div>
         </div>
 
-
-
         <!-- ideia de incentivar as pessoas a sairem mais e curtirem com seus amigos -->
-        <div class="b">
-            <div class="todo">
-                <div class="introducao2">
-                    <!-- ideia de marcar presença -->
-                    <h1>Não fique de fora dos role!</h1>
-                    <p>"O fim de semana tá chegando e a diversão te espera!
-                        Com o nosso app, você encontra os melhores eventos, festas, shows e experiências da sua cidade,
-                        tudo
-                        em um só lugar.
-                        <br>
-                        Monte a galera, escolha o rolê perfeito e viva momentos inesquecíveis!
-                        Não perca tempo, baixe agora e bora curtir! 🚀🎶"
-                    </p>
-                    <img src="" alt="">
-                </div>
+   <div class="b">
+    <div class="todo">
+        <div class="texto-gif invertido">
+            <!-- Texto à esquerda -->
+            <div class="div-introducao2">
+                <h1 class="Titulo-card2">Não fique de fora dos rolês!</h1>
+                <p class="subtitulo-card2">
+                    O fim de semana tá chegando e a diversão te espera! Com o nosso app, você encontra os melhores eventos, festas, shows e experiências da sua cidade, tudo em um só lugar.<br>
+                    Monte a galera, escolha o rolê perfeito e viva momentos inesquecíveis! Não perca tempo, baixe agora e bora curtir! 🚀🎶
+                </p>
+            </div>
+
+            <!-- GIF à direita -->
+            <div class="gif2">
+                <img src="./imagens/gifIndex2.gif" alt="" style="border-radius: 10px;">
             </div>
         </div>
+    </div>
+</div>
 
         <!-- apresentando as categorias disponiveis -->
         <div class="todo">

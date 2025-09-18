@@ -25,7 +25,7 @@
                 <div class="hero-section">
                     <div class="div-conteudo-intbas">
                         <p class="Titulo-wgo"
-                            style="font-size: 80px; color: #ffffffff; text-align: center; text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); -webkit-text-stroke-width: 2px; -webkit-text-stroke-color: black; padding-left: 100px; ">
+                            style="font-size: 80px; color: #ffffffff; text-align: center; text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); -webkit-text-stroke-width: 2px; padding-left: 100px; ">
                             A festa começa <br> quando você diz <span class="txt-italico">SIM!</span></p>
                         <!-- <h1 class="Titulo-WGO">WE GO OUT?</h1> -->
                         <p class="subtitulo-WGO">Descubra os melhores eventos da sua cidade com o WeGoOut!</p>
@@ -44,24 +44,20 @@
 
         <div class="a">
             <div class="todo">
-                <div class="div-introducao">
-                    <h1 class="Titulo-card">Chegou o fim de semana?</h1>
-
-
-
-                    <div>
-                        <p class="subtitulo-card">Junte a galera e descubra os melhores eventos da sua cidade. Não fique
-                            de
-                            fora
-                            dos rolês mais incríveis! Com o nosso app, você encontra festas, shows, e muito mais, tudo
-                            na
-                            palma
-                            da sua mão.</p>
+                <div class="texto-gif">
+                    <div class="div-introducao">
+                        <h1 class="Titulo-card">Chegou o fim de semana?</h1>
+                        <p class="subtitulo-card">
+                            Junte a galera e descubra os melhores eventos da sua cidade. Não fique de fora dos rolês mais incríveis! Com o nosso app, você encontra festas, shows, e muito mais, tudo na palma da sua mão.
+                        </p>
+                        <img src="/conteudo/sobre/src/img-card-festa.png" alt="" width="250px">
                     </div>
-                    <img src="/conteudo/sobre/src/img-card-festa.png" alt="" width="250px">
 
+                    <div class="gif1">
+                        <img src="./imagens/gifIndex1.gif" alt="" style="border-radius: 10px;">
+                    </div>
+                    
                 </div>
-
             </div>
         </div>
 
@@ -94,33 +90,41 @@
                     <div class="btn-interacoes">
                         <div class="btn-curtir-compartilhar">
 
-                            <div class="div-curtir">
-                                <button class="btn-curtir"><img class="imgint"
-                                        src="https://cdn-icons-png.flaticon.com/128/4675/4675168.png" alt=""
-                                        width="28px"></button>
-                                <p class="txt-num">1,3mil</p>
-                            </div>
-
-                            <div class="div-curtir">
-                                <img class="imgint" src="https://cdn-icons-png.flaticon.com/128/589/589671.png" alt=""
-                                    width="28px">
-                                <p class="txt-num">1,3mil</p>
-                            </div>
-
-                            <div class="div-curtir">
-                                <img class="imgint" src="https://cdn-icons-png.flaticon.com/128/17190/17190356.png"
-                                    alt="" width="28px">
-                                <p class="txt-num">1,3mil</p>
-                            </div>
                         </div>
-                        <div>
-                            <img src="https://cdn-icons-png.flaticon.com/128/5186/5186087.png" alt="" width="26px">
+                        <div class="div-curtir">
+                            <label class="container">
+                                <input checked="checked" type="checkbox" />
+                                <div class="checkmark">
+                                    <svg viewBox="0 0 256 256">
+                                        <rect fill="none" height="256" width="256"></rect>
+                                        <path
+                                            d="M224.6,51.9a59.5,59.5,0,0,0-43-19.9,60.5,60.5,0,0,0-44,17.6L128,59.1l-7.5-7.4C97.2,28.3,59.2,26.3,35.9,47.4a59.9,59.9,0,0,0-2.3,87l83.1,83.1a15.9,15.9,0,0,0,22.6,0l81-81C243.7,113.2,245.6,75.2,224.6,51.9Z"
+                                            stroke-width="20px" stroke="#000" fill="none"></path>
+                                    </svg>
+                                </div>
+                            </label>
+
+                            <p class="txt-num">1,3mil</p>
+                        </div>
+
+                        <div class="div-curtir">
+                            <img class="imgint" src="https://cdn-icons-png.flaticon.com/128/589/589671.png" alt=""
+                                width="28px">
+                            <p class="txt-num">1,3mil</p>
+                        </div>
+
+                        <div class="div-curtir">
+                            <img class="imgint" src="https://cdn-icons-png.flaticon.com/128/17190/17190356.png"
+                                alt="" width="28px">
+                            <p class="txt-num">1,3mil</p>
                         </div>
                     </div>
+                    <div>
+                        <img src="https://cdn-icons-png.flaticon.com/128/5186/5186087.png" alt="" width="26px">
+                    </div>
+
                     <div class="btn-secao">
-                        <button class="btn-ver-evento">Ver evento</button>
-                        <!-- <button class="btn-confirmar">Tô dentro!</button>
-                    <button class="btn-recusar">Tô fora</button> -->
+                        <button class="btn-ver-evento"><a href="/conteudo/sobre/evento1/evento-1.html">Ver evento</a></button>
                     </div>
 
                 </div>
@@ -180,11 +184,9 @@
                         </div>
 
                         <div class="btn-secao">
-                            <button class="btn-ver-evento"><a href="/conteudo/sobre/evento1/evento-1.html">Ver
-                                    evento</a></button>
-
-
+                            <button class="btn-ver-evento"><a href="/conteudo/sobre/evento1/evento-1.html">Ver evento</a></button>
                         </div>
+
                     </div>
 
                 </div>
@@ -217,36 +219,43 @@
                             <div class="btn-interacoes">
                                 <div class="btn-curtir-compartilhar">
 
-                                    <div class="div-curtir">
-                                        <button class="btn-curtir"><img class="imgint"
-                                                src="https://cdn-icons-png.flaticon.com/128/4675/4675168.png" alt=""
-                                                width="28px"></button>
-                                        <p class="txt-num">1,3mil</p>
-                                    </div>
-
-                                    <div class="div-curtir">
-                                        <img class="imgint" src="https://cdn-icons-png.flaticon.com/128/589/589671.png"
-                                            alt="" width="28px">
-                                        <p class="txt-num">1,3mil</p>
-                                    </div>
-
-                                    <div class="div-curtir">
-                                        <img class="imgint"
-                                            src="https://cdn-icons-png.flaticon.com/128/17190/17190356.png" alt=""
-                                            width="28px">
-                                        <p class="txt-num">1,3mil</p>
-                                    </div>
                                 </div>
-                                <div>
-                                    <img src="https://cdn-icons-png.flaticon.com/128/5186/5186087.png" alt=""
-                                        width="26px">
+                                <div class="div-curtir">
+                                    <label class="container">
+                                        <input checked="checked" type="checkbox" />
+                                        <div class="checkmark">
+                                            <svg viewBox="0 0 256 256">
+                                                <rect fill="none" height="256" width="256"></rect>
+                                                <path
+                                                    d="M224.6,51.9a59.5,59.5,0,0,0-43-19.9,60.5,60.5,0,0,0-44,17.6L128,59.1l-7.5-7.4C97.2,28.3,59.2,26.3,35.9,47.4a59.9,59.9,0,0,0-2.3,87l83.1,83.1a15.9,15.9,0,0,0,22.6,0l81-81C243.7,113.2,245.6,75.2,224.6,51.9Z"
+                                                    stroke-width="20px" stroke="#000" fill="none"></path>
+                                            </svg>
+                                        </div>
+                                    </label>
+
+                                    <p class="txt-num">1,3mil</p>
+                                </div>
+
+                                <div class="div-curtir">
+                                    <img class="imgint" src="https://cdn-icons-png.flaticon.com/128/589/589671.png" alt=""
+                                        width="28px">
+                                    <p class="txt-num">1,3mil</p>
+                                </div>
+
+                                <div class="div-curtir">
+                                    <img class="imgint" src="https://cdn-icons-png.flaticon.com/128/17190/17190356.png"
+                                        alt="" width="28px">
+                                    <p class="txt-num">1,3mil</p>
                                 </div>
                             </div>
+                            <div>
+                                <img src="https://cdn-icons-png.flaticon.com/128/5186/5186087.png" alt="" width="26px">
+                            </div>
+
                             <div class="btn-secao">
-                                <button class="btn-ver-evento" onclick="">Ver evento</button>
-
-
+                                <button class="btn-ver-evento"><a href="/conteudo/sobre/evento1/evento-1.html">Ver evento</a></button>
                             </div>
+
                         </div>
                     </div>
                 </div>

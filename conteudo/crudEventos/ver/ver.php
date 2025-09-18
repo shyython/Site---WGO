@@ -19,7 +19,7 @@
 
         </a>
 
-        <nav>
+       <nav>
             <ul>
                 <li><a href="../../home/home.php">Início</a></li>
                 <li><a href="../../blog/Blog.php">Blog</a></li>
@@ -27,9 +27,8 @@
                 <li class="config">
                     <a href="#" onclick="abrirMenuConf(event)">Configurações</a>
                     <ul id="configMenu">
-                        <li><a href="../../conteudo/conf_perfil/Configuracao_Perfil.html">Perfil</a></li>
-                        <li><a href="../conteudo/privacidade.html">Ajuda</a></li>
-                        <li><a href="../crudEventos/criar/criar.php">Criar evento</a></li>
+    
+                        <li><a href="../crud_eventos.php"> Eventos</a></li>
                     </ul>
                 </li>
             </ul>

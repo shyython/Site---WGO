@@ -28,7 +28,7 @@ header {
     justify-content: space-between;
     padding: 10px 30px;
     z-index: 1000;
-    background: #0000005d;
+    background: #909cae;
     transition: 0.3s, box-shadow 0.3s;
 }
 
@@ -269,14 +269,15 @@ nav ul li a:hover {
     width: 500px;
     flex-direction: column;
     align-items: center;
-    box-shadow: 0 4px 8px rgba(142, 89, 89, 0.1); /* corrigido */
+    box-shadow: 0 8px 10px rgba(142, 89, 89, 0.1); /* corrigido */
+    margin-bottom: 100px;
 }
 
 /* ===================== INPUTS ===================== */
 input[type="text"],
 input[type="email"],
 input[type="password"],
-input[type="date"],
+input[type="time"],
 input[type="url"] {
     width: 100%;
     padding: 10px;

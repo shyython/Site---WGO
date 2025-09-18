@@ -57,8 +57,13 @@ if ($stmt->fetch()) {
         <li class="config">
           <a href="#" onclick="abrirMenuConf(event)">Configurações</a>
           <ul id="configMenu">
-            <li><a href="../perfil/perfil.php">Perfil</a></li>
-
+            <?php
+            // Verifica se o tipo de usuário é 'empresa'
+            
+            if ($tipoUsuario === 'usuario') {
+              echo '<li><a href="../perfil/perfil.php">Perfil</a></li>';
+            }
+            ?>
             <?php
             // Verifica se o tipo de usuário é 'empresa'
             
@@ -68,7 +73,8 @@ if ($stmt->fetch()) {
             ?>
           </ul>
         </li>
-        </li>
+
+
       </ul>
     </nav>
 

@@ -119,7 +119,7 @@ main{
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 60%;
+  width: 800px;
   background-color: #fff;
 }
 
@@ -157,6 +157,7 @@ main{
     height: 300px;
     border-top-left-radius: 25px;
     border-top-right-radius: 25px;
+    max-width: 900px;
 }
 .DescricaoEvento {
 margin-top: 15px;
@@ -189,6 +190,7 @@ margin-top: 15px;
     cursor: pointer;
     scale: 1.15;
     transition: 0.5s;
+    min-width: 100px;
 }
 .Galeria{
     display: flex;

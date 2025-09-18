@@ -31,14 +31,14 @@ body {
 }
 
 .hero-section {
-    height: 500px;
+    height: 500px;  
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
     color: #fff;
     text-align: center;
-    background: rgba(0, 0, 0, 0.5);
+
 }
 
 

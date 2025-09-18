@@ -47,8 +47,8 @@ $evento = $result->fetch_object();
                 <li class="config">
                     <a href="#" onclick="abrirMenuConf(event)">Configurações</a>
                     <ul id="configMenu">
-                        <li><a href="../../conteudo/conf_perfil/Configuracao_Perfil.html">Perfil</a></li>
-                        <li><a href="../conteudo/privacidade.html">Ajuda</a></li>
+    
+                        <li><a href="../crud_eventos.php">Meu Eventos</a></li>
                     </ul>
                 </li>
             </ul>
@@ -124,7 +124,7 @@ $evento = $result->fetch_object();
                     value="<?php echo htmlspecialchars($evento->Tipo); ?>" /><br /><br />
 
                 <label for="Horario">Horário:</label><br />
-                <input type="date" id="Horario" name="Horario" required
+                <input type="time" id="Horario" name="Horario" required
                     value="<?php echo htmlspecialchars($evento->Horario); ?>" /><br /><br />
 
                 <label for="Descricao">Descrição:</label><br />
@@ -156,7 +156,7 @@ $evento = $result->fetch_object();
                 onsubmit="return confirm('Tem certeza que deseja deletar este evento?');" style="display: inline;">
                 <input type="hidden" name="id_Evento" value="<?php echo $evento->Id_Evento; ?>">
                 <button type="submit" class="btn btn-delete"
-                    style="margin-top: 20px; background-color: #dc3545; color: white; padding: 10px 20px; border: none; cursor: pointer; width: 200px;">Deletar</button>
+                    style="margin-top: 20px; background-color: #dc3545; color: white; padding: 10px 20px; border: none; cursor: pointer; width: 200px; margin-bottom: 15px;">Deletar</button>
             </form>
         </div>
     </main>

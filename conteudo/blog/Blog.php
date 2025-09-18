@@ -1,5 +1,5 @@
 <?php
-include('../login/config.php');   
+include('../login/config.php');
 // require_once "../login/validador_acesso.php";
 require_once "../loginE/validador_acesso.php";
 
@@ -9,20 +9,20 @@ $stmt->bind_param("i", $_SESSION['id_usuario']);
 $stmt->execute();
 $stmt->bind_result($tipoUsuario);
 if ($stmt->fetch()) {
-    // Achou usuário
-    
-    $stmt->close();
-} else {
-    // Não achou em usuarios → tenta em dados_empresa
-    $stmt->close();
+  // Achou usuário
 
-    $stmt = $conexao->prepare("SELECT tipoUsuario FROM Dados_empresa WHERE id_empresa = ?");
-    $stmt->bind_param("i", $_SESSION['id_empresa']);
-    $stmt->execute();
-    $stmt->bind_result($tipoUsuario);
-    $stmt->fetch();
-    $stmt->close();
-  
+  $stmt->close();
+} else {
+  // Não achou em usuarios → tenta em dados_empresa
+  $stmt->close();
+
+  $stmt = $conexao->prepare("SELECT tipoUsuario FROM Dados_empresa WHERE id_empresa = ?");
+  $stmt->bind_param("i", $_SESSION['id_empresa']);
+  $stmt->execute();
+  $stmt->bind_result($tipoUsuario);
+  $stmt->fetch();
+  $stmt->close();
+
 
 }
 ?>
@@ -56,9 +56,15 @@ if ($stmt->fetch()) {
         <li class="config">
           <a href="#" onclick="abrirMenuConf(event)">Configurações</a>
           <ul id="configMenu">
-            <li><a href="../conteudo/conf_perfil/Configuracao_Perfil.html">Perfil</a></li>
-            <li><a href="../conteudo/privacidade.html">Ajuda</a></li>
-           <?php
+            <?php
+            // Verifica se o tipo de usuário é 'empresa'
+            
+            if ($tipoUsuario === 'usuario') {
+              echo '<li><a href="../perfil/perfil.php">Perfil</a></li>';
+            }
+            ?>
+
+            <?php
             // Verifica se o tipo de usuário é 'empresa'
             
             if ($tipoUsuario === 'empresa') {

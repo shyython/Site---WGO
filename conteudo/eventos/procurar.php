@@ -77,7 +77,7 @@ $stmt->execute();
 $stmt->bind_result($tipoUsuario);
 if ($stmt->fetch()) {
     // Achou usuário
-    
+
     $stmt->close();
 } else {
     // Não achou em usuarios → tenta em dados_empresa
@@ -89,7 +89,7 @@ if ($stmt->fetch()) {
     $stmt->bind_result($tipoUsuario);
     $stmt->fetch();
     $stmt->close();
-  
+
 }
 
 
@@ -115,29 +115,34 @@ if ($stmt->fetch()) {
             <img class="" src="../imagens/WgoIcon2.png" alt="Logo" width="150px">
         </a>
 
-         <nav>
-      <ul>
-        <li><a href="../home/home.php">Início</a></li>
-        <li><a href="../blog/Blog.php">Blog</a></li>
-        <li><a href="../eventos/procurar.php">Eventos</a></li>
-        <li class="config">
-          <a href="#" onclick="abrirMenuConf(event)">Configurações</a>
-          <ul id="configMenu">
-            <li><a href="../conteudo/conf_perfil/Configuracao_Perfil.html">Perfil</a></li>
-            <li><a href="../conteudo/privacidade.html">Ajuda</a></li>
-           <?php
-            // Verifica se o tipo de usuário é 'empresa'
-            
-            if ($tipoUsuario === 'empresa') {
-              echo '<li><a href="../crudEventos/crud_eventos.php">Eventos</a></li>';
-            }
-            ?>
-          </ul>
-        </li>
+        <nav>
+            <ul>
+                <li><a href="../home/home.php">Início</a></li>
+                <li><a href="../blog/Blog.php">Blog</a></li>
+                <li><a href="../eventos/procurar.php">Eventos</a></li>
+                <li class="config">
+                    <a href="#" onclick="abrirMenuConf(event)">Configurações</a>
+                    <ul id="configMenu">
+                        <?php
+                        // Verifica se o tipo de usuário é 'empresa'
+                        
+                        if ($tipoUsuario === 'usuario') {
+                            echo '<li><a href="../perfil/perfil.php">Perfil</a></li>';
+                        }
+                        ?>
+                        <?php
+                        // Verifica se o tipo de usuário é 'empresa'
+                        
+                        if ($tipoUsuario === 'empresa') {
+                            echo '<li><a href="../crudEventos/crud_eventos.php">Eventos</a></li>';
+                        }
+                        ?>
+                    </ul>
+                </li>
 
 
-      </ul>
-    </nav>
+            </ul>
+        </nav>
         <!-- search -->
         <!-- <div class="pesquisar">
         <input type="text" name="text" class="input" required placeholder="Search...">

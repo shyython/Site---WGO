@@ -37,6 +37,8 @@ if ($stmt->fetch()) {
         $usuario['foto'] = 'https://via.placeholder.com/150'; // Ou caminho local padrão
     }
 }
+
+
 $stmt->close();
 ?>
 
@@ -66,14 +68,8 @@ $stmt->close();
                 <li><a href="../home/home.php">Início</a></li>
                 <li><a href="../blog/Blog.php">Blog</a></li>
                 <li><a href="../eventos/procurar.php">Eventos</a></li>
-                <li class="config">
-                    <a href="#" onclick="abrirMenuConf(event)">Configurações</a>
-                    <ul id="configMenu">
-                        <li><a href="../../conteudo/conf_perfil/perfil.php">Perfil</a></li>
-                        <li><a href="./privacidade.html">Ajuda</a></li>
-                        <li><a href="../crudEventos/criar/criar.php">Criar evento</a></li>
-                    </ul>
-                </li>
+              
+
             </ul>
         </nav>
 
@@ -152,7 +148,7 @@ $stmt->close();
                         <label for="">seguindo</label>
                     </div>
                     <div class="div-descricao">
-                    <p id="NomePerfil"><?php echo htmlspecialchars($usuario['descricao']); ?></p>
+                        <p id="NomePerfil"><?php echo htmlspecialchars($usuario['descricao']); ?></p>
                     </div>
                     <div class="container-btns">
                         <button class="BtnEditar">Editar Perfil</button>

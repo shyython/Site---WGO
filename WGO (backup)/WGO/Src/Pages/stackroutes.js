@@ -1,6 +1,6 @@
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import { createStackNavigator } from "@react-navigation/stack";
-import Feather from 'react-native-vector-icons/Feather';
+import { Feather } from '@expo/vector-icons';
 import Home from "../Home";
 import Eventos from "../Eventos";
 import Perfil from "../Perfil";
@@ -29,7 +29,7 @@ export default function StackRoutes() {
       <Stack.Screen name="Main" component={TabRoutes} options={{ headerShown: false }} />
       <Stack.Screen name="Pesquisa" component={Pesquisa} options={{ headerShown: false }} />
       <Stack.Screen name="Evento_Individual" component={Evento_Individual} options={{ headerShown: false }} />
-      <Stack.Screen name="Editar_Perfil" component={Editar_Perfil} options={{ headerShown: false }} />
+      <Stack.Screen name="Editar_Perfil" component={Editar_Perfil} options={{ headerShown: false,  }} />
     </Stack.Navigator>
   );
 }

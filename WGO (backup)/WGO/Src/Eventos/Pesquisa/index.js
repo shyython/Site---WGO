@@ -1,63 +1,88 @@
-import {React} from 'react';
+import React, { useState, useEffect } from 'react';
 import { StyleSheet, Text, View, useColorScheme, Image, TouchableOpacity } from 'react-native';
-import {claro, escuro} from '../../Styles/Globalstyles';
-import { useState, useEffect } from 'react';
+import { claro, escuro } from '../../Styles/Globalstyles';
 import axios from 'axios';
-import { useNavigation } from '@react-navigation/native';
-import { API_URL } from '../../../ConfigsBanco/Config.js/index.js';
+import { useNavigation, useRoute } from '@react-navigation/native';
+import { API_URL } from '../../../ConfigsBanco/Config.js';
+import { ScrollView } from 'react-native-gesture-handler';
 
+export default function Pesquisa({ }) {
+  const theme = useColorScheme();
+  const estilo = theme === 'dark' ? escuro : claro;
 
-export default function Pesquisa({route}){
-        const theme = useColorScheme();
-        const estilo = theme === 'dark' ? escuro : claro;
+   const route = useRoute();
+  const { pesquisa, categoria } = route.params || {};
+  const [eventos, setEventos] = useState([]);
+  const navigation = useNavigation();
 
-        //PARAMETRO DA PESQUISA
-        const {setPesquisa, setCategoria} = route.params;
-
-        const [eventos, setEventos] = useState([]);
   useEffect(() => {
-  const getSearch = async () => {
-    if(setPesquisa){
-
+  if (pesquisa) {
+    const getSearch = async () => {
       try {
         const res = await axios.post(`${API_URL}/usuarios/eventos/search`, {
-          procurar:  setPesquisa 
+          procurar: pesquisa
         });
         setEventos(res.data.sort((a, b) => (a.Nome_Evento > b.Nome_Evento ? 1 : -1)));
       } catch (err) {
         console.log(err);
       }
     };
-    
-    if (setPesquisa) {
-      getSearch();
-    }
+    getSearch();
+  }
+}, [pesquisa]);
+
+useEffect(() => {
+  if (categoria) {
+    const getSeachbyCat = async () => {
+      try {
+        const res = await axios.get(`${API_URL}/usuarios/buscar`, {
+          params: { procurar: categoria }
+        });
+
+        setEventos(res.data.sort((a, b) => (a.Categoria > b.Categoria ? 1 : -1)));
+      } catch (err) {
+        console.log(err);
+      }
+    };
+    getSeachbyCat();
+  }
+}, [categoria]);
+
+  function NavegaEvento(evento) {
+    navigation.navigate('Evento_Individual', { evento });
   }
 
-}, [setPesquisa]);
-  const navigation = useNavigation();
-  function NavegaEvento(evento) {
-  navigation.navigate('Evento_Individual', { evento });
-  }
-        
-     return (
+  return (
+    <ScrollView>
+
     <View style={estilo.ContainerPesquisa}>
       <View style={estilo.ResultadoPesquisa}>
-        <Text style={estilo.Label}>Resultados para: {setPesquisa ? `${setPesquisa}` : `Categoria: ${setCategoria}`}</Text>
-        {eventos.map((evento, index) => (
-          <View key={index} style={estilo.EventosPesquisa}>
-            <Image 
-              source={{ uri: evento.Img1 }} 
-              style={estilo.ImgEvento}
-            />
+        <TouchableOpacity style={estilo.BtnVoltar} onPress={() => navigation.goBack()}>
+          <Image source={require={uri:'https://icones.pro/wp-content/uploads/2021/06/icone-fleche-gauche-bleu.png'}} style={estilo.TxtVoltar}></Image>
+        </TouchableOpacity>
+        <Text style={estilo.Label}>
+          Resultados para: {pesquisa ? `${pesquisa}` : `Categoria: ${categoria}`}
+        </Text>
+
+        {eventos.map((evento) => (
+          <View key={evento.id || evento.Nome_Evento} >
+            <TouchableOpacity onPress={() => NavegaEvento(evento)} style={estilo.EventosPesquisa}>
+
+            <Image source={{ uri: evento.Img1 }} style={estilo.ImgPesquisa} />
+            <View>
             <Text style={estilo.Txtevento}>{evento.Nome_Evento}</Text>
-            <Text style={estilo.Txtevento}>4.8</Text>
-            <TouchableOpacity onPress={() => NavegaEvento(evento)} style={estilo.BtnVerMaisPesquisa}>
-              <Text style={estilo.TextBtnVer}>Ver Mais</Text>
+            <View style={estilo.ContainerInf}>
+
+            <Text style={estilo.Txtevento}>{evento.Categoria}</Text>
+            <Text style={estilo.Txteventob}>{evento.Tipo}</Text>
+            </View>
+            </View>
             </TouchableOpacity>
+         
           </View>
         ))}
       </View>
     </View>
+    </ScrollView>
   );
 }

@@ -1,12 +1,12 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View, TextInput, TouchableOpacity, Image, useColorScheme } from 'react-native';
+import { StyleSheet, Text, View, TextInput, TouchableOpacity, Image, useColorScheme, KeyboardAvoidingView } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 import { claro, escuro } from '../Styles/Globalstyles';
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import { API_URL } from '../../ConfigsBanco/Config.js';
 import { setUser } from '../../ConfigsBanco/UsuarioGlobal/index.js';
-
+import { MaskedTextInput } from "react-native-mask-text";
 
 
 export default function Inicio() {
@@ -59,10 +59,10 @@ const VerificaLogin = () => {
   return (
     
       
-      <View style={estilo.container}>
+      <KeyboardAvoidingView behavior='padding' style={estilo.container}>
         <Image source={require('../Assets/Logo.png')} style={estilo.logo} />
         <TextInput placeholder="Digite seu Email" style={estilo.Input} value={Email} onChangeText={setEmail}></TextInput>
-        <TextInput placeholder="Digite seu Senha" style={estilo.Input} value={Senha} onChangeText={setSenha}></TextInput>
+        <TextInput placeholder="Digite seu Senha" style={estilo.Input} value={Senha}  onChangeText={setSenha}></TextInput>
       
         <View style={{flexDirection: 'row', justifyContent: 'space-between', width: '80%'}}>
           <TouchableOpacity>
@@ -76,7 +76,7 @@ const VerificaLogin = () => {
           <Text>Entrar</Text>
         </TouchableOpacity>
         <StatusBar style="auto" />
-        </View>
+        </KeyboardAvoidingView >
     
   );
 }

@@ -12,6 +12,10 @@ export default function Perfil() {
   const estilo = theme === 'dark' ? escuro : claro;
 
   const [usuario, setUsuario] = useState(null);
+  const [abaAtiva, setAbaAtiva] = useState("salvos");
+  const [eventosSalvos, setEventosSalvos] = useState([]);
+
+
   const navigation = useNavigation();
    function NavegaEdit(){
     navigation.navigate('Editar_Perfil')
@@ -31,6 +35,18 @@ useEffect(() => {
 
    
 }, []);
+useEffect(() => {
+  const fetchEventosSalvos = async () => {
+    try {
+      const res = await axios.get(`${API_URL}/usuarios/eventosSalvos/${getUser()}`);
+      setEventosSalvos(res.data);
+    } catch (err) {
+      console.error("Erro ao buscar eventos salvos:", err);
+    }
+  };
+
+  fetchEventosSalvos();
+}, []);
 
 
 
@@ -42,12 +58,13 @@ useEffect(() => {
     );
   }
 
+
   return (
     <View style={estilo.containerPerfil}>
       <View style={estilo.ContainerFoto}>
         <Image
           style={estilo.ImgPerfil}
-          source={{ uri:usuario.Foto  }}
+          source={{ uri: "https://w7.pngwing.com/pngs/1000/665/png-transparent-computer-icons-profile-s-free-angle-sphere-profile-cliparts-free.png" || usuario.Foto  }}
         />
         <View>
           <Text style={estilo.Txtnome}>{usuario.Nome}</Text>
@@ -68,8 +85,51 @@ useEffect(() => {
           <Text style={estilo.TxtBtn}>compartilhar perfil</Text>
         </TouchableOpacity>
       </View>
-      <Text style={estilo.salvos}>Publicações</Text>
-      <Text style={estilo.salvos}>Salvos</Text>
+      <View style={{ flexDirection: "row", justifyContent: "center", marginVertical: 50 }}>
+          <TouchableOpacity onPress={() => setAbaAtiva("publicacoes")} style={{ marginHorizontal: 20 }}>
+            <Text 
+            style={{ 
+            fontSize: 18, 
+            fontWeight: abaAtiva === "publicacoes" ? "bold" : "normal",
+            color: abaAtiva === "publicacoes" ? "orange" : "#ffffffff",
+            textDecorationLine: abaAtiva === "publicacoes" ? "underline" : "none"
+            }}>
+              publicações
+            </Text>
+          </TouchableOpacity>
+
+          <TouchableOpacity onPress={() => setAbaAtiva("salvos")} style={{ marginHorizontal: 20 }}>
+            <Text 
+            style={{ 
+              fontSize: 18, 
+              fontWeight: abaAtiva === "salvos" ? "bold" : "normal",
+              color: abaAtiva === "salvos" ? "orange" : "#ffffffff",
+              textDecorationLine: abaAtiva === "salvos" ? "underline" : "none"
+              
+            }}>
+              salvos
+            </Text>
+          </TouchableOpacity>
+        </View>
+
+        {abaAtiva === "salvos" && (
+          <View style={estilo.ContainerSalvos}>
+            {eventosSalvos.map((evento) => (
+      <View key={evento.Id_Evento}>
+        <TouchableOpacity onPress={() => navigation.navigate('Evento_Individual', { eventoId: evento.Id_Evento })}>
+        <Image source={{ uri: evento.Img1 }} style={estilo.ImgEventoSalvo} />
+        </TouchableOpacity>
+      </View>
+    ))}
+           
+          </View>
+        )}
+
+        {abaAtiva === "publicacoes" && (
+          <View style={estilo.ContainerSalvos}>
+          </View>
+        )}
+
     </View>
   );
 }

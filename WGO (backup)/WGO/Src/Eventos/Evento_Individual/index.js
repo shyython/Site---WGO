@@ -1,35 +1,53 @@
 import { Text, useColorScheme, View, Image, ScrollView, TouchableOpacity } from 'react-native';
 import { claro, escuro } from '../../Styles/Globalstyles';
-import { useState } from 'react';
+import { use, useEffect, useState } from 'react';
+import { useNavigation } from '@react-navigation/native';
+import axios from 'axios';
+import { getUser } from '../../../ConfigsBanco/UsuarioGlobal';
+import { API_URL } from '../../../ConfigsBanco/Config.js';
 
 export default function EventoIndividual({ route }) {
   const theme = useColorScheme();
   const estilo = theme === 'dark' ? escuro : claro;
+  const navigation = useNavigation();
+
   const [curtida, setCurtida] = useState(false);
   const [salvo, setSalvo] = useState(false);
 
-  const { evento } = route.params;
+ const handleSalvarEvento = async (evento) => {
+  try {
+    const res = await axios.post(`${API_URL}/usuarios/salvarEvento`, {
+      eventoId: evento.Id_Evento,
+      usuarioId: getUser(), // retorna o id do usuário logado
+    });
+    console.log(res.data);
+    setSalvo(true); // marca como salvo
+  } catch (err) {
+    console.error("Erro ao salvar evento:", err);
+  };
+};
 
+  const { evento } = route.params;
   const [imagemPrincipal, setImagemPrincipal] = useState(evento.Img1);
+
+  // 🔹 estado para controlar aba
+  const [abaAtiva, setAbaAtiva] = useState("informacoes");
 
   const iconeNaoCurtido = "https://cdn-icons-png.flaticon.com/128/1077/1077035.png"; 
   const iconeCurtido = "https://cdn-icons-png.flaticon.com/128/833/833472.png";
   const iconeSalvo = "https://cdn-icons-png.flaticon.com/128/7093/7093762.png";
   const Iconenaosalvo = "https://cdn-icons-png.flaticon.com/128/7131/7131186.png";
 
-  function like() {
-    setCurtida(!curtida); 
-  }
-  function save() {
-    setSalvo(!salvo); 
-  }
-
   return (
     <ScrollView contentContainerStyle={{ flexGrow: 1 }}>
       <View style={estilo.containerEvento}>
-
+        <TouchableOpacity style={estilo.BtnVoltar} onPress={() => navigation.goBack()}>
+           <Image source={require={uri:'https://icones.pro/wp-content/uploads/2021/06/icone-fleche-gauche-bleu.png'}} style={estilo.TxtVoltar}></Image>
+        </TouchableOpacity>
+        {/* imagem principal */}
         <Image style={estilo.ImgEventoIndi} source={{ uri: imagemPrincipal }} />
 
+        {/* miniaturas */}
         <View style={estilo.ContainerMini}>
           {[evento.Img1, evento.Img2, evento.Img3, evento.Img4].map((img, index) => (
             <TouchableOpacity key={index} onPress={() => setImagemPrincipal(img)}>
@@ -38,21 +56,60 @@ export default function EventoIndividual({ route }) {
           ))}
         </View>
 
-        <View style={estilo.ContainerInformacoes}>
-          <Text style={estilo.TxtNomeEvento}>{evento.Nome_Evento}</Text>
-          <Text style={estilo.descricao}>{evento.Descricao}</Text>
+        <Text style={estilo.TxtNomeEvento}>{evento.Nome_Evento}</Text>
+
+
+        <View style={{ flexDirection: "row", justifyContent: "center", marginVertical: 10 }}>
+          <TouchableOpacity onPress={() => setAbaAtiva("avaliacoes")} style={{ marginHorizontal: 20 }}>
+            <Text 
+            style={{ 
+            fontSize: 18, 
+            fontWeight: abaAtiva === "avaliacoes" ? "bold" : "normal",
+            color: abaAtiva === "avaliacoes" ? "orange" : "#ffffffff",
+            textDecorationLine: abaAtiva === "avaliacoes" ? "underline" : "none"
+            }}>
+              Avaliações
+            </Text>
+          </TouchableOpacity>
+
+          <TouchableOpacity onPress={() => setAbaAtiva("informacoes")} style={{ marginHorizontal: 20 }}>
+            <Text 
+            style={{ 
+              fontSize: 18, 
+              fontWeight: abaAtiva === "informacoes" ? "bold" : "normal",
+              color: abaAtiva === "informacoes" ? "orange" : "#ffffffff",
+              textDecorationLine: abaAtiva === "informacoes" ? "underline" : "none"
+              
+            }}>
+              Informações
+            </Text>
+          </TouchableOpacity>
         </View>
 
-        <View style={estilo.Det}>
-          <View>
-            <Image source={{uri: 'https://cdn-icons-png.flaticon.com/128/7291/7291700.png'}} style={{width:35, height:35}} />
-            <Text style={estilo.Txtloc}>{evento.Endereco}</Text>
+        {abaAtiva === "informacoes" && (
+          <View style={estilo.ContainerInfoEve}>
+
+            <Text style={estilo.descricao}>{evento.Descricao}</Text>
+
+            <View style={estilo.Det}>
+              <View>
+                <Image source={{uri: 'https://cdn-icons-png.flaticon.com/128/7291/7291700.png'}} style={{width:35, height:35}} />
+                <Text style={estilo.Txtloc}>{evento.Endereco}</Text>
+              </View>
+              <View>
+                <Image source={{uri: 'https://cdn-icons-png.flaticon.com/128/4283/4283102.png'}} style={{width:35, height:35}} />
+                <Text style={estilo.Txthorario}>{evento.Horario}</Text>
+              </View>
+            </View>
           </View>
-          <View>
-            <Image source={{uri: 'https://cdn-icons-png.flaticon.com/128/4283/4283102.png'}} style={{width:35, height:35}} />
-            <Text style={estilo.Txthorario}>{evento.Horario}</Text>
+        )}
+
+        {abaAtiva === "avaliacoes" && (
+          <View style={estilo.ContainerInfoEve}>
+
+            <Text style={{ color: "#999" }}>Aqui você pode exibir comentários ou estrelas dos usuários.</Text>
           </View>
-        </View>
+        )}
 
         <View style={estilo.ContainerBtns}>
           <TouchableOpacity style={estilo.Btn}>
@@ -61,13 +118,13 @@ export default function EventoIndividual({ route }) {
         </View>
 
         <View style={estilo.ContainerSalva}>
-          <TouchableOpacity onPress={like}>
+          <TouchableOpacity onPress={() => setCurtida(!curtida)}>
             <Image 
               source={{ uri: curtida ? iconeCurtido : iconeNaoCurtido }} 
               style={estilo.curtir} 
             />
           </TouchableOpacity>
-          <TouchableOpacity onPress={save}>
+          <TouchableOpacity onPress={() => handleSalvarEvento(evento)}>
             <Image 
               source={{ uri: salvo ? iconeSalvo : Iconenaosalvo }} 
               style={estilo.curtir} 
@@ -79,4 +136,4 @@ export default function EventoIndividual({ route }) {
       </View>
     </ScrollView>
   );
-}
+  }

@@ -61,6 +61,21 @@ export const getSeach = (req, res) => {
     return res.status(200).json(data);
   });
 };
+export const getSeachbyCat = (req, res) => {
+
+
+  const search = req.query.procurar || "";
+  if (!search) {
+    return res.status(400).json({ error: "Parâmetro 'procurar' é obrigatório" });
+  }
+
+  
+  const q = "SELECT * FROM eventos WHERE Categoria = ?";
+  db.query(q, [search], (err, data) => {
+    if (err) return res.status(500).json(err);
+    return res.status(200).json(data);
+  });
+};
 
 export const getEventoById = (req, res) => {
   const id = req.params.id; 
@@ -92,5 +107,69 @@ export const getPerfil = (req, res) => {
     }
 
     return res.status(200).json(data[0]); 
+  });
+};
+
+export const updatePerfil = (req, res) => {
+  const id = req.params.id;
+  const {Foto, Descricao, Username, Email, Telefone} = req.body;
+  console.log("Body recebido:", req.body);
+  console.log("ID recebido:", id);
+
+  const q = `
+    UPDATE Dados_Usuarios 
+    SET Foto = ?, Descricao = ?, Username = ?, Email = ?, Telefone = ?
+    WHERE Id_Usuario = ?
+  `;
+
+  const values = [Foto, Descricao, Username, Email, Telefone, id];
+
+  db.query(q, values, (err, data) => {
+    if (err) {
+      console.error("Erro ao atualizar perfil:", err);
+      return res.status(500).json({ error: "Erro ao atualizar perfil" });
+    }
+
+    if (data.affectedRows === 0) {
+      return res.status(404).json({ error: "Usuário não encontrado" });
+    }
+
+    return res.status(200).json({ message: "Perfil atualizado com sucesso" });
+  });
+};
+export const salvarEvento = (req, res) => {
+  const { eventoId, usuarioId } = req.body;
+  console.log("Dados recebidos para salvar evento:", req.body);
+
+  const q = "INSERT INTO Salvos (Id_Evento, Id_Usuario) VALUES (?, ?)";
+  const values = [eventoId, usuarioId];
+
+  db.query(q, values, (err, data) => {
+    if (err) {
+      console.error("Erro ao salvar evento:", err);
+      return res.status(500).json({ error: "Erro ao salvar evento" });
+    }
+    return res.status(200).json({ message: "Evento salvo com sucesso" });
+  });
+};
+export const getEventosSalvos = (req, res) => {
+  const { usuarioId } = req.params;
+
+  const q = `
+    SELECT e.Id_Evento, e.Nome_Evento, e.Categoria, e.Endereco, e.Tipo, 
+       e.Horario, e.Descricao, 
+       COALESCE(e.Img1, 'https://via.placeholder.com/300x200.png?text=Sem+Imagem') AS Img1,
+       e.Img2, e.Img3, e.Img4
+FROM eventos e
+INNER JOIN Salvos s ON e.Id_Evento = s.Id_Evento
+WHERE s.Id_Usuario = ?;
+  `;
+
+  db.query(q, [usuarioId], (err, data) => {
+    if (err) {
+      console.error("Erro ao buscar eventos salvos:", err);
+      return res.status(500).json({ error: "Erro ao buscar eventos salvos" });
+    }
+    return res.status(200).json(data);
   });
 };

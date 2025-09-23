@@ -4,6 +4,7 @@ import { TextInput } from 'react-native-gesture-handler';
 import { claro, escuro } from '../Styles/Globalstyles';
 import axios from 'axios';
 import { API_URL } from '../../ConfigsBanco/Config.js';
+import { MaskedTextInput } from "react-native-mask-text";
 
 export default function Cadastrar(){
     const theme = useColorScheme();
@@ -65,7 +66,17 @@ export default function Cadastrar(){
             <TextInput style={estilo.Cad_Txtinput} placeholder="Nome" value={Nome} onChangeText={setNome}></TextInput>
             <TextInput style={estilo.Cad_Txtinput} placeholder="Email" value={Email} onChangeText={setEmail}></TextInput>
             <View style={estilo.Cad_Inputs}>
-            <TextInput style={estilo.Cad_Txtinput} type="numeric" placeholder="Data de nascimento" value={Data_Nasc} onChangeText={setData_Nasc} ></TextInput>
+            <MaskedTextInput
+            type="date"
+            style={estilo.Cad_Txtinput}
+            placeholder="Data de nascimento"
+            value={Data_Nasc}
+            onChangeText={setData_Nasc}
+            keyboardType="numeric"
+            options={{
+            dateFormat: 'YYYY/DD/MM',
+            }}/>
+            
             <TextInput style={estilo.Cad_Txtinput} placeholder="Telefone" value={Telefone} onChangeText={setTelefone}></TextInput>
             </View>
             <TextInput style={estilo.Cad_Txtinput} placeholder="Senha" value={Senha} onChangeText={setSenha}></TextInput>

@@ -979,6 +979,8 @@ export const escuro = StyleSheet.create({
   },
   ContainerSalvos:{
     backgroundColor:'#3a3a3aff',
+    display:'flex',
+    flexDirection:'row',
   },
   ImgEventoSalvo:{
     marginLeft:15,

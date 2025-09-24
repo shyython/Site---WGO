@@ -6,6 +6,7 @@ import { getUser } from '../../ConfigsBanco/UsuarioGlobal';
 import axios from 'axios';
 import { API_URL } from '../../ConfigsBanco/Config.js';
 import { useNavigation } from '@react-navigation/core';
+import { ScrollView } from 'react-native-gesture-handler';
 
 export default function Perfil() {
   const theme = useColorScheme();
@@ -113,16 +114,16 @@ useEffect(() => {
         </View>
 
         {abaAtiva === "salvos" && (
-          <View style={estilo.ContainerSalvos}>
+          <ScrollView>
             {eventosSalvos.map((evento) => (
-      <View key={evento.Id_Evento}>
-        <TouchableOpacity onPress={() => navigation.navigate('Evento_Individual', { eventoId: evento.Id_Evento })}>
+      <View style={estilo.ContainerSalvos} key={evento.Id_Evento}>
+        <TouchableOpacity onPress={() => navigation.navigate('Evento_Individual', { evento})}>
         <Image source={{ uri: evento.Img1 }} style={estilo.ImgEventoSalvo} />
         </TouchableOpacity>
       </View>
     ))}
            
-          </View>
+          </ScrollView>
         )}
 
         {abaAtiva === "publicacoes" && (

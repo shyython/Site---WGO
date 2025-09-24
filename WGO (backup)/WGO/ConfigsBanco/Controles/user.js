@@ -157,8 +157,7 @@ export const getEventosSalvos = (req, res) => {
 
   const q = `
     SELECT e.Id_Evento, e.Nome_Evento, e.Categoria, e.Endereco, e.Tipo, 
-       e.Horario, e.Descricao, 
-       COALESCE(e.Img1, 'https://via.placeholder.com/300x200.png?text=Sem+Imagem') AS Img1,
+       e.Horario, e.Descricao, Img1,
        e.Img2, e.Img3, e.Img4
 FROM eventos e
 INNER JOIN Salvos s ON e.Id_Evento = s.Id_Evento
